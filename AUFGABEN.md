@@ -8,31 +8,37 @@ Alles, was ohne deinen Mac ging, ist erledigt. Code, Szenen-Builder, iPhone-App,
 Multiplayer, Concept-Art und Tests liegen im Repository. Die folgenden Schritte brauchen
 deinen Mac, dein Apple- oder Unity-Konto oder deine Entscheidung.
 
-Ich konnte Unity hier nicht starten. Der ganze Unity-Code ist gegen die Bibliotheken von
-Unity 6.6 (6000.6.9f1) kompiliert und die Logik mit 102 Tests geprüft, aber **gesehen hat das
-Spiel noch niemand**. Schick mir Fehlermeldungen aus der Unity-Konsole, dann behebe ich sie.
+**Stand vom Mac (13.11.2026):** `frostline.sh alles` läuft auf dem MacBook Air (M4) mit
+Unity 6000.6.9f1 vom USB-Stick komplett durch: Einrichten ohne übersprungene Schritte, Insel,
+102/102 Unity-Tests, Mac-Build, 13 Screenshots in `Ausgabe/bilder/`, Messung **bestanden**
+(Medium, 1920 × 1080: Ø 154,9 fps, 1 %-Tief 127,5 fps, Bericht in `Ausgabe/benchmark_bericht.txt`).
+Behoben dabei: mehrdeutiges `AddHDLight` (HDRP 17.6), fehlender Texturordner, verlorene
+Bodenschichten (Insel war nur Sand), eigene Drohne im FPV-Bild, blockiges Analograuschen.
+iPhone-App: 13/13 Swift-Tests, Simulator-Build startet.
 
 ## 1 · Projekt öffnen und Insel bauen (ca. 30 min)
 
-- [ ] Unity Hub installieren, dazu **Unity 6000.6.9f1** (Unity 6.6) mit **Mac Build Support**.
-- [ ] In Unity Hub „Add project from disk“ → Ordner `Frostline`. Der erste Import lädt HDRP,
+- [x] Unity Hub installieren, dazu **Unity 6000.6.9f1** (Unity 6.6) mit **Mac Build Support**.
+      (Liegt auf dem USB-Stick; `frostline.sh` findet Hub und Editor dort.)
+- [x] In Unity Hub „Add project from disk“ → Ordner `Frostline`. Der erste Import lädt HDRP,
       Input System, Netcode, Multiplayer Services und glTFast; das dauert einige Minuten.
-- [ ] Menü **Frostline › 1 · Projekt einrichten**, danach Unity neu starten, wenn der Dialog es sagt.
-- [ ] Menü **Frostline › 4 · Insel erstellen (4 × 4 km)**. Der Bau dauert ein paar Minuten
+- [x] Menü **Frostline › 1 · Projekt einrichten**, danach Unity neu starten, wenn der Dialog es sagt.
+- [x] Menü **Frostline › 4 · Insel erstellen (4 × 4 km)**. Der Bau dauert ein paar Minuten
       (vier Terrain-Tiles mit je 2049² Höhenpunkten).
-- [ ] Konsole ansehen: Meldungen mit „Frostline: … wird übersprungen“ bitte an mich schicken.
-      Sie bedeuten, dass ein HDRP-Feld in deiner Version anders heißt.
+- [x] Konsole ansehen: Meldungen mit „Frostline: … wird übersprungen“ bitte an mich schicken.
+      Sie bedeuten, dass ein HDRP-Feld in deiner Version anders heißt. (Keine mehr.)
 - [ ] Play drücken. Ohne Sender fliegst du mit der Tastatur: W/S Gas, A/D Gier, Pfeile, Leertaste schärfen.
-- [ ] Prüfen, ob das Higgsfield-Drohnenmodell mit der Nase nach vorn zeigt (Taste P für das
-      Replay mit Verfolgerkamera). Falls nicht: kurz Bescheid geben.
+- [x] Prüfen, ob das Higgsfield-Drohnenmodell mit der Nase nach vorn zeigt. Ja: siehe
+      `Ausgabe/bilder/12_Drohne_Seite_Nase_rechts.png` (Antenne hinten links, Kamera vorn rechts).
 
 ## 2 · Sender und Gate-Messung (Woche 1)
 
 - [ ] RadioMaster Pocket per USB-C anschließen, am Sender „USB Joystick (HID)“ wählen.
 - [ ] Im Spiel **F1 › Sender › Sender kalibrieren** und den Anweisungen folgen.
-- [ ] **Frostline › 3 · Mac-Build erstellen**, den Build starten, Qualität „Medium“ lassen
+- [x] **Frostline › 3 · Mac-Build erstellen**, den Build starten, Qualität „Medium“ lassen
       (Zielstufe auf dem MacBook Air), **F9**.
       Nach 60 s steht das Ergebnis da. Die Textdatei aus dem Ordner `Benchmarks` bitte an mich.
+      (Bestanden, Bericht in `Ausgabe/benchmark_bericht.txt`.)
 - [ ] Beim ersten Start fragt macOS nach eingehenden Verbindungen: **Erlauben**.
       Das brauchen die iPhone-App und der Multiplayer.
 - [x] Offene Frage aus dem Plan: Es ist ein **MacBook Air** → Zielstufe „Medium“ (ist eingestellt).
@@ -84,7 +90,8 @@ Kostenlos zum Konto hinzufügen und importieren:
 - [ ] **Higgsfield Hero-Props**: Funkmast, Leuchtturm, Schiffswrack, Kran, Fischerhütte und
       Rennen-Gates als 3D-Modelle, je 9 Credits, zusammen rund 54 Credits.
       Kontostand jetzt: **128 Credits**. Laut Plan frage ich vor jeder größeren Serie: freigeben?
-- [ ] Optional: Unity-Tests im Editor laufen lassen (Window › General › Test Runner › EditMode › Run All).
+- [x] Optional: Unity-Tests im Editor laufen lassen (Window › General › Test Runner › EditMode › Run All).
+      (102/102 per `frostline.sh tests`.)
 
 ## Was ich hier nicht machen konnte
 

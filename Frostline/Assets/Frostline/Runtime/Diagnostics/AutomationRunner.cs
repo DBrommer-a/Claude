@@ -132,11 +132,48 @@ namespace Frostline.Diagnostics
                 index++;
             }
 
+            // Zuletzt das Modell von außen (die FPV-Kamera blendet es aus): zeigt die Nase nach vorn?
+            // Am Startpunkt, dort ist das Funksignal sauber (weit draußen rauscht das Bild absichtlich).
+            DroneRespawn spawn = drone.GetComponent<DroneRespawn>();
+            bool hasSpawn = spawn != null && spawn.spawnPoint != null;
+            Vector3 modelSpot = hasSpawn ? spawn.spawnPoint.position + Vector3.up * 4f : high;
+            Quaternion modelYaw = hasSpawn ? Quaternion.Euler(0f, spawn.spawnPoint.eulerAngles.y, 0f) : Quaternion.identity;
+            drone.transform.SetPositionAndRotation(modelSpot, modelYaw);
+            yield return ModelShots(drone.transform, index);
+
             body.isKinematic = false;
             body.interpolation = RigidbodyInterpolation.Interpolate;
             drone.enabled = true;
             DroneRespawn respawn = drone.GetComponent<DroneRespawn>();
             if (respawn != null) respawn.Respawn();
+        }
+
+        /// <summary>
+        /// Zwei Bilder der Drohne mit einer eigenen Kamera: schräg von vorn und genau von rechts.
+        /// Im Seitenbild muss die Nase (Kamera vorn am Rahmen) rechts im Bild liegen.
+        /// </summary>
+        IEnumerator ModelShots(Transform drone, int index)
+        {
+            var go = new GameObject("Automatik-Modellkamera");
+            Camera cam = go.AddComponent<Camera>();
+            cam.nearClipPlane = 0.01f;
+            cam.fieldOfView = 40f;
+            cam.depth = 100f;
+            Vector3 center = drone.position + drone.up * 0.03f;
+            var shots = new[]
+            {
+                new KeyValuePair<string, Vector3>("Drohne_vorn_rechts", drone.forward * 0.45f + drone.right * 0.35f + drone.up * 0.2f),
+                new KeyValuePair<string, Vector3>("Drohne_Seite_Nase_rechts", drone.right * 0.6f + drone.up * 0.1f),
+            };
+            foreach (KeyValuePair<string, Vector3> shot in shots)
+            {
+                go.transform.position = center + shot.Value;
+                go.transform.LookAt(center, Vector3.up);
+                yield return new WaitForSecondsRealtime(SettleSeconds);
+                yield return Capture(index.ToString("00") + "_" + shot.Key);
+                index++;
+            }
+            Destroy(go);
         }
 
         IEnumerator Capture(string name)
