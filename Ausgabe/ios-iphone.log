@@ -1,0 +1,518 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project FrostlineRemote/FrostlineRemote.xcodeproj -scheme FrostlineRemote -configuration Debug -destination id=00008150-001410A63428401C -derivedDataPath Ausgabe/ios-build DEVELOPMENT_TEAM=M4546626W3 -allowProvisioningUpdates build
+
+Build settings from command line:
+    DEVELOPMENT_TEAM = M4546626W3
+
+2026-11-13 17:07:51.431 xcodebuild[95236:21362395] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'FrostlineRemote' in project 'FrostlineRemote' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 5abcb343460386c33ecd4f21c35360e9
+Build description path: /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/XCBuildData/5abcb343460386c33ecd4f21c35360e9.xcbuilddata
+CreateBuildDirectory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    builtin-create-build-directory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    builtin-create-build-directory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache
+
+CreateBuildDirectory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    builtin-create-build-directory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos
+
+CreateBuildDirectory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    builtin-create-build-directory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    builtin-create-build-directory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    builtin-create-build-directory /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote-ade97b92e75f40eadb97b768f636addf-VFS-iphoneos/all-product-headers.yaml
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemote.xcodeproj
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote-ade97b92e75f40eadb97b768f636addf-VFS-iphoneos/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-own-target-headers.hmap (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-generated-files.hmap (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-generated-files.hmap
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftFileList (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftFileList
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftConstValuesFileList (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.hmap (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.hmap
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-OutputFileMap.json (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-project-headers.hmap (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-project-headers.hmap
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-target-headers.hmap (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_const_extract_protocols.json (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.LinkFileList (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.LinkFileList
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyStaticMetadataFileList (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyMetadataFileList (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-non-framework-target-headers.hmap (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-DebugDylibPath-normal-arm64.txt (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-DebugDylibInstallName-normal-arm64.txt (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-DebugDylibInstallName-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/Entitlements.plist (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    write-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/Entitlements.plist
+
+MkDir /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /bin/mkdir -p /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app
+
+ProcessProductPackaging /Users/davidbrommer/Library/Developer/Xcode/UserData/Provisioning\ Profiles/c102a65b-5897-4476-9e9b-c9453adcc9d0.mobileprovision /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/embedded.mobileprovision (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-productPackagingUtility /Users/davidbrommer/Library/Developer/Xcode/UserData/Provisioning\ Profiles/c102a65b-5897-4476-9e9b-c9453adcc9d0.mobileprovision -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/embedded.mobileprovision
+
+ProcessProductPackaging "" /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "M4546626W3.app.frostline.remote";
+    "com.apple.developer.team-identifier" = M4546626W3;
+    "get-task-allow" = 1;
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent
+
+ProcessProductPackagingDER /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent.der (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /usr/bin/derq query -f xml -i /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent.der --raw
+
+Ld /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/__preview.dylib normal (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -O0 -L/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -F/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -install_name @rpath/FrostlineRemote.debug.dylib -Xlinker -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_dependency_info.dat -Xlinker -no_adhoc_codesign -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/__preview.dylib
+
+MkDir /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /bin/mkdir -p /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned
+
+MkDir /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/unthinned (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /bin/mkdir -p /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/unthinned
+
+GenerateAssetSymbols /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Assets.xcassets (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Assets.xcassets --compile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_dependencies --output-partial-info-plist /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --minimum-deployment-target 17.0 --platform iphoneos --bundle-identifier app.frostline.remote --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Assets.xcassets (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Assets.xcassets --compile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPhone18,2 --filter-for-device-os-version 27.0.1 --development-region en --target-device iphone --minimum-deployment-target 17.0 --platform iphoneos
+/* com.apple.actool.compilation-results */
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist_thinned
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver FrostlineRemote normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FrostlineRemote -Onone @/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -F /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache -output-file-map /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -sdk-module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_const_extract_protocols.json -Xcc -iquote -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-generated-files.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-own-target-headers.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-target-headers.hmap -Xcc -iquote -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-project-headers.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/include -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources-normal/arm64 -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/arm64 -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-Swift.h -working-directory /Users/davidbrommer/Projekte/Frostline/FrostlineRemote -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/ptrauth-BO8F7FOVWAYF26632ZCLAUR88.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_stddef-8BGT99IZST19F89WAF6BQNOPE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/SwiftShims-IK418BDGJP6FKNZ7IYFH8JCX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_stdbool-37A4PMUT9Z0SH5KJ5Y3CC7ERT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/DeveloperToolsSupport-1WRNECVHNNJNWPBL90SQ7994J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_stdarg-8E1JZIL0WSYRBLJ6A81CMKM78.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/ptrcheck-67LHCB3VU1X045HIU3W0WSDES.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_AvailabilityInternal-CH0JKEGMCE0VCJ4T09S98UW2Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_float-4WCE9MIJV3BH6NRC3143C8QFT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_SwiftConcurrencyShims-8T3OWFMIAPZJWJUK5C0KGAO9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_DarwinFoundation1-2ER5BY1PIDEH510OJGF7WKI1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_limits-3L32S3W4IT2ILZH652DBHZFRE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_DarwinFoundation2-3EDOWD3NKDS0Y6O2PE4WR6PLO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/sys_types-BZVJS6IEW6F5EI5FB59M24CGV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_tgmath-2E93O2JLXE8M6F5P2WASQR513.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_stdint-C3UMW0AMBZEDOB4IZIENEOIST.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_DarwinFoundation3-6ZK5RI2PFT0V6SUOUABDKNQ8Y.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_intrinsics-DCG16UORGC46QR8KSNFU1RDPZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_stdatomic-E7E0VZFZBUX19HSAURJ0BEUGP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_Builtin_inttypes-5G7IUPF22GWY15V73Z1ONLZ6B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Darwin-263QN8ELJQ064YW07QZ8K7D4R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/simd-DUN1R912RMNY3YVNGSG8BWDF5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/MachO-5YM70IR6056EYRQT16MW6U07N.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/ObjectiveC-44D9NS2N5JX15824LNWF9NFND.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/os_object-2OBTT9SC93KUZOFFT5YT5WU2D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/os_workgroup-5R2CRLDGVSH058YDW8AM4MURI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Spatial-13PJZRN0XWLF6DHF0CDB9X6EI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Dispatch-JRJKO27ONOJRX9S0U7MJDQ8P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/dnssd-1FTZ8ZLD80UNQZEIO4U5FD9F6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreFoundation-2PJFWIMKU6F8YX3HBCJ4NDVF8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/XPC-A02TIT4V2YNDMUVDCH6EGNUQ6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/os-DFV9PEMQ7LCO52F5SVGRNLWW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CFNetwork-WL7MT7EZBNB2TNNAUILP3WT5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Security-DVICHDETB4BSGUEEZKCRUQRJT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreGraphics-F322DZWMHTRVAQ2H2MPHM6Q14.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Foundation-26ZM9DLDBTXP2T36RNDHVOY5W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreText-6609SIS2K6IL0KCTQZ6D3U2L6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/ImageIO-77Z14TC0VN9RGCTIRQ5584G6T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/UniformTypeIdentifiers-37EIXYXPRD12G3QWL14M0PWJ5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreTransferable-5JD5XG0Z5NRV6D2ZZQPHCR9F3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Network-7BDC5V2I96P4PCZXAIEJH0994.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Accessibility-DJL0AQEPHNGBXVSU35HOMXZQ2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/UIUtilities-DM3EC5MYCKVM4G2AFPQ3MZUSI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/_LocationEssentials-BU6VFNLI658UIZHGVI3KCEKRH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreData-6WYR7M0QFFNXSFH3XGB7VUBBX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Symbols-9XV37I9EAX4EEQ7M13WR9RTZS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/DataDetection-341WETMRD414OQ4A4OIVNYJQ2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/OSLog-80CARIH6V1NH1EFEQCDP2Y3KS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/UserNotifications-1O69GFDSD62N76AT5VSVA7K28.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreLocation-6VHX4LPTHZCFWZ5HQOU6NKB1D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/FileProvider-CT9AFWL89TQNDHH53B7D5WGKA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/IOSurface-A4U4VWIOMCVP3IUB1Z65UYZTC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Metal-5A8T6HEP1FN4CBBEWYZC8EMA0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/OpenGLES-E1N8UJ498KJHRDRM4GKNBKBW6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreMotion-AGXG082VZ0DXWI0EZ5AEC88UC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreVideo-489S392O13OXIUERTX2HLVCMD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/CoreImage-BIKM97X00XUTJPOXZBOSORRN2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/QuartzCore-3866HHV3FF5LQQFVGOVMWVT3U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/SwiftUICore-D9UX8Y182YE2CEXJZ0T5JX15T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/UIKit-6Z5YXT6LAEJ5G5PLGS4NCWCNT.pcm
+
+LinkAssetCatalog /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Assets.xcassets (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-linkAssetCatalog --thinned /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/thinned --thinned-dependencies /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist_unthinned --output /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app --plist-output /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Assets.car (in target 'FrostlineRemote' from project 'FrostlineRemote')
+note: Emplaced /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/AppIcon60x60@2x.png (in target 'FrostlineRemote' from project 'FrostlineRemote')
+note: Emplaced /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/AppIcon76x76@2x~ipad.png (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+ProcessInfoPlistFile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Info.plist /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Info.plist (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-infoPlistUtility /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/assetcatalog_generated_info.plist -requiredArchitecture arm64 -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Info.plist
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/SwiftUI-13DOWV2JWMZXG0KH8A59FIOGL.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ FrostlineRemote (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+EmitSwiftModule normal arm64 (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ StickMath.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemoteKit/Sources/FrostlineRemoteKit/StickMath.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemoteKit/Sources/FrostlineRemoteKit/StickMath.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ GeneratedAssetSymbols.swift /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ Settings.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Settings.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Settings.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ RemoteProtocol.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemoteKit/Sources/FrostlineRemoteKit/RemoteProtocol.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/FrostlineRemoteKit/Sources/FrostlineRemoteKit/RemoteProtocol.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ StickPadView.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/StickPadView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/StickPadView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ ContentView.swift,\ ControlState.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/ContentView.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/ControlState.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/ContentView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/ControlState.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ SettingsView.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/SettingsView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/SettingsView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ Haptics.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Haptics.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/Haptics.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ FrostlineRemoteApp.swift,\ GyroController.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/FrostlineRemoteApp.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/GyroController.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/FrostlineRemoteApp.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/GyroController.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftCompile normal arm64 Compiling\ RemoteConnection.swift /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/RemoteConnection.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftCompile normal arm64 /Users/davidbrommer/Projekte/Frostline/FrostlineRemote/App/RemoteConnection.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for FrostlineRemote (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriver\ Compilation\ Requirements FrostlineRemote normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FrostlineRemote -Onone @/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -F /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache -output-file-map /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -sdk-module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_const_extract_protocols.json -Xcc -iquote -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-generated-files.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-own-target-headers.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-target-headers.hmap -Xcc -iquote -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-project-headers.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/include -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources-normal/arm64 -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/arm64 -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-Swift.h -working-directory /Users/davidbrommer/Projekte/Frostline/FrostlineRemote -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling Settings.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftMergeGeneratedHeaders /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/FrostlineRemote-Swift.h /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-Swift.h (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-swiftHeaderTool -arch arm64 /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-Swift.h -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/FrostlineRemote-Swift.h
+
+Copy /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/arm64-apple-ios.swiftmodule /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftmodule (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftmodule /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/arm64-apple-ios.swiftmodule
+
+Copy /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/arm64-apple-ios.swiftdoc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftdoc (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftdoc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/arm64-apple-ios.swiftdoc
+
+Copy /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/arm64-apple-ios.abi.json /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.abi.json (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.abi.json /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/arm64-apple-ios.abi.json
+
+Copy /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftsourceinfo (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftsourceinfo /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling GeneratedAssetSymbols.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling StickMath.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RemoteProtocol.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Haptics.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RemoteConnection.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ContentView.swift, ControlState.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling StickPadView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling FrostlineRemoteApp.swift, GyroController.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SettingsView.swift (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+SwiftDriver\ Compilation FrostlineRemote normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FrostlineRemote -Onone @/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -F /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache -output-file-map /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -sdk-module-cache-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_const_extract_protocols.json -Xcc -iquote -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-generated-files.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-own-target-headers.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-all-target-headers.hmap -Xcc -iquote -Xcc /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-project-headers.hmap -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/include -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources-normal/arm64 -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources/arm64 -Xcc -I/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-Swift.h -working-directory /Users/davidbrommer/Projekte/Frostline/FrostlineRemote -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib normal (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -O0 -L/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos -L/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -F/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos -F/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -filelist /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.LinkFileList -install_name @rpath/FrostlineRemote.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.swiftmodule @/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote-linker-args.resp -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -Xlinker -no_adhoc_codesign -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib
+
+ConstructStubExecutorLinkFileList /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-ExecutorLinkFileList-normal-arm64.txt (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    construct-stub-executor-link-file-list /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'FrostlineRemote' from project 'FrostlineRemote')
+
+Ld /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote normal (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -O0 -L/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -F/Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -no_deduplicate -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote-ExecutorLinkFileList-normal-arm64.txt /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote
+
+CopySwiftLibs /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-swiftStdLibTool --copy --verbose --sign 209F4CD885A1F6D41BE75A86E22B4EBE78F419CE --scan-executable /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib --scan-folder /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Frameworks --scan-folder /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/PlugIns --scan-folder /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/SystemExtensions --scan-folder /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Extensions --platform iphoneos --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name FrostlineRemote --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier app.frostline.remote --output /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app --target-triple arm64-apple-ios17.0 --binary-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote --dependency-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote_dependency_info.dat --stringsdata-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftFileList --metadata-file-list /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyMetadataFileList --static-metadata-file-list /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyStaticMetadataFileList --swift-const-vals-list /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/Objects-normal/arm64/FrostlineRemote.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-11-13 17:08:11.356 appintentsmetadataprocessor[95371:21363709] Starting appintentsmetadataprocessor export
+2026-11-13 17:08:11.361 appintentsmetadataprocessor[95371:21363709] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+AppIntentsSSUTraining (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Info.plist --temp-dir-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/ssu --bundle-id app.frostline.remote --product-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app --extracted-metadata-path /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Metadata.appintents --metadata-file-list /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.DependencyMetadataFileList --source-file /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/Info.plist --archive-ssu-assets
+2026-11-13 17:08:11.381 appintentsnltrainingprocessor[95372:21363715] Parsing options for appintentsnltrainingprocessor
+2026-11-13 17:08:11.382 appintentsnltrainingprocessor[95372:21363715] Starting AppIntents SSU YAML Generation
+2026-11-13 17:08:11.384 appintentsnltrainingprocessor[95372:21363715] No AppShortcuts found - Skipping.
+
+CodeSign /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+    Signing Identity:     "Apple Development: david.brommer@icloud.com (5DY28C659X)"
+    Provisioning Profile: "iOS Team Provisioning Profile: *"
+                          (c102a65b-5897-4476-9e9b-c9453adcc9d0)
+    
+    /usr/bin/codesign --force --sign 209F4CD885A1F6D41BE75A86E22B4EBE78F419CE --timestamp\=none --generate-entitlement-der /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/FrostlineRemote.debug.dylib
+
+CodeSign /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/__preview.dylib (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+    Signing Identity:     "Apple Development: david.brommer@icloud.com (5DY28C659X)"
+    Provisioning Profile: "iOS Team Provisioning Profile: *"
+                          (c102a65b-5897-4476-9e9b-c9453adcc9d0)
+    
+    /usr/bin/codesign --force --sign 209F4CD885A1F6D41BE75A86E22B4EBE78F419CE --timestamp\=none --generate-entitlement-der /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app/__preview.dylib
+
+CodeSign /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    
+    Signing Identity:     "Apple Development: david.brommer@icloud.com (5DY28C659X)"
+    Provisioning Profile: "iOS Team Provisioning Profile: *"
+                          (c102a65b-5897-4476-9e9b-c9453adcc9d0)
+    
+    /usr/bin/codesign --force --sign 209F4CD885A1F6D41BE75A86E22B4EBE78F419CE --entitlements /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Intermediates.noindex/FrostlineRemote.build/Debug-iphoneos/FrostlineRemote.build/FrostlineRemote.app.xcent --timestamp\=none --generate-entitlement-der /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app
+
+RegisterExecutionPolicyException /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-RegisterExecutionPolicyException /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app
+
+Validate /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    builtin-validationUtility /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app (in target 'FrostlineRemote' from project 'FrostlineRemote')
+    cd /Users/davidbrommer/Projekte/Frostline/FrostlineRemote
+    /usr/bin/touch -c /Users/davidbrommer/Projekte/Frostline/Ausgabe/ios-build/Build/Products/Debug-iphoneos/FrostlineRemote.app
+
+** BUILD SUCCEEDED **
+

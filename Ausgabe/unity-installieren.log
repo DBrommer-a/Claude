@@ -1,0 +1,154 @@
+[install-state] file-claims-store: swept claims of dead pid=90833
+Progress:
+[Unity (6000.3.28f1)] downloading 0.00%
+[93812:1113/170645.915841:ERROR:storage/browser/quota/quota_database.cc:988] Could not open the quota database, resetting.
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 1.00%
+[93812:1113/170647.006282:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 2.00%
+[93812:1113/170648.012389:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 3.00%
+[93812:1113/170649.019417:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[93812:1113/170650.029563:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 4.00%
+[93812:1113/170651.041739:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 5.00%
+[93812:1113/170652.048420:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 6.00%
+[93812:1113/170653.057901:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 7.00%
+[93812:1113/170654.070675:ERROR:content/browser/indexed_db/instance/leveldb/backing_store.cc:237] Failed to open LevelDB database from /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb,IO error: /Users/davidbrommer/Library/Application Support/UnityHub/IndexedDB/file__0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 8.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 9.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 10.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 11.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 12.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 13.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 14.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 15.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 16.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 17.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 18.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 19.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 20.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 21.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 22.00%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 23.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 24.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 25.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 26.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 27.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 28.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 29.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 30.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 31.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 32.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 33.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 34.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 35.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 36.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 37.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 38.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 39.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 40.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 41.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 42.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 43.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 44.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 45.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 46.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 47.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 48.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 49.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 50.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 51.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 52.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 53.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 54.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 55.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 56.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 57.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 58.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 59.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 60.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 61.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 62.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 63.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 64.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 65.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 66.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 67.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 68.01%
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 69.01%
+[93812:1113/170826.937546:ERROR:content/browser/gpu/gpu_process_host.cc:1035] GPU process exited unexpectedly: exit_code=15
+[93812:1113/170827.006879:ERROR:content/browser/network_service_instance_impl.cc:650] Network service crashed or was terminated, restarting service.
+[2A[0JProgress:
+[Unity (6000.3.28f1)] downloading 69.01%

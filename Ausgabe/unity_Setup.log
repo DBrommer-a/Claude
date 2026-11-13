@@ -1,0 +1,461 @@
+Unity Editor version:    6000.6.9f1 (8c45277fb9c5)
+Branch:                  6000.6/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.5.2 (Build 25F84)
+Darwin version:          25.5.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Date:                    2026-11-13T16:22:52Z
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 21478)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 21482)
+VBCSCompiler prewarm took 2.90 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T16:22:52.41648Z"
+Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-quit
+-projectPath
+/Users/davidbrommer/Projekte/Frostline/Frostline
+-executeMethod
+Frostline.EditorTools.FrostlineCommandLine.Setup
+-logFile
+/Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_Setup.log
+Successfully changed project path to: /Users/davidbrommer/Projekte/Frostline/Frostline
+/Users/davidbrommer/Projekte/Frostline/Frostline
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [8423480704]  Target information:
+
+Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 1077100684 [EditorId] 1077100684 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 1077100684 [EditorId] 1077100684 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8423480704] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8423480704] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-21448" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.19.0'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-davidbrommer"
+[Licensing::IpcConnector] LicenseClient-davidbrommer channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T16:22:52.914988Z"
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 81943af8af7b172a9097ab3c851ca751
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052672
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.19.0+4cc3dda
+  Session Id:              3ee07d34997f449e83eb3940043840e3
+  Correlation Id:          db9bad02f50b48e9f242c4f497e1c413
+  External correlation Id: 3364413901829614198
+  Machine Id:              VLvnnjBZADzrEVJVmAYFwzJg3ro=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.50s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T16:22:53.416849Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 9072485318181-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 1.00s
+[Licensing::Module] Licensing is initialized (took 0.73s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Launching Unity Data Store - /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/Unity.DataStore 
+Unity Data Store artifact dir = Library/DataStore, working dir = /Users/davidbrommer/Projekte/Frostline/FrostlineUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.9f1 (8c45277fb9c5)
+[EntityIdStore] init: VM path (explicit commit), pageSize=16384, blockCount=262144, entitiesPerBlock=1024, blocksPerSlotPage=0, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/davidbrommer/Projekte/Frostline/Frostline/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+ preferred device: Apple M4 (high power)
+Metal devices available: 1
+0: Apple M4 (high power)
+Using device Apple M4 (high power)
+Initializing Metal device caps: Apple M4
+Mac GPU Family: 2
+Apple GPU Family: 9
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Initialize mono
+Mono path[0] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/Managed'
+Mono path[1] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000307 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.414 seconds
+Domain Reload Profiling: 657ms
+	BeginReloadAssembly (43ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (163ms)
+		LoadAssemblies (40ms)
+		TypeCache.Refresh (114ms)
+			TypeCache.ScanAssembly (105ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (415ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (44ms)
+			ProcessInitializeOnLoadMethodAttributes (223ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 50 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.cloud.gltfast@6.21.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.cloud.gltfast@15da4aaf9675)
+    com.unity.inputsystem@1.20.1 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.inputsystem@2436e68c60c4)
+    com.unity.netcode.gameobjects@2.14.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.netcode.gameobjects@297aac4ac093)
+    com.unity.services.multiplayer@2.4.1 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.multiplayer@cf2613f41536)
+    com.unity.services.qos@1.5.1 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.qos@49c69eeeb35e)
+    com.unity.services.core@1.18.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.core@3464cb68d709)
+    com.unity.services.wire@1.6.2 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.wire@2681a6cbc3fb)
+    com.unity.services.deployment@1.7.2 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.deployment@c07c64f9804b)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.nuget.newtonsoft-json@4dfd81071c64)
+    com.unity.services.authentication@3.8.1 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.authentication@28eacf73eb7a)
+    com.unity.nuget.mono-cecil@1.11.6 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.services.deployment.api@1.1.3 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.services.deployment.api@9becf6da0f1a)
+    com.unity.searcher@4.9.5 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.profiling.core@8a49f7027d06)
+  Built-in packages:
+    com.unity.render-pipelines.high-definition@17.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.render-pipelines.high-definition@6fc877b69258)
+    com.unity.test-framework@1.8.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.test-framework@01a8b42f9cf6)
+    com.unity.ugui@2.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.ugui@ff4f88904a57)
+    com.unity.modules.animation@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.animation)
+    com.unity.modules.audio@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.audio)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.physics)
+    com.unity.modules.physicscore2d@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.tetgen)
+    com.unity.modules.timelinefoundation@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.uielements)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.unitywebrequest)
+    com.unity.modules.video@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.video)
+    com.unity.modules.xr@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.hierarchycore)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.physics2d)
+    com.unity.ext.nunit@2.1.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.ext.nunit@0198eae3b53e)
+    com.unity.transport@6.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.transport@94c88ce470f3)
+    com.unity.collections@6.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.collections@c70d71c1212e)
+    com.unity.render-pipelines.core@17.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.render-pipelines.core@77e675a23c5f)
+    com.unity.shadergraph@17.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.shadergraph@807b608040c3)
+    com.unity.visualeffectgraph@17.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.visualeffectgraph@7204a6b6bf9d)
+    com.unity.render-pipelines.high-definition-config@17.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.render-pipelines.high-definition-config@399121e4b3f1)
+    com.unity.burst@2.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.burst@626e66ab421b)
+    com.unity.mathematics@1.4.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.mathematics@8306a64d0cd6)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.modules.androidjni)
+    com.unity.test-framework.performance@6.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.test-framework.performance@816c370aad5b)
+    com.unity.graph-authoring@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.graph-authoring@cfd2588851ee)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/davidbrommer/Projekte/Frostline/Frostline
+DisplayProgressbar: Compiling Scripts
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 0s938ms
+[ 860/1171  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1167/1171  0s] Csc Library/Bee/artifacts/200b0aE.dag/Frostline.Editor.dll (+2 others)
+Assets/Frostline/Editor/HdrpAccess.cs(26,43): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+[1168/1171  0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Frostline.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Frostline.Editor.dll, with 141 defines and 313 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, Unity.Netcode.Editor.CodeGen.INetworkMessageILPP, Unity.Netcode.Editor.CodeGen.INetworkSerializableILPP, Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP, Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running Unity.Netcode.Editor.CodeGen.INetworkMessageILPP
+running Unity.Netcode.Editor.CodeGen.INetworkSerializableILPP
+running Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP
+running Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP
+[1169/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Editor.pdb
+[1170/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Editor.dll
+*** Tundra build success (0.92 seconds), 5 items updated, 1171 evaluated
+Assets/Frostline/Editor/HdrpAccess.cs(26,43): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+AssetDatabase: script compilation time: 1.313624s
+Begin MonoManager ReloadAssembly
+Total cache size 253363764
+Total cache size after purge 253363764, took 00:00:00.0975667
+Symbol file LoadedFromMemory is not a mono symbol file
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.661 seconds
+Domain Reload Profiling: 1140ms
+	BeginReloadAssembly (148ms)
+		DisableScriptedObjects (45ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (5ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (285ms)
+		LoadAssemblies (123ms)
+		TypeCache.Refresh (87ms)
+			TypeCache.ScanAssembly (78ms)
+		AnalyzeDomain (34ms)
+			BuildScriptInfoCaches (30ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (662ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (72ms)
+			ProcessInitializeOnLoadMethodAttributes (414ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Starting new worker id: 0 with log in /Users/davidbrommer/Projekte/Frostline/Frostline/Logs/AssetImportWorkerHW0.log
+Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/UnityShaderCompiler
+Refreshing native plugins compatible for Editor in 3.06 ms, found 0 plugins.
+
+Asset Pipeline Refresh (id=d0a8ad955763e49bea82948eec4020ce): Total: 3.124 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1148 ms
+		Asset DB Callback time: managed=118 ms, native=12 ms
+		Scripting: domain reloads=1, domain reload time=497 ms, compile time=1315 ms, other=32 ms
+		Project Asset Count: scripts=1694, non-scripts=2761
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 8.478ms
+	ApplyChangesToAssetFolders: 0.214ms
+	Scan: 283.563ms
+	Collect global state as custom dependencies: 10.804ms
+	OnSourceAssetsModified: 0.259ms
+	CategorizeScriptCompilationAssets: 17.172ms
+	ProcessAssetsWithTransientArtifactChanges: 41.959ms
+	CategorizeAssets: 53.844ms
+	CompileScripts: 1314.966ms
+	ImportOutOfDateAssets: 670.774ms (665.182ms without children)
+		UnloadImportedAssets: 3.730ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.504ms
+		ImportSchedulerStart: 1.313ms
+	PostProcessAllAssets: 118.941ms
+		VCAutoAddAssetPostprocess 0.415ms
+		XRBuildSystem.XRAssetImported 0.113ms
+		MonoPostProcessAllAssets: 118.215ms
+			AssetPostprocessorProxy.OnPostprocessAllAssets 14.983ms
+			AssetPostprocessor.OnPostprocessAllAssets 14.441ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 12.405ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 9.055ms
+			SyncVS.PostprocessSyncProject 4.103ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 3.590ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 3.530ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.645ms
+			NetworkPrefabProcessor.OnPostprocessAllAssets 1.371ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 1.055ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.834ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.788ms
+			AssetChangedListener.OnPostprocessAllAssets 0.772ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.654ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.599ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.567ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.298ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.279ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.248ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.184ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.179ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.152ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.149ms
+			AssetEvents.OnPostprocessAllAssets 0.133ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.130ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.124ms
+			PostProcessor.OnPostprocessAllAssets 0.118ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.096ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.092ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.079ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.071ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.059ms
+	PostAssetChangesProfiler: 4.441ms
+	UnloadStreamsBegin: 0.606ms
+	PersistCurrentRevisions: 0.090ms
+	GenerateScriptTypeHashes: 0.894ms
+	GenerateScriptTypeSerializationHashes: 1.714ms
+	Untracked: 596.183ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 0.101ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Frostline
+2026-11-13 17:22:57.645 Unity[21448:21473093] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7f78d0d20 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2026-11-13 17:22:57.775 Unity[21448:21473093] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7f78d23a0 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Unloading 78 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7269 unused Assets / (13.8 MB). Loaded Objects now: 8437.
+Memory consumption went from 0.63 GB to 0.61 GB.
+Total: 8.492750 ms (FindLiveObjects: 0.505167 ms CreateObjectMapping: 0.146750 ms MarkObjects: 4.941125 ms  DeleteObjects: 2.825291 ms)
+
+Frostline: Projekt einrichten …
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:55)
+Frostline.EditorTools.FrostlineCommandLine:Setup () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:18)
+
+(Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 55)
+
+Importing 'GUID: 00000000000000006100000000000000 - Path: ProjectSettings/GraphicsSettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000006100000000000000' -> (Import Result ID: '7e5a33b2c85cbe8459e3f698815be655') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=a2dcdb8bc9503711bc0f2e2d72cfd36c DependenciesID=0a13ab26ecf43d4497655a49aa12bc20 StaticDependenciesID=15e86efd94564a289a6869f0589d4b3a 
+Importing 'GUID: 127e6a63d30d943ff8bc7dc7c8d08851 - Path: Assets/Frostline/Settings/HDRP_Low.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 127e6a63d30d943ff8bc7dc7c8d08851' -> (Import Result ID: '765bdbd7458427e0e6e9dfe281ac8a18') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=5920abe27e695ab236f3a10ffdaa5c25 DependenciesID=db3906ff8dcb19535b6bfbb308834a10 StaticDependenciesID=4ad3fbea493c4fb8ec4e895d7ce43b02 
+Importing 'GUID: 067451b03b09c4c389b9460debdc0846 - Path: Assets/Frostline/Settings/HDRP_Ultra.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 067451b03b09c4c389b9460debdc0846' -> (Import Result ID: 'c86eb0821e8517a2f754682016cf2568') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3ad819e9a112d6e58285c7fc933f6f10 DependenciesID=16e0e8c1ecede83bb6cdbb15ddb7860c StaticDependenciesID=45d0b5da05055d07db5846947cddd1b6 
+Importing 'GUID: 27a0a44961f3a455b9ec96f5f2246fb9 - Path: Assets/Frostline/Settings/HDRP_High.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 27a0a44961f3a455b9ec96f5f2246fb9' -> (Import Result ID: '26de3ccc257a124fd4242d023de354c5') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6a615e00465515118180c67ecafcb0f0 DependenciesID=52ca245df4546bc9b3925436a6305451 StaticDependenciesID=b673768cd8fc906389c4a807615ab961 
+Importing 'GUID: edb9f07004cc74fefbf536a1ea0263d4 - Path: Assets/Frostline/Settings/HDRP_Medium.asset' with importer (NativeFormatImporter)
+Imported 'GUID: edb9f07004cc74fefbf536a1ea0263d4' -> (Import Result ID: 'af3501ced1756ec716b3f3aadab21b7d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0b64cf1709bc04eb6be88d602547167e DependenciesID=f130d71deb49ad53f6b9c37374acfeeb StaticDependenciesID=cdb7864b67e54b737ae5c5ae3d241b30 
+Asset Pipeline Refresh (id=198919760f9544a998cf42f6bdbe7d34): Total: 0.060 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d0d5c9b65a47943ba9057b51170939a1): Total: 0.065 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Frostline] Fertig eingerichtet:
+
+• HDRP mit vier Qualitätsstufen (Low, Medium, High, Ultra), Wasser und Volumenwolken aktiv
+• Interne Auflösung 67 % auf „High“, hochskaliert mit STP
+• Physik mit 500 Hz
+• Farbraum Linear
+
+Falls Unity jetzt Shader neu kompiliert, kurz warten. Danach: Frostline > 2 · Prototyp-Szene erstellen.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Frostline.EditorTools.EditorPrompts:Dialog (string,string,string) (at Assets/Frostline/Editor/EditorPrompts.cs:19)
+Frostline.EditorTools.FrostlineProjectSetup:Run () (at Assets/Frostline/Editor/FrostlineProjectSetup.cs:79)
+Frostline.EditorTools.FrostlineCommandLine/<>c:<Setup>b__0_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:20)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
+Frostline.EditorTools.FrostlineCommandLine:Setup () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:18)
+
+(Filename: Assets/Frostline/Editor/EditorPrompts.cs Line: 19)
+
+Frostline: Projekt einrichten fertig.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:63)
+Frostline.EditorTools.FrostlineCommandLine:Setup () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:18)
+
+(Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 63)
+
+MonoPathRemapper: Attempts to remap: 16356; Successful remaps: 0
+Thread 0x4366f7000 may have been prematurely finalized
+Thread 0x420ae3000 may have been prematurely finalized
+Serialized file version minimum: 23, current 23
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x175913000 may have been prematurely finalized
+Thread 0x17599f000 may have been prematurely finalized
+Thread 0x175bcf000 may have been prematurely finalized
+Thread 0x175b43000 may have been prematurely finalized
+Thread 0x175c5b000 may have been prematurely finalized
+Thread 0x175a2b000 may have been prematurely finalized
+Thread 0x175ab7000 may have been prematurely finalized
+Thread 0x175ce7000 may have been prematurely finalized
+Shut down UDS service system complete
+debugger-agent: Unable to listen on 41
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0 channel disconnected successfully.
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown

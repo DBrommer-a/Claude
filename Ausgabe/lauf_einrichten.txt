@@ -1,0 +1,2 @@
+▶ Unity: Frostline.EditorTools.FrostlineCommandLine.Setup  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_Setup.log)
+✓ Frostline.EditorTools.FrostlineCommandLine.Setup

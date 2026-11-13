@@ -1,0 +1,42 @@
+▶ Unity: Frostline.EditorTools.FrostlineCommandLine.BuildIsland  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_BuildIsland.log)
+✗ fehlgeschlagen, letzte Zeilen:
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:63)
+Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
+
+(Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 63)
+
+MonoPathRemapper: Attempts to remap: 19466; Successful remaps: 608
+Thread 0x4387e7000 may have been prematurely finalized
+Serialized file version minimum: 23, current 23
+Thread 0x40061f000 may have been prematurely finalized
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x1743c7000 may have been prematurely finalized
+Thread 0x17470f000 may have been prematurely finalized
+Thread 0x1744df000 may have been prematurely finalized
+Thread 0x174683000 may have been prematurely finalized
+Thread 0x17479b000 may have been prematurely finalized
+Thread 0x174453000 may have been prematurely finalized
+Thread 0x1745f7000 may have been prematurely finalized
+Thread 0x174827000 may have been prematurely finalized
+Thread 0x17456b000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0 channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Shut down UDS service system complete
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+debugger-agent: Unable to listen on 41
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
