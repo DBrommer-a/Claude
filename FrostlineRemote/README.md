@@ -5,7 +5,7 @@ optional Gyro-Steuerung, Haptik und Telemetrie vom Mac.
 
 ## Starten
 
-1. `FrostlineRemote.xcodeproj` in Xcode 15 oder neuer öffnen.
+1. `FrostlineRemote.xcodeproj` in Xcode 15 oder neuer öffnen (erzeugt mit XcodeGen aus `project.yml`).
 2. Ziel „FrostlineRemote“ › Signing & Capabilities: dein Team wählen. Bei Bedarf die
    Bundle ID `app.frostline.remote` auf eine eigene ändern.
 3. iPhone anschließen, Play. Beim ersten Start fragt iOS nach „Lokales Netzwerk“: erlauben.

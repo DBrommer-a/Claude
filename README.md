@@ -1,57 +1,78 @@
 # Frostline
 
-FPV-Drohnen-Simulator in Unity 6 HDRP auf einer eisigen Insel. Dieses Repository
-enthält den Stand für **Woche 1–2 (Prototyp)** aus dem Gesamtplan: Flugphysik,
-Sender-Eingabe, Ozean, Volumenwolken, ein Terrain-Tile und die fps-Messung für
-das erste Gate („60 fps im Build, Physik gewählt, dann kaufen“).
+FPV-Drohnen-Simulator in Unity 6 HDRP auf einer eisigen Insel von 4 × 4 km, mit echtem
+FPV-Sender oder iPhone als Controller und Multiplayer für bis zu 8 Drohnen.
+
+**Was du am Mac tun musst, steht in [AUFGABEN.md](AUFGABEN.md).**
+
+## Stand
+
+| Bereich | Stand |
+| --- | --- |
+| Flugphysik | fertig, 59 Tests: Motoren mit Trägheit, Akku mit Spannungseinbruch, Betaflight-/Actual-Rates, Raten-PID, Airmode, Acro/Angle/Horizon, Turtle, Failsafe, 500 Hz |
+| Steuerung | USB-Sender mit Kalibrier-Assistent, Gamepad, Tastatur, iPhone-App |
+| Insel | ganze Karte als spielbarer Rohbau in Originalgröße: alle Zonen, Einfluglöcher, Wald, Wolkendecke |
+| Spielmodi | Freestyle mit 12 Sammelringen, 3 Rennstrecken mit Bestzeit und Ghost, Replay, Signalverlust am Rand, Checkpoints |
+| Wetter | klar, tiefe Wolken, Schneesturm; Tageszeit über Physically Based Sky; Wind auf die Drohne |
+| Multiplayer | Relay + Lobby mit Raum-Code, Geister-Drohnen mit Interpolation, Rennen für alle, Fangen |
+| iPhone-App | SwiftUI, Multitouch-Sticks, Gyro, Haptik, Telemetrie, 250 Pakete/s |
+| Higgsfield | Concept-Art je Zone, Testdrohne als 3D-Modell, Ambient-Sounds, App-Icon, Ladebildschirm |
+| Optik | Platzhalter-Texturen und Rohbau-Geometrie; die echten Assets kommen nach dem 60-fps-Gate |
+
+Alles ist gegen Unity 6.3 kompiliert, aber noch nicht im Editor gestartet worden.
 
 ## Öffnen
 
-1. Unity Hub installieren und **Unity 6000.3.28f1 (Unity 6.3 LTS)** mit dem
-   Modul **Mac Build Support** hinzufügen. Eine neuere 6000.3-Version geht auch.
-2. In Unity Hub „Add project from disk“ → den Ordner `Frostline` wählen.
-   Beim ersten Öffnen lädt Unity HDRP und das Input System; das dauert einige Minuten.
-3. Menü **Frostline › 1 · Projekt einrichten**. Richtet HDRP mit den
-   Qualitätsstufen Low/Medium/High/Ultra ein (High: 67 % Auflösung + STP),
-   aktiviert Wasser und Wolken und stellt die Physik auf 500 Hz.
-   Danach Unity einmal neu starten, wenn der Dialog darum bittet.
-4. Menü **Frostline › 2 · Prototyp-Szene erstellen**. Baut die Szene
-   `Assets/Frostline/Scenes/Prototype.unity` komplett per Skript.
-5. **Play** drücken.
+1. **Unity 6000.3.28f1** mit Mac Build Support installieren, Ordner `Frostline` in Unity Hub öffnen.
+2. **Frostline › 1 · Projekt einrichten** (HDRP, Qualitätsstufen, 500 Hz), Unity neu starten.
+3. **Frostline › 4 · Insel erstellen (4 × 4 km)**: die ganze Karte.
+   Oder **2 · Prototyp-Szene** für einen schnellen Test auf 2 × 2 km.
+4. Play.
 
-## Steuerung
+Weitere Menüpunkte: **3 · Mac-Build erstellen** (für die fps-Messung) und
+**5 · Megascans importieren** (Mask-Maps, Materialien, Terrain-Layer).
 
-| Gerät | So geht's |
+## Tasten
+
+| Taste | Funktion |
 | --- | --- |
-| FPV-Sender (z. B. RadioMaster Pocket, EdgeTX) | Per USB-C anschließen, am Sender „USB Joystick (HID)“ wählen, HF-Module aus. Im Spiel F1 → „Sender kalibrieren“. Der Assistent erkennt Kanalreihenfolge und Richtung selbst. |
-| Gamepad (PS5, Xbox) | Linker Stick Gas/Gier, rechter Stick Nick/Roll. A/✕ schärfen, Y/△ Modus, X/□ Reset, B/○ Turtle. |
-| Tastatur (Notlösung) | W/S Gas, A/D Gier, Pfeiltasten Nick/Roll, Leertaste schärfen, M Modus, R Reset, T Turtle. |
+| F1 | Menü: Spiel (Rennen, Wetter, Tageszeit), Sender, Rates, Drohne, Grafik, Benchmark |
+| F2 | Multiplayer: Raum hosten oder per Code beitreten |
+| F9 | fps-Messung (60 s fester Flug) |
+| P | Replay der letzten Minuten (Leertaste Pause, ←/→ springen, ↑/↓ Tempo, C Kamera, S speichern) |
+| R | zurück zum letzten Checkpoint |
+| Tastatur-Flug | W/S Gas, A/D Gier, Pfeile Nick/Roll, Leertaste schärfen, M Modus, T Turtle |
 
-**F1** Menü (Sender, Rates, Drohne, Grafik, Benchmark) · **F9** fps-Messung · **R** zurück zum Startplatz.
+## Die Insel
 
-Geschärft wird nur mit Gas ganz unten, wie bei einer echten Drohne.
+| Zone | Zum Reinfliegen |
+| --- | --- |
+| Strand (Start) | Schiffswrack auf der Seite, an beiden Enden offen |
+| Hafen, Fischerdorf | offene Lagerhalle, unter dem Pier durch, Leuchtturm-Galerie |
+| Industriegebiet | drei Hallen mit eingestürzten Dachfeldern und hängenden Bindern, Förderband-Tunnel, Schornstein (oben rein, unten raus), Kranbahn |
+| Stadt | Rohbau-Hochhaus mit offenen Etagen und Gerüst, Lücken zwischen acht Türmen |
+| Tal-Dorf, Bergdorf | offene Scheunen, Glockenstuhl, Steinbrücke |
+| Gletscher | Eistunnel in der Gletscherzunge, Felsbögen, Talabfahrt von 640 auf 110 m |
+| Wald | Baum-Slalom, unter umgestürzten Stämmen durch |
+| Wolkendecke | ab 650 m, die Gipfel ragen hinein |
 
-## Das 60-fps-Gate messen
-
-1. **Frostline › 3 · Mac-Build erstellen** (Apple Silicon, kein Development Build).
-2. Den Build starten, Qualitätsstufe „High“ lassen, **F9** drücken.
-3. Nach 60 Sekunden automatischem Flug über Meer, Insel und durch die Wolken
-   erscheint das Ergebnis. Bestanden ist es, wenn auch die langsamsten 1 % der
-   Bilder über 60 fps liegen. Der Bericht (Text + jedes einzelne Bild als CSV)
-   liegt unter `~/Library/Application Support/Frostline/Frostline/Benchmarks/`;
-   der genaue Pfad steht auch im Menü unter „Benchmark“.
-
-Im Editor gemessene Werte zählen nicht; der Editor ist auf demselben Mac deutlich langsamer.
+Rennstrecken: **Strandlinie** (durchs Wrack), **Industrie-Slalom** (durch Hallen und Tunnel),
+**Gletscher-Dive** (durch Eistunnel und Felsbogen).
 
 ## Aufbau
 
 | Ordner | Inhalt |
 | --- | --- |
-| `Assets/Frostline/Flight/Core` | Flugphysik ohne Unity-Abhängigkeit: Motoren, Propeller, Akku, Luftwiderstand, Raten-PID, Mixer mit Airmode, Betaflight- und Actual-Rates, Acro/Angle/Horizon, Turtle, Failsafe. Basiert auf KestrelFPV (MIT). |
-| `Assets/Frostline/Runtime` | Unity-Anbindung: `DroneController` (Rigidbody, 500 Hz), `StickInput` (Sender, Gamepad, Tastatur), Kalibrier-Assistent, OSD, Menü, prozeduraler Motorsound, Benchmark. |
-| `Assets/Frostline/Editor` | Projekt-Einrichtung, Szenen-Builder, Insel-Generator, Mac-Build. |
-| `Assets/Frostline/Tests` | 59 Tests der Flugphysik (Unity Test Runner oder `dotnet test`). |
-| `tools/flightcore-tests` | Führt dieselben Tests ohne Unity aus: `dotnet test` (.NET 8). |
+| `Frostline/Assets/Frostline/Flight/Core` | Flugphysik ohne Unity-Abhängigkeit (nach KestrelFPV, MIT) |
+| `Frostline/Assets/Frostline/Shared` | testbare Logik: Funkprotokoll, Rennen, Replay, Signal, Interpolation, Mask-Map |
+| `Frostline/Assets/Frostline/Runtime` | Unity-Anbindung: Drohne, Eingabe, iPhone-Empfang, Spielmodi, Wetter, Menü, OSD, Ton |
+| `Frostline/Assets/Frostline/Multiplayer` | Netcode for GameObjects, Sessions (Relay + Lobby), Geister-Drohnen |
+| `Frostline/Assets/Frostline/Editor` | Projekt-Einrichtung, Szenen- und Insel-Builder, Mac-Build, Megascans-Import |
+| `Frostline/Assets/Frostline/Tests` | 102 Tests (Unity Test Runner oder `dotnet test tools/flightcore-tests`) |
+| `FrostlineRemote` | iPhone-App mit Xcode-Projekt; `FrostlineRemoteKit` mit 13 Swift-Tests |
+| `Design/Concept` | Concept-Art aus Higgsfield als Ziel für Licht und Farben |
+
+Bei jedem Push laufen die C#- und Swift-Tests automatisch (GitHub Actions).
 
 ## Flugphysik in Zahlen (Preset „Freestyle 5"“)
 
@@ -63,16 +84,3 @@ Im Editor gemessene Werte zählen nicht; der Editor ist auf demselben Mac deutli
 | Steiggeschwindigkeit Vollgas | ca. 120 km/h |
 | Roll-Sprung auf 207 °/s | 10–90 % in ca. 40 ms, 5 % Überschwingen |
 | Rates (Standard) | Betaflight RC Rate 1,00 · Super Rate 0,70 → 667 °/s |
-
-Weitere Presets: Racer 5", Cinewhoop 3", Bebop (Original-Werte aus KestrelFPV).
-
-## Noch offen für Woche 1–2
-
-- **Gegenkandidat Yue**: „Yue Ultimate FPV Drone Physics“ ist kostenlos, muss aber
-  von dir im Asset Store geholt werden. Dann fliegen beide dieselbe Strecke mit
-  deinem Sender; das bessere Stickgefühl gewinnt.
-- **Gate-Messung auf deinem M4**: kann nur auf deinem Mac laufen (siehe oben).
-- Erst nach bestandenem Gate werden die beiden Kauf-Assets geholt.
-
-Terrain-Texturen und Drohnenmodell sind Platzhalter; Megascans und das
-Higgsfield-Modell kommen in den späteren Phasen.

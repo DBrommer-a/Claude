@@ -1,7 +1,10 @@
-# Alternative zum mitgelieferten FrostlineRemote.xcodeproj: `brew install xcodegen && xcodegen`
+# Daraus ist FrostlineRemote.xcodeproj erzeugt. Neu erzeugen: `brew install xcodegen && xcodegen`
 name: FrostlineRemote
 options:
   bundleIdPrefix: app.frostline
+  # Projektformat von Xcode 15, damit es auch mit älteren Xcode-Versionen öffnet.
+  xcodeVersion: "15.0"
+  projectFormat: xcode15_0
   deploymentTarget:
     iOS: "17.0"
 targets:
