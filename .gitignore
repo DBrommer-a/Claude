@@ -1,0 +1,32 @@
+# Unity
+Frostline/[Ll]ibrary/
+Frostline/[Tt]emp/
+Frostline/[Oo]bj/
+Frostline/[Bb]uild/
+Frostline/[Bb]uilds/
+Frostline/[Ll]ogs/
+Frostline/[Uu]ser[Ss]ettings/
+Frostline/[Mm]emoryCaptures/
+Frostline/[Rr]ecordings/
+Frostline/*.csproj
+Frostline/*.sln
+Frostline/*.slnx
+Frostline/.vs/
+Frostline/.vscode/
+Frostline/.idea/
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+crashlytics-build.properties
+
+# macOS
+.DS_Store
+
+# .NET-Testprojekt
+tools/**/bin/
+tools/**/obj/
+tools/**/TestResults/

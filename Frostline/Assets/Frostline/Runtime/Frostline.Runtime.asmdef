@@ -1,0 +1,17 @@
+{
+    "name": "Frostline.Runtime",
+    "rootNamespace": "Frostline",
+    "references": [
+        "Frostline.Flight.Core",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
