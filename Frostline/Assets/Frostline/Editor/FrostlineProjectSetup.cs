@@ -50,6 +50,7 @@ namespace Frostline.EditorTools
             EnsureFolder(SettingsFolder);
 
             PlayerSettings.colorSpace = ColorSpace.Linear;
+            PlayerSettings.companyName = "Frostline";
             PlayerSettings.productName = "Frostline";
             // Physik mit 500 Hz. Das Spiel setzt den Wert beim Start zusätzlich selbst.
             Time.fixedDeltaTime = FrostlineBootstrap.PhysicsDeltaTime;

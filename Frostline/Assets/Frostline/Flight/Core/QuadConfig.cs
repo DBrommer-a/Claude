@@ -113,6 +113,11 @@ namespace Frostline.Flight.Core
             return (QuadConfig)MemberwiseClone();
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
         // ------------------------------------------------------------------ Presets
 
         public static QuadConfig Freestyle5()

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 
 namespace Frostline
 {
@@ -22,7 +21,16 @@ namespace Frostline
 
             // Eingaben werden zeitlich auf die Physik-Schritte verteilt statt einmal pro Bild
             // gelesen. So kommen 1000 Hz vom Sender auch bei 60 Bildern pro Sekunde fein an.
-            InputSystem.settings.updateMode = InputSettings.UpdateMode.ProcessEventsInFixedUpdate;
+            // Auf einer Kopie, damit im Editor kein Einstellungs-Asset des Projekts verändert wird.
+            InputSettings current = InputSystem.settings;
+            if (current.updateMode != InputSettings.UpdateMode.ProcessEventsInFixedUpdate)
+            {
+                InputSettings copy = Object.Instantiate(current);
+                copy.name = "Frostline Input Settings";
+                copy.hideFlags = HideFlags.HideAndDontSave;
+                copy.updateMode = InputSettings.UpdateMode.ProcessEventsInFixedUpdate;
+                InputSystem.settings = copy;
+            }
             InputSystem.pollingFrequency = 500f;
         }
     }

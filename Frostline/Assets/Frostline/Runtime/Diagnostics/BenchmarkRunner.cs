@@ -70,6 +70,8 @@ namespace Frostline.Diagnostics
         public float lowAltitude = 60f;
         [Tooltip("Oberster Punkt des Flugs. In die Wolkenschicht legen.")]
         public float highAltitude = 800f;
+        [Tooltip("Mindestabstand zum Boden, damit der Flug nicht durch Berge führt.")]
+        public float minimumClearance = 40f;
 
         readonly List<float> frameMs = new List<float>(8192);
         float elapsed;
@@ -144,7 +146,22 @@ namespace Frostline.Diagnostics
             float angle = t * Mathf.PI * 2f;
             float r = radius * (0.75f + 0.25f * Mathf.Cos(angle * 3f));
             float height = Mathf.Lerp(lowAltitude, highAltitude, 0.5f - 0.5f * Mathf.Cos(angle));
-            return center + new Vector3(Mathf.Cos(angle) * r, height, Mathf.Sin(angle) * r);
+            Vector3 point = center + new Vector3(Mathf.Cos(angle) * r, height, Mathf.Sin(angle) * r);
+            point.y = Mathf.Max(point.y, GroundHeight(point) + minimumClearance);
+            return point;
+        }
+
+        static float GroundHeight(Vector3 point)
+        {
+            float ground = 0f; // Meeresspiegel
+            foreach (Terrain terrain in Terrain.activeTerrains)
+            {
+                Vector3 origin = terrain.transform.position;
+                Vector3 size = terrain.terrainData.size;
+                bool inside = point.x >= origin.x && point.x <= origin.x + size.x && point.z >= origin.z && point.z <= origin.z + size.z;
+                if (inside) ground = Mathf.Max(ground, terrain.SampleHeight(point) + origin.y);
+            }
+            return ground;
         }
 
         void Finish()
