@@ -10,8 +10,8 @@ deinen Mac, dein Apple- oder Unity-Konto oder deine Entscheidung.
 
 **Stand vom Mac (13.11.2026):** `frostline.sh alles` läuft auf dem MacBook Air (M4) mit
 Unity 6000.6.9f1 vom USB-Stick komplett durch: Einrichten ohne übersprungene Schritte, Insel,
-102/102 Unity-Tests, Mac-Build, 13 Screenshots in `Ausgabe/bilder/`, Messung **bestanden**
-(Medium, 1920 × 1080: Ø 154,9 fps, 1 %-Tief 127,5 fps, Bericht in `Ausgabe/benchmark_bericht.txt`).
+102/102 Unity-Tests, Mac-Build, 19 Screenshots in `Ausgabe/bilder/`, Messung **bestanden**
+(Medium, 1920 × 1080: Ø 153,5 fps, 1 %-Tief 125,8 fps, Bericht in `Ausgabe/benchmark_bericht.txt`).
 Behoben dabei: mehrdeutiges `AddHDLight` (HDRP 17.6), fehlender Texturordner, verlorene
 Bodenschichten (Insel war nur Sand), eigene Drohne im FPV-Bild, blockiges Analograuschen.
 iPhone-App: 13/13 Swift-Tests, Simulator-Build startet.
@@ -87,9 +87,16 @@ Kostenlos zum Konto hinzufügen und importieren:
 
 ## 7 · Entscheidungen
 
-- [ ] **Higgsfield Hero-Props**: Funkmast, Leuchtturm, Schiffswrack, Kran, Fischerhütte und
+- [x] **Higgsfield Hero-Props**: Funkmast, Leuchtturm, Schiffswrack, Kran, Fischerhütte und
       Rennen-Gates als 3D-Modelle, je 9 Credits, zusammen rund 54 Credits.
-      Kontostand jetzt: **128 Credits**. Laut Plan frage ich vor jeder größeren Serie: freigeben?
+      Freigegeben und erzeugt (Tripo, detaillierte Texturen, je 7,5 Credits = 45 Credits,
+      Kontostand danach **83 Credits**). Texturen auf 2K verkleinert, liegen unter
+      `Models/Requisiten/`. `PropModels` setzt sie beim Inselbau in die Platzhalter ein; deren
+      Kollision bleibt, Flugrouten, Ringe und Gates verhalten sich also wie vorher. Ausnahme Wrack:
+      Das Modell ist ein geschlossener Rumpf, die Strandlinie führt aber durchs Rennwrack. Das
+      bleibt deshalb offen, das Modell liegt als „Gestrandeter Kutter“ weiter östlich am Strand.
+      Gates zeigen ihren Zustand auch am Modell (grün = nächstes, grau = durchflogen).
+      Bilder: `Ausgabe/bilder/13–18_Requisite_*.png`.
 - [x] Optional: Unity-Tests im Editor laufen lassen (Window › General › Test Runner › EditMode › Run All).
       (102/102 per `frostline.sh tests`.)
 

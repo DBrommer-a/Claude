@@ -333,7 +333,13 @@ namespace Frostline.EditorTools
             wreckRotation = Quaternion.Euler(0f, 78f, 0f) * Quaternion.Euler(0f, 0f, 62f);
             var kit = new MeshKit();
             IslandStructures.Shipwreck(kit, mat);
+            // Das Rennwrack bleibt der gebaute, offene Rumpf: Die Strandlinie und ein Sammelring führen
+            // hindurch. Das Higgsfield-Wrack ist geschlossen und steht deshalb als gestrandeter Kutter
+            // weiter östlich am Strand, abseits der Strecke (eigene Kollision).
             Emit(kit, "Schiffswrack", zone, wreckCenter, wreckRotation);
+            Vector3 cutterCoast = IslandShape.CoastPoint(new Vector2(2680f, -50f), new Vector2(2680f, 2000f), 0.3f);
+            cutterCoast.y = IslandShape.Height(cutterCoast.x, cutterCoast.z);
+            PropModels.PlaceDecor(PropModels.Schiffswrack, "Gestrandeter Kutter", zone, cutterCoast, Quaternion.Euler(0f, 205f, 12f), 30f, 1.2f);
 
             // Treibholz
             var drift = new MeshKit();
@@ -402,7 +408,7 @@ namespace Frostline.EditorTools
             var tower = new MeshKit();
             float gallery;
             IslandStructures.Lighthouse(tower, mat, out gallery);
-            Emit(tower, "Leuchtturm", zone, lighthouseBase, Quaternion.identity);
+            PropModels.TrySwap(Emit(tower, "Leuchtturm", zone, lighthouseBase, Quaternion.identity), PropModels.Leuchtturm, PropModels.Fit.Height);
 
             // Boote am Pier
             var boats = new MeshKit();
@@ -422,7 +428,11 @@ namespace Frostline.EditorTools
                 float a = i * Mathf.PI * 2f / 7f;
                 Vector3 p = fishing.Ground + new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a)) * (35f + (float)rng.NextDouble() * 25f);
                 p.y = IslandShape.Height(p.x, p.z);
-                IslandStructures.House(huts, i % 3 == 0 ? mat.WoodOchre : mat.WoodRed, mat, p, -a * Mathf.Rad2Deg + 90f, 5.5f, 7f, 3.2f);
+                // Jede Hütte einzeln, damit das Higgsfield-Modell pro Hütte eingesetzt werden kann.
+                var hut = new MeshKit();
+                IslandStructures.House(hut, i % 3 == 0 ? mat.WoodOchre : mat.WoodRed, mat, Vector3.zero, 0f, 5.5f, 7f, 3.2f);
+                GameObject hutGo = Emit(hut, "Fischerhütte " + (i + 1), village, p, Quaternion.Euler(0f, -a * Mathf.Rad2Deg + 90f, 0f));
+                PropModels.TrySwap(hutGo, PropModels.Fischerhuette, PropModels.Fit.Footprint);
             }
             // Trockengestelle für Fisch
             for (int i = 0; i < 4; i++)
@@ -432,7 +442,7 @@ namespace Frostline.EditorTools
                 huts.Beam(mat.WoodDark, p + new Vector3(3f, 0f, 0f), p + new Vector3(3f, 2.4f, 0f), 0.15f);
                 huts.Beam(mat.WoodDark, p + new Vector3(-3f, 2.3f, 0f), p + new Vector3(3f, 2.3f, 0f), 0.1f);
             }
-            Emit(huts, "Fischerhütten", village, Vector3.zero, Quaternion.identity);
+            Emit(huts, "Trockengestelle", village, Vector3.zero, Quaternion.identity);
         }
 
         // ------------------------------------------------------------ Industrie
@@ -470,7 +480,7 @@ namespace Frostline.EditorTools
             var crane = new MeshKit();
             IslandStructures.CraneRunway(crane, mat, 150f, 20f, 14f, 10f);
             Vector3 craneCenter = industry + new Vector3(0f, 0f, 75f);
-            Emit(crane, "Kranbahn", zone, craneCenter, Quaternion.identity);
+            PropModels.TrySwap(Emit(crane, "Kranbahn", zone, craneCenter, Quaternion.identity), PropModels.Kranbahn, PropModels.Fit.Footprint);
             craneBridge = craneCenter + new Vector3(10f, 0f, 0f);
 
             var rubble = new MeshKit();
@@ -648,7 +658,7 @@ namespace Frostline.EditorTools
             var kit = new MeshKit();
             Vector3 top;
             IslandStructures.RadioMast(kit, mat, 84f, out top);
-            Emit(kit, "Funkmast", zone, best, Quaternion.identity);
+            PropModels.TrySwap(Emit(kit, "Funkmast", zone, best, Quaternion.identity), PropModels.Funkmast, PropModels.Fit.Height);
             mastTop = best + top;
         }
 
@@ -697,6 +707,7 @@ namespace Frostline.EditorTools
                 var kit = new MeshKit();
                 IslandStructures.GateFrame(kit, mat, width, height);
                 GameObject gate = Emit(kit, "Gate " + (i + 1), track.transform, points[i], rotation);
+                PropModels.TrySwap(gate, PropModels.RennGate, PropModels.Fit.Stretch);
                 RaceGate rg = gate.AddComponent<RaceGate>();
                 rg.width = width;
                 rg.height = height;

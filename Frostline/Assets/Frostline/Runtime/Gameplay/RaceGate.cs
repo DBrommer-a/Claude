@@ -21,6 +21,9 @@ namespace Frostline.Gameplay
 
         static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
         static readonly int EmissiveColor = Shader.PropertyToID("_EmissiveColor");
+        // Higgsfield-Gates kommen über glTFast; dessen Materialien heißen anders.
+        static readonly int GltfBaseColor = Shader.PropertyToID("baseColorFactor");
+        static readonly int GltfEmissive = Shader.PropertyToID("emissiveFactor");
 
         Renderer[] renderers;
         MaterialPropertyBlock block;
@@ -77,6 +80,10 @@ namespace Frostline.Gameplay
                 r.GetPropertyBlock(block);
                 block.SetColor(BaseColor, color);
                 block.SetColor(EmissiveColor, glow);
+                // glTFast multipliziert die Farbe mit der Textur: im Grundzustand weiß, damit die
+                // orange-schwarzen Streifen des Modells bleiben; „nächstes Gate“ grün, durchflogen grau.
+                block.SetColor(GltfBaseColor, state == State.Idle ? Color.white : color);
+                block.SetColor(GltfEmissive, state == State.Idle ? Color.black : glow);
                 r.SetPropertyBlock(block);
             }
         }

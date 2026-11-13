@@ -140,12 +140,71 @@ namespace Frostline.Diagnostics
             Quaternion modelYaw = hasSpawn ? Quaternion.Euler(0f, spawn.spawnPoint.eulerAngles.y, 0f) : Quaternion.identity;
             drone.transform.SetPositionAndRotation(modelSpot, modelYaw);
             yield return ModelShots(drone.transform, index);
+            index += 2;
+            yield return PropShots(drone.transform, index);
 
             body.isKinematic = false;
             body.interpolation = RigidbodyInterpolation.Interpolate;
             drone.enabled = true;
             DroneRespawn respawn = drone.GetComponent<DroneRespawn>();
             if (respawn != null) respawn.Respawn();
+        }
+
+        const string ModelChild = "Modell (Higgsfield)";
+        static readonly string[] PropNames = { "Leuchtturm", "Funkmast", "Gestrandeter Kutter", "Kranbahn", "Fischerhütte 1" };
+
+        /// <summary>Ein Bild pro Higgsfield-Requisite aus der FPV-Sicht, schräg von vorn oben.</summary>
+        IEnumerator PropShots(Transform drone, int index)
+        {
+            Camera fpv = Camera.main;
+            // Die FPV-Kamera ist gegenüber der Drohne nach oben geneigt (Uptilt); das gleichen wir aus.
+            Quaternion cameraOffset = fpv != null ? Quaternion.Inverse(drone.rotation) * fpv.transform.rotation : Quaternion.identity;
+
+            // Requisiten über ihr Modell-Kind suchen: Ringe und Checkpoints tragen teils dieselben Namen.
+            var props = new Dictionary<string, Transform>();
+            foreach (Transform t in FindObjectsByType<Transform>(FindObjectsInactive.Include))
+                if (t.name == ModelChild && t.parent != null && !props.ContainsKey(t.parent.name)) props[t.parent.name] = t.parent;
+
+            foreach (string name in PropNames)
+            {
+                Transform prop;
+                if (!props.TryGetValue(name, out prop))
+                {
+                    Log("Requisite " + name + " nicht gefunden");
+                    continue;
+                }
+                Frame(drone, prop, cameraOffset);
+                yield return new WaitForSecondsRealtime(SettleSeconds);
+                yield return Capture(index.ToString("00") + "_Requisite_" + Safe(name));
+                index++;
+            }
+
+            // Renn-Gates gibt es nur bei laufendem Rennen; für das Bild die erste Strecke kurz einschalten.
+            RaceTrack track = FindAnyObjectByType<RaceTrack>(FindObjectsInactive.Include);
+            if (track == null) yield break;
+            bool wasActive = track.gameObject.activeSelf;
+            track.gameObject.SetActive(true);
+            RaceGate[] gates = track.GetComponentsInChildren<RaceGate>();
+            if (gates.Length > 0)
+            {
+                gates[0].SetState(RaceGate.State.Next);
+                Frame(drone, gates[0].transform, cameraOffset);
+                yield return new WaitForSecondsRealtime(SettleSeconds);
+                yield return Capture(index.ToString("00") + "_Requisite_RennGate");
+                gates[0].SetState(RaceGate.State.Idle);
+            }
+            track.gameObject.SetActive(wasActive);
+        }
+
+        static void Frame(Transform drone, Transform target, Quaternion cameraOffset)
+        {
+            var bounds = new Bounds(target.position, Vector3.zero);
+            foreach (Renderer r in target.GetComponentsInChildren<Renderer>())
+                if (r.enabled) bounds.Encapsulate(r.bounds);
+            float radius = Mathf.Max(bounds.extents.magnitude, 3f);
+            Vector3 direction = (Quaternion.Euler(0f, 35f, 0f) * target.forward + Vector3.up * 0.35f).normalized;
+            Vector3 eye = bounds.center + direction * radius * 1.6f;
+            drone.SetPositionAndRotation(eye, Quaternion.LookRotation(bounds.center - eye) * Quaternion.Inverse(cameraOffset));
         }
 
         /// <summary>
