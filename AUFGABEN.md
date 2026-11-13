@@ -1,5 +1,9 @@
 # Aufgaben für dich (am Mac)
 
+> Vieles davon geht per Terminal: `tools/mac/frostline.sh alles` richtet ein, baut Insel und
+> Mac-Build, lässt die Tests laufen, macht Screenshots und die fps-Messung (Ergebnisse in `Ausgabe/`).
+> Vorher einmal `tools/mac/frostline.sh unity-installieren` und in Unity Hub anmelden.
+
 Alles, was ohne deinen Mac ging, ist erledigt. Code, Szenen-Builder, iPhone-App,
 Multiplayer, Concept-Art und Tests liegen im Repository. Die folgenden Schritte brauchen
 deinen Mac, dein Apple- oder Unity-Konto oder deine Entscheidung.
@@ -26,11 +30,12 @@ niemand**. Schick mir Fehlermeldungen aus der Unity-Konsole, dann behebe ich sie
 
 - [ ] RadioMaster Pocket per USB-C anschließen, am Sender „USB Joystick (HID)“ wählen.
 - [ ] Im Spiel **F1 › Sender › Sender kalibrieren** und den Anweisungen folgen.
-- [ ] **Frostline › 3 · Mac-Build erstellen**, den Build starten, Qualität „High“ lassen, **F9**.
+- [ ] **Frostline › 3 · Mac-Build erstellen**, den Build starten, Qualität „Medium“ lassen
+      (Zielstufe auf dem MacBook Air), **F9**.
       Nach 60 s steht das Ergebnis da. Die Textdatei aus dem Ordner `Benchmarks` bitte an mich.
 - [ ] Beim ersten Start fragt macOS nach eingehenden Verbindungen: **Erlauben**.
       Das brauchen die iPhone-App und der Multiplayer.
-- [ ] Offene Frage aus dem Plan: Ist dein M4 ein **MacBook Air**, ein **Mac mini** oder ein **MacBook Pro**?
+- [x] Offene Frage aus dem Plan: Es ist ein **MacBook Air** → Zielstufe „Medium“ (ist eingestellt).
 
 ## 3 · Gegenkandidat Yue (Woche 1)
 
