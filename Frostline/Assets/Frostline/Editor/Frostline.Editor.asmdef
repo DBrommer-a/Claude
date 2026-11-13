@@ -3,8 +3,12 @@
     "rootNamespace": "Frostline.EditorTools",
     "references": [
         "Frostline.Flight.Core",
+        "Frostline.Shared",
         "Frostline.Runtime",
-        "Unity.InputSystem"
+        "Frostline.Multiplayer",
+        "Unity.InputSystem",
+        "Unity.Netcode.Runtime",
+        "Unity.Networking.Transport"
     ],
     "includePlatforms": [
         "Editor"

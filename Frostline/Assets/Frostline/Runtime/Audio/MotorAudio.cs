@@ -20,6 +20,12 @@ namespace Frostline.Audio
         /// <summary>Für Replays: feste Motorlast 0..1 statt der Telemetrie; negativ = aus.</summary>
         [System.NonSerialized] public float overrideLoad = -1f;
 
+        [Tooltip("3D-Ton (für Drohnen anderer Spieler); aus = Ton im Kopfhörer (eigene Drohne).")]
+        public bool spatial = false;
+
+        /// <summary>Höchstdrehzahl, wenn keine Drohne zugeordnet ist (Mitspieler).</summary>
+        public float fallbackMaxRpm = 28000f;
+
         const int Motors = QuadSim.MotorCount;
 
         // Vom Hauptthread geschrieben, vom Audio-Thread gelesen.
@@ -44,16 +50,19 @@ namespace Frostline.Audio
             AudioSource source = GetComponent<AudioSource>();
             source.clip = null;
             source.loop = true;
-            source.spatialBlend = 0f;
+            source.spatialBlend = spatial ? 1f : 0f;
+            source.rolloffMode = AudioRolloffMode.Logarithmic;
+            source.minDistance = 3f;
+            source.maxDistance = 400f;
             source.playOnAwake = true;
             source.Play();
         }
 
         void Update()
         {
-            if (drone == null) return;
-            Telemetry t = drone.Telemetry;
-            float maxRpm = Mathf.Max(t.MaxRpm, 1f);
+            if (drone == null && overrideLoad < 0f) return;
+            Telemetry t = drone != null ? drone.Telemetry : null;
+            float maxRpm = Mathf.Max(t != null ? t.MaxRpm : fallbackMaxRpm, 1f);
             for (int i = 0; i < Motors; i++)
             {
                 // Im Replay laufen die Motoren leicht unterschiedlich, damit die Schwebung bleibt.

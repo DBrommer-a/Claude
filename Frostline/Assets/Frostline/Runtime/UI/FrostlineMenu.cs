@@ -188,7 +188,7 @@ namespace Frostline.UI
         {
             GUILayout.Label("Freestyle", heading);
             string progress = collectibles != null ? "Sammelobjekte: " + collectibles.CollectedCount + " / " + collectibles.Total : "";
-            GUILayout.Label("Frei fliegen, Landmarken erkunden. " + progress, wrapped);
+            GUILayout.Label("Frei fliegen, Landmarken erkunden. " + progress + "   ·   F2: Multiplayer", wrapped);
             GUILayout.BeginHorizontal();
             if (race != null && race.Active && GUILayout.Button("Rennen beenden", GUILayout.Height(30f))) race.StopRace();
             if (replay != null && GUILayout.Button(replay.Playing ? "Replay beenden (P)" : "Replay ansehen (P)", GUILayout.Height(30f)))
@@ -227,6 +227,8 @@ namespace Frostline.UI
             {
                 GUILayout.Space(10f);
                 GUILayout.Label("Wetter und Tageszeit", heading);
+                if (weather.lockedByHost) GUILayout.Label("Im Multiplayer bestimmt der Host Wetter und Tageszeit.", wrapped);
+                GUI.enabled = !weather.lockedByHost;
                 WorldState state = weather.State;
                 int w = GUILayout.Toolbar((int)state.Weather, WeatherNames, GUILayout.Height(28f));
                 int currentDay = state.TimeOfDay < 10f ? 0 : (state.TimeOfDay < 16f ? 1 : 2);
@@ -243,6 +245,7 @@ namespace Frostline.UI
                     state.CloudSeed = Random.Range(1, int.MaxValue);
                     weather.SetLocal(state);
                 }
+                GUI.enabled = true;
             }
 
             if (remote != null)

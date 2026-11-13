@@ -1,0 +1,25 @@
+{
+    "name": "Frostline.Multiplayer",
+    "rootNamespace": "Frostline.Multiplayer",
+    "references": [
+        "Frostline.Flight.Core",
+        "Frostline.Shared",
+        "Frostline.Runtime",
+        "Unity.InputSystem",
+        "Unity.Collections",
+        "Unity.Netcode.Runtime",
+        "Unity.Networking.Transport",
+        "Unity.Services.Core",
+        "Unity.Services.Authentication",
+        "Unity.Services.Multiplayer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -51,6 +51,9 @@ namespace Frostline.View
         [Tooltip("Spielminuten pro Echtsekunde; 0 = Uhrzeit steht.")]
         public float timeScale = 0f;
 
+        /// <summary>Im Multiplayer als Mitspieler: Wetter kommt vom Host, das Menü sperrt die Regler.</summary>
+        [System.NonSerialized] public bool lockedByHost;
+
         [Header("Sonne")]
         [Tooltip("Höchster Sonnenstand im Jahresmittel auf etwa 64° Nord.")]
         public float maxElevation = 38f;

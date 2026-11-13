@@ -5,9 +5,12 @@ using Frostline.Controls;
 using Frostline.Diagnostics;
 using Frostline.Flight;
 using Frostline.Gameplay;
+using Frostline.Multiplayer;
 using Frostline.Remote;
 using Frostline.UI;
 using Frostline.View;
+using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -424,6 +427,8 @@ namespace Frostline.EditorTools
                 collectibles.drone = drone;
             }
 
+            CreateMultiplayer();
+
             FrostlineMenu menu = go.AddComponent<FrostlineMenu>();
             menu.drone = drone;
             menu.input = input;
@@ -436,6 +441,53 @@ namespace Frostline.EditorTools
             menu.weather = weather;
             menu.collectibles = collectibles;
             menu.remote = remote;
+        }
+
+        /// <summary>
+        /// Netcode for GameObjects mit Unity Transport (Relay kommt über die Sessions), dazu die
+        /// Spieler-Drohne als Prefab und die gemeinsame Welt (Wetter, Rennen, Fangen).
+        /// </summary>
+        static void CreateMultiplayer()
+        {
+            var go = new GameObject("Multiplayer");
+            NetworkManager manager = go.AddComponent<NetworkManager>();
+            UnityTransport transport = go.AddComponent<UnityTransport>();
+            if (manager.NetworkConfig == null) manager.NetworkConfig = new NetworkConfig();
+            manager.NetworkConfig.NetworkTransport = transport;
+            manager.NetworkConfig.TickRate = 30;
+            manager.NetworkConfig.ConnectionApproval = false;
+            manager.NetworkConfig.EnableSceneManagement = true;
+            manager.NetworkConfig.PlayerPrefab = CreateNetworkDronePrefab();
+            go.AddComponent<MultiplayerSession>();
+            go.AddComponent<MultiplayerPanel>();
+
+            var world = new GameObject("Netzwerk-Welt");
+            world.AddComponent<NetworkObject>();
+            world.AddComponent<NetworkWorld>();
+        }
+
+        static GameObject CreateNetworkDronePrefab()
+        {
+            const string path = GeneratedFolder + "/Netzwerk-Drohne.prefab";
+            var go = new GameObject("Netzwerk-Drohne");
+            go.AddComponent<NetworkObject>();
+            NetworkDrone drone = go.AddComponent<NetworkDrone>();
+            Material frame = LitMaterial("Mitspieler", new Color(1f, 0.55f, 0.1f), 0.5f);
+            var model = new GameObject("Modell").transform;
+            model.SetParent(go.transform, false);
+            Part(model, PrimitiveType.Cube, new Vector3(0f, 0.02f, 0f), new Vector3(0.22f, 0.03f, 0.22f), Quaternion.Euler(0f, 45f, 0f), frame);
+            Part(model, PrimitiveType.Cube, new Vector3(0f, 0.045f, -0.01f), new Vector3(0.05f, 0.04f, 0.12f), Quaternion.identity, frame);
+            go.AddComponent<AudioSource>();
+            MotorAudio audio = go.AddComponent<MotorAudio>();
+            audio.spatial = true;
+            audio.volume = 0.6f;
+            drone.model = model;
+            drone.motorAudio = audio;
+
+            if (AssetDatabase.LoadAssetAtPath<GameObject>(path) != null) AssetDatabase.DeleteAsset(path);
+            GameObject prefab = PrefabUtility.SaveAsPrefabAsset(go, path);
+            Object.DestroyImmediate(go);
+            return prefab;
         }
 
         /// <summary>Schneefall in einem Würfel um die Kamera; Menge steuert das Wetter.</summary>
