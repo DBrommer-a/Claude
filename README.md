@@ -23,7 +23,7 @@ Alles ist gegen Unity 6.6 (6000.6.9f1) kompiliert, aber noch nicht im Editor ges
 
 ## Öffnen
 
-1. **Unity 6000.6.9f1** mit Mac Build Support installieren, Ordner `Frostline` in Unity Hub öffnen.
+1. **Unity 6000.6.9f1** (Unity 6.6) mit Mac Build Support installieren, Ordner `Frostline` in Unity Hub öffnen.
 2. **Frostline › 1 · Projekt einrichten** (HDRP, Qualitätsstufen, 500 Hz), Unity neu starten.
 3. **Frostline › 4 · Insel erstellen (4 × 4 km)**: die ganze Karte.
    Oder **2 · Prototyp-Szene** für einen schnellen Test auf 2 × 2 km.

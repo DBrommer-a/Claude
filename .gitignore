@@ -31,3 +31,12 @@ tools/**/bin/
 tools/**/obj/
 tools/**/TestResults/
 Ausgabe/
+
+# Swift Package Manager
+FrostlineRemote/**/.build/
+
+# Von tools/mac/frostline.sh erzeugt (insel), jederzeit neu baubar (~80 MB)
+Frostline/Assets/Frostline/Generated/
+Frostline/Assets/Frostline/Generated.meta
+Frostline/Assets/Frostline/Scenes/
+Frostline/Assets/Frostline/Scenes.meta

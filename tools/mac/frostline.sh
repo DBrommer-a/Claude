@@ -3,13 +3,34 @@
 # Aufruf aus dem Repository-Ordner, z. B.:  tools/mac/frostline.sh alles
 set -euo pipefail
 
-VERSION="6000.6.9f1"
-CHANGESET="8c45277fb9c5"
+VERSION="${UNITY_VERSION:-6000.6.9f1}"
+CHANGESET="${UNITY_CHANGESET:-8c45277fb9c5}"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 PROJECT="$ROOT/Frostline"
 OUT="$ROOT/Ausgabe"
-UNITY="${UNITY:-/Applications/Unity/Hub/Editor/$VERSION/Unity.app/Contents/MacOS/Unity}"
-HUB="/Applications/Unity Hub.app/Contents/MacOS/Unity Hub"
+
+# Unity Hub und die Editoren dürfen auch auf einem externen Laufwerk liegen.
+# Hub: HUB_APP, sonst /Applications, sonst per Spotlight gesucht.
+find_hub_app() {
+  if [ -n "${HUB_APP:-}" ]; then echo "$HUB_APP"; return; fi
+  if [ -d "/Applications/Unity Hub.app" ]; then echo "/Applications/Unity Hub.app"; return; fi
+  mdfind "kMDItemCFBundleIdentifier == 'com.unity3d.unityhub'" 2>/dev/null | head -1
+}
+# Editor: UNITY, sonst der Installationsordner aus den Hub-Einstellungen, sonst die Voreinstellung.
+find_unity() {
+  if [ -n "${UNITY:-}" ]; then echo "$UNITY"; return; fi
+  local settings="$HOME/Library/Application Support/UnityHub/secondaryInstallPath.json"
+  local dir=""
+  [ -f "$settings" ] && dir="$(sed -e 's/^"//' -e 's/"$//' "$settings")"
+  for base in "$dir" "/Applications/Unity/Hub/Editor"; do
+    [ -n "$base" ] && [ -x "$base/$VERSION/Unity.app/Contents/MacOS/Unity" ] \
+      && { echo "$base/$VERSION/Unity.app/Contents/MacOS/Unity"; return; }
+  done
+  echo "/Applications/Unity/Hub/Editor/$VERSION/Unity.app/Contents/MacOS/Unity"
+}
+HUB_APP="$(find_hub_app)"
+HUB="$HUB_APP/Contents/MacOS/Unity Hub"
+UNITY="$(find_unity)"
 APP="$PROJECT/Builds/Frostline.app"
 QUALITY="${QUALITY:-Medium}"
 
@@ -42,10 +63,12 @@ player() {
 
 case "${1:-hilfe}" in
   unity-installieren)
-    if [ ! -d "/Applications/Unity Hub.app" ]; then
+    if [ -z "$HUB_APP" ] || [ ! -d "$HUB_APP" ]; then
       command -v brew >/dev/null || { echo "Homebrew fehlt: https://brew.sh" >&2; exit 1; }
       brew install --cask unity-hub
+      HUB="/Applications/Unity Hub.app/Contents/MacOS/Unity Hub"
     fi
+    if [ -x "$UNITY" ]; then echo "✓ Unity $VERSION ist schon installiert: $UNITY"; exit 0; fi
     "$HUB" -- --headless install --version "$VERSION" --changeset "$CHANGESET" --architecture arm64
     echo "Danach einmal Unity Hub öffnen, mit dem Unity-Konto anmelden und die Personal-Lizenz aktivieren."
     ;;

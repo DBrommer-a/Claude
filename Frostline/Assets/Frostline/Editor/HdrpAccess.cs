@@ -130,7 +130,7 @@ namespace Frostline.EditorTools
         public static bool InvokeStatic(Type type, string method, params object[] arguments)
         {
             if (type == null) return false;
-            MethodInfo info = type.GetMethod(method, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
+            MethodInfo info = FindStaticMethod(type, method, arguments);
             if (info == null) return false;
             try
             {
@@ -142,6 +142,30 @@ namespace Frostline.EditorTools
                 Debug.LogWarning("Frostline: " + type.Name + "." + method + " fehlgeschlagen: " + Unwrap(e).Message);
                 return false;
             }
+        }
+
+        // Sucht die Überladung, deren Parameter zu den Argumenten passen. Ab HDRP 17.6 gibt es z. B.
+        // AddHDLight(GameObject, LightType) und die veraltete AddHDLight(GameObject, HDLightTypeAndShape);
+        // GetMethod(name) wirft dann eine AmbiguousMatchException.
+        static MethodInfo FindStaticMethod(Type type, string name, object[] arguments)
+        {
+            object[] args = arguments ?? new object[0];
+            foreach (MethodInfo candidate in type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static))
+            {
+                if (candidate.Name != name) continue;
+                ParameterInfo[] parameters = candidate.GetParameters();
+                if (parameters.Length != args.Length) continue;
+                bool fits = true;
+                for (int i = 0; i < parameters.Length && fits; i++)
+                {
+                    Type expected = parameters[i].ParameterType;
+                    fits = args[i] == null
+                        ? !expected.IsValueType || Nullable.GetUnderlyingType(expected) != null
+                        : expected.IsInstanceOfType(args[i]);
+                }
+                if (fits) return candidate;
+            }
+            return null;
         }
 
         static PropertyInfo FindProperty(Type type, string name)

@@ -142,6 +142,8 @@ namespace Frostline.EditorTools
             string texturePath = TextureFolder + "/" + name + ".png";
             string layerPath = GeneratedFolder + "/Layer_" + name + ".terrainlayer";
 
+            // Auch der Inselbau ruft das hier auf; er legt den Texturordner sonst nicht an.
+            FrostlineProjectSetup.EnsureFolder(TextureFolder);
             File.WriteAllBytes(texturePath, NoiseTexture(light, dark, roughness, name.GetHashCode()).EncodeToPNG());
             AssetDatabase.ImportAsset(texturePath);
             var importer = (TextureImporter)AssetImporter.GetAtPath(texturePath);

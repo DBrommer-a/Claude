@@ -14,7 +14,7 @@ Spiel noch niemand**. Schick mir Fehlermeldungen aus der Unity-Konsole, dann beh
 
 ## 1 · Projekt öffnen und Insel bauen (ca. 30 min)
 
-- [ ] Unity Hub installieren, dazu **Unity 6000.6.9f1** mit **Mac Build Support**.
+- [ ] Unity Hub installieren, dazu **Unity 6000.6.9f1** (Unity 6.6) mit **Mac Build Support**.
 - [ ] In Unity Hub „Add project from disk“ → Ordner `Frostline`. Der erste Import lädt HDRP,
       Input System, Netcode, Multiplayer Services und glTFast; das dauert einige Minuten.
 - [ ] Menü **Frostline › 1 · Projekt einrichten**, danach Unity neu starten, wenn der Dialog es sagt.
