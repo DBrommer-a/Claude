@@ -57,10 +57,10 @@ namespace Frostline.EditorTools
         {
             if (!HdrpAccess.IsInstalled)
             {
-                EditorUtility.DisplayDialog("Frostline", "HDRP ist noch nicht geladen. Bitte zuerst „Frostline > 1 · Projekt einrichten“ ausführen.", "OK");
+                EditorPrompts.Dialog("Frostline", "HDRP ist noch nicht geladen. Bitte zuerst „Frostline > 1 · Projekt einrichten“ ausführen.", "OK");
                 return;
             }
-            if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            if (!EditorPrompts.SaveScenes()) return;
 
             try
             {
@@ -132,7 +132,7 @@ namespace Frostline.EditorTools
                 EditorUtility.ClearProgressBar();
             }
 
-            EditorUtility.DisplayDialog("Frostline",
+            EditorPrompts.Dialog("Frostline",
                 "Die Insel ist fertig: Frostline_Insel.unity\n\n"
                 + "Start am Strand im Süden. Im Menü (F1 › Spiel) gibt es drei Rennen: Strandlinie, Industrie-Slalom und Gletscher-Dive. "
                 + "12 Sammelringe hängen an den Landmarken.\n\n"

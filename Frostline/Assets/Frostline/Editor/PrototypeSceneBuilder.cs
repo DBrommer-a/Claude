@@ -34,10 +34,10 @@ namespace Frostline.EditorTools
         {
             if (!HdrpAccess.IsInstalled)
             {
-                EditorUtility.DisplayDialog("Frostline", "HDRP ist noch nicht geladen. Bitte zuerst „Frostline > 1 · Projekt einrichten“ ausführen.", "OK");
+                EditorPrompts.Dialog("Frostline", "HDRP ist noch nicht geladen. Bitte zuerst „Frostline > 1 · Projekt einrichten“ ausführen.", "OK");
                 return;
             }
-            if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            if (!EditorPrompts.SaveScenes()) return;
 
             try
             {
@@ -80,7 +80,7 @@ namespace Frostline.EditorTools
                 EditorUtility.ClearProgressBar();
             }
 
-            EditorUtility.DisplayDialog("Frostline",
+            EditorPrompts.Dialog("Frostline",
                 "Die Prototyp-Szene ist fertig und gespeichert.\n\n"
                 + "Play drücken. Sender per USB anschließen (EdgeTX: „USB Joystick (HID)“), dann F1 → „Sender kalibrieren“.\n\n"
                 + "Ohne Sender: W/S Gas, A/D Gier, Pfeiltasten Nick/Roll, Leertaste schärfen, M Modus, R Reset.\n\n"

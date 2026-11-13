@@ -30,3 +30,4 @@ crashlytics-build.properties
 tools/**/bin/
 tools/**/obj/
 tools/**/TestResults/
+Ausgabe/

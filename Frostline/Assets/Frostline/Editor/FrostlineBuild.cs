@@ -17,7 +17,13 @@ namespace Frostline.EditorTools
         const string OutputPath = "Builds/Frostline.app";
 
         [MenuItem("Frostline/3 · Mac-Build erstellen", priority = 3)]
-        public static void BuildMac()
+        public static void BuildMacMenu()
+        {
+            BuildMac(OutputPath);
+        }
+
+        /// <summary>Baut den Mac-Player; true bei Erfolg. Auch für den Aufruf per Kommandozeile.</summary>
+        public static bool BuildMac(string outputPath)
         {
             var scenes = new List<string>();
             foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
@@ -26,15 +32,15 @@ namespace Frostline.EditorTools
             }
             if (scenes.Count == 0)
             {
-                EditorUtility.DisplayDialog("Frostline", "Keine Szene im Build. Bitte zuerst „Frostline > 2 · Prototyp-Szene erstellen“ ausführen.", "OK");
-                return;
+                EditorPrompts.Dialog("Frostline", "Keine Szene im Build. Bitte zuerst „Frostline > 2 · Prototyp-Szene erstellen“ ausführen.", "OK");
+                return false;
             }
 
             if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.StandaloneOSX)
             {
-                bool switchTarget = EditorUtility.DisplayDialog("Frostline",
+                bool switchTarget = EditorPrompts.Dialog("Frostline",
                     "Die Build-Plattform wird auf macOS umgestellt. Das kann beim ersten Mal einige Minuten dauern.", "Weiter", "Abbrechen");
-                if (!switchTarget) return;
+                if (!switchTarget) return false;
                 EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneOSX);
             }
 
@@ -43,7 +49,7 @@ namespace Frostline.EditorTools
             var options = new BuildPlayerOptions
             {
                 scenes = scenes.ToArray(),
-                locationPathName = OutputPath,
+                locationPathName = outputPath,
                 target = BuildTarget.StandaloneOSX,
                 // Kein Development Build: der misst langsamer und verfälscht das 60-fps-Gate.
                 options = BuildOptions.None,
@@ -53,16 +59,18 @@ namespace Frostline.EditorTools
             BuildSummary summary = report.summary;
             if (summary.result == BuildResult.Succeeded)
             {
-                string full = Path.GetFullPath(OutputPath);
-                EditorUtility.DisplayDialog("Frostline",
+                string full = Path.GetFullPath(outputPath);
+                EditorPrompts.Dialog("Frostline",
                     "Build fertig (" + (summary.totalSize / (1024 * 1024)) + " MB, " + summary.totalTime.TotalMinutes.ToString("0.0") + " min).\n\n"
                     + full + "\n\nStarten, Qualitätsstufe „High“ lassen, F9 drücken und 60 Sekunden warten. "
                     + "Der Bericht liegt danach im Ordner Benchmarks (Pfad steht im Menü unter „Benchmark“).", "OK");
-                EditorUtility.RevealInFinder(full);
+                if (!EditorPrompts.Batch) EditorUtility.RevealInFinder(full);
+                return true;
             }
             else
             {
-                EditorUtility.DisplayDialog("Frostline", "Build fehlgeschlagen: " + summary.result + ". Details stehen in der Konsole.", "OK");
+                EditorPrompts.Dialog("Frostline", "Build fehlgeschlagen: " + summary.result + ". Details stehen in der Konsole.", "OK");
+                return false;
             }
         }
 

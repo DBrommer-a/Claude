@@ -478,7 +478,7 @@ namespace Frostline.UI
             int current = QualitySettings.GetQualityLevel();
             int chosen = GUILayout.Toolbar(current, names, GUILayout.Height(30f));
             if (chosen != current) QualitySettings.SetQualityLevel(chosen, true);
-            GUILayout.Label("Ziel auf dem M4 ist „High“. „Ultra“ ist für Screenshots und den Trailer gedacht.", wrapped);
+            GUILayout.Label("Ziel auf dem MacBook Air ist „Medium“ (passiv gekühlt), auf Mac mini oder MacBook Pro „High“. „Ultra“ ist für Screenshots und den Trailer.", wrapped);
 
             GUILayout.Space(10f);
             bool vsync = GUILayout.Toggle(QualitySettings.vSyncCount > 0, "  VSync (an die Bildwiederholrate des Monitors binden)");
@@ -494,7 +494,7 @@ namespace Frostline.UI
         {
             GUILayout.Label("fps-Messung", heading);
             GUILayout.Label("Fliegt 60 Sekunden lang automatisch einen festen Weg über Meer, Insel und durch die Wolken und misst dabei jedes Bild. "
-                + "Für die Entscheidung nach dem Prototyp zählt nur die Messung im fertigen Build auf Stufe „High“.", wrapped);
+                + "Für die Entscheidung nach dem Prototyp zählt nur die Messung im fertigen Build auf der Zielstufe („Medium“ auf dem MacBook Air).", wrapped);
             GUILayout.Space(8f);
 
             if (benchmark == null)

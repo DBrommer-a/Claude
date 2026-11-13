@@ -35,14 +35,15 @@ namespace Frostline.EditorTools
             new Level { Name = "Ultra", RenderScalePercent = 100f, AmbientOcclusion = true, ScreenSpaceReflection = true, LodBias = 2.0f, TextureBudgetMb = 4096 },
         };
 
-        const int DefaultLevel = 2; // High
+        // MacBook Air (passiv gekühlt, drosselt unter Dauerlast): laut Plan ist „Medium“ das Ziel.
+        const int DefaultLevel = 1; // Medium
 
         [MenuItem("Frostline/1 · Projekt einrichten", priority = 1)]
         public static void Run()
         {
             if (!HdrpAccess.IsInstalled)
             {
-                EditorUtility.DisplayDialog("Frostline",
+                EditorPrompts.Dialog("Frostline",
                     "Das HDRP-Paket ist noch nicht geladen. Warte, bis Unity die Pakete fertig importiert hat, und starte die Einrichtung dann erneut.", "OK");
                 return;
             }
@@ -75,7 +76,7 @@ namespace Frostline.EditorTools
             {
                 message += "\n\nWICHTIG: Die Eingabe-Einstellung wurde geändert. Bitte Unity einmal schließen und das Projekt neu öffnen, bevor du Play drückst.";
             }
-            EditorUtility.DisplayDialog("Frostline", message, "OK");
+            EditorPrompts.Dialog("Frostline", message, "OK");
         }
 
         // ------------------------------------------------------------ HDRP-Asset je Stufe
