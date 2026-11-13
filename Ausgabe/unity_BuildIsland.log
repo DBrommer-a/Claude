@@ -7,12 +7,12 @@ Darwin version:          25.5.0
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
-Date:                    2026-11-13T18:04:57Z
-VBCSCompilerPreWarmer: watching VBCSCompiler (PID 84318)
-VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 84320)
-VBCSCompiler prewarm took 2.95 ms
+Date:                    2026-11-13T21:46:36Z
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 27787)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 27789)
+VBCSCompiler prewarm took 2.92 ms
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T18:04:57.135805Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T21:46:36.153506Z"
 Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
 
 COMMAND LINE ARGUMENTS:
@@ -67,44 +67,23 @@ Successfully changed project path to: /Users/davidbrommer/Projekte/Frostline/Fro
 Logging is directed to a specific file, skipping project log.
 Player connection [8423480704]  Target information:
 
-Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 4167195355 [EditorId] 4167195355 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 2253319038 [EditorId] 2253319038 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 4167195355 [EditorId] 4167195355 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 2253319038 [EditorId] 2253319038 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8423480704] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8423480704] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-84317" after 0.1 seconds.
+[Package Manager] Connected to IPC stream "Upm-27786" after 0.1 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.19.0'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-davidbrommer"
 [Licensing::IpcConnector] LicenseClient-davidbrommer channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T18:04:57.702031Z"
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.19.0+4cc3dda
-  Session Id:              32f45dc0c0cc4c0193a8cc13c18d0e03
-  Correlation Id:          db9bad02f50b48e9f242c4f497e1c413
-  External correlation Id: 4467459751805092945
-  Machine Id:              VLvnnjBZADzrEVJVmAYFwzJg3ro=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.60s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T18:04:58.301827Z"
-[Licensing::Module] Error: Access token is unavailable; failed to update
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: 9072485318181-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 1.20s
-[Licensing::Module] Licensing is initialized (took 0.99s).
-[Licensing::Client] Successfully resolved entitlement details
-Library Redirect Path: Library/
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T21:46:36.646249Z"
 Initialising UDS system complete:
   - System type: Client
   - Resource namespace: 81943af8af7b172a9097ab3c851ca751
@@ -113,6 +92,27 @@ Initialising UDS system complete:
   - Command buffer size: 8192
   - Hashmap size: 4194304
   - Service connected: false
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.19.0+4cc3dda
+  Session Id:              49eadb1d691f4d3a96024a37fcec90c1
+  Correlation Id:          db9bad02f50b48e9f242c4f497e1c413
+  External correlation Id: 6374285585438756061
+  Machine Id:              VLvnnjBZADzrEVJVmAYFwzJg3ro=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.63s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T21:46:37.276706Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 9072485318181-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 1.13s
+[Licensing::Module] Licensing is initialized (took 0.92s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
 Launching Unity Data Store - /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/Unity.DataStore 
 Unity Data Store artifact dir = Library/DataStore, working dir = /Users/davidbrommer/Projekte/Frostline/FrostlineUnity Data Store running and initialised
 [Physics::Module] Selected backend (deferred post-plugins).
@@ -142,7 +142,7 @@ Mono path[0] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.
 Mono path[1] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56317
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56786
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -150,28 +150,27 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000427 seconds.
+Registered in 0.000377 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.297 seconds
-Domain Reload Profiling: 566ms
-	BeginReloadAssembly (63ms)
-		CreateAndSetChildDomain (23ms)
+- Finished resetting the current domain, in  0.386 seconds
+Domain Reload Profiling: 629ms
+	BeginReloadAssembly (41ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (168ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (165ms)
 		LoadAssemblies (40ms)
 		TypeCache.Refresh (119ms)
 			TypeCache.ScanAssembly (111ms)
 		AnalyzeDomain (0ms)
-	FinalizeReload (298ms)
+	FinalizeReload (386ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (49ms)
+			BeforeProcessingInitializeOnLoad (50ms)
 			ProcessInitializeOnLoadAttributes (44ms)
-			ProcessInitializeOnLoadMethodAttributes (106ms)
+			ProcessInitializeOnLoadMethodAttributes (196ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -230,7 +229,7 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.test-framework.performance@6.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.test-framework.performance@816c370aad5b)
     com.unity.graph-authoring@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.graph-authoring@cfd2588851ee)
 [Subsystems] No new subsystems found in resolved package list.
-[Package Manager] Done registering packages in 0.01 seconds
+[Package Manager] Done registering packages in 0.00 seconds
 Starting: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: /Users/davidbrommer/Projekte/Frostline/Frostline
 DisplayProgressbar: Compiling Scripts
@@ -238,13 +237,13 @@ warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
-ExitCode: 0 Duration: 0s252ms
+ExitCode: 0 Duration: 0s255ms
 [ 861/1171  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
 *** Tundra build success (0.24 seconds), 1 items updated, 1171 evaluated
-AssetDatabase: script compilation time: 0.564146s
+AssetDatabase: script compilation time: 0.627402s
 Begin MonoManager ReloadAssembly
 Total cache size 267851784
-Total cache size after purge 267851784, took 00:00:00.1122161
+Total cache size after purge 267851784, took 00:00:00.1002409
 Symbol file LoadedFromMemory is not a mono symbol file
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
@@ -252,87 +251,87 @@ Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.568 seconds
-Domain Reload Profiling: 1007ms
-	BeginReloadAssembly (109ms)
-		DisableScriptedObjects (15ms)
-		CreateAndSetChildDomain (27ms)
+- Finished resetting the current domain, in  0.573 seconds
+Domain Reload Profiling: 1002ms
+	BeginReloadAssembly (110ms)
+		DisableScriptedObjects (28ms)
+		CreateAndSetChildDomain (18ms)
 	RebuildCommonClasses (5ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (284ms)
-		LoadAssemblies (114ms)
-		TypeCache.Refresh (90ms)
-			TypeCache.ScanAssembly (81ms)
-		AnalyzeDomain (35ms)
-			BuildScriptInfoCaches (31ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (274ms)
+		LoadAssemblies (108ms)
+		TypeCache.Refresh (88ms)
+			TypeCache.ScanAssembly (79ms)
+		AnalyzeDomain (34ms)
+			BuildScriptInfoCaches (30ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (569ms)
+	FinalizeReload (574ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (53ms)
-			ProcessInitializeOnLoadAttributes (72ms)
-			ProcessInitializeOnLoadMethodAttributes (320ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (75ms)
+			ProcessInitializeOnLoadMethodAttributes (321ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
 Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/UnityShaderCompiler
 Starting new worker id: 0 with log in /Users/davidbrommer/Projekte/Frostline/Frostline/Logs/AssetImportWorkerHW0.log
 
-Asset Pipeline Refresh (id=02be1324e0bd54bf39cbd37e9a2dfc2e): Total: 2.220 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=537e78e93d1df405ba12817b530d6be2): Total: 2.255 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=1090 ms
-		Asset DB Callback time: managed=59 ms, native=13 ms
-		Scripting: domain reloads=1, domain reload time=457 ms, compile time=565 ms, other=33 ms
-		Project Asset Count: scripts=1696, non-scripts=2941
+		Asset DB Process Time: managed=0 ms, native=1076 ms
+		Asset DB Callback time: managed=62 ms, native=5 ms
+		Scripting: domain reloads=1, domain reload time=446 ms, compile time=629 ms, other=35 ms
+		Project Asset Count: scripts=1747, non-scripts=3193
 		Asset File Changes: new=0, changed=0, moved=0, deleted=0
 		Scan Filter Count: 1
-	InvokePackagesCallback: 14.473ms
-	ApplyChangesToAssetFolders: 0.184ms
-	Scan: 321.037ms
-	Collect global state as custom dependencies: 7.765ms
-	CategorizeScriptCompilationAssets: 17.250ms
-	ProcessAssetsWithTransientArtifactChanges: 44.043ms
-	CategorizeAssets: 55.558ms
-	CompileScripts: 565.442ms
-	ImportOutOfDateAssets: 576.349ms (572.091ms without children)
-		UnloadImportedAssets: 2.472ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.492ms
-		ImportSchedulerStart: 1.246ms
-	PostProcessAllAssets: 59.170ms
-		MonoPostProcessAllAssets: 59.141ms
-			AssetPostprocessorProxy.OnPostprocessAllAssets 14.484ms
-			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 8.537ms
-			SyncVS.PostprocessSyncProject 1.146ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.921ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.676ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 0.544ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.374ms
-			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.240ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.164ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.153ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.107ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.091ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.059ms
-	UnloadStreamsBegin: 0.606ms
-	PersistCurrentRevisions: 0.095ms
-	GenerateScriptTypeHashes: 1.090ms
-	GenerateScriptTypeSerializationHashes: 2.035ms
-	Untracked: 556.239ms
+	InvokePackagesCallback: 6.291ms
+	ApplyChangesToAssetFolders: 0.185ms
+	Scan: 299.686ms
+	Collect global state as custom dependencies: 7.695ms
+	CategorizeScriptCompilationAssets: 17.243ms
+	ProcessAssetsWithTransientArtifactChanges: 39.042ms
+	CategorizeAssets: 56.104ms
+	CompileScripts: 628.674ms
+	ImportOutOfDateAssets: 581.242ms (577.084ms without children)
+		UnloadImportedAssets: 2.369ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.522ms
+		ImportSchedulerStart: 1.228ms
+	PostProcessAllAssets: 62.700ms
+		MonoPostProcessAllAssets: 62.670ms
+			AssetPostprocessorProxy.OnPostprocessAllAssets 14.714ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 8.723ms
+			SyncVS.PostprocessSyncProject 0.936ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.920ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.659ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.539ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.355ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.250ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.149ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.124ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.100ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.072ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.063ms
+	UnloadStreamsBegin: 0.609ms
+	PersistCurrentRevisions: 0.101ms
+	GenerateScriptTypeHashes: 1.067ms
+	GenerateScriptTypeSerializationHashes: 1.989ms
+	Untracked: 547.878ms
 
 Application.AssetDatabase Initial Refresh End
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Scanning for USB devices : 0.113ms
+Scanning for USB devices : 0.099ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-Frostline
-2026-11-13 19:05:01.517 Unity[84317:21703230] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x93dbf0c80 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2026-11-13 22:46:40.540 Unity[27786:21956421] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0xb83168c80 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 Unloading 77 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7264 unused Assets / (12.3 MB). Loaded Objects now: 8473.
-Memory consumption went from 0.63 GB to 0.62 GB.
-Total: 7.723542 ms (FindLiveObjects: 0.608041 ms CreateObjectMapping: 0.142958 ms MarkObjects: 4.630375 ms  DeleteObjects: 2.260291 ms)
+Unloading 7266 unused Assets / (12.3 MB). Loaded Objects now: 8475.
+Memory consumption went from 0.63 GB to 0.61 GB.
+Total: 7.917000 ms (FindLiveObjects: 0.523583 ms CreateObjectMapping: 0.144250 ms MarkObjects: 4.955959 ms  DeleteObjects: 2.219583 ms)
 
 Frostline: Insel …
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
@@ -347,362 +346,340 @@ Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/E
 (Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 55)
 
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 0 unused Assets / (0 B). Loaded Objects now: 8475.
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 8477.
 Memory consumption went from 0.61 GB to 0.61 GB.
-Total: 4.916709 ms (FindLiveObjects: 0.225625 ms CreateObjectMapping: 0.060084 ms MarkObjects: 4.550083 ms  DeleteObjects: 0.009250 ms)
+Total: 4.822000 ms (FindLiveObjects: 0.226625 ms CreateObjectMapping: 0.057583 ms MarkObjects: 4.459375 ms  DeleteObjects: 0.007417 ms)
 
 DisplayProgressbar: Frostline – Insel
-Asset Pipeline Refresh (id=1ef494b970b2447f38c0edab54ad41f2): Total: 0.132 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=bd27e88fe85c34907a0591a28255fb06): Total: 0.136 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: 4af87d98af8614b558ecc5aaef1ab67a - Path: Assets/Frostline/Generated/Env_Basis.asset' with importer (NativeFormatImporter)
 Imported 'GUID: 4af87d98af8614b558ecc5aaef1ab67a' -> (Import Result ID: '21c25d3c0ca62e6baf123810675881b1') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=50b06914a3d7a48caba73e74499a0dbf DependenciesID=80a79d851ba9ceb0ff89d3d79df93aac StaticDependenciesID=418bd6041e2f6186dff7b0d47552255e 
-Asset Pipeline Refresh (id=b2cd7ed114f494cef8444a3a8ee75787): Total: 0.047 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2c926bcaa39cd4a128702356ac946913): Total: 0.045 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: 4af87d98af8614b558ecc5aaef1ab67a - Path: Assets/Frostline/Generated/Env_Basis.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 4af87d98af8614b558ecc5aaef1ab67a' -> (Import Result ID: 'ec5c4d4412fb3cdcb1494c3a455e4654') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=50b06914a3d7a48caba73e74499a0dbf DependenciesID=d16adf84a82df6d0734821b5a79f482b StaticDependenciesID=b55404130d2b685b5ec5922923dd0715 
-Asset Pipeline Refresh (id=2bfe0843290c841fa8a95d74db76aa67): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6fe8f3f8e927c497c93867c16cdc834d): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Imported 'GUID: 4af87d98af8614b558ecc5aaef1ab67a' -> (Import Result ID: '35fbd02ed612964a7c9cde21cb379e73') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=50b06914a3d7a48caba73e74499a0dbf DependenciesID=e77e22aee089e560bf05fcebeceba32d StaticDependenciesID=cea2b6919699fe2ea34bae62f5cee2b3 
+Asset Pipeline Refresh (id=76db1ae66d1be414191a1174b10fb985): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ad1e67149cbbc44f8a35377c35e4cc5c): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: 4949785bb1e354f3493e66452edfd942 - Path: Assets/Frostline/Generated/Env_TiefeWolken.asset' with importer (NativeFormatImporter)
 Imported 'GUID: 4949785bb1e354f3493e66452edfd942' -> (Import Result ID: '0762d38745e896a6f93a5083645b16f7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=00e8dd4bf73cc98be65baae5e1fa1661 DependenciesID=09a56aae4f77665c69549d0fcb01f7cc StaticDependenciesID=2bd7ea4d2ad3945b8488c4d373d7d4cf 
-Asset Pipeline Refresh (id=68d5111a13d7f4bf987e3a84a7823d48): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=171559c92acb14dc284a3673268a9480): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: 4949785bb1e354f3493e66452edfd942 - Path: Assets/Frostline/Generated/Env_TiefeWolken.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 4949785bb1e354f3493e66452edfd942' -> (Import Result ID: '134353e1a51ed523f5c3fe74991f0a5c') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=00e8dd4bf73cc98be65baae5e1fa1661 DependenciesID=4c6bde88caa372e29e9d36689765ecd9 StaticDependenciesID=79a55c3d9c2179955e6ebaa35f18e559 
-Asset Pipeline Refresh (id=ce3052b252f6f461ba48a9fb72f09b27): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=fabca88e22bfc48f5907735ed27e9e79): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Imported 'GUID: 4949785bb1e354f3493e66452edfd942' -> (Import Result ID: 'af6736f75abb028f77bd9fe7fa868085') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=00e8dd4bf73cc98be65baae5e1fa1661 DependenciesID=f90ae6d06f47e60da14e5970901b0c1f StaticDependenciesID=905cadacebe2986ae53a7103760d3814 
+Asset Pipeline Refresh (id=55dbed5a9ed234b91b94e3963481d22b): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=be75f22309cee41baa7d28116d21c7a3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: c7daf3fe27f0246b1946d7917c919395 - Path: Assets/Frostline/Generated/Env_Schneesturm.asset' with importer (NativeFormatImporter)
 Imported 'GUID: c7daf3fe27f0246b1946d7917c919395' -> (Import Result ID: '2ef304a58e6cf21bd4a4eaa3a4218182') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b6518631150bf9dbc0029d55911cbac0 DependenciesID=1f720b669cd6f875c842ecfe091b6970 StaticDependenciesID=6e862f6b01e09f419cc88d7c330db1ad 
-Asset Pipeline Refresh (id=b7a05e2bec6e84561834f8733fc4ae85): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=72c942790a2f348b2b4296e892ce9fb1): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: c7daf3fe27f0246b1946d7917c919395 - Path: Assets/Frostline/Generated/Env_Schneesturm.asset' with importer (NativeFormatImporter)
-Imported 'GUID: c7daf3fe27f0246b1946d7917c919395' -> (Import Result ID: 'e22b920f447e9083aebe207db10e7627') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b6518631150bf9dbc0029d55911cbac0 DependenciesID=2b39a208cf2c8e4327d730d06e3e327b StaticDependenciesID=3051d0e765a1adf2e4119a7e2cfe4e04 
-Asset Pipeline Refresh (id=144211d15f8204068927a8349d85370c): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: a78570a267d4c4b9cb2da0969019e0ea - Path: Assets/Frostline/Generated/Textures/Insel_Sand.png' with importer (TextureImporter)
-Imported 'GUID: a78570a267d4c4b9cb2da0969019e0ea' -> (Import Result ID: '5348e3bdbf593683137dd9a9323b6012') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8deceddc81f1e25dd4b9adc61b212b7 DependenciesID=ec89f02878ff95fb32bad29bfff45b8e StaticDependenciesID=0734791d2cab3e5c96133433b74d1ddc 
-Asset Pipeline Refresh (id=da14a822ce8a74e579c9a763566dc0d3): Total: 0.028 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: a78570a267d4c4b9cb2da0969019e0ea - Path: Assets/Frostline/Generated/Textures/Insel_Sand.png' with importer (TextureImporter)
-Imported 'GUID: a78570a267d4c4b9cb2da0969019e0ea' -> (Import Result ID: '5348e3bdbf593683137dd9a9323b6012') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8deceddc81f1e25dd4b9adc61b212b7 DependenciesID=ec89f02878ff95fb32bad29bfff45b8e StaticDependenciesID=0734791d2cab3e5c96133433b74d1ddc 
-Asset Pipeline Refresh (id=2ec3751e1491e4965a4c81227d452c61): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=7eaae2fb77c9249128dce19ac63f4d66): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6a9620761f00a4266b5b2b001c678366): Total: 0.042 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: ee66e6ea95cda45b3871ca7198f9f2fb - Path: Assets/Frostline/Generated/Textures/Insel_Kies_Gras.png' with importer (TextureImporter)
-Imported 'GUID: ee66e6ea95cda45b3871ca7198f9f2fb' -> (Import Result ID: '91861958ac6f35f51f8a60c1de764103') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a66f5e4a8ef9fdab707db4c96458377 DependenciesID=cfa11f55ad2ec44c34140511c3f16743 StaticDependenciesID=b33d7bd07749a2cb53428b73e36eb6f5 
-Asset Pipeline Refresh (id=b9347b346e01346cc9b51155fac90f90): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: ee66e6ea95cda45b3871ca7198f9f2fb - Path: Assets/Frostline/Generated/Textures/Insel_Kies_Gras.png' with importer (TextureImporter)
-Imported 'GUID: ee66e6ea95cda45b3871ca7198f9f2fb' -> (Import Result ID: '91861958ac6f35f51f8a60c1de764103') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a66f5e4a8ef9fdab707db4c96458377 DependenciesID=cfa11f55ad2ec44c34140511c3f16743 StaticDependenciesID=b33d7bd07749a2cb53428b73e36eb6f5 
-Asset Pipeline Refresh (id=2ee8b0ae8dc9247ab82c1c81c9ce11b8): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=917eca49a8283490797a3565b4134759): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ada5181541baa49249cee11c44dafdcb): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: 32716d34a7c0a4a6cabf883d00772b67 - Path: Assets/Frostline/Generated/Textures/Insel_Fels.png' with importer (TextureImporter)
-Imported 'GUID: 32716d34a7c0a4a6cabf883d00772b67' -> (Import Result ID: 'bedb992f58cbc3883d3689b9c8284042') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2e15c0ee98c22515a1867610dce309be DependenciesID=c3f3a639d1826130a33071feb21d7830 StaticDependenciesID=59715c984153b2228bbe4e0895fdbeb9 
-Asset Pipeline Refresh (id=0f9a2f3e39cd14aa1baa91280829df6e): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: 32716d34a7c0a4a6cabf883d00772b67 - Path: Assets/Frostline/Generated/Textures/Insel_Fels.png' with importer (TextureImporter)
-Imported 'GUID: 32716d34a7c0a4a6cabf883d00772b67' -> (Import Result ID: 'bedb992f58cbc3883d3689b9c8284042') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2e15c0ee98c22515a1867610dce309be DependenciesID=c3f3a639d1826130a33071feb21d7830 StaticDependenciesID=59715c984153b2228bbe4e0895fdbeb9 
-Asset Pipeline Refresh (id=beb6e0a5e511e4f179ce1a99ffa9fd91): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=461d06575c44e41f9afcae8ccec2833d): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=79aac0186275b420cbd5c283db8b334a): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: 5e072a83481804ee4bb1444b60122a92 - Path: Assets/Frostline/Generated/Textures/Insel_Schnee.png' with importer (TextureImporter)
-Imported 'GUID: 5e072a83481804ee4bb1444b60122a92' -> (Import Result ID: 'a677b3216e629834f45d6a3c1e49ebe1') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0e97566481911501d0c4e16b4592cea DependenciesID=1d15bc02951060b4a148a15e91bfa4d7 StaticDependenciesID=481249447d4605cbee0cab54cd1c2cac 
-Asset Pipeline Refresh (id=81aa233559b5d45b8a705df5c4756e8a): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: 5e072a83481804ee4bb1444b60122a92 - Path: Assets/Frostline/Generated/Textures/Insel_Schnee.png' with importer (TextureImporter)
-Imported 'GUID: 5e072a83481804ee4bb1444b60122a92' -> (Import Result ID: 'a677b3216e629834f45d6a3c1e49ebe1') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0e97566481911501d0c4e16b4592cea DependenciesID=1d15bc02951060b4a148a15e91bfa4d7 StaticDependenciesID=481249447d4605cbee0cab54cd1c2cac 
-Asset Pipeline Refresh (id=13ce68678208d40ad978572985c6ab32): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=648fed0337dc649fa8948a0013834bb6): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=af0af63ce03124e0b8d3febbacd5108f): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: ad4d0528b01f94e60a1629c38ffeff59 - Path: Assets/Frostline/Generated/Textures/Insel_Eis.png' with importer (TextureImporter)
-Imported 'GUID: ad4d0528b01f94e60a1629c38ffeff59' -> (Import Result ID: '6d02fc0e0084591b471d530d9a423b25') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=48f54f0f76e958e0196b05d01387a010 DependenciesID=7a8421ee99547d1a22ca834f18c9eaec StaticDependenciesID=3014e12a6a14d3170e17afebe91f4e67 
-Asset Pipeline Refresh (id=a61dd931e6d38420da13ca41664c10fb): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: ad4d0528b01f94e60a1629c38ffeff59 - Path: Assets/Frostline/Generated/Textures/Insel_Eis.png' with importer (TextureImporter)
-Imported 'GUID: ad4d0528b01f94e60a1629c38ffeff59' -> (Import Result ID: '6d02fc0e0084591b471d530d9a423b25') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=48f54f0f76e958e0196b05d01387a010 DependenciesID=7a8421ee99547d1a22ca834f18c9eaec StaticDependenciesID=3014e12a6a14d3170e17afebe91f4e67 
-Asset Pipeline Refresh (id=842a7ae6112d0419f956f1ff69de1fc1): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=82650978dc92540f28d616b5f20d10e0): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c2a109ac797704de3bf559a1545a4349): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=19b74e6ca5234443fa7ad68a96d28ec2): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c594271ee536f4b25a31d246c0b3be19): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0aff1a1555a8b4b6fa8a3b7bc175c862): Total: 0.004 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Imported 'GUID: c7daf3fe27f0246b1946d7917c919395' -> (Import Result ID: '338159684981f3f3a1c232ede80d3210') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=b6518631150bf9dbc0029d55911cbac0 DependenciesID=c25a85956721708056f6e7696aeeb146 StaticDependenciesID=fdf7adcd46eafdb313ba53f87131164c 
+Asset Pipeline Refresh (id=80bd058a07145411787eda93bfb379f0): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c69e6f98d2a134e46bba486fae977da1): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=1d449d437be8c40fc81e6cac6af31ef5): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=10b9a01e3294346de8a1ad448c1f0674): Total: 0.003 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.TerrainData> (string) (at /Users/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:448)
-Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:202)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
-Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
-Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
-Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
-
-[Assets/Frostline/Editor/IslandBuilder.cs line 202]
-
-Worker ready: AssetImportWorkerHW0 0
-Asset Pipeline Refresh (id=2441ed2a2e69548e4ae47b61cdd940fc): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: aec7f550030df44a6855ab92eb386587 - Path: Assets/Frostline/Generated/Insel/Terrain_0_0.asset' with importer (NativeFormatImporter)
-Imported 'GUID: aec7f550030df44a6855ab92eb386587' -> (Import Result ID: '6083c4091faf339be1ab5349bdba9567') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=679660ba53e8f306fc745f28f4e7d399 DependenciesID=bcd5ad5f6ebc6a50d341bdaaf2f9fd2f StaticDependenciesID=a406fd58b4b48c8c97614892cd6f5bb6 
-Asset Pipeline Refresh (id=db47afee6a59e4a10ac842dea6b7cdb5): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
-UnityEngine.TerrainData:set_treePrototypes (UnityEngine.TreePrototype[])
 Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:218)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
 [Assets/Frostline/Editor/IslandBuilder.cs line 218]
 
+Asset Pipeline Refresh (id=9908d46be4df3410aaa7633b0a24b8f2): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: aec7f550030df44a6855ab92eb386587 - Path: Assets/Frostline/Generated/Insel/Terrain_0_0.asset' with importer (NativeFormatImporter)
+Imported 'GUID: aec7f550030df44a6855ab92eb386587' -> (Import Result ID: '6083c4091faf339be1ab5349bdba9567') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=679660ba53e8f306fc745f28f4e7d399 DependenciesID=bcd5ad5f6ebc6a50d341bdaaf2f9fd2f StaticDependenciesID=a406fd58b4b48c8c97614892cd6f5bb6 
+Asset Pipeline Refresh (id=678acea30915c44b881fb70c66bc334d): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Worker ready: AssetImportWorkerHW0 0
+The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.TerrainData:set_treePrototypes (UnityEngine.TreePrototype[])
+Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:234)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
+Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
+Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
+
+[Assets/Frostline/Editor/IslandBuilder.cs line 234]
+
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.TerrainData> (string) (at /Users/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:448)
-Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:202)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
+Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:218)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 202]
+[Assets/Frostline/Editor/IslandBuilder.cs line 218]
 
-Asset Pipeline Refresh (id=e36b1f396c4c44066b35132ba35d1b32): Total: 0.048 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=f153a76601a584237872eecb6094cb03): Total: 0.049 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: c906701ba6f9d44fcb72cf47516f3984 - Path: Assets/Frostline/Generated/Insel/Terrain_1_0.asset' with importer (NativeFormatImporter)
 Imported 'GUID: c906701ba6f9d44fcb72cf47516f3984' -> (Import Result ID: '468e866958c408f7285c493b1b564080') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7cf7038eafc446fbcaf9e57d8a5a58c3 DependenciesID=966bdd3b318f957953c384bdba4b80c4 StaticDependenciesID=3256a9c2e8f793e2bb3a23a8db2ecb2d 
-Asset Pipeline Refresh (id=5f089e0d04c2f4018b8787954e868f1d): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9d29030a3d10a4d84aa18b74ea7c258e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
 UnityEngine.TerrainData:set_treePrototypes (UnityEngine.TreePrototype[])
-Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:218)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
+Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:234)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 218]
+[Assets/Frostline/Editor/IslandBuilder.cs line 234]
 
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.TerrainData> (string) (at /Users/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:448)
-Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:202)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
+Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:218)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 202]
+[Assets/Frostline/Editor/IslandBuilder.cs line 218]
 
-Asset Pipeline Refresh (id=9cbd2aef23c074daa87f2cb4e01f7ad0): Total: 0.045 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=be8b348d5020646ed96c3a9ba20d7112): Total: 0.042 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: c06e5b8aeeb1d48989f2cc8a55e5de9c - Path: Assets/Frostline/Generated/Insel/Terrain_0_1.asset' with importer (NativeFormatImporter)
 Imported 'GUID: c06e5b8aeeb1d48989f2cc8a55e5de9c' -> (Import Result ID: '7e7c1f274ffea83ef198ab16e7e3774d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=aefbea58b3d0edf369eab1ced7ba9697 DependenciesID=afac1fc8ef0a6ed7a2227294c780e058 StaticDependenciesID=fe74b3a907c25de2c8738bdec7dac89c 
-Asset Pipeline Refresh (id=d762029504156489692fe5bdc0597e5e): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=8a4bddcdd1da24b6f91e6d6a85e68053): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
 UnityEngine.TerrainData:set_treePrototypes (UnityEngine.TreePrototype[])
-Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:218)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
+Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:234)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 218]
+[Assets/Frostline/Editor/IslandBuilder.cs line 234]
 
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.TerrainData> (string) (at /Users/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:448)
-Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:202)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
-Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
-Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
-Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
-
-[Assets/Frostline/Editor/IslandBuilder.cs line 202]
-
-Asset Pipeline Refresh (id=4bd45397730fc41a2bbe2c741cb55c36): Total: 0.042 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f - Path: Assets/Frostline/Generated/Insel/Terrain_1_1.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f' -> (Import Result ID: 'fc51da77bf18129a2f0427cf5f31095d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=8927ddd24bdd094264cb1c8013571f7a DependenciesID=ecd86f8b9feaf4520fd32c331f9c800c StaticDependenciesID=d33a059e642e670748d05c6fcfac60fa 
-Asset Pipeline Refresh (id=62f5f2d5b966641429484e742ba8427b): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
-UnityEngine.TerrainData:set_treePrototypes (UnityEngine.TreePrototype[])
 Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:218)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:82)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
 [Assets/Frostline/Editor/IslandBuilder.cs line 218]
 
-Asset Pipeline Refresh (id=b9056037f1f2348d6bb77fcae22087af): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a85cc76ed0a684a9b8402af7b5312e2e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=aecb555dd73bb4bd6a18c076c8b7c949): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=4f4ae94f91f8546d09afe6aac8c6afef): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a251fcd89959444ae842f1da772bbd6b): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=f978eb5ba7fa9418fa4c14a9be09374e): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ef8a424b966ab41ee9b31cab874e486c): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=1239e33def28c436f8c713a3e84722fa): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b3fbf184f5ee4474b866c00bf5064041): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=24d236596a9be433fab6f0e458352783): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c461a11e166a24734834d7642fb3011d): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b67bd472d88074555994e5a0932d058e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b1dcf59ba421c468e83bec729caec102): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=cb670e11a89c04fe28efac6697aec114): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=02d4868971eb943abb3be2f5d288b7bc): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=02f27a6e8b8f948fe88a8deac9d66e4b): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=bcfa7579135e740d1bf0facab856b191): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=1131b79a7bdd849738d8e7a394060dd1): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=2df33634c5d3c466ab0e6cb27d18f49b): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=4fb57824604ca43f78b5ca2dc65fa83e): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6988e1aed46be4069abc12cb79576034): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ff681b131e0324ee38a917494263a8b7): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=1b84969c2bb8c4f119b8d0699528ca73): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e7f38f450c7734f2ca605204d42a7034): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=67690d4559e4a42669f18bb24822b34a): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=1217f2c126bb14e56a6800cfce2bf28a): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b9e9bdb92e6b84bd0af073f220425f6a): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=65eae23c125554b65bdebcc3c4810cf9): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=eb27b91ef229c4cc9952f3240eda41d8): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0016db478774f4835a29858a74f42afd): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=1f79bd36c8098417e88c52f14c07d2e4): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=d04c1985165454f309f6510ff501640a): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=05f5862a86a864d01b37dace4f6f75f0): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=7b4cdd597d81f47b19c9b2b688259992): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=890aecf37682247f69819e30b0b48362): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=abed0d4ef727d4a99850be10542c2a35): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=63c5cebaf1c084339bf4d53845d09d50): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e51ebe426c52c41f6a61feaa2932fd40): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=5b5b70cef75b945cc9737b63a26d42d3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=34b47883e5e39469b945c482b4eeb0a1): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=338a4105a6cb049a08ad3259e20b0551): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=051e9575f37f34332a9c23acc58baaf9): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=65861a7deeaf54d9e979ba5306af6ba0): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a66c9e6737f1e43618c2ebbb499e8b82): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e6bbab6736f0348a38dec2f973235afa): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=95b15cbeb3808489da7eff213c2998bd): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0e37f5905d516477ea6c59ded36e815e): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=780a658bca090457591dc90f2922b833): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b5767484c62d24569ac4c9ea3e4573c8): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=23216893d881d4202a57a42e03acecb1): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b77ae011f6a9d4f9dae6611a2d8b0641): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=297f55fe7481d47148bee43c0e92bc49): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=15ed24e9e249e4739a31dbd9f31dad60): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=3abfc1fc264074c6ab601713e2b829c4): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=64373e5552c8a41c88f5e8e85765cec9): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c969821316a714b8d99628d7d8398686): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6c2746b532bac46f9aa8e4fe4eb8bd2f): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=1128f167c02de4a3aa8560cbb4cd5e9a): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=05ee953501fa24fb18cde037329af2fc): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=fc602c2a84e294b9a8984ba216d38d9d): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6e458644d4c2c4ff6a7453be2bcdb68f): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=22ed3af0664594e328d52f51635b54ed): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=779367a78fa924f8581acbe8bd09bafb): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=db9ac41d8bbde41ffa6366652b56cf5c): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=042adc7947c3841948821d21567a0fa9): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=667787022f0ba4b35979e0117a331640): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=7b046dc022ac84481bea51913e46fb04): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=bf96de631c3ce4f3a9542f461517583a): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ed33bede498734280b5fdf8c18d328ed): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0945066d42d22459ca1aa0e6c1c83720): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b6c6aa4c7481d4384a6d3d6e1e690d2d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c1838d33a08ab4f078ef307a358288b3): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=79729e2907a2b4af3a2090608be25587): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=7cdcb0d09f8a3469f8cfadd59d03aa2c): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=4f7ac029c972f44ddac0a56feed4fa43): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=58cf4e02405044043b61caeb04cd01b5): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c15b3a19126de43539a7cf29cd53d625): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0f864e5c1d3be46ada9c45f83393feb7): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=46269f25262d64d5190fd411f3b6866a): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=808f2366d3f644a5cb541a7638dd4856): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=38c3f150a164b48d3ad42b11b3713bab): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=99d302ae552a24c24845f790f3b59a9b): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=d8a44ab383ade4e89a455510ae7dc4f3): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b9b113879d96b4ca4ba0897d512d6e49): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=28c1d0555f73a453f9f1d6ff729b9884): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=bc3df251787624a5ca58a011b6b4e578): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=7733abe66b08c499098f5859127140a6): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=5be1e1cb2cf53486d907190b74500a8b): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b8318b71fa2a4481c84c936e7520268c): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a412295121ed6481cb6cfcd3c87f4177): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=196c78a542b7a40f89b05586ed3c8b32): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=d681f2439fb794429ab285664cb5bd73): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=8ca261316ab634f7287d97f4773d4fc6): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b88b07e0348b24d199080bdfb1732a0f): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=2d8e0247c5465481cb5b6157fa44c612): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e5e5957021c8f4e2ab9c0d10425a6961): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0d9128e5e250143a7af543b9b8a3892d): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=de8b84fd7aef9499aa8e82c8f4ca092b): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=8477dd025f24c4ababf9680d4008199d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=2e63ade8dbc4c4b6595a409b620b7db4): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=3147acc6851a548ab97686463715ba26): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0695dc0537a1d41a29a4a8c648b019d2): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c92ca556d95954b5b8b93fd692da3773): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6ea3673c82c0a4556803ab6da91e3c82): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=567295426a4d24a5a949abcc237fc49e): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0ead41c8ca76e4ccbb950aabb0e21e6b): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=d6425fea1511843099b0f9dae74ca607): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=6deccb3344e3f4b598ceb54f05c2dadd): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=404312b46bda14f0ba94817634da9598): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=bb8f3ae256f054fcaa22b2b491a2b7b5): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ed3606adcce0a46ad84cbf18ffdaec6b): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=49d1e206d5d374e6ea4084465b07e92e): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=3333d4bf4749a47fc969e6e2775c4fed): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=4a5cce5c9260a49b1ad2592e045c7b44): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a7b842f53326948cdb8efc59ccc6fa4c): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=88c12b8338aab403794e9a169fb2b64a): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c94ef524a7fb44621946dae04d9b91a5): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ac1931edd56c045a3b5a0b17e6904b3c): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=d721bb1d48a0d4e4d93fd1f3ebfd9e4e): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=9e3e2b13e44ce4b23a63cce2e06e30b2): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=29b04f537cdce4bec895cf35d99e02a8): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=915a445f6c4ce406a9f469402b8b784b): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=54d84d13fd2be4399b2211ff911dae14): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b2272b1154f3d4b18a2b051a76d757d2): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=31bc70396681c48e0a179655b0b28c8d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=86468128a1ad24945b03e44f5b217b73): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=edcf40c566edf449695de0d718194cb9): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=fa16680fb77084014ac8777724e159b0): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=cc204a96e51244792981ae1341a757e8): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=99534575a1d674dc39f91373a0a3fe85): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=944ec5220ef434edd93a878aa4ec38d6): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=c5d5c32a263e7417ebb15530a302efc4): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=80d232d8eb44a424aa61c5050b62cea7): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=34b18cb90001345b2b3b31aaa0d7997d): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=67d1ad3b5574345929ca524cde21701b): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e0691aa6a986b4077b9b5f2f1eaf2e3e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=2e2b404d8fb3f4bc2a93840fa301e9fb): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b79b2ca7e71f84395a46f03a9c964017): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=98c4031142a6148c48569a3d17ae534d): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=7f4fcff650e8b43baae328f7420f9786): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=4ef873c63a57c44d9aecbb16707a2451): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=81d50669e97fe4389bda9c70e2fe6b58): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=9c7f96db4ab244e538a9a10462c726a3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=8bf7a87085b5247fea59ce61742321f6): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a5201c3bfdf63453d81aadacd4ea61c4): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=635e7a9ec4dd14e678a0f060e659b2af): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=a513b2f5354894ec79aba55ce3ff18ea): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e8d29c040aa364a6babb04c9406b1a82): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=335fdc26dfcef41ee979af29e1ccc4a3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=05a634ce9ee244ad29cafb00364355cf): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=fd999c7aef17a4183a69edead61aa451): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0f368f153760441a795396b3a1534424): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=9dd76f721b8c84e68b750f4915316352): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=0ff8a8c12bc024e4eb290391e842a15e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=474154e4b0263489382331eb967687f0): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=8f8f356dd362f415897c4e30e40a3dcf): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=2704c7e85e09347238ba38f662ed2583): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=2bbeca9d0edcb41a2bdd4d92da3daa39): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ab2bb70b41d9142ac87f69cf6de5a45a): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=ad0ca1139cd6249fea368fdf6e42cbab): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=e3144172b363f470e86178e877c59928): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=989caf207c8db4b7dbe2827facfb4cbe): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=150f75c54f19f4932919134b9b850e52): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ad8d07e275a7f46cf8d95744eb988325): Total: 0.042 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f - Path: Assets/Frostline/Generated/Insel/Terrain_1_1.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f' -> (Import Result ID: 'fc51da77bf18129a2f0427cf5f31095d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=8927ddd24bdd094264cb1c8013571f7a DependenciesID=ecd86f8b9feaf4520fd32c331f9c800c StaticDependenciesID=d33a059e642e670748d05c6fcfac60fa 
+Asset Pipeline Refresh (id=3cfa6b65486b4496681d4c5cb61d422d): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.TerrainData:set_treePrototypes (UnityEngine.TreePrototype[])
+Frostline.EditorTools.IslandBuilder:CreateTerrains () (at Assets/Frostline/Editor/IslandBuilder.cs:234)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:84)
+Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
+Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
+
+[Assets/Frostline/Editor/IslandBuilder.cs line 234]
+
+Asset Pipeline Refresh (id=4ae28920c2cdf45de81ab7f873430eb2): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ab436714f39984ec2bb502b91d43f24f): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9bcabbed79f8849a494dacea89955302): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7402ae42ee2da410c9f1d1387d93438a): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=10bad8d7ca0194510863f11bd5523aea): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=aab3244f6178e43ddb135ad4d0ce9694): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0b52775703a0446bba6504b58a64d20d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=74658fca9aede4aa18464c15ce147b6a): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=de182a7b10dac4bf9b9f73036900decb): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=017b5f2c6096c485cb2ffc6fab1dd503): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=4ebb11532a5de49c68adb610c6a9e23c): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9b1b35539c86b4a4db1367f351c822d5): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=1f38b6e3e678d432ba7a9cbb97b57955): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a1227726578494453b5059e6cbfd7012): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=db71e4b3f81a647288eda6519c5dc860): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ca03956385ad1493583eb19c46dfae7c): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=09b5a529887c445e9bb9e81f5899fc86): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b65c8fb4403bb43978757a628ffe298f): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=cdd9b7642a4d3428fbbf6fd9b3d669b0): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=6a6e333c1f98a43f99d5b26d946a8c7c): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=232605f85773a4d8ea2e7c1da494d26a): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=dd2cda84d17474f729c321e1e672afff): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0ba49afa25b6c4b84a88b37b2015dcf9): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=e1abb008b24df4405819771933185132): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9059e4f0de22f4bfcad5cc19929569cf): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=168a582679a7f485c9422a57a18acb11): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d950dc2508fad44dea6c0d065fa6d130): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9aa614db743434b3b9c5071e3e16cfeb): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=489a3f02e1eca4c35bd860821b739bf6): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=92123b6f0579646ed807cc160efef8c2): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=350c7f50d42db4d57aa6d750040418e8): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=207b8d3d6e8044270a3120f50e03df15): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=40c87f2b8940c4445ab142c7147b6e8a): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=269dedd2a455d49659abc96d936779ea): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=3ecb0cb7f28534d2b9c9c56dd8835d35): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=fe6b4232e0bb449eeb147c9a7b4dfa75): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=521d3a9d6b33340e2b7ba0d5569369d1): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=03a9dfdc2ee46451b800ef4aa4b0634d): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0b3d0391857f0409399c1421c958453b): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=3bd8fb040aba242b4b6cdb4e1e7d052d): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=78e7c42c7e4ae473fad5aedade590492): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=423538dbb2bd4446c96011ffd67c6b6e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7f07031c0f3b54cc9ac6eb1bc11e6b84): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d2a7c024cc47a4f429df1f15d44e7cdc): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=40d97bb3630394ac48914feb67d749e7): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=013f1b4d0c94343319479e0f8357662a): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=67c5d3692d41d429e96531cdbaba9cee): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=6f9600b5e5a6747b7b1325820620af8b): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=52e16bcbf87174b8ab466638c9001e0d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b3e9a2ba9c4334321ba1a78883788a28): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c19c4f650381e454d86e1c5f1a16de44): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2996a51330d7e49d1b21a3c348dfd3eb): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=e0ccbaf83c1ca4027880839662a42b37): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b3c49a07402c74495859849d53a421d0): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=4915007b1fbb642f79239681164c89ad): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=e224ea44fb5d745a082f742d7d807ab9): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=4f218d1175a0d4b759d6df6247498aec): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=30596afc7826d4ba994bb2c9e129993a): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=dd6ca2111bf2f40ca8a22195add44662): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d231288baaadc4a4abebc7b8e1f72d5c): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=5c4c0d848c1834d30993a4fe24f9eebf): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=592a91386447144a0b59f6ded5354d0b): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=db71f7bde32a247db8dab27880ce2d35): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=9950fc80beeb3451aaf269abcb5d7e08): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=1136676e310544704abc830139c2b10d): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=fb30b4ff1ee7741859327daca19e4fb6): Total: 0.042 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=dba5fd326a3674b96befbcf48345f22b): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=537d490ecc20846df89c439bce0bcf5a): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7fee2689a9edd4abf951ce74558f9d35): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=3f96323cd5d5d4304b6a6fa4ffcef01e): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=badbd1e060b844ab6ae931655ddd9e27): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d54ed294456e64c0e80e2253540bb749): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=f248647ec328842cf9bfa36c8e4abd8e): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=4fe82b178be5b41189bcd0edaee029bd): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=201bac61a017340549981bf15c65b843): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=5ee4ea8719b804fbda518291ddaa3a20): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2615a83107b4a4d01a8731c1ab1213ef): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=3b0799bf6b7f3482bb3a67d12bb93dd4): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2a58db1ce7e9f41ffae5359de2bd0402): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c5edb0a398f0b4f80aceb72be6955ca6): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7a94b46fb3cc546faa077743031c8fb7): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=81ad574c0d0534a7bbc91922c8b5f224): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Refreshing native plugins compatible for Editor in 2.49 ms, found 0 plugins.
+Asset Pipeline Refresh (id=d9e0e2b156e054728876eb090ffa9b66): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7756c8fe569a94990b0e4adb7a608be7): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=f11eeb4b983014aeca07a438efee01ea): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=326a34b9441bb4db18504cc74de40ba4): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=17a2ad7bf93554060a99b23f0aeb48c4): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d19029ca39494456f8c48969f8c2611d): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=83aec7baeaad34d0db7c152e59764461): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d1669a8b43bbb47cb91df985a9958a0b): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=04ea281d91ee440eb9171e7dc06e0a4f): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a71fd9f3f3bb94d8dbe1314d87800956): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=343c82694e23f4a9e86fddd90d3c7139): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=dc18a2ba8c0fc4731a086f508a44d415): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=197b424f41f2c486b8dcd60d9f308c9c): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=04187a12a373b40e3a6338130c9f4699): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=41ae81270f31644728092d3bbc2e151d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=abb57d0de8128497aad26048a520368d): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=06ad3702318774fc6a97c19912adcbb6): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d81025c36323c49398e09840f09c8b79): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=bca7f89166b7c48b3a3d88a2a89952a0): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a027d865dbc8a417ea3dcc9e02ae3a21): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=1048b600c242445f5b6b0f803557cf36): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=da793b085f1c14a1ba973cb82b4fe216): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=6f47424408488484c9c61c86babe3ce4): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c420f14d90787439483e182a30969336): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=615e30ba36fcb496d87b1ac73bb66e61): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=fe6e337e3b28a4425bba15a193566378): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=8b4af3681abab4cedad3c31429a95a3e): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=61400316dcddc4db1bcb267a44de4628): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=bd50208e8e81e48a2b09a62b492e5cda): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=67613b1668069473b9a2080e5c41b8a1): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d8b14a9cb1c014188872ec8c8c39103b): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=157a8869c7026451eb25bb24bdd2e9b6): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=6b2b6af16a13948b5820dbec921dfba7): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ba866fbd06f6d43d5940a7b81960aab0): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=8513b050bf5d0416f9e97e514096b2fd): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=66a9cb73d9e1d407cb837e0b7325a031): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=4f6b4d8cbb835483485cce3f60052f7a): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=927501dc3d63f4603a94d443d0436702): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=cf15395fe046e4e7dba568c238529791): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=8dcd250c602fb4ac5a2ff6ff2d119da9): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=118363d8c4dfe4a9abddb041f148e247): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0bb02d87ff3ad4b71a0b61373da68e66): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=bc08107f8778946818f3095c7483c9ac): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=65b5c797255924d489765606dec42851): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=160dbf6959e6f418d9b408cbd56da7f6): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ead40ceeb13ba4e4ab7859ecaeab5c9a): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ccf3b4f869be742458256a12bb0c0c6d): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b2f3c02e3d118477389e1c9561d1b1a3): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=d2a8941feb6f44853b611165e60e50c8): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=1587ab165bc1f415fa06b7ee2f1eb9e9): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=590dafe17845d4224ba08ee7e9eda9a3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=cf23dbdb6bff248d6a6b88f77b87806b): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=86c2146f6423540c399a3876f6c52819): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=76f56929a156a41019be1e84eba7c657): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=38e6de1b4e5574ec0a977ad2f09634ec): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ca82e7134f4e24deaa99bf96b0a58d0d): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=cf4f80cdfb6d54a6d82d4b5b55c1bedf): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0c9302185a94c4ca1a125e7fdbff9a75): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=af7fae883c3284bcf838dac076d609bd): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=54cf873d08ff945568f4f03a6d3dc434): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=95539719b50994277a0541caa396098d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b4e02e10e0649467fb615c3ac28b2547): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=94570cb360fe2455b9caa084ed3182c3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0013bb6a5b277449984efb4d29c3a1dc): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b31a24892a0c546e78983ea8c4764745): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=25dce546c4f0a4ca4a2a1358aabe30e0): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=08bfa13f3ed574ee19a9297a8d131e65): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a28419ca3887340fd8fb495282ccb9fa): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=fe5c16e23006c4a15ad62e9bf6627a59): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=10fcc44b0b8774191a6cf0fbbb022b33): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a42afb2188aa840eb854301bb724a93e): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c4d9fec4e703d403e89b232100b3beb9): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7cc458186378745c38b413041fcb38a1): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a5b37775d679c4969a979765a45bd3b6): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=149a7e33d24974491accf6e4e5fa8d36): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=129569d1818b44280aa2f3792a4540c4): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=e67e546e8d6884d67b9256faf9d0c71d): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=beccd2587344846eebfe3909374ec69e): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b4ba9a9ca1a854322a2472a4b8fec94f): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0b551276f72df4d0fb123e3e68b35dd9): Total: 0.039 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Frostline: Ausstattung aus Vorlagen: 667 Modelle gesetzt, 73 Stellen verworfen.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Frostline.EditorTools.IslandDressing:Build (UnityEngine.Transform,System.Collections.Generic.IList`1<Frostline.Gameplay.RaceTrack>,UnityEngine.Transform,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3) (at Assets/Frostline/Editor/IslandDressing.cs:57)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:107)
+Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
+Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
+Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
+
+(Filename: Assets/Frostline/Editor/IslandDressing.cs Line: 57)
+
+Asset Pipeline Refresh (id=d8483d7a7ccd34c33b60a8560cca011e): Total: 0.045 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: 17e532077f15c4e96aba580dfb8d529b - Path: Assets/Frostline/Generated/Materials/M_Schneeflocke.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 17e532077f15c4e96aba580dfb8d529b' -> (Import Result ID: '5c273b678b6299641d217513da2d8870') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=69ea18c3097a64862541c03cb0f59685 DependenciesID=64bbc3875631985eaf7d7e15474bae85 StaticDependenciesID=9bd53dbb049fbd34fa6a5c5a08ddfc51 
-Asset Pipeline Refresh (id=0a25d5f8a2eb94b73a63b1cbafb91218): Total: 0.050 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=58d76bc787b3d46f3b22fc29971c9f9a): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=719f7d777a92c49dea7a56313dd251d4): Total: 0.050 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=946655a9cf36645158b24ef19c3975a4): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: 568b021865c964ac082b0f740f241b56 - Path: Assets/Frostline/Generated/Netzwerk-Drohne.prefab' with importer (PrefabImporter)
-Imported 'GUID: 568b021865c964ac082b0f740f241b56' -> (Import Result ID: '3bbfb777646a391b6b765211b7dacad2') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0507cb647c4d93ca5e320fa9f5eb5d2d DependenciesID=776316dc0b69c02cd7cc3d1c3eb631cd StaticDependenciesID=e5773f2b2e551517643121e9c3b3339e 
-Asset Pipeline Refresh (id=1b6d217144bb04444b0b7a5896f72530): Total: 0.040 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Imported 'GUID: 568b021865c964ac082b0f740f241b56' -> (Import Result ID: 'c2f52d3e1614254dd5e6a33d79d1409b') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cec4329d7a0f1d96e5c9244f050728e2 DependenciesID=44311dbaf207db3482fc430ada6b58c1 StaticDependenciesID=6b52207bdf7c536194e7e62be76769c6 
+Asset Pipeline Refresh (id=9504a98a885c04a86be9e985fa45938f): Total: 0.041 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 80cd05c2b31f040efa7adf9dc37cd990 - Path: Assets/Frostline/Vorlagen/Texturen/gray_rocks/M_gray_rocks_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 80cd05c2b31f040efa7adf9dc37cd990' -> (Import Result ID: 'ae1e200991dfc721cf106acc81e368fc') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=45d531a1e789a18ae32cdd8b7164fde2 DependenciesID=1e8d8de0d7ab9299cac46f31d4a4e707 StaticDependenciesID=f654fb644ff0118662123aa30e11f37e 
 Importing 'GUID: 61a7a8d3ce9ba4161abd336c8f136001 - Path: Assets/Frostline/Generated/Materials/M_Fels.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 61a7a8d3ce9ba4161abd336c8f136001' -> (Import Result ID: 'cd8077e5d7945f90c31b34d0e372da03') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bac876ebf322d638ae171a53918f1a55 DependenciesID=ac613cd642f3699cd6b538d8b6aaf535 StaticDependenciesID=15d4787aaf0f102743bf4f2c0598c2b3 
 Importing 'GUID: 91a21e5981e604c0d89d5fd841764142 - Path: Assets/Frostline/Generated/Materials/M_Ziegel.mat' with importer (NativeFormatImporter)
@@ -717,106 +694,144 @@ Importing 'GUID: 62379324742d64a7b8f99aeaae61709a - Path: Assets/Frostline/Gener
 Imported 'GUID: 62379324742d64a7b8f99aeaae61709a' -> (Import Result ID: 'bc0daaf1d1725b852fabc81a335c3d8d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=080ba19bae3911b2b1a150e404762b68 DependenciesID=ec9f09824976ca7de12504ff24e03838 StaticDependenciesID=2add509f27df170d3a177d2865657801 
 Importing 'GUID: 43855628efa364818afc8f8c28b9af9f - Path: Assets/Frostline/Generated/Materials/M_Schnee.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 43855628efa364818afc8f8c28b9af9f' -> (Import Result ID: 'fb79cad545dd60f709903c451b7844d8') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=1fc1fd314b0c6aaca77ec7dffb1fa52e DependenciesID=42a6807354655499455230c716cc19e1 StaticDependenciesID=1b99acc23bdbc9daf5feee136c232e8e 
+Importing 'GUID: 83df6a7a6035e4ccaacdd1b0ff2b2b1b - Path: Assets/Frostline/Vorlagen/Texturen/concrete_panels/M_concrete_panels_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 83df6a7a6035e4ccaacdd1b0ff2b2b1b' -> (Import Result ID: '3b399579d594eb66976a183980d4d1cd') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=49f81ef8c0cb4836d516985cc29fa423 DependenciesID=45a8feacf00f93661a1bda09311e88e7 StaticDependenciesID=bf75f4a3b9cfb59cf7912aed6d4a6ff1 
 Importing 'GUID: a3602160a4d344f5d8799324016e4ad9 - Path: Assets/Frostline/Generated/Materials/M_Stahl.mat' with importer (NativeFormatImporter)
 Imported 'GUID: a3602160a4d344f5d8799324016e4ad9' -> (Import Result ID: '08bba6162eaabf0f033d2f12e6df91b7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=fb1c60fafe3a4ae6c239e52b6846931d DependenciesID=d21329a8a407cd721e9128eaf6769e7c StaticDependenciesID=6f4c8e81fb576441a8d153595967143a 
+Importing 'GUID: c342f58005a78479284acb6b6229aab3 - Path: Assets/Frostline/Vorlagen/Texturen/snow_04/TL_snow_04.terrainlayer' with importer (NativeFormatImporter)
+Imported 'GUID: c342f58005a78479284acb6b6229aab3' -> (Import Result ID: '6b55f2ef7a8cdf3f6435706e8761b819') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=a95faa28a540604d23009c3bdc3a3ef0 DependenciesID=9bf364852df2c00ef49ad2cb655f2f65 StaticDependenciesID=66aa37e4e540d71d7500452657a1008e 
 Importing 'GUID: d316dbc6a747d4524b8ffdbb881d91ae - Path: Assets/Frostline/Generated/Materials/M_Weiss.mat' with importer (NativeFormatImporter)
 Imported 'GUID: d316dbc6a747d4524b8ffdbb881d91ae' -> (Import Result ID: '69cd1f917fd4bd34c1d790d32ce3246f') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f0f5c10ae1cb5b66f740443d662fec9b DependenciesID=3776f30e27b5325174be7aae19d6d3ae StaticDependenciesID=494d6cdde4c9e97a6350778d4d9e83ec 
+Importing 'GUID: d35825fa9916d4e069627f0797180e2e - Path: Assets/Frostline/Vorlagen/Texturen/coast_sand_01/TL_coast_sand_01.terrainlayer' with importer (NativeFormatImporter)
+Imported 'GUID: d35825fa9916d4e069627f0797180e2e' -> (Import Result ID: 'ba86c9676e3291d3221590d7b97b3e61') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=20b537a46289ccbb8f040219a1f3b8cc DependenciesID=bf6131351286d897a7bf40ce7a602629 StaticDependenciesID=78d6c452083cc040f84fa023a5939d94 
 Importing 'GUID: 5400244eb13894997a4d054728e1720d - Path: Assets/Frostline/Generated/Materials/M_Startplatz.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 5400244eb13894997a4d054728e1720d' -> (Import Result ID: '401db0602cefac762faaa0b6e5de9b59') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=82ad827609d27bce67fb304f19ce8d24 DependenciesID=3f5f18f63d3598f5b328af1b27ab5642 StaticDependenciesID=5259d843336caa4905eafbfc4018114e 
 Importing 'GUID: 643ccd6a1258244d3827aa212275af6a - Path: Assets/Frostline/Generated/Materials/M_Gate.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 643ccd6a1258244d3827aa212275af6a' -> (Import Result ID: 'e28de2f79d5dd9b9650354dec3c50e51') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7fa7e6b03622ff08698302f2362d6c49 DependenciesID=ef8d71111bf7c4e1a4a8f8b34102ad65 StaticDependenciesID=b542a0429f9f787ab885940b8c428a43 
 Importing 'GUID: 74526192ba0df4baeb79aa3c5e2c8a22 - Path: Assets/Frostline/Generated/Materials/M_Drohne_Rahmen.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 74526192ba0df4baeb79aa3c5e2c8a22' -> (Import Result ID: 'f11c132d1098270f051b4e50dbf0220d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=2b81edb5c62bd4af05d46d0d9414e39f DependenciesID=eda2c356ed3ae2194482e62c39e7a5af StaticDependenciesID=15a9c9c089c831a72a43283f97de4e3c 
+Importing 'GUID: 941d7c9cf0e11409d89748bbdcfa5e48 - Path: Assets/Frostline/Vorlagen/Texturen/rusty_metal_02/M_rusty_metal_02_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 941d7c9cf0e11409d89748bbdcfa5e48' -> (Import Result ID: 'fbaf7a6ac63a6e5819b877dd6a68ade2') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=2f53f30c8dde6691e5833fbf5a67fe5d DependenciesID=5552c7b089ea15a7820202b5e3465c95 StaticDependenciesID=ea1277fc0ad3c8d9faee95b22e61e9f3 
 Importing 'GUID: a4ac434f257af42cfaf89aba3701b9a5 - Path: Assets/Frostline/Generated/Materials/M_Glas.mat' with importer (NativeFormatImporter)
 Imported 'GUID: a4ac434f257af42cfaf89aba3701b9a5' -> (Import Result ID: '20df5e198eaf630b106f50f59f09c761') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3f6e722b70885ab0ad6669d2be0139a7 DependenciesID=40a485fc06caaa577b33124a7608e934 StaticDependenciesID=700c72a0a19fb5eff7ea769e7f6448f3 
+Importing 'GUID: c46999199f4ec4436acebf1310f4e0d1 - Path: Assets/Frostline/Vorlagen/Texturen/painted_plaster_wall/M_painted_plaster_wall_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c46999199f4ec4436acebf1310f4e0d1' -> (Import Result ID: '20dde36188d32073077e9025c7a3c77b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=cd82ae963c8b8f39fa1e026d9c408d1e DependenciesID=770cdf5ecfea35452816e7899c85eb7c StaticDependenciesID=6e08e5ed63876c85c8f1ef7747ee0b50 
+Importing 'GUID: c47cdc187f9bb40b99d36849fc7e27ac - Path: Assets/Frostline/Vorlagen/Texturen/concrete_pavers/M_concrete_pavers_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c47cdc187f9bb40b99d36849fc7e27ac' -> (Import Result ID: '84cf160aa09817f8f61f1d5bdd4a4c7f') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=cd059dbb41946c6b6ad0ae819f3eba3c DependenciesID=78bede46790bd5155b41d931d7ee5bca StaticDependenciesID=6627ed592309e2ad3a9f1a579eba5398 
 Importing 'GUID: f4006d6d096f0432f812048a2db03d62 - Path: Assets/Frostline/Generated/Materials/M_Geruest.mat' with importer (NativeFormatImporter)
 Imported 'GUID: f4006d6d096f0432f812048a2db03d62' -> (Import Result ID: '3e1762d50e3cf11d5ef444d8e3ba05dc') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=e81714af1a320f40f038ecb1b2a270e7 DependenciesID=69b1a53bc4cd9c37d43d3ff8cc1f083f StaticDependenciesID=e1ddd52b6f891deaa2621fa0b3a28226 
 Importing 'GUID: 06f7e5c3788c244e3ad923acd8c52dc8 - Path: Assets/Frostline/Generated/Materials/M_Ghost.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 06f7e5c3788c244e3ad923acd8c52dc8' -> (Import Result ID: '4f248f060e810aa485e45faf4c104234') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=85e783028cff4b347343862f65573115 DependenciesID=31ce3b4fca48bbba3bc209b44bd645cf StaticDependenciesID=64c4f711a7a88e821e53af90ae6d0927 
 Importing 'GUID: 167e5f5d57bb24e2ca04681295a37021 - Path: Assets/Frostline/Generated/Materials/M_Dach.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 167e5f5d57bb24e2ca04681295a37021' -> (Import Result ID: '22ad4ba50baf436feb6808db4d8a4f42') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=fc268d18445ad738a17e7d259fa61dec DependenciesID=6f6d2ceb84c1eee7d8173131bcadb99f StaticDependenciesID=5422b7e876c5b2c37963bb97513c9a93 
+Importing 'GUID: 36616594374cc477a984ef695b0dc7dd - Path: Assets/Frostline/Vorlagen/Texturen/snow_02/M_snow_02_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 36616594374cc477a984ef695b0dc7dd' -> (Import Result ID: '94e6442dd74291134b5089d713b8f1f2') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c71d2d3f2b0895f9bb7d98a0c703a054 DependenciesID=afbc2dd72fa923066d289ca083186741 StaticDependenciesID=2f206bbc6b317e442aed32a1e5e1bae3 
 Importing 'GUID: 769e0115d4055439798eff39f5fb6638 - Path: Assets/Frostline/Generated/Materials/M_Holz_Ocker.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 769e0115d4055439798eff39f5fb6638' -> (Import Result ID: 'b7058b9b217f568d72923743e4bfef19') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=785c4d8fbf15f4ca1c2ef0f7f9135fcc DependenciesID=a8c6958dade2f0596d20a2f7718a714d StaticDependenciesID=2870fadc4704207846036d22e0fe9a74 
 Importing 'GUID: 17e532077f15c4e96aba580dfb8d529b - Path: Assets/Frostline/Generated/Materials/M_Schneeflocke.mat' with importer (NativeFormatImporter)
-Imported 'GUID: 17e532077f15c4e96aba580dfb8d529b' -> (Import Result ID: '00e4582709ee8b61054de8ccec8a36b0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=69ea18c3097a64862541c03cb0f59685 DependenciesID=5a82b5e6bd8adf15e5fe1f07e93146de StaticDependenciesID=9441878ececfba32a35230f44bebc739 
+Imported 'GUID: 17e532077f15c4e96aba580dfb8d529b' -> (Import Result ID: 'bdeba09341761c268489d1398da95c67') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=69ea18c3097a64862541c03cb0f59685 DependenciesID=00e4971308c87227f4c91de26a6c0b8c StaticDependenciesID=c59b78b38d9f614ad4c6359c40674be4 
 Importing 'GUID: 57956d85b76dc4cea90a1e3af353edde - Path: Assets/Frostline/Generated/Materials/M_Rumpf.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 57956d85b76dc4cea90a1e3af353edde' -> (Import Result ID: 'e09d8250f65bd2799975fc0c79994680') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7cd835c373482630bc351844abde818e DependenciesID=61835a679839c9a029fe597b84fd72ad StaticDependenciesID=40a09058f538f9f828d9f972ee351f6d 
 Importing 'GUID: 97da9f7156ecd4fdd963081df44c770e - Path: Assets/Frostline/Generated/Materials/M_Drohne_Akzent.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 97da9f7156ecd4fdd963081df44c770e' -> (Import Result ID: '0ba6f59316a2d54ead9f4e46b7c7887b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f4226d4a945f995bc3de357f4f6eeb2e DependenciesID=30176a3493e52e01c939a515018e6923 StaticDependenciesID=2fcff1234dd652b5823a44ac2d33fcd9 
+Importing 'GUID: f7b6743fde5954314997c5ffb64e5ba4 - Path: Assets/Frostline/Vorlagen/Texturen/rocky_terrain_02/TL_rocky_terrain_02.terrainlayer' with importer (NativeFormatImporter)
+Imported 'GUID: f7b6743fde5954314997c5ffb64e5ba4' -> (Import Result ID: '86c9e551b9224f51f6f2c6a95840d929') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c3d2f02c3b2b9950a55902ff3c8482aa DependenciesID=eb6a2eb7a98bfa5534f912e4ff5fa474 StaticDependenciesID=e8b74d5bee766fd33a798bc99ebda692 
 Importing 'GUID: 38a6a401c866b4114bd92b4bd15c5034 - Path: Assets/Frostline/Generated/Materials/M_Eis.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 38a6a401c866b4114bd92b4bd15c5034' -> (Import Result ID: '6451a46eb9f2bef6cf52e9ef92a4bc9e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=2c1c698b2c69490b8a4b82291733139f DependenciesID=98db320f91de4b19c9b4fc44bb4008c4 StaticDependenciesID=4fdc7f6d39618c15e95223cc78cc79f6 
+Importing 'GUID: 4981dded257d34710865356ee3562d27 - Path: Assets/Frostline/Vorlagen/Texturen/snow_field_aerial/TL_snow_field_aerial.terrainlayer' with importer (NativeFormatImporter)
+Imported 'GUID: 4981dded257d34710865356ee3562d27' -> (Import Result ID: 'ef0ca3a4a72b333a1e786e1e5bf5819a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=06c1621421df98eaa5dd2b9c07064645 DependenciesID=81a9b5d23975932ff705ee1ef050aee0 StaticDependenciesID=9e32b56f50e4e2577d3a420326ecb24d 
 Importing 'GUID: 895b9d9e6c9f64f3b9a19937cfc4188e - Path: Assets/Frostline/Generated/Materials/M_Stein.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 895b9d9e6c9f64f3b9a19937cfc4188e' -> (Import Result ID: 'f731950c51e3d264ed1030847a7c792a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=d40f777a1ac12fd246ea1edea198a5c3 DependenciesID=ea48af7d73149a27cf40974afba741e4 StaticDependenciesID=7de387f9326fd5ea7125b04f0f4cac12 
+Importing 'GUID: 898f15424f5654e44bfd1070a0c00e19 - Path: Assets/Frostline/Vorlagen/Texturen/weathered_plank_siding/M_weathered_plank_siding_F2422E.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 898f15424f5654e44bfd1070a0c00e19' -> (Import Result ID: 'c763c1b5ee055db3517c0ab320f8fc06') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=a260e28ef5e2246ffc5f51740351723e DependenciesID=6dba6e8d7d4f33f9eea09f7ddff937bd StaticDependenciesID=0857a074305ad8da50673adddb9b39ea 
+Importing 'GUID: b9ab6f85eeb6a47e1a7d02478a2bd741 - Path: Assets/Frostline/Vorlagen/Texturen/brick_wall_02/M_brick_wall_02_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b9ab6f85eeb6a47e1a7d02478a2bd741' -> (Import Result ID: 'b4f36aaee09ca5c9a2bf7cb3b434f419') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=fc6235557e182c1adf426280f87e2e11 DependenciesID=7244b7c9466ad1e1b08cbffe9bc570f6 StaticDependenciesID=1fbb7dca1ce2d8a0a5ba4b5193072028 
 Importing 'GUID: 9a47623c7d8de43d880e7d2d1696be11 - Path: Assets/Frostline/Generated/Materials/M_Sammelring.mat' with importer (NativeFormatImporter)
-Imported 'GUID: 9a47623c7d8de43d880e7d2d1696be11' -> (Import Result ID: '362575cc7201db6b6b4fe60f96b94c85') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=713f03e5c591b21b491ed0a6186cceaa DependenciesID=d01ffdf0f662a31c1ef2cc1e6e6243a6 StaticDependenciesID=27cf06a5e437f7a4dff68f73a92b7e31 
+Imported 'GUID: 9a47623c7d8de43d880e7d2d1696be11' -> (Import Result ID: '362575cc7201db6b6b4fe60f96b94c85') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=713f03e5c591b21b491ed0a6186cceaa DependenciesID=d01ffdf0f662a31c1ef2cc1e6e6243a6 StaticDependenciesID=27cf06a5e437f7a4dff68f73a92b7e31 
+Importing 'GUID: fa2deb1eff5a541239e28f78d20a1507 - Path: Assets/Frostline/Vorlagen/Texturen/weathered_planks/M_weathered_planks_8C7361.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fa2deb1eff5a541239e28f78d20a1507' -> (Import Result ID: 'cb8bcb2d1be00fc9a1376f5b1462de60') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=1b10d4e106f88d88030bea4e0d88a094 DependenciesID=c4348e135ec77ed750aece6fffe34228 StaticDependenciesID=8f845134bd5c0f9fe8601e82283eedbe 
 Importing 'GUID: 3b2a3378aee224efbb03d17ea75b46b9 - Path: Assets/Frostline/Generated/Materials/M_Rinde.mat' with importer (NativeFormatImporter)
-Imported 'GUID: 3b2a3378aee224efbb03d17ea75b46b9' -> (Import Result ID: 'f1e8cf94a316d56143a08d53cdc17994') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2f8633d0dc4062c444bb22ea393632af DependenciesID=6ed15133e52f1346d3315291522384e7 StaticDependenciesID=b2bf08d89b852673770bbe98417dde19 
+Imported 'GUID: 3b2a3378aee224efbb03d17ea75b46b9' -> (Import Result ID: 'f1e8cf94a316d56143a08d53cdc17994') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=2f8633d0dc4062c444bb22ea393632af DependenciesID=6ed15133e52f1346d3315291522384e7 StaticDependenciesID=b2bf08d89b852673770bbe98417dde19 
 Importing 'GUID: 9bf6927814cdc491c817c85efce0d908 - Path: Assets/Frostline/Generated/Materials/M_Holz_Dunkel.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 9bf6927814cdc491c817c85efce0d908' -> (Import Result ID: 'e4fc01e3745c6e9a2493cf6681d957f0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ee69f4a7d18c462d8f5c0e221be5d93b DependenciesID=e08750070ec43dd98724a2dae81eba79 StaticDependenciesID=8fc80d3072bfb78fb80bf5cffbad82c3 
 Importing 'GUID: db5c50baaacae452295865369e0b3b69 - Path: Assets/Frostline/Generated/Materials/M_Holz_Rot.mat' with importer (NativeFormatImporter)
 Imported 'GUID: db5c50baaacae452295865369e0b3b69' -> (Import Result ID: 'db04d33d005d175b8ca04acfdf9e5964') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=83490ed72dcb5e931b3bd1e0e0b842fb DependenciesID=ed1391a5626d89c8fc2d4686c3831b16 StaticDependenciesID=b72de33a71ba261640c641cf303277e7 
 Importing 'GUID: 0c11473540c4846e397c53bcce047180 - Path: Assets/Frostline/Generated/Materials/M_Drohne_Propeller.mat' with importer (NativeFormatImporter)
-Imported 'GUID: 0c11473540c4846e397c53bcce047180' -> (Import Result ID: '81987e7411975aad610a99500abf5bd0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=52112668ddb8e7ce7e6abc66ad88146a DependenciesID=b000e6bc84d2de9bda538dbb11d397e5 StaticDependenciesID=13425bc952eb223c6810d6260a01e559 
+Imported 'GUID: 0c11473540c4846e397c53bcce047180' -> (Import Result ID: '81987e7411975aad610a99500abf5bd0') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=52112668ddb8e7ce7e6abc66ad88146a DependenciesID=b000e6bc84d2de9bda538dbb11d397e5 StaticDependenciesID=13425bc952eb223c6810d6260a01e559 
+Importing 'GUID: ece047809fda44dbda0ba24f0c32a94d - Path: Assets/Frostline/Vorlagen/Texturen/grey_roof_tiles/M_grey_roof_tiles_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ece047809fda44dbda0ba24f0c32a94d' -> (Import Result ID: 'ccc3247a43b290cad1b30112257427ba') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=2e07fe238884f1b2e1f979a47619ba98 DependenciesID=aa80c98c5e99dc1c77ce6073bb76b0be StaticDependenciesID=0f4b82429eab20a4a42eeaf2d5d23f2d 
 Importing 'GUID: 3dc3a142165ed41ffb026b246632e1c2 - Path: Assets/Frostline/Generated/Materials/M_Mitspieler.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 3dc3a142165ed41ffb026b246632e1c2' -> (Import Result ID: 'b42675e27bc469eae39b9fac7a0181e8') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=88f61a0e78cdcc491dd677660e7d6211 DependenciesID=6cda81238b3067f31b27b73acbe5bf83 StaticDependenciesID=ad68a3b2c91a911ffcca38f8994a603c 
 Importing 'GUID: 0ed3eddab1bba44ca8f09b798d46d1ad - Path: Assets/Frostline/Generated/Materials/M_Beton.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 0ed3eddab1bba44ca8f09b798d46d1ad' -> (Import Result ID: 'cc9dcd872d737940cbf84ab98fe61e33') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=dc05fa7b74e3cdc04c6447c75a381d26 DependenciesID=f199ec40a249386b6d1d7fe2f9d317d3 StaticDependenciesID=ad32f24e1ccde8ec8251e03ccb0722e6 
+Importing 'GUID: 2eba3e56571d84462a0db9d5f4b71fd8 - Path: Assets/Frostline/Vorlagen/Texturen/metal_plate/M_metal_plate_9EA3AD.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2eba3e56571d84462a0db9d5f4b71fd8' -> (Import Result ID: '01f18e0f374550d1043aa55f94feb954') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0768f4434a3d0e9f4d43890c79917436 DependenciesID=556dcf63e0339dfb4b23b347809e4fbc StaticDependenciesID=290a014fb51eb929a93f30c6d724cc2d 
+Importing 'GUID: 3efe07a67810947e1a1fbfe2a00117fe - Path: Assets/Frostline/Vorlagen/Texturen/painted_plaster_wall/M_painted_plaster_wall_E6291F.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3efe07a67810947e1a1fbfe2a00117fe' -> (Import Result ID: '5eeb208dffdd628de2500512ea61c76c') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=1bc2154c5616682c982a210894bb4d08 DependenciesID=4bddb44815fb752124a22eee895d0f5f StaticDependenciesID=ab63fa93b0d7af4bf24575ce40a7e167 
+Importing 'GUID: 8efd08d9d1f23461daae6bbd38dac59c - Path: Assets/Frostline/Vorlagen/Texturen/rusty_metal_sheet/M_rusty_metal_sheet_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 8efd08d9d1f23461daae6bbd38dac59c' -> (Import Result ID: '8617b227e750f0dd4e645d1caea926f4') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6d6731d5cce19fee094f1dadd15cfb87 DependenciesID=cf4e713d1100359f7774e14b2e20ffd0 StaticDependenciesID=86454818ab4758cd5b0734045e97798f 
+Importing 'GUID: ee2fcbd9978c14a6e8c4986f127dabd5 - Path: Assets/Frostline/Vorlagen/Texturen/weathered_plank_siding/M_weathered_plank_siding_FFC766.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ee2fcbd9978c14a6e8c4986f127dabd5' -> (Import Result ID: '32e25d9106c391dde4efdcf5965075b5') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=1baf4641e2570f88b0d48620f0bf2f98 DependenciesID=9600bf7c09b652c03187e67ca1be07a9 StaticDependenciesID=ef241c21e31fd384f298835c36539e9e 
 Importing 'GUID: 1ff08d8849390407a92e1054d8cd6bbd - Path: Assets/Frostline/Generated/Materials/M_Nadeln.mat' with importer (NativeFormatImporter)
 Imported 'GUID: 1ff08d8849390407a92e1054d8cd6bbd' -> (Import Result ID: '6463bf9428c1f321dda8a0aea595bc19') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=08c384c19587d48d98b331341f003049 DependenciesID=ef3aac6cd5826b63f40e940529846efd StaticDependenciesID=1972788f58463b98857dd7e52569b654 
+Importing 'GUID: cf706e56014de4443938bc7abb499964 - Path: Assets/Frostline/Vorlagen/Texturen/stone_wall/M_stone_wall_FFFFFF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cf706e56014de4443938bc7abb499964' -> (Import Result ID: 'c1ef273ab6c7fba8b3c87a8dff4d00dd') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3f99f0aa95d4d2f31f407e52136ba451 DependenciesID=5da526e9c12a9159567252055e4bef3c StaticDependenciesID=8ea78d2d78a491bd75a5637e1f0b7cc9 
+Importing 'GUID: ff0241e9442db4934a4877175cf81773 - Path: Assets/Frostline/Vorlagen/Texturen/gray_rocks/TL_gray_rocks.terrainlayer' with importer (NativeFormatImporter)
+Imported 'GUID: ff0241e9442db4934a4877175cf81773' -> (Import Result ID: '90f0db4ce534080947623732eca8b7f0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c822b77c79698e76fca45b6f5e30ca96 DependenciesID=f69146b9d20d9fb378543a5cba19a86f StaticDependenciesID=c89236e36604f547c2ef87e708d75b63 
 Importing 'GUID: 406100905e0bc4b0095c1723f61f7334 - Path: Assets/DefaultNetworkPrefabs.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 406100905e0bc4b0095c1723f61f7334' -> (Import Result ID: '5d7934f83ba2b785f4c93b0875e5b199') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=1917c57bd7f127cf0264e6c9a3827100 DependenciesID=9f59b75e896bd66fb0b0674edbc4e74b StaticDependenciesID=0a99ac037f6226e8b3d2d7f3a667f001 
+Imported 'GUID: 406100905e0bc4b0095c1723f61f7334' -> (Import Result ID: '299ba02a78886740398bd123019dbd20') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=1917c57bd7f127cf0264e6c9a3827100 DependenciesID=1a0c0dc0960c9e977d76ffeb3dc2eeeb StaticDependenciesID=2bbc286cbec07ef2ae898acf350f82b9 
 Importing 'GUID: c06e5b8aeeb1d48989f2cc8a55e5de9c - Path: Assets/Frostline/Generated/Insel/Terrain_0_1.asset' with importer (NativeFormatImporter)
-Imported 'GUID: c06e5b8aeeb1d48989f2cc8a55e5de9c' -> (Import Result ID: 'c747f1e40ff4b6b7e0b83c06ebac85a9') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f1076e0fd685b94f51d2c687aae2d508 DependenciesID=b94e815680f5d3ce51a09cf7f4618241 StaticDependenciesID=7aa289297b5d56fdfc414bdf895fd8ab 
+Imported 'GUID: c06e5b8aeeb1d48989f2cc8a55e5de9c' -> (Import Result ID: '71fe9f6c594aa807e3cd9e16d035f166') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=572dad8d2750cd60cdab470452f6d44b DependenciesID=49af202a3706b7481aee697ee7ecdbf9 StaticDependenciesID=dd1ba3f13c16afbe40c480a964ec3764 
 Importing 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f - Path: Assets/Frostline/Generated/Insel/Terrain_1_1.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f' -> (Import Result ID: '97dc4f43685e17321c589103592bea5b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=604e3b90e48ecc514ae99daac949d7a8 DependenciesID=9adcc609059c41dea3e87de2626b1dc7 StaticDependenciesID=04cd0725f25b4899b15345514c6d1fb1 
+Imported 'GUID: 746225a2bb4cf4eb781a69d90cb6c21f' -> (Import Result ID: '9b9d47e4b5d7c0eca18adf913d01dfd2') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=8c654aa188817e510a461f2a7e89f044 DependenciesID=1eb80f87398f0a87e9f7407d7b921c36 StaticDependenciesID=f7a0664f0ab87632d23b3ff76f7d24cf 
 Importing 'GUID: c906701ba6f9d44fcb72cf47516f3984 - Path: Assets/Frostline/Generated/Insel/Terrain_1_0.asset' with importer (NativeFormatImporter)
-Imported 'GUID: c906701ba6f9d44fcb72cf47516f3984' -> (Import Result ID: '970973fe4cf8e53abdef86dc3d2cc26e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=35560de01a3536829a3f249f3c65cf8b DependenciesID=6468cbcb1393114584275eb4a371c374 StaticDependenciesID=551c78d4056a3a42a5f91aef1812309d 
+Imported 'GUID: c906701ba6f9d44fcb72cf47516f3984' -> (Import Result ID: '29a867031e6546f0de07e849c4afb5a6') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=2cabe6abff0fbe6bf85dbeb971f4d115 DependenciesID=730a37a145cf83419c298323330f98ea StaticDependenciesID=54e6c45a44129be0bfe265694292ff8b 
 Importing 'GUID: aec7f550030df44a6855ab92eb386587 - Path: Assets/Frostline/Generated/Insel/Terrain_0_0.asset' with importer (NativeFormatImporter)
-Imported 'GUID: aec7f550030df44a6855ab92eb386587' -> (Import Result ID: '6192de67e36c41801fc1c58240095fc9') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c7eec3aeedb2c0e0117d582b04de3e71 DependenciesID=df49056bd8470ee9305fdbb617591c24 StaticDependenciesID=21858f9c42d108f4a8c821ce9046b01b 
+Imported 'GUID: aec7f550030df44a6855ab92eb386587' -> (Import Result ID: 'ad6ed59311bebef3ac84be4637aad05e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0010a658ead9d05d9aed2c5f5ccee8b9 DependenciesID=c7c77b7ec94251e7c221cecdfe4af292 StaticDependenciesID=4bf96c64d6fa3690085a9a029f50103f 
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:124)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:128)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 124]
+[Assets/Frostline/Editor/IslandBuilder.cs line 128]
 
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:124)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:128)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 124]
+[Assets/Frostline/Editor/IslandBuilder.cs line 128]
 
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:124)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:128)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 124]
+[Assets/Frostline/Editor/IslandBuilder.cs line 128]
 
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:124)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:128)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
 
-[Assets/Frostline/Editor/IslandBuilder.cs line 124]
+[Assets/Frostline/Editor/IslandBuilder.cs line 128]
 
-Asset Pipeline Refresh (id=496a4475b404d489db5ec621e0a1928b): Total: 0.154 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=74ad6fca51284402081cc814b5c36da3): Total: 0.188 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: bea71036b785f493fbfcdf91d705c9c8 - Path: Assets/Frostline/Scenes/Frostline_Insel.unity' with importer (DefaultImporter)
-Imported 'GUID: bea71036b785f493fbfcdf91d705c9c8' -> (Import Result ID: 'f364d5b7f84a3b36fdc51f57d14b3869') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ef593bde8b43e79997804f95f71ad4ba DependenciesID=f6d5e6adc9cca05eda4fe1799177c7d0 StaticDependenciesID=c835bd3fd6d6b28afdc8751a301f05b2 
-Asset Pipeline Refresh (id=edfcb7a68307d418d94f6169068830c6): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Imported 'GUID: bea71036b785f493fbfcdf91d705c9c8' -> (Import Result ID: 'a21c958c1870bf758a2a996fcd38c57c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ef593bde8b43e79997804f95f71ad4ba DependenciesID=7234853092622b8ce8e4f4fb3b48e351 StaticDependenciesID=72a6f965f1539005f81f177dc103b97c 
+Asset Pipeline Refresh (id=9241e26b4f8284d0badc348b8466b681): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 [Frostline] Die Insel ist fertig: Frostline_Insel.unity
 
 Start am Strand im Süden. Im Menü (F1 › Spiel) gibt es drei Rennen: Strandlinie, Industrie-Slalom und Gletscher-Dive. 12 Sammelringe hängen an den Landmarken.
@@ -829,7 +844,7 @@ UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,st
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:Log (object)
 Frostline.EditorTools.EditorPrompts:Dialog (string,string,string) (at Assets/Frostline/Editor/EditorPrompts.cs:19)
-Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:135)
+Frostline.EditorTools.IslandBuilder:Build () (at Assets/Frostline/Editor/IslandBuilder.cs:139)
 Frostline.EditorTools.FrostlineCommandLine/<>c:<BuildIsland>b__2_0 () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:38)
 Frostline.EditorTools.FrostlineCommandLine:Run (string,System.Func`1<bool>) (at Assets/Frostline/Editor/FrostlineCommandLine.cs:56)
 Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/Editor/FrostlineCommandLine.cs:36)
@@ -848,21 +863,20 @@ Frostline.EditorTools.FrostlineCommandLine:BuildIsland () (at Assets/Frostline/E
 
 (Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 63)
 
-MonoPathRemapper: Attempts to remap: 16754; Successful remaps: 0
-Thread 0x43a8eb000 may have been prematurely finalized
+MonoPathRemapper: Attempts to remap: 16739; Successful remaps: 0
+Thread 0x43c943000 may have been prematurely finalized
 Serialized file version minimum: 23, current 23
-Thread 0x43ac87000 may have been prematurely finalized
+Thread 0x43cd07000 may have been prematurely finalized
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-Thread 0x16e7bf000 may have been prematurely finalized
-Thread 0x16eb07000 may have been prematurely finalized
-Thread 0x16ea7b000 may have been prematurely finalized
-Thread 0x16e963000 may have been prematurely finalized
-Thread 0x16e9ef000 may have been prematurely finalized
-Thread 0x16e84b000 may have been prematurely finalized
-Thread 0x16e8d7000 may have been prematurely finalized
-Thread 0x16eb93000 may have been prematurely finalized
+Thread 0x174813000 may have been prematurely finalized
+Thread 0x174acf000 may have been prematurely finalized
+Thread 0x17492b000 may have been prematurely finalized
+Thread 0x1749b7000 may have been prematurely finalized
+Thread 0x174a43000 may have been prematurely finalized
+Thread 0x174b5b000 may have been prematurely finalized
+Thread 0x17489f000 may have been prematurely finalized
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 [Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0-notifications channel disconnected successfully.

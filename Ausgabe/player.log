@@ -28,27 +28,28 @@ Begin MonoManager ReloadAssembly
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
 ScriptableRuntimeReflectionSystemSettings.system is assigned more than once. Only a the last instance will be used. (Last instance , New instance UnityEngine.Rendering.HighDefinition.HDRuntimeReflectionSystem)
-Metal RecreateSurface[0x77cd70240]: surface size 1920x1080
+Metal RecreateSurface[0x79f0c8240]: surface size 1920x1080
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-UnloadTime: 1.448334 ms
+UnloadTime: 0.474709 ms
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-Frostline Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 153.5 fps, 1%-Tief 125.8 fps
-FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 153.5 fps | 1%-Tief 125.8 fps
+Frostline Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 144.4 fps, 1%-Tief 110.8 fps
+FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 144.4 fps | 1%-Tief 110.8 fps
 FROSTLINE_AUTOMATION Ergebnis geschrieben: /Users/davidbrommer/Projekte/Frostline/Ausgabe/benchmark.json
 FROSTLINE_AUTOMATION Automatisierung fertig
-Thread 0x170e2f000 may have been prematurely finalized
-Thread 0x170ccb000 may have been prematurely finalized
+Thread 0x170ed7000 may have been prematurely finalized
+Thread 0x170ce7000 may have been prematurely finalized
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-Thread 0x16fd7b000 may have been prematurely finalized
-Thread 0x16fbd7000 may have been prematurely finalized
-Thread 0x16fc63000 may have been prematurely finalized
-Thread 0x16fcef000 may have been prematurely finalized
+Thread 0x16fbf3000 may have been prematurely finalized
+Thread 0x16fd97000 may have been prematurely finalized
+Thread 0x16fd0b000 may have been prematurely finalized
+Thread 0x16fe23000 may have been prematurely finalized
+Thread 0x16fc7f000 may have been prematurely finalized
 CodeReloadManager destroyed

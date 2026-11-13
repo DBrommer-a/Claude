@@ -7,12 +7,12 @@ Darwin version:          25.5.0
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
-Date:                    2026-11-13T18:05:22Z
-VBCSCompilerPreWarmer: watching VBCSCompiler (PID 84757)
-VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 84759)
-VBCSCompiler prewarm took 2.79 ms
+Date:                    2026-11-13T21:47:01Z
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 27859)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 27861)
+VBCSCompiler prewarm took 2.69 ms
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T18:05:22.628116Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T21:47:01.479021Z"
 Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
 
 COMMAND LINE ARGUMENTS:
@@ -69,23 +69,23 @@ Successfully changed project path to: /Users/davidbrommer/Projekte/Frostline/Fro
 Logging is directed to a specific file, skipping project log.
 Player connection [8423480704]  Target information:
 
-Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 753372602 [EditorId] 753372602 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 826626552 [EditorId] 826626552 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 753372602 [EditorId] 753372602 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 826626552 [EditorId] 826626552 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8423480704] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8423480704] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-84756" after 0.1 seconds.
+[Package Manager] Connected to IPC stream "Upm-27858" after 0.1 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.19.0'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-davidbrommer"
 [Licensing::IpcConnector] LicenseClient-davidbrommer channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T18:05:23.371126Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T21:47:02.172361Z"
 Initialising UDS system complete:
   - System type: Client
   - Resource namespace: 81943af8af7b172a9097ab3c851ca751
@@ -96,12 +96,12 @@ Initialising UDS system complete:
   - Service connected: false
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.19.0+4cc3dda
-  Session Id:              7660133bea5145d2bf47e3139a015a36
+  Session Id:              ef2db14cd48f4ebd99976b936e1357b1
   Correlation Id:          db9bad02f50b48e9f242c4f497e1c413
-  External correlation Id: 35213608802562169
+  External correlation Id: 3391646604060149287
   Machine Id:              VLvnnjBZADzrEVJVmAYFwzJg3ro=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.59s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T18:05:23.961287Z"
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.60s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T21:47:02.769061Z"
 [Licensing::Module] Error: Access token is unavailable; failed to update
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -110,8 +110,8 @@ Initialising UDS system complete:
   Type: Assigned
   Expiration: Unlimited
 [Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
-[Licensing::Module] Licensing Background thread has ended after 1.33s
-[Licensing::Module] Licensing is initialized (took 1.12s).
+[Licensing::Module] Licensing Background thread has ended after 1.29s
+[Licensing::Module] Licensing is initialized (took 1.07s).
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 Launching Unity Data Store - /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/Unity.DataStore 
@@ -143,7 +143,7 @@ Mono path[0] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.
 Mono path[1] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56858
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -151,28 +151,29 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.012025 seconds.
+Registered in 0.003227 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.589 seconds
-Domain Reload Profiling: 958ms
-	BeginReloadAssembly (142ms)
-		CreateAndSetChildDomain (7ms)
+- Finished resetting the current domain, in  0.581 seconds
+Domain Reload Profiling: 940ms
+	BeginReloadAssembly (150ms)
+		CreateAndSetChildDomain (12ms)
+	RebuildCommonClasses (3ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (176ms)
-		LoadAssemblies (137ms)
-		TypeCache.Refresh (127ms)
-			TypeCache.ScanAssembly (119ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (168ms)
+		LoadAssemblies (139ms)
+		TypeCache.Refresh (119ms)
+			TypeCache.ScanAssembly (111ms)
 		AnalyzeDomain (0ms)
-	FinalizeReload (590ms)
+	FinalizeReload (581ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (50ms)
-			ProcessInitializeOnLoadAttributes (44ms)
-			ProcessInitializeOnLoadMethodAttributes (401ms)
+			BeforeProcessingInitializeOnLoad (49ms)
+			ProcessInitializeOnLoadAttributes (43ms)
+			ProcessInitializeOnLoadMethodAttributes (397ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -231,7 +232,7 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.test-framework.performance@6.6.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.test-framework.performance@816c370aad5b)
     com.unity.graph-authoring@1.0.0 (location: /Users/davidbrommer/Projekte/Frostline/Frostline/Library/PackageCache/com.unity.graph-authoring@cfd2588851ee)
 [Subsystems] No new subsystems found in resolved package list.
-[Package Manager] Done registering packages in 0.00 seconds
+[Package Manager] Done registering packages in 0.01 seconds
 Starting: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: /Users/davidbrommer/Projekte/Frostline/Frostline
 DisplayProgressbar: Compiling Scripts
@@ -239,13 +240,13 @@ warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
-ExitCode: 0 Duration: 0s337ms
+ExitCode: 0 Duration: 0s312ms
 [ 861/1171  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
-*** Tundra build success (0.32 seconds), 1 items updated, 1171 evaluated
-AssetDatabase: script compilation time: 0.718542s
-Begin MonoManager ReloadAssembly
+*** Tundra build success (0.30 seconds), 1 items updated, 1171 evaluated
+AssetDatabase: script compilation time: 0.710984s
 Total cache size 267851784
-Total cache size after purge 267851784, took 00:00:00.0923196
+Begin MonoManager ReloadAssembly
+Total cache size after purge 267851784, took 00:00:00.0975283
 Symbol file LoadedFromMemory is not a mono symbol file
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
@@ -253,102 +254,102 @@ Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:False
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.574 seconds
-Domain Reload Profiling: 1092ms
-	BeginReloadAssembly (146ms)
-		DisableScriptedObjects (46ms)
-		CreateAndSetChildDomain (35ms)
+- Finished resetting the current domain, in  0.566 seconds
+Domain Reload Profiling: 1089ms
+	BeginReloadAssembly (155ms)
+		DisableScriptedObjects (54ms)
+		CreateAndSetChildDomain (38ms)
 	RebuildCommonClasses (5ms)
-	RebuildNativeTypeToScriptingClass (9ms)
+	RebuildNativeTypeToScriptingClass (8ms)
 	initialDomainReloadingComplete (31ms)
-	LoadAllAssembliesAndSetupDomain (328ms)
-		LoadAssemblies (165ms)
+	LoadAllAssembliesAndSetupDomain (324ms)
+		LoadAssemblies (162ms)
 		TypeCache.Refresh (86ms)
 			TypeCache.ScanAssembly (77ms)
 		AnalyzeDomain (33ms)
 			BuildScriptInfoCaches (29ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (575ms)
+	FinalizeReload (566ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (54ms)
-			ProcessInitializeOnLoadAttributes (73ms)
-			ProcessInitializeOnLoadMethodAttributes (327ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (72ms)
+			ProcessInitializeOnLoadMethodAttributes (322ms)
 		AwakeInstancesAfterBackupRestoration (8ms)
 Starting new worker id: 0 with log in /Users/davidbrommer/Projekte/Frostline/Frostline/Logs/AssetImportWorkerHW0.log
 
-Asset Pipeline Refresh (id=8a163cc0c150c443da6203165d89c3b7): Total: 2.466 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=b8157f73a96d44174b3b07f8f9ec94bc): Total: 2.439 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=1106 ms
-		Asset DB Callback time: managed=62 ms, native=5 ms
-		Scripting: domain reloads=1, domain reload time=535 ms, compile time=720 ms, other=35 ms
-		Project Asset Count: scripts=1696, non-scripts=2941
+		Asset DB Process Time: managed=0 ms, native=1086 ms
+		Asset DB Callback time: managed=60 ms, native=7 ms
+		Scripting: domain reloads=1, domain reload time=540 ms, compile time=712 ms, other=31 ms
+		Project Asset Count: scripts=1747, non-scripts=3193
 		Asset File Changes: new=0, changed=0, moved=0, deleted=0
 		Scan Filter Count: 1
-	InvokePackagesCallback: 5.938ms
-	ApplyChangesToAssetFolders: 0.182ms
-	Scan: 292.023ms
-	Collect global state as custom dependencies: 12.559ms
-	CategorizeScriptCompilationAssets: 20.012ms
-	ProcessAssetsWithTransientArtifactChanges: 42.006ms
-	CategorizeAssets: 55.477ms
-	CompileScripts: 719.615ms
-	ImportOutOfDateAssets: 582.495ms (577.928ms without children)
-		UnloadImportedAssets: 2.732ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.534ms
-		ImportSchedulerStart: 1.254ms
-	PostProcessAllAssets: 62.772ms
-		MonoPostProcessAllAssets: 62.743ms
-			AssetPostprocessorProxy.OnPostprocessAllAssets 14.980ms
-			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 9.134ms
-			SyncVS.PostprocessSyncProject 1.719ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.804ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.670ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 0.602ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.310ms
-			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.244ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.155ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.115ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.091ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.071ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.061ms
-	UnloadStreamsBegin: 0.553ms
-	PersistCurrentRevisions: 0.094ms
-	GenerateScriptTypeHashes: 1.069ms
-	GenerateScriptTypeSerializationHashes: 1.993ms
-	Untracked: 670.513ms
+	InvokePackagesCallback: 7.821ms
+	ApplyChangesToAssetFolders: 0.180ms
+	Scan: 290.644ms
+	Collect global state as custom dependencies: 8.325ms
+	CategorizeScriptCompilationAssets: 19.821ms
+	ProcessAssetsWithTransientArtifactChanges: 39.453ms
+	CategorizeAssets: 55.311ms
+	CompileScripts: 711.997ms
+	ImportOutOfDateAssets: 573.732ms (569.378ms without children)
+		UnloadImportedAssets: 2.650ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.517ms
+		ImportSchedulerStart: 1.146ms
+	PostProcessAllAssets: 60.926ms
+		MonoPostProcessAllAssets: 60.896ms
+			AssetPostprocessorProxy.OnPostprocessAllAssets 14.213ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 7.928ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.424ms
+			SyncVS.PostprocessSyncProject 1.741ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.940ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.523ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.325ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.237ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.171ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.127ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.103ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.077ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.073ms
+	UnloadStreamsBegin: 0.549ms
+	PersistCurrentRevisions: 0.100ms
+	GenerateScriptTypeHashes: 1.018ms
+	GenerateScriptTypeSerializationHashes: 1.899ms
+	Untracked: 669.038ms
 
 Application.AssetDatabase Initial Refresh End
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Scanning for USB devices : 0.088ms
+Scanning for USB devices : 0.092ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-Frostline
-2026-11-13 19:05:27.911 Unity[84756:21705966] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x854104c80 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2026-11-13 22:47:06.664 Unity[27858:21957469] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0xb3a134c80 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 Unloading 77 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7264 unused Assets / (9.5 MB). Loaded Objects now: 8473.
-Memory consumption went from 0.62 GB to 0.62 GB.
-Total: 8.290750 ms (FindLiveObjects: 0.474791 ms CreateObjectMapping: 0.130500 ms MarkObjects: 5.164375 ms  DeleteObjects: 2.444208 ms)
+Unloading 7266 unused Assets / (14.2 MB). Loaded Objects now: 8475.
+Memory consumption went from 0.63 GB to 0.61 GB.
+Total: 7.880584 ms (FindLiveObjects: 0.483834 ms CreateObjectMapping: 0.265458 ms MarkObjects: 4.928250 ms  DeleteObjects: 2.130417 ms)
 
-[Project] Loading completed in 5.407 seconds
-	Project init time: 				5.190 seconds
+[Project] Loading completed in 5.307 seconds
+	Project init time: 				5.098 seconds
 		Template init time: 		0.000 seconds
-		Package Manager init time: 		1.251 seconds
-		Asset Database init time: 		0.152 seconds
+		Package Manager init time: 		1.211 seconds
+		Asset Database init time: 		0.146 seconds
 		Global illumination init time: 	0.000 seconds
-		Assemblies load time: 			1.018 seconds
+		Assemblies load time: 			0.999 seconds
 		Unity extensions init time: 	0.011 seconds
-		Asset Database refresh time: 	2.466 seconds
-	Scene opening time: 			0.145 seconds
-##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1794593128030,"processId":84756,"projectLoad":5.407428959000001,"projectInit":5.189868458,"templateInit":0.0,"packageManagerInit":1.25058675,"assetDatabaseInit":0.151698917,"globalIlluminationInit":0.000247166,"assembliesLoad":1.017857042,"unityExtensionsInit":0.010656167,"assetDatabaseRefresh":2.46564375,"sceneOpening":0.14519675}
-##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1794593128030,"processId":84756,"editorVersion":"6000.6.9f1 (8c45277fb9c5)","branch":"6000.6/staging","buildType":"Release","platform":"OSX"}
+		Asset Database refresh time: 	2.439 seconds
+	Scene opening time: 			0.141 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1794606426781,"processId":27858,"projectLoad":5.307238208,"projectInit":5.098120792,"templateInit":0.0,"packageManagerInit":1.211112917,"assetDatabaseInit":0.146007875,"globalIlluminationInit":0.000439959,"assembliesLoad":0.999432041,"unityExtensionsInit":0.010979708,"assetDatabaseRefresh":2.43939825,"sceneOpening":0.140965833}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1794606426781,"processId":27858,"editorVersion":"6000.6.9f1 (8c45277fb9c5)","branch":"6000.6/staging","buildType":"Release","platform":"OSX"}
 Subscribe to USB device events
-Scanning for USB devices : 0.069ms
+Scanning for USB devices : 0.068ms
 [Licensing::Client] Successfully resolved entitlement details
 Running tests for ExecutionSettings with details:
 targetPlatform = 
@@ -377,12 +378,12 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions () (at /Users/bokken/
 (Filename: ./Library/PackageCache/com.unity.test-framework@01a8b42f9cf6/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 53)
 
 [UnityConnectServicesConfig] config is NOT valid, switching to default
-Created GICache directory at /Users/davidbrommer/Library/Caches/com.unity3d.UnityEditor/GiCache. Took: 0.002s, timestamps: [5.411 - 5.413]
+Created GICache directory at /Users/davidbrommer/Library/Caches/com.unity3d.UnityEditor/GiCache. Took: 0.002s, timestamps: [5.310 - 5.312]
 [Licensing::Client] Successfully resolved entitlement details
 Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1 unused Assets / (1.7 KB). Loaded Objects now: 8650.
+Unloading 1 unused Assets / (1.7 KB). Loaded Objects now: 8652.
 Memory consumption went from 0.61 GB to 0.61 GB.
-Total: 6.342625 ms (FindLiveObjects: 0.357083 ms CreateObjectMapping: 0.065792 ms MarkObjects: 5.835500 ms  DeleteObjects: 0.014291 ms)
+Total: 5.664875 ms (FindLiveObjects: 0.221125 ms CreateObjectMapping: 0.058583 ms MarkObjects: 5.298834 ms  DeleteObjects: 0.012042 ms)
 
 Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
@@ -418,9 +419,9 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions () (at /Users/bokken/
 (Filename: ./Library/PackageCache/com.unity.test-framework@01a8b42f9cf6/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs Line: 48)
 
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 0 unused Assets / (Unknown). Loaded Objects now: 8650.
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 8652.
 Memory consumption went from 0.61 GB to 0.61 GB.
-Total: 6.288667 ms (FindLiveObjects: 0.214583 ms CreateObjectMapping: 0.056083 ms MarkObjects: 5.931417 ms  DeleteObjects: 0.007792 ms)
+Total: 6.204125 ms (FindLiveObjects: 0.225792 ms CreateObjectMapping: 0.058042 ms MarkObjects: 5.843833 ms  DeleteObjects: 0.006000 ms)
 
 DisplayProgressbar: Undo
 Test run completed. Exiting with code 0 (Ok). Run completed.
@@ -438,26 +439,30 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions () (at /Users/bokken/
 
 MonoPathRemapper: Attempts to remap: 17047; Successful remaps: 192
 Serialized file version minimum: 23, current 23
-Thread 0x427f1b000 may have been prematurely finalized
+Thread 0x43d1db000 may have been prematurely finalized
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-Thread 0x17063f000 may have been prematurely finalized
-Thread 0x1706cb000 may have been prematurely finalized
-Thread 0x1707e3000 may have been prematurely finalized
-Thread 0x170757000 may have been prematurely finalized
-Thread 0x1708fb000 may have been prematurely finalized
-Thread 0x170987000 may have been prematurely finalized
-Thread 0x17086f000 may have been prematurely finalized
-Shut down UDS service system complete
+Worker ready: AssetImportWorkerHW0 0
+Thread 0x17bec7000 may have been prematurely finalized
+Thread 0x17bf53000 may have been prematurely finalized
+Thread 0x17c20f000 may have been prematurely finalized
+Thread 0x17bfdf000 may have been prematurely finalized
+Thread 0x17c327000 may have been prematurely finalized
+Thread 0x17c0f7000 may have been prematurely finalized
+Thread 0x17c29b000 may have been prematurely finalized
+Thread 0x17c183000 may have been prematurely finalized
+Thread 0x17c06b000 may have been prematurely finalized
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 [Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0-notifications channel disconnected successfully.
 [Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0 channel disconnected successfully.
+Shut down UDS service system complete
+debugger-agent: Unable to listen on 52
+Lingering sessions upon destruction of worker manager
 Unity Data Store service was successfully shut down
 UDS shutting down local client system
 AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-debugger-agent: Unable to listen on 41
 VBCSCompilerPreWarmer: requested VBCSCompiler shutdown

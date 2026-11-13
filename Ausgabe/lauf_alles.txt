@@ -1,3 +1,34 @@
+▶ Freie Vorlagen laden (Poly Haven, CC0)
+· textur coast_sand_01 (schon da)
+· textur rocky_terrain_02 (schon da)
+· textur gray_rocks (schon da)
+· textur snow_field_aerial (schon da)
+· textur snow_04 (schon da)
+· textur concrete_panels (schon da)
+· textur brick_wall_02 (schon da)
+· textur rusty_metal_02 (schon da)
+· textur metal_plate (schon da)
+· textur concrete_pavers (schon da)
+· textur weathered_plank_siding (schon da)
+· textur weathered_planks (schon da)
+· textur grey_roof_tiles (schon da)
+· textur painted_plaster_wall (schon da)
+· textur stone_wall (schon da)
+· textur snow_02 (schon da)
+· textur rusty_metal_sheet (schon da)
+· model rock_face_01 (schon da)
+· model rock_moss_set_01 (schon da)
+· model boulder_01 (schon da)
+· model dead_tree_trunk (schon da)
+· model tree_stump_01 (schon da)
+· model dutch_ship_medium (schon da)
+· model Barrel_01 (schon da)
+· model industrial_pastic_container (schon da)
+· model flood_lights (schon da)
+· model utility_box_01 (schon da)
+· model street_lamp_01 (schon da)
+· model fire_hydrant (schon da)
+Vorlagen: 17 Texturen, 12 Modelle in /Users/davidbrommer/Projekte/Frostline/Frostline/Assets/Frostline/Vorlagen
 ▶ Unity: Frostline.EditorTools.FrostlineCommandLine.Setup  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_Setup.log)
 ✓ Frostline.EditorTools.FrostlineCommandLine.Setup
 ▶ Unity: Frostline.EditorTools.FrostlineCommandLine.BuildIsland  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_BuildIsland.log)
@@ -40,25 +71,25 @@ total="102" passed="102" failed="0"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (147 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Strand.png  (138 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Hafen.png  (145 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Industriegebiet.png  (148 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (152 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Strand.png  (149 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Hafen.png  (158 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Industriegebiet.png  (143 fps)
 FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Stadt.png  (141 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Tal_Dorf.png  (155 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Bergdorf.png  (148 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Gletscher.png  (147 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Wald.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Funkmast.png  (148 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Ueber_den_Wolken.png  (157 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Drohne_vorn_rechts.png  (35 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Drohne_Seite_Nase_rechts.png  (38 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/13_Requisite_Leuchtturm.png  (137 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/14_Requisite_Funkmast.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/15_Requisite_Gestrandeter_Kutter.png  (137 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/16_Requisite_Kranbahn.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/17_Requisite_Fischerhütte_1.png  (140 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/18_Requisite_RennGate.png  (165 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Tal_Dorf.png  (141 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Bergdorf.png  (133 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Gletscher.png  (140 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Wald.png  (137 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Funkmast.png  (142 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Ueber_den_Wolken.png  (145 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Drohne_vorn_rechts.png  (32 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Drohne_Seite_Nase_rechts.png  (34 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/13_Requisite_Leuchtturm.png  (138 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/14_Requisite_Funkmast.png  (137 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/15_Requisite_Gestrandeter_Kutter.png  (124 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/16_Requisite_Kranbahn.png  (136 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/17_Requisite_Fischerhütte_1.png  (138 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/18_Requisite_RennGate.png  (160 fps)
 FROSTLINE_AUTOMATION Automatisierung fertig
 00_Start_FPV.png
 01_Strand.png
@@ -113,21 +144,21 @@ FROSTLINE_AUTOMATION Automatisierung fertig
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 153.5 fps | 1%-Tief 125.8 fps
+FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 144.4 fps | 1%-Tief 110.8 fps
 FROSTLINE_AUTOMATION Ergebnis geschrieben: /Users/davidbrommer/Projekte/Frostline/Ausgabe/benchmark.json
 FROSTLINE_AUTOMATION Automatisierung fertig
 {
   "rating": "Passed",
-  "averageFps": 153.52,
-  "onePercentLowFps": 125.82,
-  "medianFrameMs": 6.469,
-  "p99FrameMs": 7.658,
-  "worstFrameMs": 16.979,
-  "frames": 9212,
+  "averageFps": 144.41,
+  "onePercentLowFps": 110.81,
+  "medianFrameMs": 6.837,
+  "p99FrameMs": 8.428,
+  "worstFrameMs": 32.109,
+  "frames": 8665,
   "quality": "Medium",
   "resolution": "1920 x 1080",
   "device": "Mac16,12",
   "gpu": "Apple M4",
-  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_190815.txt"
+  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_224955.txt"
 }
 EXIT=0
