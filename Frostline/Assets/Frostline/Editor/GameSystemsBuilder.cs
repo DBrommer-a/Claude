@@ -247,6 +247,10 @@ namespace Frostline.EditorTools
 
         // ------------------------------------------------------------ Drohne
 
+        /// <summary>Ebene für das Modell der eigenen Drohne; die FPV-Kamera blendet sie aus.</summary>
+        public const int OwnDroneLayer = 8;
+        public const string OwnDroneLayerName = "Eigene Drohne";
+
         public static DroneController CreateDrone(Transform spawnPoint)
         {
             var go = new GameObject("Drohne");
@@ -284,6 +288,11 @@ namespace Frostline.EditorTools
             cameraGo.AddComponent<AudioListener>();
             cameraGo.tag = "MainCamera";
             ConfigureHdCamera(cameraGo);
+
+            // Das eigene Modell zeigt nur die Verfolgerkamera. Die FPV-Kamera sitzt mitten im Rahmen
+            // und hätte sonst Arme und Kamerahalter groß im Bild.
+            foreach (Renderer part in go.GetComponentsInChildren<Renderer>(true)) part.gameObject.layer = OwnDroneLayer;
+            camera.cullingMask &= ~(1 << OwnDroneLayer);
 
             var fpv = cameraGo.AddComponent<FpvCamera>();
             fpv.drone = drone;

@@ -103,7 +103,9 @@ namespace Frostline.EditorTools
             string dataPath = GeneratedFolder + "/IslandTile.asset";
             if (AssetDatabase.LoadAssetAtPath<TerrainData>(dataPath) != null) AssetDatabase.DeleteAsset(dataPath);
 
+            // Erst als Asset speichern, dann Schichten setzen (sonst gehen die Splatmaps verloren).
             var data = new TerrainData();
+            AssetDatabase.CreateAsset(data, dataPath);
             data.heightmapResolution = HeightResolution;
             data.size = new Vector3(IslandGenerator.TileSize, IslandGenerator.HeightRange, IslandGenerator.TileSize);
 
@@ -122,7 +124,8 @@ namespace Frostline.EditorTools
             data.SetAlphamaps(0, 0, IslandGenerator.BuildSplatmap(heights, SplatResolution));
 
             Progress("Terrain: speichern", 0.85f);
-            AssetDatabase.CreateAsset(data, dataPath);
+            EditorUtility.SetDirty(data);
+            AssetDatabase.SaveAssets();
 
             GameObject go = Terrain.CreateTerrainGameObject(data);
             go.name = "Insel (Terrain-Tile 2 × 2 km)";

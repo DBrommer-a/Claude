@@ -60,6 +60,7 @@ namespace Frostline.EditorTools
             foreach (Level level in Levels) assets.Add(CreatePipelineAsset(level));
             ConfigureQualityLevels(assets);
             GraphicsSettings.defaultRenderPipeline = assets[DefaultLevel];
+            NameLayer(GameSystemsBuilder.OwnDroneLayer, GameSystemsBuilder.OwnDroneLayerName);
 
             bool restartNeeded = EnableBothInputBackends();
 
@@ -249,6 +250,20 @@ namespace Frostline.EditorTools
             SerializedProperty property = parent.FindPropertyRelative(name);
             if (property == null) Debug.LogWarning("Frostline: Einstellung „" + name + "“ gibt es in dieser Unity-Version nicht, wird übersprungen.");
             return property;
+        }
+
+        /// <summary>Gibt einer leeren Ebene (Layer) im TagManager einen Namen.</summary>
+        static void NameLayer(int index, string name)
+        {
+            Object[] managers = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset");
+            if (managers == null || managers.Length == 0) return;
+            var tagManager = new SerializedObject(managers[0]);
+            SerializedProperty layers = tagManager.FindProperty("layers");
+            if (layers == null || index >= layers.arraySize) return;
+            SerializedProperty entry = layers.GetArrayElementAtIndex(index);
+            if (!string.IsNullOrEmpty(entry.stringValue)) return;
+            entry.stringValue = name;
+            tagManager.ApplyModifiedPropertiesWithoutUndo();
         }
 
         static void SetBool(SerializedProperty parent, string name, bool value)

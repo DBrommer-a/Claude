@@ -18,7 +18,7 @@ namespace Frostline.Gameplay
         public float cleanAltitude = 2200f;
         public float lostAltitude = 3200f;
         [Tooltip("Auch ohne Kartenrand ein wenig analoges Rauschen, wie bei echter Analog-Brille.")]
-        [Range(0f, 0.3f)] public float baseNoise = 0.03f;
+        [Range(0f, 0.3f)] public float baseNoise = 0.015f;
 
         readonly SignalModel model = new SignalModel();
         AnalogNoise noise;
@@ -97,7 +97,8 @@ namespace Frostline.Gameplay
         {
             texture = new Texture2D(Width, Height, TextureFormat.RGBA32, false)
             {
-                filterMode = FilterMode.Point,
+                // Weich gefiltert: Point ergab bei 1080p sichtbare 8-Pixel-Blöcke statt Analograuschen.
+                filterMode = FilterMode.Bilinear,
                 wrapMode = TextureWrapMode.Clamp,
                 name = "Analog Noise",
             };

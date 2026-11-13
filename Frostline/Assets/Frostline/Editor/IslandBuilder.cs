@@ -196,7 +196,12 @@ namespace Frostline.EditorTools
                     float originZ = tz * IslandShape.TileSize;
                     string label = "Tile " + (tx == 0 ? "West" : "Ost") + "-" + (tz == 0 ? "Süd" : "Nord");
 
+                    // Erst als Asset speichern, dann Schichten setzen: Sonst speichert Unity die Splatmap-
+                    // Texturen nicht mit, und beim Laden ist das ganze Terrain nur noch Sand.
+                    string dataPath = Folder + "/Terrain_" + tx + "_" + tz + ".asset";
+                    if (AssetDatabase.LoadAssetAtPath<TerrainData>(dataPath) != null) AssetDatabase.DeleteAsset(dataPath);
                     var data = new TerrainData();
+                    AssetDatabase.CreateAsset(data, dataPath);
                     data.heightmapResolution = HeightResolution;
                     data.size = new Vector3(IslandShape.TileSize, IslandShape.HeightRange, IslandShape.TileSize);
                     float baseProgress = 0.05f + index * 0.15f;
@@ -213,9 +218,7 @@ namespace Frostline.EditorTools
                     data.treePrototypes = new[] { new TreePrototype { prefab = treePrefab } };
                     data.SetTreeInstances(PlaceTrees(originX, originZ), true);
 
-                    string dataPath = Folder + "/Terrain_" + tx + "_" + tz + ".asset";
-                    if (AssetDatabase.LoadAssetAtPath<TerrainData>(dataPath) != null) AssetDatabase.DeleteAsset(dataPath);
-                    AssetDatabase.CreateAsset(data, dataPath);
+                    EditorUtility.SetDirty(data);
 
                     GameObject go = Terrain.CreateTerrainGameObject(data);
                     go.name = label;
