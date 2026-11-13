@@ -3,8 +3,8 @@
 # Aufruf aus dem Repository-Ordner, z. B.:  tools/mac/frostline.sh alles
 set -euo pipefail
 
-VERSION="6000.3.28f1"
-CHANGESET="8f082d2fe476"
+VERSION="6000.6.9f1"
+CHANGESET="8c45277fb9c5"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 PROJECT="$ROOT/Frostline"
 OUT="$ROOT/Ausgabe"

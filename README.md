@@ -19,11 +19,11 @@ FPV-Sender oder iPhone als Controller und Multiplayer für bis zu 8 Drohnen.
 | Higgsfield | Concept-Art je Zone, Testdrohne als 3D-Modell, Ambient-Sounds, App-Icon, Ladebildschirm |
 | Optik | Platzhalter-Texturen und Rohbau-Geometrie; die echten Assets kommen nach dem 60-fps-Gate |
 
-Alles ist gegen Unity 6.3 kompiliert, aber noch nicht im Editor gestartet worden.
+Alles ist gegen Unity 6.6 (6000.6.9f1) kompiliert, aber noch nicht im Editor gestartet worden.
 
 ## Öffnen
 
-1. **Unity 6000.3.28f1** mit Mac Build Support installieren, Ordner `Frostline` in Unity Hub öffnen.
+1. **Unity 6000.6.9f1** mit Mac Build Support installieren, Ordner `Frostline` in Unity Hub öffnen.
 2. **Frostline › 1 · Projekt einrichten** (HDRP, Qualitätsstufen, 500 Hz), Unity neu starten.
 3. **Frostline › 4 · Insel erstellen (4 × 4 km)**: die ganze Karte.
    Oder **2 · Prototyp-Szene** für einen schnellen Test auf 2 × 2 km.
