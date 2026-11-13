@@ -82,7 +82,7 @@ namespace Frostline.View
         void Awake()
         {
             Instance = this;
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
             lowCloudsWeight = weather == Weather.LowClouds ? 1f : 0f;
             stormWeight = weather == Weather.Snowstorm ? 1f : 0f;
             windAngle = UnityEngine.Random.Range(0f, 360f);

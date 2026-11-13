@@ -45,17 +45,17 @@ namespace Frostline.UI
 
         void Awake()
         {
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
-            if (input == null) input = FindFirstObjectByType<StickInput>();
-            if (fpvCamera == null) fpvCamera = FindFirstObjectByType<FpvCamera>();
-            if (motorAudio == null) motorAudio = FindFirstObjectByType<MotorAudio>();
-            if (benchmark == null) benchmark = FindFirstObjectByType<BenchmarkRunner>();
-            if (osd == null) osd = FindFirstObjectByType<Osd>();
-            if (race == null) race = FindFirstObjectByType<RaceManager>();
-            if (replay == null) replay = FindFirstObjectByType<ReplayDirector>();
-            if (weather == null) weather = FindFirstObjectByType<WeatherSystem>();
-            if (collectibles == null) collectibles = FindFirstObjectByType<Collectibles>();
-            if (remote == null) remote = FindFirstObjectByType<RemoteControlServer>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
+            if (input == null) input = FindAnyObjectByType<StickInput>();
+            if (fpvCamera == null) fpvCamera = FindAnyObjectByType<FpvCamera>();
+            if (motorAudio == null) motorAudio = FindAnyObjectByType<MotorAudio>();
+            if (benchmark == null) benchmark = FindAnyObjectByType<BenchmarkRunner>();
+            if (osd == null) osd = FindAnyObjectByType<Osd>();
+            if (race == null) race = FindAnyObjectByType<RaceManager>();
+            if (replay == null) replay = FindAnyObjectByType<ReplayDirector>();
+            if (weather == null) weather = FindAnyObjectByType<WeatherSystem>();
+            if (collectibles == null) collectibles = FindAnyObjectByType<Collectibles>();
+            if (remote == null) remote = FindAnyObjectByType<RemoteControlServer>();
             presets = QuadConfig.AllPresets();
         }
 

@@ -48,8 +48,12 @@ namespace Frostline.Gameplay
         void Awake()
         {
             Instance = this;
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
+#if UNITY_6000_4_OR_NEWER
+            if (tracks.Count == 0) tracks.AddRange(FindObjectsByType<RaceTrack>());
+#else
             if (tracks.Count == 0) tracks.AddRange(FindObjectsByType<RaceTrack>(FindObjectsSortMode.None));
+#endif
             tracks.Sort((a, b) => string.Compare(a.trackName, b.trackName, StringComparison.Ordinal));
             foreach (RaceTrack t in tracks) t.gameObject.SetActive(false);
         }

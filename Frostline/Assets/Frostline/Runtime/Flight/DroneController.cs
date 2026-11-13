@@ -48,7 +48,7 @@ namespace Frostline.Flight
         void Awake()
         {
             body = GetComponent<Rigidbody>();
-            if (input == null) input = FindFirstObjectByType<StickInput>();
+            if (input == null) input = FindAnyObjectByType<StickInput>();
             ApplySettings();
         }
 

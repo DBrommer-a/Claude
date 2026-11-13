@@ -59,7 +59,7 @@ namespace Frostline.Controls
 
         void OnEnable()
         {
-            if (remote == null) remote = FindFirstObjectByType<RemoteControlServer>();
+            if (remote == null) remote = FindAnyObjectByType<RemoteControlServer>();
             toggledMode = defaultMode;
             InputSystem.onDeviceChange += OnDeviceChange;
             SelectBestDevice();

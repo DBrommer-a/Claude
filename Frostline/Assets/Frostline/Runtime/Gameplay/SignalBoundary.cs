@@ -29,7 +29,7 @@ namespace Frostline.Gameplay
 
         void Awake()
         {
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
             if (respawn == null && drone != null) respawn = drone.GetComponent<DroneRespawn>();
             noise = new AnalogNoise();
         }

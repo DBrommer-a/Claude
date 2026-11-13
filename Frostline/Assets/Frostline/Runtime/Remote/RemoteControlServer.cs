@@ -58,7 +58,7 @@ namespace Frostline.Remote
         void OnEnable()
         {
             Instance = this;
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
             Open();
             FrostlineEvents.Crashed += OnCrashed;
             FrostlineEvents.GroundTouched += OnGroundTouched;

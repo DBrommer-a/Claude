@@ -42,7 +42,7 @@ namespace Frostline.Multiplayer
         public override void OnNetworkSpawn()
         {
             Instance = this;
-            race = FindFirstObjectByType<RaceManager>();
+            race = FindAnyObjectByType<RaceManager>();
             weatherSystem = WeatherSystem.Instance;
 
             if (race != null)

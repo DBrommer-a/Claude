@@ -91,7 +91,7 @@ namespace Frostline.Diagnostics
         IEnumerator Screenshots()
         {
             Directory.CreateDirectory(shotsFolder);
-            DroneController drone = FindFirstObjectByType<DroneController>();
+            DroneController drone = FindAnyObjectByType<DroneController>();
             if (drone == null)
             {
                 Log("Keine Drohne in der Szene, keine Screenshots");
@@ -103,7 +103,7 @@ namespace Frostline.Diagnostics
             yield return Capture("00_Start_FPV");
 
             var views = new List<KeyValuePair<string, Pose>>();
-            Checkpoints checkpoints = FindFirstObjectByType<Checkpoints>();
+            Checkpoints checkpoints = FindAnyObjectByType<Checkpoints>();
             if (checkpoints != null)
             {
                 foreach (Transform point in checkpoints.transform)
@@ -113,7 +113,7 @@ namespace Frostline.Diagnostics
                     views.Add(new KeyValuePair<string, Pose>(point.name, new Pose(eye, Quaternion.LookRotation(target - eye))));
                 }
             }
-            SignalBoundary signal = FindFirstObjectByType<SignalBoundary>();
+            SignalBoundary signal = FindAnyObjectByType<SignalBoundary>();
             Vector3 center = signal != null ? new Vector3(signal.center.x, 0f, signal.center.y) : Vector3.zero;
             Vector3 high = center + new Vector3(0f, 1800f, -2600f);
             views.Add(new KeyValuePair<string, Pose>("Ueber_den_Wolken", new Pose(high, Quaternion.LookRotation(center + Vector3.up * 400f - high))));
@@ -160,7 +160,7 @@ namespace Frostline.Diagnostics
 
         IEnumerator Benchmark()
         {
-            BenchmarkRunner runner = FindFirstObjectByType<BenchmarkRunner>();
+            BenchmarkRunner runner = FindAnyObjectByType<BenchmarkRunner>();
             if (runner == null)
             {
                 Log("Kein Benchmark in der Szene");

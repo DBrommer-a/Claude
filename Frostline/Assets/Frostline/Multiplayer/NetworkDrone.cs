@@ -37,7 +37,7 @@ namespace Frostline.Multiplayer
             all.Add(this);
             if (IsOwner)
             {
-                local = FindFirstObjectByType<DroneController>();
+                local = FindAnyObjectByType<DroneController>();
                 string name = MultiplayerSession.PilotName;
                 if (name.Length > 28) name = name.Substring(0, 28);
                 pilotName.Value = new FixedString32Bytes(name);
@@ -66,7 +66,7 @@ namespace Frostline.Multiplayer
 
         void UpdateOwner()
         {
-            if (local == null) local = FindFirstObjectByType<DroneController>();
+            if (local == null) local = FindAnyObjectByType<DroneController>();
             if (local == null) return;
 
             Transform t = local.transform;

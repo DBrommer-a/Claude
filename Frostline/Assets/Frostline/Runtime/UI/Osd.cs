@@ -25,9 +25,9 @@ namespace Frostline.UI
 
         void Awake()
         {
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
-            if (input == null) input = FindFirstObjectByType<StickInput>();
-            if (benchmark == null) benchmark = FindFirstObjectByType<BenchmarkRunner>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
+            if (input == null) input = FindAnyObjectByType<StickInput>();
+            if (benchmark == null) benchmark = FindAnyObjectByType<BenchmarkRunner>();
         }
 
         void Start()

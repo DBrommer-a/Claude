@@ -21,7 +21,7 @@ namespace Frostline.Multiplayer
 
         void Awake()
         {
-            if (session == null) session = FindFirstObjectByType<MultiplayerSession>();
+            if (session == null) session = FindAnyObjectByType<MultiplayerSession>();
             nameInput = MultiplayerSession.PilotName;
         }
 
@@ -159,7 +159,7 @@ namespace Frostline.Multiplayer
             }
 
             NetworkWorld world = NetworkWorld.Instance;
-            RaceManager race = FindFirstObjectByType<RaceManager>();
+            RaceManager race = FindAnyObjectByType<RaceManager>();
             if (host && world != null)
             {
                 GUILayout.Space(6f);

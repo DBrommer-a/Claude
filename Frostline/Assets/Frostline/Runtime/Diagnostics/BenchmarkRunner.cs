@@ -86,7 +86,7 @@ namespace Frostline.Diagnostics
 
         void Awake()
         {
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
         }
 
         public void Begin()

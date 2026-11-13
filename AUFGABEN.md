@@ -9,8 +9,8 @@ Multiplayer, Concept-Art und Tests liegen im Repository. Die folgenden Schritte 
 deinen Mac, dein Apple- oder Unity-Konto oder deine Entscheidung.
 
 Ich konnte Unity hier nicht starten. Der ganze Unity-Code ist gegen die Bibliotheken von
-Unity 6.3 kompiliert und die Logik mit 102 Tests geprüft, aber **gesehen hat das Spiel noch
-niemand**. Schick mir Fehlermeldungen aus der Unity-Konsole, dann behebe ich sie.
+Unity 6.6 (6000.6.9f1) kompiliert und die Logik mit 102 Tests geprüft, aber **gesehen hat das
+Spiel noch niemand**. Schick mir Fehlermeldungen aus der Unity-Konsole, dann behebe ich sie.
 
 ## 1 · Projekt öffnen und Insel bauen (ca. 30 min)
 

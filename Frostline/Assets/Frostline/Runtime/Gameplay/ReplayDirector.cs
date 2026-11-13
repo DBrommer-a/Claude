@@ -41,7 +41,7 @@ namespace Frostline.Gameplay
 
         void Awake()
         {
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
             int capacity = Mathf.CeilToInt(recordRateHz * 60f * keepMinutes);
             buffer = new ReplayBuffer(Mathf.Max(capacity, 16));
             FrostlineEvents.Respawned += OnRespawned;

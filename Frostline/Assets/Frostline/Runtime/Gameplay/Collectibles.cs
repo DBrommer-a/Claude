@@ -27,7 +27,7 @@ namespace Frostline.Gameplay
 
         void Awake()
         {
-            if (drone == null) drone = FindFirstObjectByType<DroneController>();
+            if (drone == null) drone = FindAnyObjectByType<DroneController>();
             foreach (Transform child in transform) items.Add(child);
             foreach (string id in PlayerPrefs.GetString(Key, "").Split('|'))
             {
