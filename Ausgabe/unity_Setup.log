@@ -7,12 +7,12 @@ Darwin version:          25.5.0
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
-Date:                    2026-11-13T17:17:54Z
-VBCSCompilerPreWarmer: watching VBCSCompiler (PID 44921)
-VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 44923)
-VBCSCompiler prewarm took 40.73 ms
+Date:                    2026-11-13T18:04:48Z
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 84179)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 84181)
+VBCSCompiler prewarm took 20.15 ms
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T17:17:55.030891Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer" at "2026-11-13T18:04:48.298853Z"
 Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
 
 COMMAND LINE ARGUMENTS:
@@ -67,23 +67,44 @@ Successfully changed project path to: /Users/davidbrommer/Projekte/Frostline/Fro
 Logging is directed to a specific file, skipping project log.
 Player connection [8423480704]  Target information:
 
-Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 617593529 [EditorId] 617593529 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8423480704]  * "[IP] 192.168.178.78 [Port] 55505 [Flags] 2 [Guid] 3598964494 [EditorId] 3598964494 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 617593529 [EditorId] 617593529 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8423480704]  * "[IP] 100.110.72.102 [Port] 55505 [Flags] 2 [Guid] 3598964494 [EditorId] 3598964494 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air-von-David.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8423480704] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8423480704] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-44820" after 0.6 seconds.
+[Package Manager] Connected to IPC stream "Upm-84163" after 0.1 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.19.0'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-davidbrommer"
 [Licensing::IpcConnector] LicenseClient-davidbrommer channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T17:17:56.316978Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0" at "2026-11-13T18:04:49.3811Z"
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.19.0+4cc3dda
+  Session Id:              0204e7b631b74d35b11a8cfc5f6db8e4
+  Correlation Id:          db9bad02f50b48e9f242c4f497e1c413
+  External correlation Id: 55366846060982895
+  Machine Id:              VLvnnjBZADzrEVJVmAYFwzJg3ro=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.59s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T18:04:49.973526Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 9072485318181-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 1.73s
+[Licensing::Module] Licensing is initialized (took 1.50s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
 Initialising UDS system complete:
   - System type: Client
   - Resource namespace: 81943af8af7b172a9097ab3c851ca751
@@ -92,27 +113,6 @@ Initialising UDS system complete:
   - Command buffer size: 8192
   - Hashmap size: 4194304
   - Service connected: false
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.19.0+4cc3dda
-  Session Id:              2765a63808874cdab902056bfb351f35
-  Correlation Id:          db9bad02f50b48e9f242c4f497e1c413
-  External correlation Id: 833415193424972274
-  Machine Id:              VLvnnjBZADzrEVJVmAYFwzJg3ro=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-davidbrommer-1.19.0" (connect: 0.00s, validation: 0.00s, handshake: 0.69s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-davidbrommer-1.19.0-notifications" at "2026-11-13T17:17:57.009344Z"
-[Licensing::Module] Error: Access token is unavailable; failed to update
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: 9072485318181-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 1.99s
-[Licensing::Module] Licensing is initialized (took 1.30s).
-[Licensing::Client] Successfully resolved entitlement details
-Library Redirect Path: Library/
 Launching Unity Data Store - /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/Unity.DataStore 
 Unity Data Store artifact dir = Library/DataStore, working dir = /Users/davidbrommer/Projekte/Frostline/FrostlineUnity Data Store running and initialised
 [Physics::Module] Selected backend (deferred post-plugins).
@@ -142,7 +142,7 @@ Mono path[0] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.
 Mono path[1] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56163
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -150,29 +150,29 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.007026 seconds.
+Registered in 0.003638 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.789 seconds
-Domain Reload Profiling: 1203ms
-	BeginReloadAssembly (174ms)
-		CreateAndSetChildDomain (20ms)
+- Finished resetting the current domain, in  0.592 seconds
+Domain Reload Profiling: 1007ms
+	BeginReloadAssembly (193ms)
+		CreateAndSetChildDomain (18ms)
 	RebuildCommonClasses (3ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (187ms)
-		LoadAssemblies (157ms)
-		TypeCache.Refresh (139ms)
-			TypeCache.ScanAssembly (130ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (178ms)
+		LoadAssemblies (178ms)
+		TypeCache.Refresh (129ms)
+			TypeCache.ScanAssembly (120ms)
 		AnalyzeDomain (0ms)
-	FinalizeReload (789ms)
+	FinalizeReload (592ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (45ms)
-			ProcessInitializeOnLoadAttributes (41ms)
-			ProcessInitializeOnLoadMethodAttributes (591ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (42ms)
+			ProcessInitializeOnLoadMethodAttributes (401ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -240,10 +240,10 @@ warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
-ExitCode: 0 Duration: 1s377ms
+ExitCode: 0 Duration: 1s243ms
 [ 858/1171  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
 [1159/1171  0s] Csc Library/Bee/artifacts/200b0aE.dag/Frostline.Runtime.dll (+2 others)
-[1161/1171  0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Frostline.Runtime.dll (+pdb)
+[1160/1171  0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Frostline.Runtime.dll (+pdb)
 Processing assembly Library/Bee/artifacts/200b0aE.dag/Frostline.Runtime.dll, with 143 defines and 284 references
 processors: Unity.Jobs.CodeGen.JobsILPostProcessor, Unity.Netcode.Editor.CodeGen.INetworkMessageILPP, Unity.Netcode.Editor.CodeGen.INetworkSerializableILPP, Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP, Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP, zzzUnity.Burst.CodeGen.BurstILPostProcessor
 1 processor(s) skipped this assembly
@@ -252,8 +252,9 @@ running Unity.Netcode.Editor.CodeGen.INetworkMessageILPP
 running Unity.Netcode.Editor.CodeGen.INetworkSerializableILPP
 running Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP
 running Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP
-[1162/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Runtime.pdb
-[1163/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Runtime.dll
+[1161/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Runtime.pdb
+[1162/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Runtime.dll
+[1163/1171  0s] Csc Library/Bee/artifacts/200b0aE.dag/Frostline.Multiplayer.dll (+2 others)
 [1164/1171  0s] Csc Library/Bee/artifacts/200b0aE.dag/Frostline.Editor.dll (+2 others)
 Assets/Frostline/Editor/HdrpAccess.cs(26,43): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
 [1165/1171  0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Frostline.Multiplayer.dll (+pdb)
@@ -265,6 +266,8 @@ running Unity.Netcode.Editor.CodeGen.INetworkMessageILPP
 running Unity.Netcode.Editor.CodeGen.INetworkSerializableILPP
 running Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP
 running Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP
+[1166/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Multiplayer.pdb
+[1167/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Multiplayer.dll
 [1168/1171  0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Frostline.Editor.dll (+pdb)
 Processing assembly Library/Bee/artifacts/200b0aE.dag/Frostline.Editor.dll, with 141 defines and 313 references
 processors: Unity.Jobs.CodeGen.JobsILPostProcessor, Unity.Netcode.Editor.CodeGen.INetworkMessageILPP, Unity.Netcode.Editor.CodeGen.INetworkSerializableILPP, Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP, Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP, zzzUnity.Burst.CodeGen.BurstILPostProcessor
@@ -276,124 +279,124 @@ running Unity.Netcode.Editor.CodeGen.NetworkBehaviourILPP
 running Unity.Netcode.Editor.CodeGen.RuntimeAccessModifiersILPP
 [1169/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Editor.dll
 [1170/1171  0s] CopyFiles Library/ScriptAssemblies/Frostline.Editor.pdb
-*** Tundra build success (1.11 seconds), 10 items updated, 1171 evaluated
+*** Tundra build success (1.23 seconds), 13 items updated, 1171 evaluated
 Assets/Frostline/Editor/HdrpAccess.cs(26,43): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
-AssetDatabase: script compilation time: 2.126725s
+AssetDatabase: script compilation time: 1.824065s
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.25 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.43 ms, found 0 plugins.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Scripting: successfully reloaded assembly
 - Finished resetting the current domain, in  0.740 seconds
-Domain Reload Profiling: 1371ms
-	BeginReloadAssembly (214ms)
-		DisableScriptedObjects (18ms)
-		CreateAndSetChildDomain (122ms)
+Domain Reload Profiling: 1436ms
+	BeginReloadAssembly (288ms)
+		DisableScriptedObjects (15ms)
+		CreateAndSetChildDomain (127ms)
 	RebuildCommonClasses (5ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (370ms)
-		LoadAssemblies (203ms)
-		TypeCache.Refresh (92ms)
-			TypeCache.ScanAssembly (82ms)
-		AnalyzeDomain (34ms)
-			BuildScriptInfoCaches (30ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (361ms)
+		LoadAssemblies (257ms)
+		TypeCache.Refresh (95ms)
+			TypeCache.ScanAssembly (85ms)
+		AnalyzeDomain (35ms)
+			BuildScriptInfoCaches (31ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (741ms)
+	FinalizeReload (740ms)
 		SetupLoadedEditorAssemblies (0ms)
 			BeforeProcessingInitializeOnLoad (55ms)
 			ProcessInitializeOnLoadAttributes (76ms)
-			ProcessInitializeOnLoadMethodAttributes (482ms)
+			ProcessInitializeOnLoadMethodAttributes (484ms)
 		AwakeInstancesAfterBackupRestoration (8ms)
 Starting new worker id: 0 with log in /Users/davidbrommer/Projekte/Frostline/Frostline/Logs/AssetImportWorkerHW0.log
-Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/UnityShaderCompiler
 
-Asset Pipeline Refresh (id=20fe1bbbdd9e94117987622d47206495): Total: 4.311 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=f0d593ded3e454008aed065f835474e6): Total: 4.064 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=1373 ms
-		Asset DB Callback time: managed=107 ms, native=17 ms
-		Scripting: domain reloads=1, domain reload time=651 ms, compile time=2128 ms, other=32 ms
-		Project Asset Count: scripts=1695, non-scripts=2860
-		Asset File Changes: new=0, changed=5, moved=0, deleted=0
+		Asset DB Process Time: managed=0 ms, native=1365 ms
+		Asset DB Callback time: managed=108 ms, native=13 ms
+		Scripting: domain reloads=1, domain reload time=715 ms, compile time=1825 ms, other=35 ms
+		Project Asset Count: scripts=1696, non-scripts=2941
+		Asset File Changes: new=0, changed=4, moved=0, deleted=0
 		Scan Filter Count: 1
-	InvokePackagesCallback: 12.051ms
-	ApplyChangesToAssetFolders: 0.195ms
-	Scan: 346.302ms
-	Collect global state as custom dependencies: 10.770ms
-	OnSourceAssetsModified: 0.314ms
-	CategorizeScriptCompilationAssets: 22.917ms
-	ProcessAssetsWithTransientArtifactChanges: 43.146ms
-	CategorizeAssets: 90.390ms
-	CompileScripts: 2128.266ms
-	ImportOutOfDateAssets: 751.301ms (746.102ms without children)
-		UnloadImportedAssets: 3.017ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.503ms
-		ImportSchedulerStart: 1.636ms
-	PostProcessAllAssets: 109.308ms
-		VCAutoAddAssetPostprocess 1.365ms
-		XRBuildSystem.XRAssetImported 0.108ms
-		MonoPostProcessAllAssets: 106.868ms
-			AssetPostprocessorProxy.OnPostprocessAllAssets 16.081ms
-			AssetPostprocessor.OnPostprocessAllAssets 14.840ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 9.231ms
-			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 9.096ms
-			NetworkPrefabProcessor.OnPostprocessAllAssets 7.712ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 3.515ms
-			SyncVS.PostprocessSyncProject 3.001ms
-			MaterialPostprocessor.OnPostprocessAllAssets 1.349ms
-			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.796ms
-			AssetChangedListener.OnPostprocessAllAssets 0.793ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.774ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.658ms
-			VFXGraphPreprocessor.OnPostprocessAllAssets 0.650ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.632ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 0.538ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.326ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.264ms
-			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.233ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.150ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.144ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.144ms
+	InvokePackagesCallback: 11.438ms
+	ApplyChangesToAssetFolders: 0.186ms
+	Scan: 332.756ms
+	Collect global state as custom dependencies: 8.475ms
+	OnSourceAssetsModified: 0.263ms
+	CategorizeScriptCompilationAssets: 21.886ms
+	ProcessAssetsWithTransientArtifactChanges: 42.250ms
+	CategorizeAssets: 92.232ms
+	CompileScripts: 1825.350ms
+	ImportOutOfDateAssets: 750.419ms (745.612ms without children)
+		UnloadImportedAssets: 2.882ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.481ms
+		ImportSchedulerStart: 1.404ms
+	PostProcessAllAssets: 108.699ms
+		VCAutoAddAssetPostprocess 0.429ms
+		XRBuildSystem.XRAssetImported 0.099ms
+		MonoPostProcessAllAssets: 107.926ms
+			AssetPostprocessorProxy.OnPostprocessAllAssets 15.837ms
+			AssetPostprocessor.OnPostprocessAllAssets 14.554ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 10.556ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 9.618ms
+			NetworkPrefabProcessor.OnPostprocessAllAssets 5.416ms
+			SyncVS.PostprocessSyncProject 4.051ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 3.438ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.486ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.841ms
+			AssetChangedListener.OnPostprocessAllAssets 0.803ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.784ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 0.731ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 0.683ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.610ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.550ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.319ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.246ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.244ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.158ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.148ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.143ms
 			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.135ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.132ms
-			AssetEvents.OnPostprocessAllAssets 0.125ms
-			PostProcessor.OnPostprocessAllAssets 0.116ms
-			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.115ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.104ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.085ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.064ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.063ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.060ms
-			ThemePostprocessor.OnPostprocessAllAssets 0.054ms
-	PostAssetChangesProfiler: 3.269ms
-	UnloadStreamsBegin: 0.721ms
-	PersistCurrentRevisions: 0.093ms
-	GenerateScriptTypeHashes: 1.237ms
-	GenerateScriptTypeSerializationHashes: 2.257ms
-	Untracked: 790.098ms
+			PostProcessor.OnPostprocessAllAssets 0.130ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.123ms
+			AssetEvents.OnPostprocessAllAssets 0.121ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.117ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.091ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.071ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.070ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.065ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.061ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.056ms
+	PostAssetChangesProfiler: 1.903ms
+	UnloadStreamsBegin: 0.875ms
+	PersistCurrentRevisions: 0.094ms
+	GenerateScriptTypeHashes: 1.203ms
+	GenerateScriptTypeSerializationHashes: 2.165ms
+	Untracked: 865.976ms
 
 Application.AssetDatabase Initial Refresh End
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Launching external process: /Volumes/MAC-SKILLS/Programme/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/Helpers/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Scanning for USB devices : 0.136ms
+Scanning for USB devices : 0.186ms
 Initializing Unity extensions:
+2026-11-13 19:04:55.862 Unity[84163:21701841] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0xc130c0d20 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-Frostline
-2026-11-13 18:18:03.464 Unity[44820:21567627] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x9decd8d20 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 Unloading 79 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7263 unused Assets / (12.6 MB). Loaded Objects now: 8492.
+Unloading 7264 unused Assets / (12.0 MB). Loaded Objects now: 8493.
 Memory consumption went from 0.63 GB to 0.62 GB.
-Total: 8.145125 ms (FindLiveObjects: 0.441959 ms CreateObjectMapping: 0.118916 ms MarkObjects: 5.215500 ms  DeleteObjects: 2.289917 ms)
+Total: 7.605500 ms (FindLiveObjects: 0.487250 ms CreateObjectMapping: 0.133000 ms MarkObjects: 4.748209 ms  DeleteObjects: 2.162458 ms)
 
-2026-11-13 18:18:03.598 Unity[44820:21567627] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x9decda1c0 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2026-11-13 19:04:55.985 Unity[84163:21701841] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0xc130c2260 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 Frostline: Projekt einrichten …
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
@@ -406,21 +409,18 @@ Frostline.EditorTools.FrostlineCommandLine:Setup () (at Assets/Frostline/Editor/
 
 (Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 55)
 
-AcceleratorClientConnectionCallback - disconnected - :0
-Importing 'GUID: 00000000000000003000000000000000 - Path: ProjectSettings/TagManager.asset' with importer (LibraryAssetImporter)
-Imported 'GUID: 00000000000000003000000000000000' -> (Import Result ID: '073cef91c30706743aa85f4d5192eb41') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=f000288eab4d423778547d37d97a06b9 DependenciesID=ff99c757834a101d6455fa2f9f7b61a0 StaticDependenciesID=b086d862076672f7641dcb1de7beceae 
 Importing 'GUID: 00000000000000006100000000000000 - Path: ProjectSettings/GraphicsSettings.asset' with importer (LibraryAssetImporter)
-Imported 'GUID: 00000000000000006100000000000000' -> (Import Result ID: '7e5a33b2c85cbe8459e3f698815be655') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=a2dcdb8bc9503711bc0f2e2d72cfd36c DependenciesID=0a13ab26ecf43d4497655a49aa12bc20 StaticDependenciesID=15e86efd94564a289a6869f0589d4b3a 
+Imported 'GUID: 00000000000000006100000000000000' -> (Import Result ID: '7e5a33b2c85cbe8459e3f698815be655') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=a2dcdb8bc9503711bc0f2e2d72cfd36c DependenciesID=0a13ab26ecf43d4497655a49aa12bc20 StaticDependenciesID=15e86efd94564a289a6869f0589d4b3a 
 Importing 'GUID: 127e6a63d30d943ff8bc7dc7c8d08851 - Path: Assets/Frostline/Settings/HDRP_Low.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 127e6a63d30d943ff8bc7dc7c8d08851' -> (Import Result ID: '765bdbd7458427e0e6e9dfe281ac8a18') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=5920abe27e695ab236f3a10ffdaa5c25 DependenciesID=db3906ff8dcb19535b6bfbb308834a10 StaticDependenciesID=4ad3fbea493c4fb8ec4e895d7ce43b02 
+Imported 'GUID: 127e6a63d30d943ff8bc7dc7c8d08851' -> (Import Result ID: '765bdbd7458427e0e6e9dfe281ac8a18') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=5920abe27e695ab236f3a10ffdaa5c25 DependenciesID=db3906ff8dcb19535b6bfbb308834a10 StaticDependenciesID=4ad3fbea493c4fb8ec4e895d7ce43b02 
 Importing 'GUID: 067451b03b09c4c389b9460debdc0846 - Path: Assets/Frostline/Settings/HDRP_Ultra.asset' with importer (NativeFormatImporter)
 Imported 'GUID: 067451b03b09c4c389b9460debdc0846' -> (Import Result ID: 'c86eb0821e8517a2f754682016cf2568') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3ad819e9a112d6e58285c7fc933f6f10 DependenciesID=16e0e8c1ecede83bb6cdbb15ddb7860c StaticDependenciesID=45d0b5da05055d07db5846947cddd1b6 
 Importing 'GUID: 27a0a44961f3a455b9ec96f5f2246fb9 - Path: Assets/Frostline/Settings/HDRP_High.asset' with importer (NativeFormatImporter)
 Imported 'GUID: 27a0a44961f3a455b9ec96f5f2246fb9' -> (Import Result ID: '26de3ccc257a124fd4242d023de354c5') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6a615e00465515118180c67ecafcb0f0 DependenciesID=52ca245df4546bc9b3925436a6305451 StaticDependenciesID=b673768cd8fc906389c4a807615ab961 
 Importing 'GUID: edb9f07004cc74fefbf536a1ea0263d4 - Path: Assets/Frostline/Settings/HDRP_Medium.asset' with importer (NativeFormatImporter)
 Imported 'GUID: edb9f07004cc74fefbf536a1ea0263d4' -> (Import Result ID: 'af3501ced1756ec716b3f3aadab21b7d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=0b64cf1709bc04eb6be88d602547167e DependenciesID=f130d71deb49ad53f6b9c37374acfeeb StaticDependenciesID=cdb7864b67e54b737ae5c5ae3d241b30 
-Asset Pipeline Refresh (id=a3feea86cf9114ae7bb3a76bd94d2fe1): Total: 0.064 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=b8d544386d98248e0be5f42e8b221053): Total: 0.054 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=27ec2aa433bb5414bbdda0514317edbd): Total: 0.062 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=5b6747735d3914a13804c07a9f5cb199): Total: 0.058 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
 [Frostline] Fertig eingerichtet:
 
 • HDRP mit vier Qualitätsstufen (Low, Medium, High, Ultra), Wasser und Volumenwolken aktiv
@@ -455,24 +455,22 @@ Frostline.EditorTools.FrostlineCommandLine:Setup () (at Assets/Frostline/Editor/
 
 (Filename: Assets/Frostline/Editor/FrostlineCommandLine.cs Line: 63)
 
-MonoPathRemapper: Attempts to remap: 15516; Successful remaps: 0
-Thread 0x43d81f000 may have been prematurely finalized
+MonoPathRemapper: Attempts to remap: 15924; Successful remaps: 0
+Thread 0x4380cf000 may have been prematurely finalized
 Serialized file version minimum: 23, current 23
-Thread 0x40709b000 may have been prematurely finalized
+Thread 0x421c07000 may have been prematurely finalized
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-Thread 0x173cc7000 may have been prematurely finalized
-Thread 0x173ddf000 may have been prematurely finalized
-Thread 0x173d53000 may have been prematurely finalized
-Thread 0x173ef7000 may have been prematurely finalized
-Thread 0x173f83000 may have been prematurely finalized
-Thread 0x17409b000 may have been prematurely finalized
-Thread 0x17400f000 may have been prematurely finalized
-Thread 0x173e6b000 may have been prematurely finalized
-Thread 0x174127000 may have been prematurely finalized
+Thread 0x1703d7000 may have been prematurely finalized
+Thread 0x17071f000 may have been prematurely finalized
+Thread 0x170463000 may have been prematurely finalized
+Thread 0x1704ef000 may have been prematurely finalized
+Thread 0x17034b000 may have been prematurely finalized
+Thread 0x170607000 may have been prematurely finalized
+Thread 0x170693000 may have been prematurely finalized
+Thread 0x17057b000 may have been prematurely finalized
 Shut down UDS service system complete
-debugger-agent: Unable to listen on 52
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 [Licensing::IpcConnector] LicenseClient-davidbrommer-1.19.0-notifications channel disconnected successfully.
@@ -482,4 +480,17 @@ UDS shutting down local client system
 AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+debugger-agent: Unable to listen on 52
+[Unity Package Manager (Upm)]
+Application terminated due to an uncaught exception:
+  Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:138:10)
+    at writeGeneric (node:internal/stream_base_commons:126:10)
+    at Socket._writeGeneric (node:net:1324:11)
+    at Socket._write (node:net:1336:8)
+    at writeOrBuffer (node:internal/streams/writable:574:12)
+    at _write (node:internal/streams/writable:503:10)
+    at Writable.write (node:internal/streams/writable:512:10)
+    at module2.exports.log (/home/bokken/build/output/unity/upm/dist/temp/bundle/app.js:73:1682)
+    at TransportStream._write (/home/bokken/build/output/unity/upm/dist/temp/bundle/app.js:72:60725)
+    at doWrite (/home/bokken/build/output/unity/upm/dist/temp/bundle/app.js:72:54921)

@@ -40,17 +40,25 @@ total="102" passed="102" failed="0"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (168 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Strand.png  (154 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Hafen.png  (138 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Industriegebiet.png  (149 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Stadt.png  (151 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Tal_Dorf.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Bergdorf.png  (142 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (147 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Strand.png  (138 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Hafen.png  (145 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Industriegebiet.png  (148 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Stadt.png  (141 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Tal_Dorf.png  (155 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Bergdorf.png  (148 fps)
 FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Gletscher.png  (147 fps)
 FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Wald.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Funkmast.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Ueber_den_Wolken.png  (159 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Funkmast.png  (148 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Ueber_den_Wolken.png  (157 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Drohne_vorn_rechts.png  (35 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Drohne_Seite_Nase_rechts.png  (38 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/13_Requisite_Leuchtturm.png  (137 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/14_Requisite_Funkmast.png  (142 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/15_Requisite_Gestrandeter_Kutter.png  (137 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/16_Requisite_Kranbahn.png  (142 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/17_Requisite_Fischerhütte_1.png  (140 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/18_Requisite_RennGate.png  (165 fps)
 FROSTLINE_AUTOMATION Automatisierung fertig
 00_Start_FPV.png
 01_Strand.png
@@ -63,6 +71,14 @@ FROSTLINE_AUTOMATION Automatisierung fertig
 08_Wald.png
 09_Funkmast.png
 10_Ueber_den_Wolken.png
+11_Drohne_vorn_rechts.png
+12_Drohne_Seite_Nase_rechts.png
+13_Requisite_Leuchtturm.png
+14_Requisite_Funkmast.png
+15_Requisite_Gestrandeter_Kutter.png
+16_Requisite_Kranbahn.png
+17_Requisite_Fischerhütte_1.png
+18_Requisite_RennGate.png
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
@@ -97,21 +113,21 @@ FROSTLINE_AUTOMATION Automatisierung fertig
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 154.9 fps | 1%-Tief 127.5 fps
+FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 153.5 fps | 1%-Tief 125.8 fps
 FROSTLINE_AUTOMATION Ergebnis geschrieben: /Users/davidbrommer/Projekte/Frostline/Ausgabe/benchmark.json
 FROSTLINE_AUTOMATION Automatisierung fertig
 {
   "rating": "Passed",
-  "averageFps": 154.93,
-  "onePercentLowFps": 127.49,
-  "medianFrameMs": 6.461,
-  "p99FrameMs": 7.571,
-  "worstFrameMs": 19.621,
-  "frames": 9297,
+  "averageFps": 153.52,
+  "onePercentLowFps": 125.82,
+  "medianFrameMs": 6.469,
+  "p99FrameMs": 7.658,
+  "worstFrameMs": 16.979,
+  "frames": 9212,
   "quality": "Medium",
   "resolution": "1920 x 1080",
   "device": "Mac16,12",
   "gpu": "Apple M4",
-  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_182054.txt"
+  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_190815.txt"
 }
 EXIT=0

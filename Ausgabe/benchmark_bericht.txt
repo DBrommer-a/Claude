@@ -1,13 +1,13 @@
-Frostline Benchmark 2026-11-13 18:20
+Frostline Benchmark 2026-11-13 19:08
 Ergebnis: BESTANDEN – stabil über 60 fps
 
-Schnitt:        154.9 fps
-1%-Tief:        127.5 fps
-Median:         6.46 ms
-95. Perzentil:  7.26 ms
-99. Perzentil:  7.57 ms
-Längstes Bild:  19.62 ms
-Bilder:         9297 in 60.0 s
+Schnitt:        153.5 fps
+1%-Tief:        125.8 fps
+Median:         6.47 ms
+95. Perzentil:  7.39 ms
+99. Perzentil:  7.66 ms
+Längstes Bild:  16.98 ms
+Bilder:         9212 in 60.0 s
 
 Qualitätsstufe: Medium
 Auflösung:      1920 x 1080
