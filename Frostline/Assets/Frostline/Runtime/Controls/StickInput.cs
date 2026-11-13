@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Frostline.Flight.Core;
+using Frostline.Remote;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
@@ -14,7 +15,13 @@ namespace Frostline.Controls
     [DefaultExecutionOrder(-100)]
     public sealed class StickInput : MonoBehaviour
     {
-        public enum Source { None, Transmitter, Gamepad, Keyboard }
+        public enum Source { None, Transmitter, Gamepad, Keyboard, Remote }
+
+        [Tooltip("Empfänger für die iPhone-App. Leer = erster in der Szene.")]
+        public RemoteControlServer remote;
+
+        [Tooltip("Meldet sich die iPhone-App, wird automatisch auf sie umgeschaltet (außer ein Sender ist aktiv).")]
+        public bool autoSelectRemote = true;
 
         [Tooltip("Flugmodus, solange kein Modus-Schalter zugeordnet ist.")]
         public FlightMode defaultMode = FlightMode.Acro;
@@ -29,7 +36,14 @@ namespace Frostline.Controls
         public InputDevice Device { get; private set; }
         public InputProfile Profile { get; private set; }
         public ControlInput Current { get; private set; }
-        public string DeviceLabel { get { return Device != null ? Device.displayName : SourceLabel(ActiveSource); } }
+        public string DeviceLabel
+        {
+            get
+            {
+                if (ActiveSource == Source.Remote) return "iPhone" + (remote != null && remote.ClientName.Length > 0 ? ": " + remote.ClientName : "");
+                return Device != null ? Device.displayName : SourceLabel(ActiveSource);
+            }
+        }
 
         readonly List<AxisControl> learnable = new List<AxisControl>();
         AxisControl rollAxis, pitchAxis, yawAxis, throttleAxis, armControl, turtleControl, resetControl, modeControl;
@@ -41,9 +55,11 @@ namespace Frostline.Controls
         bool previousArmKey, previousModeKey, previousResetKey;
         bool resetRequested;
         bool deviceLost;
+        bool remoteWasOnline;
 
         void OnEnable()
         {
+            if (remote == null) remote = FindFirstObjectByType<RemoteControlServer>();
             toggledMode = defaultMode;
             InputSystem.onDeviceChange += OnDeviceChange;
             SelectBestDevice();
@@ -52,6 +68,28 @@ namespace Frostline.Controls
         void OnDisable()
         {
             InputSystem.onDeviceChange -= OnDeviceChange;
+        }
+
+        void Update()
+        {
+            bool remoteOnline = remote != null && remote.IsConnected;
+            if (autoSelectRemote && remoteOnline && ActiveSource != Source.Remote && ActiveSource != Source.Transmitter && !remoteWasOnline)
+            {
+                SelectRemote();
+            }
+            remoteWasOnline = remoteOnline;
+        }
+
+        /// <summary>Fliegt mit der iPhone-App.</summary>
+        public void SelectRemote()
+        {
+            if (remote == null) return;
+            Device = null;
+            Profile = null;
+            deviceLost = false;
+            toggledArm = false;
+            learnable.Clear();
+            ActiveSource = Source.Remote;
         }
 
         void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -143,6 +181,7 @@ namespace Frostline.Controls
                 case Source.Keyboard: return "Tastatur";
                 case Source.Gamepad: return "Gamepad";
                 case Source.Transmitter: return "Sender";
+                case Source.Remote: return "iPhone";
                 default: return "kein Eingabegerät";
             }
         }
@@ -270,10 +309,22 @@ namespace Frostline.Controls
                 case Source.Transmitter: ReadTransmitter(ref input); break;
                 case Source.Gamepad: ReadGamepad(ref input); break;
                 case Source.Keyboard: ReadKeyboard(ref input); break;
+                case Source.Remote: ReadRemote(ref input); break;
             }
 
             Current = input;
             return input;
+        }
+
+        void ReadRemote(ref ControlInput input)
+        {
+            if (remote == null)
+            {
+                input.SignalValid = false;
+                return;
+            }
+            input = remote.ReadInput();
+            if (remote.ConsumeReset()) resetRequested = true;
         }
 
         void ReadTransmitter(ref ControlInput input)

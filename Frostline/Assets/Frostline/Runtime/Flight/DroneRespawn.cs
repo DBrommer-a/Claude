@@ -36,8 +36,19 @@ namespace Frostline.Flight
 
         public void Respawn()
         {
-            Vector3 position = spawnPoint != null ? spawnPoint.position : startPosition;
-            Quaternion rotation = spawnPoint != null ? spawnPoint.rotation : startRotation;
+            // Im Rennen geht es am zuletzt durchflogenen Gate weiter.
+            Frostline.Gameplay.RaceManager race = Frostline.Gameplay.RaceManager.Instance;
+            if (race != null && race.TryRespawnAtLastGate())
+            {
+                drone.ResetFlightState();
+                FrostlineEvents.RaiseRespawned();
+                return;
+            }
+
+            Transform checkpoint = Frostline.Gameplay.Checkpoints.Instance != null ? Frostline.Gameplay.Checkpoints.Instance.Current : null;
+            Transform target = checkpoint != null ? checkpoint : spawnPoint;
+            Vector3 position = target != null ? target.position : startPosition;
+            Quaternion rotation = target != null ? Quaternion.Euler(0f, target.eulerAngles.y, 0f) : startRotation;
 
             Rigidbody body = drone.Body;
             if (!body.isKinematic)
@@ -49,6 +60,7 @@ namespace Frostline.Flight
             body.rotation = rotation;
             transform.SetPositionAndRotation(position, rotation);
             drone.ResetFlightState();
+            FrostlineEvents.RaiseRespawned();
         }
     }
 }

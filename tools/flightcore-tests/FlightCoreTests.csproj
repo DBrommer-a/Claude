@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="../../Frostline/Assets/Frostline/Flight/Core/**/*.cs" LinkBase="Core" />
+    <Compile Include="../../Frostline/Assets/Frostline/Shared/**/*.cs" LinkBase="Shared" />
     <Compile Include="../../Frostline/Assets/Frostline/Tests/Editor/**/*.cs" LinkBase="Tests" />
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@
     "rootNamespace": "Frostline.Tests",
     "references": [
         "Frostline.Flight.Core",
+        "Frostline.Shared",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],

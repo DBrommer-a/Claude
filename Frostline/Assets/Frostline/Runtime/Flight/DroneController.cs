@@ -23,9 +23,13 @@ namespace Frostline.Flight
         [Tooltip("Wind in Weltkoordinaten, m/s.")]
         public Vector3 wind;
 
+        [Tooltip("Ab dieser Aufprallgeschwindigkeit (m/s) zählt eine Berührung als Absturz.")]
+        public float crashSpeed = 4f;
+
         Rigidbody body;
         QuadSim sim;
         ControlInput lastInput;
+        bool wasArmed;
 
         public Telemetry Telemetry { get { return Sim.Telemetry; } }
         public ControlInput LastInput { get { return lastInput; } }
@@ -76,6 +80,20 @@ namespace Frostline.Flight
         public void ResetFlightState()
         {
             Sim.Reset();
+            wasArmed = false;
+        }
+
+        void OnCollisionEnter(Collision collision)
+        {
+            // Gates melden sich selbst; hier nur Boden, Wände, Gebäude.
+            if (collision.collider.GetComponentInParent<Frostline.Gameplay.RaceGate>() != null)
+            {
+                FrostlineEvents.RaiseGateTouched();
+                return;
+            }
+            float impact = collision.relativeVelocity.magnitude;
+            if (impact >= crashSpeed) FrostlineEvents.RaiseCrashed(impact);
+            else if (impact > 0.5f) FrostlineEvents.RaiseGroundTouched();
         }
 
         void FixedUpdate()
@@ -93,6 +111,10 @@ namespace Frostline.Flight
             state.Wind = new Vec3(wind.x, wind.y, wind.z);
 
             FlightOutput output = Sim.Step(lastInput, state, Time.fixedDeltaTime);
+
+            bool armed = Sim.Telemetry.Armed;
+            if (armed && !wasArmed) FrostlineEvents.RaiseArmed();
+            wasArmed = armed;
 
             body.AddRelativeForce(new Vector3(output.ForceBody.X, output.ForceBody.Y, output.ForceBody.Z), ForceMode.Force);
             body.AddRelativeTorque(new Vector3(output.TorqueBody.X, output.TorqueBody.Y, output.TorqueBody.Z), ForceMode.Force);

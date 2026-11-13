@@ -17,6 +17,9 @@ namespace Frostline.Audio
         [Range(2, 4)] public int bladeCount = 3;
         [Range(0f, 1f)] public float volume = 0.5f;
 
+        /// <summary>Für Replays: feste Motorlast 0..1 statt der Telemetrie; negativ = aus.</summary>
+        [System.NonSerialized] public float overrideLoad = -1f;
+
         const int Motors = QuadSim.MotorCount;
 
         // Vom Hauptthread geschrieben, vom Audio-Thread gelesen.
@@ -53,7 +56,8 @@ namespace Frostline.Audio
             float maxRpm = Mathf.Max(t.MaxRpm, 1f);
             for (int i = 0; i < Motors; i++)
             {
-                float rpm = t.MotorRpm[i];
+                // Im Replay laufen die Motoren leicht unterschiedlich, damit die Schwebung bleibt.
+                float rpm = overrideLoad >= 0f ? overrideLoad * maxRpm * (1f + 0.01f * i) : t.MotorRpm[i];
                 targetFrequency[i] = rpm / 60f * bladeCount;
                 float load = Mathf.Clamp01(rpm / maxRpm);
                 targetLevel[i] = load * Mathf.Sqrt(load);

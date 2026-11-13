@@ -3,6 +3,7 @@
     "rootNamespace": "Frostline",
     "references": [
         "Frostline.Flight.Core",
+        "Frostline.Shared",
         "Unity.InputSystem"
     ],
     "includePlatforms": [],

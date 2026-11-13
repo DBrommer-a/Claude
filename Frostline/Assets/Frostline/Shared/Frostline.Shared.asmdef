@@ -1,0 +1,16 @@
+{
+    "name": "Frostline.Shared",
+    "rootNamespace": "Frostline",
+    "references": [
+        "Frostline.Flight.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

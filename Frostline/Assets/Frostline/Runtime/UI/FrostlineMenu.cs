@@ -4,6 +4,8 @@ using Frostline.Controls;
 using Frostline.Diagnostics;
 using Frostline.Flight;
 using Frostline.Flight.Core;
+using Frostline.Gameplay;
+using Frostline.Remote;
 using Frostline.View;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,8 +24,13 @@ namespace Frostline.UI
         public MotorAudio motorAudio;
         public BenchmarkRunner benchmark;
         public Osd osd;
+        public RaceManager race;
+        public ReplayDirector replay;
+        public WeatherSystem weather;
+        public Collectibles collectibles;
+        public RemoteControlServer remote;
 
-        static readonly string[] Tabs = { "Sender", "Rates", "Drohne", "Grafik", "Benchmark" };
+        static readonly string[] Tabs = { "Spiel", "Sender", "Rates", "Drohne", "Grafik", "Benchmark" };
         static readonly string[] AxisNames = { "Roll", "Pitch", "Yaw" };
 
         PilotSettings settings;
@@ -44,6 +51,11 @@ namespace Frostline.UI
             if (motorAudio == null) motorAudio = FindFirstObjectByType<MotorAudio>();
             if (benchmark == null) benchmark = FindFirstObjectByType<BenchmarkRunner>();
             if (osd == null) osd = FindFirstObjectByType<Osd>();
+            if (race == null) race = FindFirstObjectByType<RaceManager>();
+            if (replay == null) replay = FindFirstObjectByType<ReplayDirector>();
+            if (weather == null) weather = FindFirstObjectByType<WeatherSystem>();
+            if (collectibles == null) collectibles = FindFirstObjectByType<Collectibles>();
+            if (remote == null) remote = FindFirstObjectByType<RemoteControlServer>();
             presets = QuadConfig.AllPresets();
         }
 
@@ -144,11 +156,12 @@ namespace Frostline.UI
                 scroll = GUILayout.BeginScrollView(scroll);
                 switch (tab)
                 {
-                    case 0: DrawTransmitter(); break;
-                    case 1: DrawRates(); break;
-                    case 2: DrawDrone(); break;
-                    case 3: DrawGraphics(); break;
-                    case 4: DrawBenchmark(); break;
+                    case 0: DrawGame(); break;
+                    case 1: DrawTransmitter(); break;
+                    case 2: DrawRates(); break;
+                    case 3: DrawDrone(); break;
+                    case 4: DrawGraphics(); break;
+                    case 5: DrawBenchmark(); break;
                 }
                 GUILayout.EndScrollView();
                 GUILayout.FlexibleSpace();
@@ -163,6 +176,86 @@ namespace Frostline.UI
             heading = new GUIStyle(GUI.skin.label) { fontSize = 20, fontStyle = FontStyle.Bold };
             wrapped = new GUIStyle(GUI.skin.label) { wordWrap = true, fontSize = 14 };
             bar = new GUIStyle(GUI.skin.box);
+        }
+
+        // ------------------------------------------------------------ Spiel
+
+        static readonly string[] WeatherNames = { "Klar", "Tiefe Wolken", "Schneesturm" };
+        static readonly string[] DayNames = { "Morgen", "Mittag", "Abend" };
+        static readonly float[] DayHours = { 7.5f, 12.5f, 19f };
+
+        void DrawGame()
+        {
+            GUILayout.Label("Freestyle", heading);
+            string progress = collectibles != null ? "Sammelobjekte: " + collectibles.CollectedCount + " / " + collectibles.Total : "";
+            GUILayout.Label("Frei fliegen, Landmarken erkunden. " + progress, wrapped);
+            GUILayout.BeginHorizontal();
+            if (race != null && race.Active && GUILayout.Button("Rennen beenden", GUILayout.Height(30f))) race.StopRace();
+            if (replay != null && GUILayout.Button(replay.Playing ? "Replay beenden (P)" : "Replay ansehen (P)", GUILayout.Height(30f)))
+            {
+                Close();
+                replay.Toggle();
+                return;
+            }
+            if (collectibles != null && GUILayout.Button("Sammelfortschritt zurücksetzen", GUILayout.Height(30f))) collectibles.ResetProgress();
+            GUILayout.EndHorizontal();
+
+            GUILayout.Space(10f);
+            GUILayout.Label("Rennen", heading);
+            if (race == null || race.tracks.Count == 0)
+            {
+                GUILayout.Label("In dieser Szene gibt es keine Strecken. Die ganze Insel hat drei (Frostline › 4 · Insel erstellen).", wrapped);
+            }
+            else
+            {
+                foreach (RaceTrack track in race.tracks)
+                {
+                    GUILayout.BeginHorizontal();
+                    float best = track.BestLap;
+                    GUILayout.Label(track.trackName + "  ·  " + track.laps + " Runden" + (best > 0f ? "  ·  Bestzeit " + RaceManager.FormatTime(best) : ""), GUILayout.Width(420f));
+                    if (GUILayout.Button("Start", GUILayout.Height(28f)))
+                    {
+                        Close();
+                        race.StartRace(track);
+                        return;
+                    }
+                    GUILayout.EndHorizontal();
+                }
+            }
+
+            if (weather != null)
+            {
+                GUILayout.Space(10f);
+                GUILayout.Label("Wetter und Tageszeit", heading);
+                WorldState state = weather.State;
+                int w = GUILayout.Toolbar((int)state.Weather, WeatherNames, GUILayout.Height(28f));
+                int currentDay = state.TimeOfDay < 10f ? 0 : (state.TimeOfDay < 16f ? 1 : 2);
+                int d = GUILayout.Toolbar(currentDay, DayNames, GUILayout.Height(28f));
+                float hour = Slider("Uhrzeit", state.TimeOfDay, 5f, 21f, "0.0");
+                if (w != (int)state.Weather || d != currentDay || !Mathf.Approximately(hour, state.TimeOfDay))
+                {
+                    state.Weather = (Weather)w;
+                    state.TimeOfDay = d != currentDay ? DayHours[d] : hour;
+                    weather.SetLocal(state);
+                }
+                if (GUILayout.Button("Andere Wolken (neuer Seed)", GUILayout.Height(26f)))
+                {
+                    state.CloudSeed = Random.Range(1, int.MaxValue);
+                    weather.SetLocal(state);
+                }
+            }
+
+            if (remote != null)
+            {
+                GUILayout.Space(10f);
+                GUILayout.Label("iPhone-App „Frostline Remote“", heading);
+                GUILayout.Label(remote.Status, wrapped);
+                if (remote.IsConnected && input != null && input.ActiveSource != StickInput.Source.Remote
+                    && GUILayout.Button("Mit dem iPhone fliegen", GUILayout.Height(28f)))
+                {
+                    input.SelectRemote();
+                }
+            }
         }
 
         // ------------------------------------------------------------ Sender
@@ -183,14 +276,22 @@ namespace Frostline.UI
             List<InputDevice> devices = input.ListDevices();
             foreach (InputDevice device in devices)
             {
-                bool selected = device == input.Device;
+                bool selected = device == input.Device && input.ActiveSource != StickInput.Source.Remote;
                 string kind = device is Gamepad ? "Gamepad" : "Sender";
                 if (GUILayout.Toggle(selected, "  " + device.displayName + "  (" + kind + ")", GUI.skin.button, GUILayout.Height(28f)) && !selected)
                 {
                     input.SelectDevice(device);
                 }
             }
-            bool keyboardSelected = input.Device == null;
+            if (remote != null && remote.IsConnected)
+            {
+                bool remoteSelected = input.ActiveSource == StickInput.Source.Remote;
+                if (GUILayout.Toggle(remoteSelected, "  iPhone: " + remote.ClientName, GUI.skin.button, GUILayout.Height(28f)) && !remoteSelected)
+                {
+                    input.SelectRemote();
+                }
+            }
+            bool keyboardSelected = input.ActiveSource == StickInput.Source.Keyboard;
             if (GUILayout.Toggle(keyboardSelected, "  Tastatur", GUI.skin.button, GUILayout.Height(28f)) && !keyboardSelected)
             {
                 input.SelectDevice(null);
