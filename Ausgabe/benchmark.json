@@ -1,14 +1,14 @@
 {
   "rating": "Passed",
-  "averageFps": 141.59,
-  "onePercentLowFps": 103.37,
-  "medianFrameMs": 7.019,
-  "p99FrameMs": 9.196,
-  "worstFrameMs": 16.948,
-  "frames": 8497,
+  "averageFps": 154.93,
+  "onePercentLowFps": 127.49,
+  "medianFrameMs": 6.461,
+  "p99FrameMs": 7.571,
+  "worstFrameMs": 19.621,
+  "frames": 9297,
   "quality": "Medium",
   "resolution": "1920 x 1080",
   "device": "Mac16,12",
   "gpu": "Apple M4",
-  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_172959.txt"
+  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_182054.txt"
 }
