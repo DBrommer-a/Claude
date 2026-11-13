@@ -46,24 +46,32 @@ namespace Frostline.EditorTools
 
                 Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
-                Progress("Himmel, Wolken und Nebel", 0.05f);
-                CreateEnvironmentVolume();
-                CreateSun();
+                Progress("Himmel, Wolken, Wetter, Ozean", 0.05f);
+                EnvironmentRefs env = GameSystemsBuilder.CreateEnvironment(CloudBottom, CloudThickness);
 
-                Progress("Ozean", 0.1f);
-                CreateOcean();
-
-                Terrain terrain = CreateTerrain();
+                CreateTerrain();
 
                 Progress("Drohne", 0.9f);
                 Vector3 spawn = IslandGenerator.FindBeachSpawn(IslandGenerator.TileSize * 0.5f);
                 Transform spawnPoint = CreateLaunchPad(spawn);
                 CreatePracticeGates(spawn);
-                DroneController drone = CreateDrone(spawnPoint);
-                CreateSystems(drone, terrain);
+                DroneController drone = GameSystemsBuilder.CreateDrone(spawnPoint);
+
+                var options = new SystemsOptions
+                {
+                    IslandCenter = new Vector2(IslandGenerator.TileSize * 0.5f, IslandGenerator.TileSize * 0.5f),
+                    SignalCleanRadius = 1300f,
+                    SignalLostRadius = 1800f,
+                    BenchmarkCenter = new Vector3(IslandGenerator.TileSize * 0.5f, 0f, IslandGenerator.TileSize * 0.5f),
+                    BenchmarkRadius = 750f,
+                    CloudBottom = CloudBottom,
+                    CloudThickness = CloudThickness,
+                };
+                GameSystemsBuilder.CreateSystems(drone, env, options);
+                GameSystemsBuilder.CreateAmbient(null, "Brandung", spawn + new Vector3(0f, 0f, -30f), 250f, 0.8f);
 
                 EditorSceneManager.SaveScene(scene, ScenePath);
-                AddSceneToBuild(ScenePath);
+                GameSystemsBuilder.AddSceneToBuild(ScenePath, false);
                 Selection.activeGameObject = drone.gameObject;
                 SceneView.lastActiveSceneView?.FrameSelected();
             }
@@ -83,132 +91,6 @@ namespace Frostline.EditorTools
         static void Progress(string step, float value)
         {
             EditorUtility.DisplayProgressBar("Frostline – Prototyp-Szene", step, value);
-        }
-
-        // ------------------------------------------------------------ Umgebung
-
-        static void CreateEnvironmentVolume()
-        {
-            Object profile = LoadOrCreateProfile(GeneratedFolder + "/PrototypeEnvironment.asset");
-
-            Object visual = HdrpAccess.AddVolumeComponent(profile, "VisualEnvironment");
-            HdrpAccess.SetVolume(visual, "skyType", 4); // Physically Based Sky
-            HdrpAccess.SetVolume(visual, "cloudType", 0);
-            // Muss World Space bleiben, sonst kann man nicht in die Wolken hineinfliegen.
-            HdrpAccess.SetVolume(visual, "renderingSpace", "World");
-
-            HdrpAccess.AddVolumeComponent(profile, "PhysicallyBasedSky");
-
-            Object clouds = HdrpAccess.AddVolumeComponent(profile, "VolumetricClouds");
-            if (clouds != null)
-            {
-                HdrpAccess.SetVolume(clouds, "enable", true);
-                HdrpAccess.SetVolume(clouds, "cloudControl", "Simple");
-                HdrpAccess.SetVolume(clouds, "cloudSimpleMode", "Performance");
-                // Preset „Cloudy“ setzt Dichte und Form; danach alle Werte als Override festhalten
-                // und nur die Höhe der Schicht ändern.
-                HdrpAccess.SetMember(clouds, "cloudPreset", "Cloudy");
-                SetAllOverrides(clouds);
-                HdrpAccess.SetMember(clouds, "cloudPreset", "Custom");
-                HdrpAccess.SetVolume(clouds, "bottomAltitude", CloudBottom);
-                HdrpAccess.SetVolume(clouds, "altitudeRange", CloudThickness);
-                // Laut Plan der größte Kostentreiber: wenige Schritte.
-                HdrpAccess.SetVolume(clouds, "numPrimarySteps", 48);
-                HdrpAccess.SetVolume(clouds, "numLightSteps", 6);
-                HdrpAccess.SetVolume(clouds, "shadows", true);
-            }
-
-            Object fog = HdrpAccess.AddVolumeComponent(profile, "Fog");
-            HdrpAccess.SetVolume(fog, "enabled", true);
-            HdrpAccess.SetVolume(fog, "meanFreePath", 1800f);
-            HdrpAccess.SetVolume(fog, "baseHeight", 0f);
-            HdrpAccess.SetVolume(fog, "maximumHeight", 350f);
-            HdrpAccess.SetVolume(fog, "enableVolumetricFog", true);
-            HdrpAccess.SetVolume(fog, "depthExtent", 300f);
-            HdrpAccess.SetVolume(fog, "anisotropy", 0.6f);
-
-            Object exposure = HdrpAccess.AddVolumeComponent(profile, "Exposure");
-            HdrpAccess.SetVolume(exposure, "mode", "Automatic");
-            HdrpAccess.SetVolume(exposure, "limitMin", 4f);
-            HdrpAccess.SetVolume(exposure, "limitMax", 16f);
-
-            Object shadows = HdrpAccess.AddVolumeComponent(profile, "HDShadowSettings");
-            HdrpAccess.SetVolume(shadows, "maxShadowDistance", 600f);
-            HdrpAccess.SetVolume(shadows, "cascadeShadowSplitCount", 3);
-
-            Object water = HdrpAccess.AddVolumeComponent(profile, "WaterRendering");
-            HdrpAccess.SetVolume(water, "enable", true);
-
-            EditorUtility.SetDirty(profile);
-            AssetDatabase.SaveAssets();
-
-            var go = new GameObject("Umgebung (Himmel, Wolken, Nebel)");
-            Component volume = go.AddComponent(HdrpAccess.CoreType("Volume"));
-            HdrpAccess.SetMember(volume, "isGlobal", true);
-            HdrpAccess.SetMember(volume, "sharedProfile", profile);
-        }
-
-        static Object LoadOrCreateProfile(string path)
-        {
-            if (AssetDatabase.LoadMainAssetAtPath(path) != null) AssetDatabase.DeleteAsset(path);
-            ScriptableObject profile = ScriptableObject.CreateInstance(HdrpAccess.CoreType("VolumeProfile"));
-            AssetDatabase.CreateAsset(profile, path);
-            return profile;
-        }
-
-        static void SetAllOverrides(Object component)
-        {
-            if (component == null) return;
-            System.Reflection.MethodInfo method = component.GetType().GetMethod("SetAllOverridesTo", new[] { typeof(bool) });
-            if (method != null) method.Invoke(component, new object[] { true });
-        }
-
-        static void CreateSun()
-        {
-            var go = new GameObject("Sonne");
-            // Vormittagssonne aus Südosten, 35° über dem Horizont.
-            go.transform.rotation = Quaternion.Euler(35f, -40f, 0f);
-
-            Light light = null;
-            System.Type extension = HdrpAccess.HdType("GameObjectExtension");
-            if (extension != null)
-            {
-                HdrpAccess.InvokeStatic(extension, "AddHDLight", go, LightType.Directional);
-                light = go.GetComponent<Light>();
-            }
-            if (light == null)
-            {
-                light = go.AddComponent<Light>();
-                light.type = LightType.Directional;
-            }
-
-            light.lightUnit = LightUnit.Lux;
-            light.intensity = 100000f;
-            light.useColorTemperature = true;
-            light.colorTemperature = 5600f;
-            light.shadows = LightShadows.Soft;
-        }
-
-        static void CreateOcean()
-        {
-            System.Type surfaceType = HdrpAccess.HdType("WaterSurface");
-            if (surfaceType == null)
-            {
-                Debug.LogWarning("Frostline: HDRP-Wasser nicht gefunden, Ozean fehlt.");
-                return;
-            }
-
-            var go = new GameObject("Ozean");
-            go.transform.position = Vector3.zero;
-            Component surface = go.AddComponent(surfaceType);
-            if (!HdrpAccess.InvokeStatic(HdrpAccess.HdType("WaterSurfacePresets"), "ApplyWaterOceanPreset", surface))
-            {
-                HdrpAccess.SetMember(surface, "surfaceType", "OceanSeaLake");
-                HdrpAccess.SetMember(surface, "geometryType", "Infinite");
-            }
-            // Kühles, eher dunkles Nordmeer mit etwas Wind.
-            HdrpAccess.SetMember(surface, "largeWindSpeed", 35f);
-            HdrpAccess.SetMember(surface, "scatteringColor", new Color(0.02f, 0.16f, 0.2f));
         }
 
         // ------------------------------------------------------------ Terrain
@@ -255,7 +137,7 @@ namespace Frostline.EditorTools
             return terrain;
         }
 
-        static TerrainLayer CreateLayer(string name, Color light, Color dark, float tileSize, float smoothness, float roughness)
+        internal static TerrainLayer CreateLayer(string name, Color light, Color dark, float tileSize, float smoothness, float roughness)
         {
             string texturePath = TextureFolder + "/" + name + ".png";
             string layerPath = GeneratedFolder + "/Layer_" + name + ".terrainlayer";
@@ -327,7 +209,7 @@ namespace Frostline.EditorTools
 
         static Transform CreateLaunchPad(Vector3 ground)
         {
-            Material padMaterial = LitMaterial("Startplatz", new Color(0.18f, 0.18f, 0.2f), 0.3f);
+            Material padMaterial = GameSystemsBuilder.LitMaterial("Startplatz", new Color(0.18f, 0.18f, 0.2f), 0.3f);
             GameObject pad = GameObject.CreatePrimitive(PrimitiveType.Cube);
             pad.name = "Startplatz";
             pad.transform.position = ground + new Vector3(0f, 0.25f, 0f);
@@ -343,7 +225,7 @@ namespace Frostline.EditorTools
 
         static void CreatePracticeGates(Vector3 start)
         {
-            Material gateMaterial = LitMaterial("Gate", new Color(1f, 0.38f, 0.05f), 0.4f);
+            Material gateMaterial = GameSystemsBuilder.LitMaterial("Gate", new Color(1f, 0.38f, 0.05f), 0.4f);
             var parent = new GameObject("Uebungs-Gates").transform;
             Vector3[] offsets =
             {
@@ -390,156 +272,6 @@ namespace Frostline.EditorTools
             bar.GetComponent<Renderer>().sharedMaterial = material;
         }
 
-        static Material LitMaterial(string name, Color color, float smoothness)
-        {
-            string path = GeneratedFolder + "/M_" + name + ".mat";
-            var material = AssetDatabase.LoadAssetAtPath<Material>(path);
-            if (material == null)
-            {
-                Shader shader = Shader.Find("HDRP/Lit");
-                material = new Material(shader != null ? shader : Shader.Find("Standard"));
-                AssetDatabase.CreateAsset(material, path);
-            }
-            material.SetColor("_BaseColor", color);
-            material.SetFloat("_Smoothness", smoothness);
-            EditorUtility.SetDirty(material);
-            return material;
-        }
 
-        // ------------------------------------------------------------ Drohne
-
-        static DroneController CreateDrone(Transform spawnPoint)
-        {
-            var go = new GameObject("Drohne");
-            go.transform.SetPositionAndRotation(spawnPoint.position, spawnPoint.rotation);
-
-            var body = go.AddComponent<Rigidbody>();
-            var collider = go.AddComponent<BoxCollider>();
-            collider.size = new Vector3(0.22f, 0.05f, 0.22f);
-            collider.center = new Vector3(0f, 0.025f, 0f);
-            collider.sharedMaterial = new PhysicsMaterial("Drohne")
-            {
-                bounciness = 0.15f,
-                dynamicFriction = 0.6f,
-                staticFriction = 0.8f,
-                bounceCombine = PhysicsMaterialCombine.Average,
-            };
-
-            DroneController drone = go.AddComponent<DroneController>();
-            DroneRespawn respawn = go.AddComponent<DroneRespawn>();
-            respawn.spawnPoint = spawnPoint;
-            respawn.killHeight = -3f;
-
-            go.AddComponent<AudioSource>();
-            go.AddComponent<MotorAudio>().drone = drone;
-
-            BuildDroneModel(go.transform);
-
-            // FPV-Kamera vorn am Rahmen.
-            var cameraGo = new GameObject("FPV-Kamera");
-            cameraGo.transform.SetParent(go.transform, false);
-            cameraGo.transform.localPosition = new Vector3(0f, 0.045f, 0.075f);
-            var camera = cameraGo.AddComponent<Camera>();
-            camera.nearClipPlane = 0.03f;
-            camera.farClipPlane = 30000f;
-            cameraGo.AddComponent<AudioListener>();
-            cameraGo.tag = "MainCamera";
-
-            System.Type cameraData = HdrpAccess.HdType("HDAdditionalCameraData");
-            if (cameraData != null)
-            {
-                Component data = cameraGo.AddComponent(cameraData);
-                HdrpAccess.SetMember(data, "antialiasing", "TemporalAntialiasing");
-                HdrpAccess.SetMember(data, "allowDynamicResolution", true);
-                // Schutz gegen schwarze Pixel bei Wolken und Nebel unter Metal (Risiko im Plan).
-                HdrpAccess.SetMember(data, "stopNaNs", true);
-            }
-
-            var fpv = cameraGo.AddComponent<FpvCamera>();
-            fpv.drone = drone;
-            fpv.tiltFromDrone = true;
-            fpv.fieldOfView = 90f;
-
-            body.mass = drone.config.MassKg;
-            return drone;
-        }
-
-        /// <summary>Platzhalter-Modell aus Grundkörpern, bis die Higgsfield-Drohne kommt.</summary>
-        static void BuildDroneModel(Transform root)
-        {
-            Material frame = LitMaterial("Drohne_Rahmen", new Color(0.05f, 0.05f, 0.055f), 0.35f);
-            Material accent = LitMaterial("Drohne_Akzent", new Color(0.0f, 0.55f, 0.9f), 0.5f);
-            Material prop = LitMaterial("Drohne_Propeller", new Color(0.12f, 0.12f, 0.13f), 0.6f);
-
-            var model = new GameObject("Modell").transform;
-            model.SetParent(root, false);
-
-            Part(model, PrimitiveType.Cube, new Vector3(0f, 0.02f, 0f), new Vector3(0.06f, 0.02f, 0.14f), Quaternion.identity, frame);
-            Part(model, PrimitiveType.Cube, new Vector3(0f, 0.045f, -0.01f), new Vector3(0.04f, 0.03f, 0.1f), Quaternion.identity, accent);
-
-            const float Arm = 0.0795f;
-            Vector3[] motors =
-            {
-                new Vector3(Arm, 0.02f, -Arm), new Vector3(Arm, 0.02f, Arm),
-                new Vector3(-Arm, 0.02f, -Arm), new Vector3(-Arm, 0.02f, Arm),
-            };
-            foreach (Vector3 motor in motors)
-            {
-                Vector3 mid = motor * 0.5f;
-                mid.y = 0.015f;
-                Quaternion along = Quaternion.LookRotation(new Vector3(motor.x, 0f, motor.z));
-                Part(model, PrimitiveType.Cube, mid, new Vector3(0.016f, 0.006f, Arm * 1.414f), along, frame);
-                Part(model, PrimitiveType.Cylinder, motor, new Vector3(0.024f, 0.009f, 0.024f), Quaternion.identity, frame);
-                Part(model, PrimitiveType.Cylinder, motor + new Vector3(0f, 0.012f, 0f), new Vector3(0.127f, 0.0008f, 0.127f), Quaternion.identity, prop);
-            }
-        }
-
-        static void Part(Transform parent, PrimitiveType type, Vector3 position, Vector3 scale, Quaternion rotation, Material material)
-        {
-            GameObject part = GameObject.CreatePrimitive(type);
-            Object.DestroyImmediate(part.GetComponent<Collider>());
-            part.transform.SetParent(parent, false);
-            part.transform.localPosition = position;
-            part.transform.localRotation = rotation;
-            part.transform.localScale = scale;
-            part.GetComponent<Renderer>().sharedMaterial = material;
-        }
-
-        // ------------------------------------------------------------ Spiel-Systeme
-
-        static void CreateSystems(DroneController drone, Terrain terrain)
-        {
-            var go = new GameObject("Frostline");
-            StickInput input = go.AddComponent<StickInput>();
-            drone.input = input;
-
-            BenchmarkRunner benchmark = go.AddComponent<BenchmarkRunner>();
-            benchmark.drone = drone;
-            benchmark.center = new Vector3(IslandGenerator.TileSize * 0.5f, 0f, IslandGenerator.TileSize * 0.5f);
-            benchmark.radius = 750f;
-            benchmark.lowAltitude = 40f;
-            benchmark.highAltitude = CloudBottom + CloudThickness * 0.3f;
-
-            Osd osd = go.AddComponent<Osd>();
-            osd.drone = drone;
-            osd.input = input;
-            osd.benchmark = benchmark;
-
-            FrostlineMenu menu = go.AddComponent<FrostlineMenu>();
-            menu.drone = drone;
-            menu.input = input;
-            menu.benchmark = benchmark;
-            menu.osd = osd;
-            menu.fpvCamera = drone.GetComponentInChildren<FpvCamera>();
-            menu.motorAudio = drone.GetComponent<MotorAudio>();
-        }
-
-        static void AddSceneToBuild(string path)
-        {
-            var scenes = new System.Collections.Generic.List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
-            scenes.RemoveAll(s => s.path == path);
-            scenes.Insert(0, new EditorBuildSettingsScene(path, true));
-            EditorBuildSettings.scenes = scenes.ToArray();
-        }
     }
 }
