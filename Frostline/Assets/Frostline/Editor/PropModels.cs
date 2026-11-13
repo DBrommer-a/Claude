@@ -144,7 +144,7 @@ namespace Frostline.EditorTools
         /// den lokalen Mesh-Grenzen, nicht an Renderer.bounds: Die sind weltachsenparallel und wären
         /// bei gedrehten Platzhaltern (Wrack, Gates) zu groß.
         /// </summary>
-        static bool LocalBounds(GameObject go, Transform space, bool ownOnly, out Bounds bounds)
+        internal static bool LocalBounds(GameObject go, Transform space, bool ownOnly, out Bounds bounds)
         {
             MeshFilter[] filters = ownOnly ? go.GetComponents<MeshFilter>() : go.GetComponentsInChildren<MeshFilter>();
             Matrix4x4 toSpace = space.worldToLocalMatrix;

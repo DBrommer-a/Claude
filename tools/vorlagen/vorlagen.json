@@ -1,0 +1,36 @@
+{
+  "quelle": "Poly Haven (https://polyhaven.com), alle Assets CC0",
+  "texturen": {
+    "coast_sand_01": "2k",
+    "rocky_terrain_02": "2k",
+    "gray_rocks": "2k",
+    "snow_field_aerial": "2k",
+    "snow_04": "2k",
+    "concrete_panels": "1k",
+    "brick_wall_02": "1k",
+    "rusty_metal_02": "1k",
+    "metal_plate": "1k",
+    "concrete_pavers": "1k",
+    "weathered_plank_siding": "1k",
+    "weathered_planks": "1k",
+    "grey_roof_tiles": "1k",
+    "painted_plaster_wall": "1k",
+    "stone_wall": "1k",
+    "snow_02": "1k",
+    "rusty_metal_sheet": "1k"
+  },
+  "modelle": {
+    "rock_face_01": "1k",
+    "rock_moss_set_01": "1k",
+    "boulder_01": "1k",
+    "dead_tree_trunk": "1k",
+    "tree_stump_01": "1k",
+    "dutch_ship_medium": "1k",
+    "Barrel_01": "1k",
+    "industrial_pastic_container": "1k",
+    "flood_lights": "1k",
+    "utility_box_01": "1k",
+    "street_lamp_01": "1k",
+    "fire_hydrant": "1k"
+  }
+}

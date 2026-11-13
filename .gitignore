@@ -40,3 +40,7 @@ Frostline/Assets/Frostline/Generated/
 Frostline/Assets/Frostline/Generated.meta
 Frostline/Assets/Frostline/Scenes/
 Frostline/Assets/Frostline/Scenes.meta
+
+# Freie Vorlagen (Poly Haven, CC0), geladen mit tools/mac/frostline.sh vorlagen
+Frostline/Assets/Frostline/Vorlagen/
+Frostline/Assets/Frostline/Vorlagen.meta

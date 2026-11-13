@@ -72,6 +72,10 @@ case "${1:-hilfe}" in
     "$HUB" -- --headless install --version "$VERSION" --changeset "$CHANGESET" --architecture arm64
     echo "Danach einmal Unity Hub öffnen, mit dem Unity-Konto anmelden und die Personal-Lizenz aktivieren."
     ;;
+  vorlagen)
+    echo "▶ Freie Vorlagen laden (Poly Haven, CC0)"
+    python3 -I "$ROOT/tools/vorlagen/vorlagen_laden.py"
+    ;;
   einrichten)
     unity_batch Frostline.EditorTools.FrostlineCommandLine.Setup
     # Nach dem Umstellen der Eingabe-Einstellung muss Unity neu starten: der nächste Aufruf ist ein neuer Prozess.
@@ -106,6 +110,7 @@ case "${1:-hilfe}" in
       -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build | tail -20
     ;;
   alles)
+    "$0" vorlagen
     "$0" einrichten
     "$0" insel
     "$0" tests
@@ -117,6 +122,7 @@ case "${1:-hilfe}" in
     cat <<HILFE
 Befehle:
   unity-installieren   Unity Hub (per Homebrew) und Unity $VERSION installieren
+  vorlagen             freie Vorlagen (Poly Haven, CC0) laden: Texturen, Felsen, Schiffe, Laternen …
   einrichten           Frostline › 1 · Projekt einrichten
   prototyp | insel     Szene bauen (2 × 2 km Prototyp oder ganze Insel)
   tests                Unity-Tests (EditMode) laufen lassen
@@ -124,7 +130,7 @@ Befehle:
   bilder               Screenshots von allen Checkpoints nach Ausgabe/bilder
   messung              60-s-fps-Messung, Ergebnis in Ausgabe/benchmark.json
   ios-pruefen          iPhone-App für den Simulator kompilieren (ohne Signieren)
-  alles                einrichten, insel, tests, build, bilder, messung
+  alles                vorlagen, einrichten, insel, tests, build, bilder, messung
 Qualitätsstufe für bilder/messung: QUALITY=High $0 messung (Standard: Medium)
 HILFE
     ;;

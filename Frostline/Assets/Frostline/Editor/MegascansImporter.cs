@@ -54,6 +54,16 @@ namespace Frostline.EditorTools
         void Import(string root)
         {
             log.Clear();
+            log.AddRange(ImportFolder(root, hero ? 4096 : 2048, terrainLayers, flipNormalGreen));
+        }
+
+        /// <summary>
+        /// Importiert alle Textur-Gruppen eines Ordners: Mask-Map, HDRP-Lit-Material „M_&lt;name&gt;“ und auf
+        /// Wunsch Terrain-Layer „TL_&lt;name&gt;“. Auch per Code nutzbar (Poly-Haven-Vorlagen).
+        /// </summary>
+        public static List<string> ImportFolder(string root, int maxSize, bool terrainLayers, bool flipNormalGreen)
+        {
+            var log = new List<string>();
             string[] guids = AssetDatabase.FindAssets("t:Texture2D", new[] { root });
             var paths = new List<string>();
             foreach (string guid in guids) paths.Add(AssetDatabase.GUIDToAssetPath(guid));
@@ -61,10 +71,9 @@ namespace Frostline.EditorTools
             if (groups.Count == 0)
             {
                 log.Add("Keine passenden Texturen gefunden.");
-                return;
+                return log;
             }
 
-            int maxSize = hero ? 4096 : 2048;
             int done = 0;
             try
             {
@@ -73,7 +82,7 @@ namespace Frostline.EditorTools
                     EditorUtility.DisplayProgressBar("Megascans", group.Key, (float)done / groups.Count);
                     try
                     {
-                        ImportGroup(group.Key, group.Value, maxSize);
+                        ImportGroup(group.Key, group.Value, maxSize, terrainLayers, flipNormalGreen);
                         log.Add("✓ " + group.Key);
                     }
                     catch (Exception e)
@@ -88,17 +97,18 @@ namespace Frostline.EditorTools
                 EditorUtility.ClearProgressBar();
                 AssetDatabase.SaveAssets();
             }
+            return log;
         }
 
-        void ImportGroup(string name, Dictionary<TextureRole, string> files, int maxSize)
+        static void ImportGroup(string name, Dictionary<TextureRole, string> files, int maxSize, bool terrainLayers, bool flipNormalGreen)
         {
             string albedo, normal;
             files.TryGetValue(TextureRole.Albedo, out albedo);
             files.TryGetValue(TextureRole.Normal, out normal);
             if (albedo == null) throw new InvalidOperationException("keine Farbtextur");
 
-            Configure(albedo, maxSize, true, false);
-            if (normal != null) Configure(normal, maxSize, false, true);
+            Configure(albedo, maxSize, true, false, flipNormalGreen);
+            if (normal != null) Configure(normal, maxSize, false, true, flipNormalGreen);
 
             string folder = Path.GetDirectoryName(albedo).Replace('\\', '/');
             string maskPath = folder + "/" + name + "_MaskMap.png";
@@ -143,7 +153,7 @@ namespace Frostline.EditorTools
             }
         }
 
-        void Configure(string path, int maxSize, bool srgb, bool isNormal)
+        static void Configure(string path, int maxSize, bool srgb, bool isNormal, bool flipNormalGreen)
         {
             var importer = AssetImporter.GetAtPath(path) as TextureImporter;
             if (importer == null) return;
@@ -161,7 +171,7 @@ namespace Frostline.EditorTools
         }
 
         /// <summary>Liest die Einzeltexturen und schreibt die Mask-Map als PNG.</summary>
-        Texture2D BuildMaskMap(Dictionary<TextureRole, string> files, string maskPath, int maxSize)
+        static Texture2D BuildMaskMap(Dictionary<TextureRole, string> files, string maskPath, int maxSize)
         {
             bool any = files.ContainsKey(TextureRole.Roughness) || files.ContainsKey(TextureRole.Gloss)
                 || files.ContainsKey(TextureRole.Occlusion) || files.ContainsKey(TextureRole.Metallic);
@@ -182,7 +192,7 @@ namespace Frostline.EditorTools
             DestroyImmediate(texture);
 
             AssetDatabase.ImportAsset(maskPath);
-            Configure(maskPath, maxSize, false, false);
+            Configure(maskPath, maxSize, false, false, false);
             return AssetDatabase.LoadAssetAtPath<Texture2D>(maskPath);
         }
 

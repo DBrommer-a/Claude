@@ -36,7 +36,38 @@ namespace Frostline.EditorTools
             m.Ring.SetColor("_EmissiveColor", new Color(1f, 0.7f, 0.2f) * 4000f);
             HdrpAccess.InvokeStatic(HdrpAccess.HdType("HDMaterial"), "ValidateMaterial", m.Ring);
             m.Scaffold = GameSystemsBuilder.LitMaterial("Geruest", new Color(0.55f, 0.5f, 0.4f), 0.4f, 0.6f, true);
+            m.UseTemplates();
             return m;
+        }
+
+        /// <summary>
+        /// Ersetzt die einfarbigen Materialien durch Poly-Haven-Vorlagen (CC0), sofern geladen.
+        /// Neutrale Holz- und Putztexturen werden eingefärbt, damit rote und ockerfarbene Häuser bleiben.
+        /// Glas, Eis, Gates, Ringe, Gerüst und Bäume behalten ihre Spielfarben.
+        /// </summary>
+        void UseTemplates()
+        {
+            Concrete = Template("concrete_panels", Concrete, Color.white);
+            Brick = Template("brick_wall_02", Brick, Color.white);
+            Rust = Template("rusty_metal_02", Rust, Color.white);
+            Steel = Template("metal_plate", Steel, new Color(0.62f, 0.64f, 0.68f));
+            Plaza = Template("concrete_pavers", Plaza, Color.white);
+            WoodRed = Template("weathered_plank_siding", WoodRed, new Color(0.95f, 0.26f, 0.18f));
+            WoodDark = Template("weathered_planks", WoodDark, new Color(0.55f, 0.45f, 0.38f));
+            WoodOchre = Template("weathered_plank_siding", WoodOchre, new Color(1f, 0.78f, 0.4f));
+            Roof = Template("grey_roof_tiles", Roof, Color.white);
+            WhitePaint = Template("painted_plaster_wall", WhitePaint, Color.white);
+            RedPaint = Template("painted_plaster_wall", RedPaint, new Color(0.9f, 0.16f, 0.12f));
+            Stone = Template("stone_wall", Stone, Color.white);
+            Rock = Template("gray_rocks", Rock, Color.white);
+            Snow = Template("snow_02", Snow, Color.white);
+            Hull = Template("rusty_metal_sheet", Hull, Color.white);
+        }
+
+        static Material Template(string id, Material fallback, Color tint)
+        {
+            Material material = Vorlagen.TextureMaterial(id, tint);
+            return material != null ? material : fallback;
         }
     }
 

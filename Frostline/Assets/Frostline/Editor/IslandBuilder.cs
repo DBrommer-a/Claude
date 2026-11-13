@@ -73,6 +73,8 @@ namespace Frostline.EditorTools
                 Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
                 Progress("Himmel, Wetter, Ozean", 0.02f);
                 EnvironmentRefs env = GameSystemsBuilder.CreateEnvironment(CloudBottom, CloudThickness);
+                Progress("Vorlagen (Poly Haven) importieren", 0.03f);
+                Vorlagen.EnsureImported();
                 mat = IslandMaterials.Create();
 
                 world = new GameObject("Insel").transform;
@@ -101,6 +103,8 @@ namespace Frostline.EditorTools
                 BuildTracks();
                 BuildCollectibles();
                 BuildCheckpoints();
+                Progress("Ausstattung aus Vorlagen", 0.92f);
+                IslandDressing.Build(world, tracks, rings, checkpoints, spawn, pierStart, pierDirection);
                 BuildAmbientSound();
 
                 Progress("Drohne und Spielsysteme", 0.95f);
@@ -159,6 +163,12 @@ namespace Frostline.EditorTools
             return go;
         }
 
+        static TerrainLayer TemplateLayer(string id, Color tint, System.Func<TerrainLayer> fallback, float tile = 0f)
+        {
+            TerrainLayer layer = Vorlagen.Layer(id, tint, tile);
+            return layer != null ? layer : fallback();
+        }
+
         static Transform Zone(string name)
         {
             var t = new GameObject("Zone: " + name).transform;
@@ -173,13 +183,19 @@ namespace Frostline.EditorTools
             const int HeightResolution = 2049;
             const int SplatResolution = 1024;
 
+            // Bodenschichten aus Poly-Haven-Vorlagen (echte Fotoscans); ohne Vorlagen die gerechneten.
             TerrainLayer[] layers =
             {
-                PrototypeSceneBuilder.CreateLayer("Insel_" + "Sand", new Color(0.36f, 0.34f, 0.31f), new Color(0.2f, 0.19f, 0.18f), 6f, 0.3f, 0.6f),
-                PrototypeSceneBuilder.CreateLayer("Insel_" + "Kies_Gras", new Color(0.33f, 0.34f, 0.3f), new Color(0.2f, 0.22f, 0.18f), 9f, 0.15f, 1.4f),
-                PrototypeSceneBuilder.CreateLayer("Insel_" + "Fels", new Color(0.3f, 0.3f, 0.32f), new Color(0.16f, 0.16f, 0.18f), 18f, 0.2f, 2.2f),
-                PrototypeSceneBuilder.CreateLayer("Insel_" + "Schnee", new Color(0.86f, 0.88f, 0.92f), new Color(0.74f, 0.78f, 0.86f), 12f, 0.45f, 0.35f),
-                PrototypeSceneBuilder.CreateLayer("Insel_" + "Eis", new Color(0.66f, 0.82f, 0.92f), new Color(0.45f, 0.62f, 0.78f), 20f, 0.8f, 0.8f),
+                TemplateLayer("coast_sand_01", new Color(0.9f, 0.9f, 0.88f),
+                    () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Sand", new Color(0.36f, 0.34f, 0.31f), new Color(0.2f, 0.19f, 0.18f), 6f, 0.3f, 0.6f)),
+                TemplateLayer("rocky_terrain_02", Color.white,
+                    () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Kies_Gras", new Color(0.33f, 0.34f, 0.3f), new Color(0.2f, 0.22f, 0.18f), 9f, 0.15f, 1.4f)),
+                TemplateLayer("gray_rocks", new Color(0.86f, 0.9f, 0.98f),
+                    () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Fels", new Color(0.3f, 0.3f, 0.32f), new Color(0.16f, 0.16f, 0.18f), 18f, 0.2f, 2.2f), 18f),
+                TemplateLayer("snow_field_aerial", Color.white,
+                    () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Schnee", new Color(0.86f, 0.88f, 0.92f), new Color(0.74f, 0.78f, 0.86f), 12f, 0.45f, 0.35f)),
+                TemplateLayer("snow_04", new Color(0.72f, 0.86f, 1f),
+                    () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Eis", new Color(0.66f, 0.82f, 0.92f), new Color(0.45f, 0.62f, 0.78f), 20f, 0.8f, 0.8f), 16f),
             };
 
             GameObject treePrefab = CreateTreePrefab();

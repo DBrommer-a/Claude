@@ -16,10 +16,20 @@ FPV-Sender oder iPhone als Controller und Multiplayer für bis zu 8 Drohnen.
 | Wetter | klar, tiefe Wolken, Schneesturm; Tageszeit über Physically Based Sky; Wind auf die Drohne |
 | Multiplayer | Relay + Lobby mit Raum-Code, Geister-Drohnen mit Interpolation, Rennen für alle, Fangen |
 | iPhone-App | SwiftUI, Multitouch-Sticks, Gyro, Haptik, Telemetrie, 250 Pakete/s |
-| Higgsfield | Concept-Art je Zone, Testdrohne als 3D-Modell, Ambient-Sounds, App-Icon, Ladebildschirm |
-| Optik | Platzhalter-Texturen und Rohbau-Geometrie; die echten Assets kommen nach dem 60-fps-Gate |
+| Higgsfield | Concept-Art je Zone, Drohne, Leuchtturm, Funkmast, Kran, Fischerhütte, Renn-Gate, Kutter als 3D-Modelle, Ambient-Sounds, App-Icon, Ladebildschirm |
+| Optik | Freie Vorlagen von Poly Haven (CC0): Fotoscan-Böden (Sand, Moos-Tundra, Fels, Schnee, Eis), Gebäude-Materialien (Beton, Ziegel, Holz, Putz, Dach, Rost, Stein) und rund 670 Modelle (Felsen, Treibholz, Segelschiffe, Fässer, Container, Flutlicht, Laternen, Hydranten) |
 
-Alles ist gegen Unity 6.6 (6000.6.9f1) kompiliert, aber noch nicht im Editor gestartet worden.
+Läuft auf dem Mac (MacBook Air M4, Unity 6000.6.9f1) mit allen Schritten durch; die fps-Messung
+(Medium, 1080p) liegt bei rund 145 fps im Schnitt.
+
+## Vorlagen (Poly Haven, CC0)
+
+`tools/mac/frostline.sh vorlagen` lädt die Liste aus `tools/vorlagen/vorlagen.json` nach
+`Frostline/Assets/Frostline/Vorlagen` (rund 140 MB, nicht im Repository). `alles` macht das als
+ersten Schritt. Beim Inselbau werden daraus Materialien und Terrain-Schichten angelegt
+(`Vorlagen.cs`) und die Insel ausgestattet (`IslandDressing.cs`): nur auf Bodenhöhe und mit Abstand
+zu Gates, Flugrouten, Ringen und Checkpoints. Fehlen die Vorlagen, baut die Insel wie früher mit
+gerechneten Texturen. Bäume bleiben gebaut: Poly Havens Bäume haben 0,4 bis 17 Millionen Polygone.
 
 ## Öffnen
 
