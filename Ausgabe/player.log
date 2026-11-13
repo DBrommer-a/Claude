@@ -28,27 +28,37 @@ Begin MonoManager ReloadAssembly
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
 ScriptableRuntimeReflectionSystemSettings.system is assigned more than once. Only a the last instance will be used. (Last instance , New instance UnityEngine.Rendering.HighDefinition.HDRuntimeReflectionSystem)
-Metal RecreateSurface[0xaacd84e40]: surface size 1920x1080
+Metal RecreateSurface[0xc15085800]: surface size 1920x1080
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-UnloadTime: 1.607583 ms
+UnloadTime: 1.555625 ms
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-Frostline Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 154.9 fps, 1%-Tief 127.5 fps
-FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 154.9 fps | 1%-Tief 127.5 fps
-FROSTLINE_AUTOMATION Ergebnis geschrieben: /Users/davidbrommer/Projekte/Frostline/Ausgabe/benchmark.json
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (143 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Strand.png  (139 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Hafen.png  (150 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Industriegebiet.png  (140 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Stadt.png  (143 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Tal_Dorf.png  (141 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Bergdorf.png  (150 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Gletscher.png  (152 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Wald.png  (143 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Funkmast.png  (145 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Ueber_den_Wolken.png  (157 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Drohne_vorn_rechts.png  (37 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Drohne_Seite_Nase_rechts.png  (42 fps)
 FROSTLINE_AUTOMATION Automatisierung fertig
-Thread 0x16f6eb000 may have been prematurely finalized
-Thread 0x16f587000 may have been prematurely finalized
+Thread 0x16cc8b000 may have been prematurely finalized
+Thread 0x16cb27000 may have been prematurely finalized
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-Thread 0x16e5ab000 may have been prematurely finalized
-Thread 0x16e51f000 may have been prematurely finalized
-Thread 0x16e637000 may have been prematurely finalized
-Thread 0x16e493000 may have been prematurely finalized
+Thread 0x16bb4b000 may have been prematurely finalized
+Thread 0x16bbd7000 may have been prematurely finalized
+Thread 0x16ba33000 may have been prematurely finalized
+Thread 0x16babf000 may have been prematurely finalized
 CodeReloadManager destroyed
