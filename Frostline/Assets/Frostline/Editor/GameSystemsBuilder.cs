@@ -414,6 +414,12 @@ namespace Frostline.EditorTools
             weather.snow = CreateSnow(go.transform);
             weather.windAudio = CreateWindAudio(go.transform);
 
+            StartupScreen startup = go.AddComponent<StartupScreen>();
+            startup.image = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Frostline/UI/Ladebildschirm.jpg");
+
+            QualityTuner tuner = go.AddComponent<QualityTuner>();
+            tuner.volumes = new[] { env.BaseVolume, env.LowCloudsVolume, env.StormVolume };
+
             if (options.Checkpoints != null)
             {
                 Checkpoints checkpoints = options.Checkpoints.gameObject.AddComponent<Checkpoints>();
