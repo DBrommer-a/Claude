@@ -12,7 +12,7 @@ namespace Frostline.EditorTools
         public const string ModelPath = "Assets/Frostline/Models/Drohne/FrostlineDrohne.glb";
 
         /// <summary>Spannweite über die Propellerspitzen eines 5-Zoll-Quads in m.</summary>
-        const float TargetSpan = 0.30f;
+        const float TargetSpan = 0.32f;
 
         public static bool TryUseGeneratedModel(Transform placeholder)
         {
@@ -62,9 +62,13 @@ namespace Frostline.EditorTools
         }
     }
 
-    /// <summary>Drehung, damit die Nase des erzeugten Modells nach +z (vorn) zeigt.</summary>
+    /// <summary>
+    /// Drehung, damit die Nase des erzeugten Modells nach +z (vorn) zeigt. Im GLB zeigt die
+    /// Nase (FPV-Kamera) nach +x; glTFast spiegelt beim Import die X-Achse, also liegt sie in
+    /// Unity bei −x. 90° um Y dreht sie nach +z.
+    /// </summary>
     public static class DroneModelOrientation
     {
-        public static readonly Vector3 Euler = new Vector3(0f, 0f, 0f);
+        public static readonly Vector3 Euler = new Vector3(0f, 90f, 0f);
     }
 }
