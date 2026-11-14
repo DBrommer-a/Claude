@@ -47,6 +47,8 @@ namespace Frostline.View
         [Header("Zustand")]
         public Weather weather = Weather.Clear;
         [Range(5f, 21f)] public float timeOfDay = 10f;
+        [Tooltip("Aus: Die Sonne der Szene bleibt, wie sie gebaut wurde (z. B. das tiefe Kinolicht der Verlassenen Insel).")]
+        public bool controlSun = true;
         public int cloudSeed = 1;
         [Tooltip("Spielminuten pro Echtsekunde; 0 = Uhrzeit steht.")]
         public float timeScale = 0f;
@@ -123,7 +125,7 @@ namespace Frostline.View
 
         void UpdateSun()
         {
-            if (sun == null) return;
+            if (sun == null || !controlSun) return;
             float day = Mathf.InverseLerp(sunrise, sunset, timeOfDay);
             float elevation = Mathf.Sin(day * Mathf.PI) * maxElevation;
             if (day <= 0f || day >= 1f) elevation = -8f;

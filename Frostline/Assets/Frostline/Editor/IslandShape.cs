@@ -143,10 +143,14 @@ namespace Frostline.EditorTools
         }
 
         /// <summary>Bodenschichten: 0 Sand, 1 Kies/Gras, 2 Fels, 3 Schnee, 4 Eis.</summary>
-        public static float[,,] BuildSplatmap(float[,] heights, float originX, float originZ, int resolution)
+        /// <summary>
+        /// Gewichte der Bodenschichten: 0 Sand, 1 Grün, 2 Fels, 3 Schnee, 4 Eis; mit
+        /// <paramref name="extraLayers"/> zusätzlich 5 Heide (fleckig in der Tundra) und 6 Kies (Strandübergang).
+        /// </summary>
+        public static float[,,] BuildSplatmap(float[,] heights, float originX, float originZ, int resolution, bool extraLayers = false)
         {
             int heightRes = heights.GetLength(0);
-            var splat = new float[resolution, resolution, 5];
+            var splat = new float[resolution, resolution, extraLayers ? 7 : 5];
             float cell = TileSize / (heightRes - 1);
 
             for (int row = 0; row < resolution; row++)
@@ -181,11 +185,29 @@ namespace Frostline.EditorTools
                     float wSnow = rest * snow;
                     rest -= wSnow;
 
+                    float wHeather = 0f, wPebbles = 0f;
+                    if (extraLayers)
+                    {
+                        // Kies am Übergang vom Strand ins Grün, Heide in Flecken auf der Tundra unter ~350 m.
+                        float pebble = SmoothStep(2f, 6f, h + jitter) * (1f - SmoothStep(9f, 16f, h + jitter)) * 0.85f;
+                        wPebbles = rest * pebble;
+                        rest -= wPebbles;
+                        float patches = SmoothStep(0.42f, 0.68f, Mathf.PerlinNoise(x * 0.006f + 31.7f, z * 0.006f - 12.3f));
+                        float heather = patches * (1f - SmoothStep(260f, 380f, h)) * (1f - SmoothStep(20f, 34f, slope));
+                        wHeather = rest * heather;
+                        rest -= wHeather;
+                    }
+
                     splat[row, col, 0] = wSand;
                     splat[row, col, 1] = rest;
                     splat[row, col, 2] = wRock;
                     splat[row, col, 3] = wSnow;
                     splat[row, col, 4] = wIce;
+                    if (extraLayers)
+                    {
+                        splat[row, col, 5] = wHeather;
+                        splat[row, col, 6] = wPebbles;
+                    }
                 }
             }
             return splat;

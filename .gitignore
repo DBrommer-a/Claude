@@ -41,6 +41,26 @@ Frostline/Assets/Frostline/Generated.meta
 Frostline/Assets/Frostline/Scenes/
 Frostline/Assets/Frostline/Scenes.meta
 
+# Asset-Store-Pakete (Unity-Lizenz, nicht weitergeben), entpackt mit tools/mac/frostline.sh assetstore
+Frostline/Assets/RPG_FPS_game_assets_industrial/
+Frostline/Assets/RPG_FPS_game_assets_industrial.meta
+Frostline/Assets/TerrainSampleAssets/
+Frostline/Assets/TerrainSampleAssets.meta
+
 # Freie Vorlagen (Poly Haven, CC0), geladen mit tools/mac/frostline.sh vorlagen
 Frostline/Assets/Frostline/Vorlagen/
 Frostline/Assets/Frostline/Vorlagen.meta
+
+# Weitere Asset-Store-/Fab-Pakete (Lizenz: nur lokal, nie ins Repository)
+Frostline/Assets/Viking Village/
+Frostline/Assets/Viking Village.meta
+Frostline/Assets/PalmTreePack/
+Frostline/Assets/PalmTreePack.meta
+Frostline/Assets/TirgamesAssets/
+Frostline/Assets/TirgamesAssets.meta
+Frostline/Assets/Fab/
+Frostline/Assets/Fab.meta
+
+# DJI-FPV-Modell (Fab/Sketchfab-Download, Lizenz unklar): nur lokal. Erzeugen: tools/mac/frostline.sh blender
+Frostline/Assets/Frostline/Models/DJI/
+Frostline/Assets/Frostline/Models/DJI.meta

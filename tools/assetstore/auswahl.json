@@ -1,0 +1,81 @@
+{
+  "hinweis": "Asset-Store-Pakete stehen unter der Unity-Asset-Store-Lizenz: Sie werden nur lokal ins Projekt entpackt und nie ins (öffentliche) Repository gelegt. Heruntergeladen werden sie in Unity unter Window › Package Manager › My Assets › Download.",
+  "cache": "~/Library/Unity/Asset Store-5.x",
+  "pakete": [
+    {
+      "name": "Industrial Set v2.0 (Dmitrii Kutsenko)",
+      "datei": "Dmitrii Kutsenko/3D ModelsEnvironmentsIndustrial/RPGFPS Game Assets for PCMobile Industrial Set v20.unitypackage",
+      "auswahl": [
+        "Assets/RPG_FPS_game_assets_industrial/Buildings/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Containers/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Oil_tanks/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Fences/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Barrels/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Boxes/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Dumpsters/*.prefab",
+        "Assets/RPG_FPS_game_assets_industrial/Other_props/*.prefab"
+      ]
+    },
+    {
+      "name": "Terrain Sample Asset Pack (Unity Technologies)",
+      "datei": "Unity Technologies/3D ModelsEnvironmentsLandscapes/Terrain Asset Pack Terrain Sample.unitypackage",
+      "auswahl": [
+        "Assets/TerrainSampleAssets/TerrainLayers/Black_Sand_TerrainLayer.terrainlayer",
+        "Assets/TerrainSampleAssets/TerrainLayers/Grass_Moss_TerrainLayer.terrainlayer",
+        "Assets/TerrainSampleAssets/TerrainLayers/Heather_TerrainLayer.terrainlayer",
+        "Assets/TerrainSampleAssets/TerrainLayers/Rock_TerrainLayer.terrainlayer",
+        "Assets/TerrainSampleAssets/TerrainLayers/Snow_TerrainLayer.terrainlayer",
+        "Assets/TerrainSampleAssets/TerrainLayers/Pebbles_A_TerrainLayer.terrainlayer",
+        "Assets/TerrainSampleAssets/Prefabs/Grass_A.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Grass_B.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Grass_C.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/GrassDry_A.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Heather_A.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Heather_B.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Fern_A.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Fern_B.prefab",
+        "Assets/TerrainSampleAssets/Prefabs/Bush_A.prefab"
+      ]
+    },
+    {
+      "name": "Viking Village 3D Sample (Unity Technologies)",
+      "datei": "Unity Technologies/3D ModelsEnvironments/Viking Village 3D Sample Project.unitypackage",
+      "auswahl": [
+        "Assets/Viking Village/Prefabs/Buildings/*.prefab",
+        "Assets/Viking Village/Prefabs/Props/*.prefab",
+        "Assets/Viking Village/Book of the Dead/Vegetation/*.prefab"
+      ],
+      "ohne": [
+        "*Standard Assets*",
+        "*Boat Attack Water System*",
+        "*.unity",
+        "*.lighting",
+        "*.inputactions",
+        "*.giparams"
+      ]
+    },
+    {
+      "name": "Palm Tree Pack Free (ALIyerEdon)",
+      "datei": "ALIyerEdon/3D ModelsVegetationTrees/Palm Tree Pack Free.unitypackage",
+      "auswahl": [
+        "Assets/PalmTreePack/*.prefab"
+      ],
+      "ohne": [
+        "*.unity",
+        "*.lighting"
+      ]
+    },
+    {
+      "name": "Abandoned Factory Lite (Tirgames)",
+      "datei": "Tirgames assets/3D ModelsPropsIndustrial/Abandoned Factory Lite.unitypackage",
+      "auswahl": [
+        "Assets/TirgamesAssets/*"
+      ],
+      "ohne": [
+        "*.unity",
+        "*.lighting"
+      ],
+      "hinweis": "Prefabs sind binär gespeichert, Verweise lassen sich nicht verfolgen: ganzen Ordner nehmen (ohne Szenen)."
+    }
+  ]
+}

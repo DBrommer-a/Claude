@@ -20,7 +20,7 @@ Has Float MSAA: 1
 Has Float Filtering: 1
 ReadWrite Texture Tier: 2
 Begin MonoManager ReloadAssembly
-- Finished resetting the current domain, in  0.003 seconds
+- Finished resetting the current domain, in  0.004 seconds
 [Physics::Module] Selected backend (deferred post-plugins).
 [Physics::Module] Name: PhysX
 [Physics::Module] Id: 0xf2b8ea05
@@ -28,28 +28,74 @@ Begin MonoManager ReloadAssembly
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
 ScriptableRuntimeReflectionSystemSettings.system is assigned more than once. Only a the last instance will be used. (Last instance , New instance UnityEngine.Rendering.HighDefinition.HDRuntimeReflectionSystem)
-Metal RecreateSurface[0x79f0c8240]: surface size 1920x1080
-The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Kiefer must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-UnloadTime: 0.474709 ms
+Metal RecreateSurface[0x961184180]: surface size 1920x1080
+Detected one or more triangles where the distance between any 2 vertices is greater than 500 units. The resulting Triangle Mesh can impact simulation and query stability. It is recommended to tessellate meshes that have large triangles. Source mesh name: Stahlwerk_0
+UnloadTime: 0.687375 ms
+Frostline: 119272 Bäume in 1378 Zellen gebündelt (8 Arten).
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-Frostline Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 144.4 fps, 1%-Tief 110.8 fps
-FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 144.4 fps | 1%-Tief 110.8 fps
-FROSTLINE_AUTOMATION Ergebnis geschrieben: /Users/davidbrommer/Projekte/Frostline/Ausgabe/benchmark.json
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (35 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Blick__Gipfel_über_dem_Wolkenmeer.png  (140 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Blick__Wolkenmeer_im_Gegenlicht.png  (97 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Blick__Nordwand_im_Abendlicht.png  (90 fps)
+Frostline: Gras an (80 m) bei 69 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Blick__Verlassenes_Wikingerdorf.png  (35 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Blick__Dorfgasse.png  (36 fps)
+Frostline: Gras aus bei 119 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Blick__Verlassenes_Stahlwerk_und_Rohbau.png  (73 fps)
+Frostline: Gras an (70 m) bei 74 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Blick__Rohbau.png  (56 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Blick__Hauptfluss_flussaufwärts.png  (13 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Blick__Dorf_am_Fluss.png  (31 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Blick__Traumstrand.png  (89 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Blick__Vom_Meer_zum_Berg_in_den_Wolken.png  (59 fps)
+Frostline: Gras aus bei 1773 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Ueber_den_Wolken.png  (95 fps)
+Frostline: Gras an (100 m) bei 4 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/13_Drohne_vorn_rechts.png  (14 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/14_Drohne_Seite_Nase_rechts.png  (15 fps)
+FROSTLINE_AUTOMATION Requisite Leuchtturm nicht gefunden
+FROSTLINE_AUTOMATION Requisite Funkmast nicht gefunden
+FROSTLINE_AUTOMATION Requisite Gestrandeter Kutter nicht gefunden
+FROSTLINE_AUTOMATION Requisite Kranbahn nicht gefunden
+FROSTLINE_AUTOMATION Requisite Fischerhütte 1 nicht gefunden
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/15_Tiefflug_Tundra.png  (13 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/30a_Stimmung_Sonnenaufgang.png  (148 fps)
+Frostline: Gras an (90 m) bei 46 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/30b_Stimmung_Sonnenaufgang.png  (30 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/31a_Stimmung_Morgen.png  (148 fps)
+Frostline: Gras an (90 m) bei 46 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/31b_Stimmung_Morgen.png  (32 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/32a_Stimmung_Mittag.png  (148 fps)
+Frostline: Gras an (90 m) bei 46 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/32b_Stimmung_Mittag.png  (32 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/33a_Stimmung_Nachmittag.png  (145 fps)
+Frostline: Gras an (90 m) bei 46 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/33b_Stimmung_Nachmittag.png  (31 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/34a_Stimmung_Goldene_Stunde.png  (146 fps)
+Frostline: Gras an (90 m) bei 46 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/34b_Stimmung_Goldene_Stunde.png  (32 fps)
+Frostline: Gras aus bei 2746 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/35a_Stimmung_Sonnenuntergang.png  (143 fps)
+Frostline: Gras an (90 m) bei 46 m über Grund, Kamera FPV-Kamera
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/35b_Stimmung_Sonnenuntergang.png  (31 fps)
 FROSTLINE_AUTOMATION Automatisierung fertig
-Thread 0x170ed7000 may have been prematurely finalized
-Thread 0x170ce7000 may have been prematurely finalized
+Thread 0x16f09b000 may have been prematurely finalized
+Thread 0x16ef37000 may have been prematurely finalized
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-Thread 0x16fbf3000 may have been prematurely finalized
-Thread 0x16fd97000 may have been prematurely finalized
-Thread 0x16fd0b000 may have been prematurely finalized
-Thread 0x16fe23000 may have been prematurely finalized
-Thread 0x16fc7f000 may have been prematurely finalized
+Thread 0x16de43000 may have been prematurely finalized
+Thread 0x16decf000 may have been prematurely finalized
+Thread 0x16df5b000 may have been prematurely finalized
+Thread 0x16dfe7000 may have been prematurely finalized
+Thread 0x16e073000 may have been prematurely finalized
 CodeReloadManager destroyed

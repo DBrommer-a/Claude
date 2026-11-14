@@ -127,6 +127,99 @@ namespace Frostline.EditorTools
             return false;
         }
 
+        /// <summary>
+        /// Trägt alle Streuprofile (Diffusion Profiles) unter Assets/ in das HDRP-Standard-Volume ein und
+        /// speichert es. Fehlt ein Profil dort, rendert HDRP Laub, Stroh und Pflanzen mit einem fremden
+        /// (hautroten) Profil – in jedem frisch gestarteten Unity und im Build. Die automatische
+        /// Registrierung von HDRP markiert das Volume nur als geändert und speichert es nicht.
+        /// Rückgabe: Anzahl neu eingetragener Profile, -1 bei Fehler.
+        /// </summary>
+        public static int RegisterDiffusionProfiles()
+        {
+            Type profileType = HdType("DiffusionProfileSettings");
+            Type settingsType = HdType("HDRPDefaultVolumeProfileSettings");
+            if (profileType == null || settingsType == null) return -1;
+
+            MethodInfo getSettings = null;
+            foreach (MethodInfo m in typeof(UnityEngine.Rendering.GraphicsSettings).GetMethods(BindingFlags.Public | BindingFlags.Static))
+                if (m.Name == "GetRenderPipelineSettings" && m.IsGenericMethodDefinition && m.GetParameters().Length == 0) getSettings = m;
+            if (getSettings == null) return -1;
+            object settings;
+            try { settings = getSettings.MakeGenericMethod(settingsType).Invoke(null, null); }
+            catch (Exception e)
+            {
+                Debug.LogWarning("Frostline: HDRP-Standard-Volume nicht lesbar: " + Unwrap(e).Message);
+                return -1;
+            }
+            PropertyInfo profileProperty = settings != null ? FindProperty(settingsType, "volumeProfile") : null;
+            var volumeProfile = profileProperty != null ? profileProperty.GetValue(settings) as Object : null;
+            if (volumeProfile == null)
+            {
+                Debug.LogWarning("Frostline: Kein HDRP-Standard-Volume gesetzt; Streuprofile nicht eingetragen.");
+                return -1;
+            }
+
+            var wanted = new System.Collections.Generic.List<Object>();
+            foreach (string guid in AssetDatabase.FindAssets("t:DiffusionProfileSettings", new[] { "Assets" }))
+            {
+                Object p = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(guid), profileType);
+                if (p != null) wanted.Add(p);
+            }
+
+            // Alle DiffusionProfileList-Komponenten des Profils angleichen (manche Profile enthalten sie doppelt).
+            var lists = new System.Collections.Generic.List<Object>();
+            FieldInfo componentsField = volumeProfile.GetType().GetField("components", BindingFlags.Public | BindingFlags.Instance);
+            var components = componentsField != null ? componentsField.GetValue(volumeProfile) as System.Collections.IList : null;
+            if (components != null)
+                foreach (object c in components)
+                    if (c is Object o && c.GetType().Name == "DiffusionProfileList") lists.Add(o);
+            if (lists.Count == 0)
+            {
+                Object added = AddVolumeComponent(volumeProfile, "DiffusionProfileList");
+                if (added == null) return -1;
+                lists.Add(added);
+            }
+
+            int addedCount = 0;
+            foreach (Object list in lists)
+            {
+                FieldInfo field = list.GetType().GetField("diffusionProfiles", BindingFlags.Public | BindingFlags.Instance);
+                object parameter = field != null ? field.GetValue(list) : null;
+                PropertyInfo valueProperty = parameter != null ? FindProperty(parameter.GetType(), "value") : null;
+                PropertyInfo overrideState = parameter != null ? FindProperty(parameter.GetType(), "overrideState") : null;
+                if (valueProperty == null || overrideState == null)
+                {
+                    Missing(list, "diffusionProfiles");
+                    return -1;
+                }
+
+                var all = new System.Collections.Generic.List<Object>();
+                if (valueProperty.GetValue(parameter) is Array current)
+                    foreach (object o in current)
+                        if (o is Object u && u != null && !all.Contains(u)) all.Add(u);
+                int before = all.Count;
+                // HDRP erlaubt 15 eigene Profile; die Projekt-Profile haben Vorrang vor den mitgelieferten.
+                foreach (Object p in wanted)
+                    if (!all.Contains(p)) all.Insert(0, p);
+                while (all.Count > 15) all.RemoveAt(all.Count - 1);
+                if (all.Count == before) continue;
+
+                Array array = Array.CreateInstance(profileType, all.Count);
+                for (int i = 0; i < all.Count; i++) array.SetValue(all[i], i);
+                overrideState.SetValue(parameter, true);
+                valueProperty.SetValue(parameter, array);
+                EditorUtility.SetDirty(list);
+                addedCount = Math.Max(addedCount, all.Count - before);
+            }
+            if (addedCount > 0)
+            {
+                EditorUtility.SetDirty(volumeProfile);
+                AssetDatabase.SaveAssets();
+                Debug.Log("Frostline: " + addedCount + " Streuprofil(e) im HDRP-Standard-Volume eingetragen.");
+            }
+            return addedCount;
+        }
+
         public static bool InvokeStatic(Type type, string method, params object[] arguments)
         {
             if (type == null) return false;

@@ -40,7 +40,7 @@ namespace Frostline.UI
         bool dirty;
         int tab;
         Vector2 scroll;
-        bool previousMenuKey, previousBenchmarkKey;
+        bool previousMenuKey, previousBenchmarkKey, previousMoodKey;
         GUIStyle heading, wrapped, bar;
 
         void Awake()
@@ -91,6 +91,11 @@ namespace Frostline.UI
                 bool menuKey = keys.f1Key.isPressed || keys.escapeKey.isPressed;
                 if (menuKey && !previousMenuKey) Toggle();
                 previousMenuKey = menuKey;
+
+                // L: nächste Lichtstimmung (im Multiplayer nur der Host).
+                bool moodKey = keys.lKey.isPressed;
+                if (moodKey && !previousMoodKey && LightingMoods.Instance != null) LightingMoods.Instance.Next();
+                previousMoodKey = moodKey;
 
                 bool benchmarkKey = keys.f9Key.isPressed;
                 if (benchmarkKey && !previousBenchmarkKey && benchmark != null)
@@ -231,14 +236,32 @@ namespace Frostline.UI
                 GUI.enabled = !weather.lockedByHost;
                 WorldState state = weather.State;
                 int w = GUILayout.Toolbar((int)state.Weather, WeatherNames, GUILayout.Height(28f));
-                int currentDay = state.TimeOfDay < 10f ? 0 : (state.TimeOfDay < 16f ? 1 : 2);
-                int d = GUILayout.Toolbar(currentDay, DayNames, GUILayout.Height(28f));
-                float hour = Slider("Uhrzeit", state.TimeOfDay, 5f, 21f, "0.0");
-                if (w != (int)state.Weather || d != currentDay || !Mathf.Approximately(hour, state.TimeOfDay))
+                LightingMoods moods = LightingMoods.Instance;
+                if (moods != null && moods.moods.Length > 0)
                 {
-                    state.Weather = (Weather)w;
-                    state.TimeOfDay = d != currentDay ? DayHours[d] : hour;
-                    weather.SetLocal(state);
+                    // Karten mit vorberechnetem Himmel: feste Lichtstimmungen statt freier Uhrzeit.
+                    GUILayout.Label("Lichtstimmung (Taste L)", wrapped);
+                    var names = new string[moods.moods.Length];
+                    for (int i = 0; i < names.Length; i++) names[i] = moods.moods[i].name;
+                    int chosen = GUILayout.SelectionGrid(moods.Current, names, 3, GUILayout.Height(60f));
+                    if (chosen != moods.Current) moods.Select(chosen);
+                    if (w != (int)state.Weather)
+                    {
+                        state.Weather = (Weather)w;
+                        weather.SetLocal(state);
+                    }
+                }
+                else
+                {
+                    int currentDay = state.TimeOfDay < 10f ? 0 : (state.TimeOfDay < 16f ? 1 : 2);
+                    int d = GUILayout.Toolbar(currentDay, DayNames, GUILayout.Height(28f));
+                    float hour = Slider("Uhrzeit", state.TimeOfDay, 5f, 21f, "0.0");
+                    if (w != (int)state.Weather || d != currentDay || !Mathf.Approximately(hour, state.TimeOfDay))
+                    {
+                        state.Weather = (Weather)w;
+                        state.TimeOfDay = d != currentDay ? DayHours[d] : hour;
+                        weather.SetLocal(state);
+                    }
                 }
                 if (GUILayout.Button("Andere Wolken (neuer Seed)", GUILayout.Height(26f)))
                 {

@@ -29,10 +29,32 @@
 · model street_lamp_01 (schon da)
 · model fire_hydrant (schon da)
 Vorlagen: 17 Texturen, 12 Modelle in /Users/davidbrommer/Projekte/Frostline/Frostline/Assets/Frostline/Vorlagen
+▶ Heruntergeladene Asset-Store-Pakete entpacken (nur Auswahl, nicht im Repository)
+✓ Industrial Set v2.0 (Dmitrii Kutsenko): 96 gewählt, 182 mit Abhängigkeiten (113 MB), 0 Dateien geschrieben (0 MB), 364 schon da
+✓ Terrain Sample Asset Pack (Unity Technologies): 15 gewählt, 72 mit Abhängigkeiten (582 MB), 0 Dateien geschrieben (0 MB), 144 schon da
+✓ Viking Village 3D Sample (Unity Technologies): 96 gewählt, 351 mit Abhängigkeiten (1295 MB), 0 Dateien geschrieben (0 MB), 702 schon da
+✓ Palm Tree Pack Free (ALIyerEdon): 9 gewählt, 28 mit Abhängigkeiten (57 MB), 0 Dateien geschrieben (0 MB), 56 schon da
+✓ Abandoned Factory Lite (Tirgames): 367 gewählt, 362 mit Abhängigkeiten (538 MB), 0 Dateien geschrieben (0 MB), 708 schon da
 ▶ Unity: Frostline.EditorTools.FrostlineCommandLine.Setup  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_Setup.log)
 ✓ Frostline.EditorTools.FrostlineCommandLine.Setup
-▶ Unity: Frostline.EditorTools.FrostlineCommandLine.BuildIsland  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_BuildIsland.log)
-✓ Frostline.EditorTools.FrostlineCommandLine.BuildIsland
+▶ Unity: Frostline.EditorTools.FrostlineCommandLine.MakeVerlassenPlayable  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_MakeVerlassenPlayable.log)
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+Frostline: „TerrainCollider.enableTreeColliders“ gibt es in dieser HDRP-Version nicht, wird übersprungen.
+✓ Frostline.EditorTools.FrostlineCommandLine.MakeVerlassenPlayable
 ▶ Unity-Tests (EditMode)
 total="102" passed="102" failed="0"
 ▶ Unity: Frostline.EditorTools.FrostlineCommandLine.BuildMac  (Log: /Users/davidbrommer/Projekte/Frostline/Ausgabe/unity_BuildMac.log)
@@ -71,45 +93,44 @@ total="102" passed="102" failed="0"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (152 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Strand.png  (149 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Hafen.png  (158 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Industriegebiet.png  (143 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Stadt.png  (141 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Tal_Dorf.png  (141 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Bergdorf.png  (133 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Gletscher.png  (140 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Wald.png  (137 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Funkmast.png  (142 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Ueber_den_Wolken.png  (145 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Drohne_vorn_rechts.png  (32 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Drohne_Seite_Nase_rechts.png  (34 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/13_Requisite_Leuchtturm.png  (138 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/14_Requisite_Funkmast.png  (137 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/15_Requisite_Gestrandeter_Kutter.png  (124 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/16_Requisite_Kranbahn.png  (136 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/17_Requisite_Fischerhütte_1.png  (138 fps)
-FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/18_Requisite_RennGate.png  (160 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/00_Start_FPV.png  (51 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/01_Blick__Gipfel_über_dem_Wolkenmeer.png  (39 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/02_Blick__Wolkenmeer_im_Gegenlicht.png  (25 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/03_Blick__Nordwand_im_Abendlicht.png  (18 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/04_Blick__Verlassenes_Wikingerdorf.png  (8 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/05_Blick__Dorfgasse.png  (11 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/06_Blick__Verlassenes_Stahlwerk_und_Rohbau.png  (26 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/07_Blick__Rohbau.png  (12 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/08_Blick__Hauptfluss_flussaufwärts.png  (10 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/09_Blick__Dorf_am_Fluss.png  (12 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/10_Blick__Traumstrand.png  (29 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/11_Blick__Vom_Meer_zum_Berg_in_den_Wolken.png  (7 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/12_Ueber_den_Wolken.png  (13 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/13_Drohne_vorn_rechts.png  (23 fps)
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/14_Drohne_Seite_Nase_rechts.png  (20 fps)
+FROSTLINE_AUTOMATION Requisite Leuchtturm nicht gefunden
+FROSTLINE_AUTOMATION Requisite Funkmast nicht gefunden
+FROSTLINE_AUTOMATION Requisite Gestrandeter Kutter nicht gefunden
+FROSTLINE_AUTOMATION Requisite Kranbahn nicht gefunden
+FROSTLINE_AUTOMATION Requisite Fischerhütte 1 nicht gefunden
+FROSTLINE_AUTOMATION Screenshot /Users/davidbrommer/Projekte/Frostline/Ausgabe/bilder/15_Tiefflug_Tundra.png  (76 fps)
 FROSTLINE_AUTOMATION Automatisierung fertig
 00_Start_FPV.png
-01_Strand.png
-02_Hafen.png
-03_Industriegebiet.png
-04_Stadt.png
-05_Tal_Dorf.png
-06_Bergdorf.png
-07_Gletscher.png
-08_Wald.png
-09_Funkmast.png
-10_Ueber_den_Wolken.png
-11_Drohne_vorn_rechts.png
-12_Drohne_Seite_Nase_rechts.png
-13_Requisite_Leuchtturm.png
-14_Requisite_Funkmast.png
-15_Requisite_Gestrandeter_Kutter.png
-16_Requisite_Kranbahn.png
-17_Requisite_Fischerhütte_1.png
-18_Requisite_RennGate.png
+01_Blick__Gipfel_über_dem_Wolkenmeer.png
+02_Blick__Wolkenmeer_im_Gegenlicht.png
+03_Blick__Nordwand_im_Abendlicht.png
+04_Blick__Verlassenes_Wikingerdorf.png
+05_Blick__Dorfgasse.png
+06_Blick__Verlassenes_Stahlwerk_und_Rohbau.png
+07_Blick__Rohbau.png
+08_Blick__Hauptfluss_flussaufwärts.png
+09_Blick__Dorf_am_Fluss.png
+10_Blick__Traumstrand.png
+11_Blick__Vom_Meer_zum_Berg_in_den_Wolken.png
+12_Ueber_den_Wolken.png
+13_Drohne_vorn_rechts.png
+14_Drohne_Seite_Nase_rechts.png
+15_Tiefflug_Tundra.png
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
@@ -144,21 +165,21 @@ FROSTLINE_AUTOMATION Automatisierung fertig
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 FROSTLINE_AUTOMATION Automatisierung gestartet
 FROSTLINE_AUTOMATION Qualitätsstufe Medium
-FROSTLINE_AUTOMATION Benchmark: BESTANDEN – stabil über 60 fps | Schnitt 144.4 fps | 1%-Tief 110.8 fps
+FROSTLINE_AUTOMATION Benchmark: KNAPP – Schnitt reicht, aber es gibt Einbrüche | Schnitt 104.9 fps | 1%-Tief 8.6 fps
 FROSTLINE_AUTOMATION Ergebnis geschrieben: /Users/davidbrommer/Projekte/Frostline/Ausgabe/benchmark.json
 FROSTLINE_AUTOMATION Automatisierung fertig
 {
-  "rating": "Passed",
-  "averageFps": 144.41,
-  "onePercentLowFps": 110.81,
-  "medianFrameMs": 6.837,
-  "p99FrameMs": 8.428,
-  "worstFrameMs": 32.109,
-  "frames": 8665,
+  "rating": "Borderline",
+  "averageFps": 104.90,
+  "onePercentLowFps": 8.63,
+  "medianFrameMs": 5.235,
+  "p99FrameMs": 89.206,
+  "worstFrameMs": 158.835,
+  "frames": 6297,
   "quality": "Medium",
   "resolution": "1920 x 1080",
   "device": "Mac16,12",
   "gpu": "Apple M4",
-  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261113_224955.txt"
+  "report": "/Users/davidbrommer/Library/Application Support/Frostline/Frostline/Benchmarks/benchmark_20261114_145614.txt"
 }
 EXIT=0

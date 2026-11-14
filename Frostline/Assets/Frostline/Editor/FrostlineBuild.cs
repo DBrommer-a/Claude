@@ -45,6 +45,8 @@ namespace Frostline.EditorTools
             }
 
             PreferAppleSilicon();
+            // CPU- und GPU-Zeit pro Bild für die Messung (FrameTimingManager); kostet praktisch nichts.
+            PlayerSettings.enableFrameTimingStats = true;
 
             var options = new BuildPlayerOptions
             {

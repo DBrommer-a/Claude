@@ -17,6 +17,7 @@ namespace Frostline.Diagnostics
     ///   -frostlineBenchmark          fps-Messung (60 s), Ergebnis als JSON
     ///   -frostlineResult &lt;Datei&gt;     wohin das JSON geschrieben wird
     ///   -frostlineQuality &lt;Name&gt;     Qualitätsstufe, z. B. High
+    ///   -frostlineOhne baeume,gras,schatten,nebel,wasser,wolken   Messung zur Fehlersuche ohne diese Teile
     /// Danach beendet sich das Spiel selbst.
     /// </summary>
     public sealed class AutomationRunner : MonoBehaviour
@@ -27,6 +28,7 @@ namespace Frostline.Diagnostics
         bool benchmark;
         string resultPath;
         string quality;
+        string without;
         readonly List<string> written = new List<string>();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -44,6 +46,7 @@ namespace Frostline.Diagnostics
             runner.benchmark = Array.IndexOf(args, "-frostlineBenchmark") >= 0;
             runner.resultPath = Argument(args, "-frostlineResult");
             runner.quality = Argument(args, "-frostlineQuality");
+            runner.without = Argument(args, "-frostlineOhne");
         }
 
         static string Argument(string[] args, string name)
@@ -65,6 +68,10 @@ namespace Frostline.Diagnostics
 
             if (!string.IsNullOrEmpty(shotsFolder)) yield return Screenshots();
             if (benchmark) yield return Benchmark();
+
+            // Der Multiplayer-Test (-frostlineHost/-frostlineJoin) beendet das Spiel selbst.
+            string[] args = Environment.GetCommandLineArgs();
+            if (Array.IndexOf(args, "-frostlineHost") >= 0 || Array.IndexOf(args, "-frostlineJoin") >= 0) yield break;
 
             Log("Automatisierung fertig");
             yield return new WaitForSecondsRealtime(0.5f);
@@ -142,12 +149,36 @@ namespace Frostline.Diagnostics
             yield return ModelShots(drone.transform, index);
             index += 2;
             yield return PropShots(drone.transform, index);
+            yield return MoodShots(drone.transform, views);
 
             body.isKinematic = false;
             body.interpolation = RigidbodyInterpolation.Interpolate;
             drone.enabled = true;
             DroneRespawn respawn = drone.GetComponent<DroneRespawn>();
             if (respawn != null) respawn.Respawn();
+        }
+
+        /// <summary>Jede Lichtstimmung von zwei Standpunkten: Dorf am Fluss und über dem Wolkenmeer.</summary>
+        IEnumerator MoodShots(Transform drone, List<KeyValuePair<string, Pose>> views)
+        {
+            Frostline.View.LightingMoods moods = Frostline.View.LightingMoods.Instance;
+            if (moods == null || moods.moods.Length == 0 || views.Count == 0) yield break;
+            var spots = new List<KeyValuePair<string, Pose>>();
+            foreach (KeyValuePair<string, Pose> v in views)
+                if (v.Key.Contains("Dorf am Fluss") || v.Key.Contains("Gipfel")) spots.Add(v);
+            if (spots.Count == 0) spots.Add(views[0]);
+            int start = moods.Current;
+            for (int m = 0; m < moods.moods.Length; m++)
+            {
+                moods.Select(m);
+                for (int s = 0; s < spots.Count; s++)
+                {
+                    drone.SetPositionAndRotation(spots[s].Value.position, spots[s].Value.rotation);
+                    yield return new WaitForSecondsRealtime((s == 0 ? moods.blendSeconds : 0f) + SettleSeconds);
+                    yield return Capture((30 + m).ToString("00") + (char)('a' + s) + "_Stimmung_" + Safe(moods.moods[m].name));
+                }
+            }
+            moods.Select(start);
         }
 
         const string ModelChild = "Modell (Higgsfield)";
@@ -177,6 +208,47 @@ namespace Frostline.Diagnostics
                 yield return new WaitForSecondsRealtime(SettleSeconds);
                 yield return Capture(index.ToString("00") + "_Requisite_" + Safe(name));
                 index++;
+            }
+
+            // Industrial Set (Asset Store): Halle, Öltank und Container aus der Nähe.
+            foreach (string prefix in new[] { "Hangar_", "Oil_tank", "Container" })
+            {
+                Transform found = null;
+                foreach (Transform t in FindObjectsByType<Transform>(FindObjectsInactive.Exclude))
+                {
+                    if (t.name.StartsWith(prefix) && t.parent != null && t.parent.name.StartsWith("Industriegebiet"))
+                    {
+                        found = t;
+                        break;
+                    }
+                }
+                if (found == null) continue;
+                Frame(drone, found, cameraOffset);
+                yield return new WaitForSecondsRealtime(SettleSeconds);
+                yield return Capture(index.ToString("00") + "_Industrie_" + Safe(prefix.TrimEnd('_')));
+                index++;
+            }
+
+            // Tiefflug über der Tundra: Gras und Heide sieht man nur aus wenigen Metern Höhe.
+            SignalBoundary signal = FindAnyObjectByType<SignalBoundary>();
+            DroneRespawn spawn = drone.GetComponent<DroneRespawn>();
+            if (signal != null && spawn != null && spawn.spawnPoint != null)
+            {
+                var center = new Vector3(signal.center.x, 0f, signal.center.y);
+                Vector3 inland = center - spawn.spawnPoint.position;
+                inland.y = 0f;
+                inland.Normalize();
+                RaycastHit hit;
+                Vector3 probe = spawn.spawnPoint.position + inland * 260f + Vector3.up * 2000f;
+                if (Physics.Raycast(probe, Vector3.down, out hit, 4000f, ~0, QueryTriggerInteraction.Ignore))
+                {
+                    Vector3 eye = hit.point + Vector3.up * 2.5f;
+                    Vector3 target = eye + inland * 30f - Vector3.up * 3f;
+                    drone.SetPositionAndRotation(eye, Quaternion.LookRotation(target - eye) * Quaternion.Inverse(cameraOffset));
+                    yield return new WaitForSecondsRealtime(SettleSeconds);
+                    yield return Capture(index.ToString("00") + "_Tiefflug_Tundra");
+                    index++;
+                }
             }
 
             // Renn-Gates gibt es nur bei laufendem Rennen; für das Bild die erste Strecke kurz einschalten.
@@ -261,6 +333,30 @@ namespace Frostline.Diagnostics
             {
                 Log("Kein Benchmark in der Szene");
                 yield break;
+            }
+            // Fehlersuche: -frostlineOhne baeume,gras,schatten,nebel,wasser,wolken misst ohne diese Teile.
+            yield return null;   // QualityTuner hat dann seine Werte gesetzt
+            if (!string.IsNullOrEmpty(without))
+            {
+                foreach (Terrain terrain in Terrain.activeTerrains)
+                {
+                    if (without.Contains("baeume")) terrain.treeDistance = 0f;
+                    if (without.Contains("gras")) { terrain.detailObjectDistance = 0f; terrain.detailObjectDensity = 0f; }
+                }
+                if (without.Contains("baeume"))
+                    foreach (Frostline.View.TerrainTreeInstancer t in FindObjectsByType<Frostline.View.TerrainTreeInstancer>(FindObjectsSortMode.None)) t.enabled = false;
+                if (without.Contains("schatten"))
+                    foreach (Light l in FindObjectsByType<Light>(FindObjectsSortMode.None))
+                        if (l.type == LightType.Directional) l.shadows = LightShadows.None;
+                foreach (Behaviour b in FindObjectsByType<Behaviour>(FindObjectsSortMode.None))
+                {
+                    string type = b.GetType().Name;
+                    if (without.Contains("nebel") && type == "LocalVolumetricFog") b.enabled = false;
+                    if (without.Contains("wasser") && type == "WaterSurface") b.enabled = false;
+                    if (without.Contains("wolken") && type == "Volume")
+                        Frostline.View.VolumeAccess.SetParameter(b, "VolumetricClouds", "enable", false);
+                }
+                Log("Messung ohne: " + without);
             }
             runner.Begin();
             while (runner.Running) yield return null;

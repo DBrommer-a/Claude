@@ -74,6 +74,9 @@ struct ContentView: View {
             }
         }
         .onChange(of: hapticsOn) { _, value in devices.haptics.enabled = value }
+        // Einfarbig: keine Systemfarben (Blau) für Knöpfe und Symbole.
+        .tint(.white)
+        .preferredColorScheme(.dark)
     }
 
     private var controls: some View {
@@ -86,8 +89,8 @@ struct ContentView: View {
                 Text(armed ? "ARMED" : "ARM")
                     .font(.headline.weight(.heavy))
                     .frame(width: 110, height: 44)
-                    .background(armed ? Color.red : Color.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
-                    .foregroundStyle(.white)
+                    .background(armed ? Color.white : Color.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
+                    .foregroundStyle(armed ? Color.black : Color.white)
             }
 
             Picker("Modus", selection: $mode) {
@@ -100,7 +103,8 @@ struct ContentView: View {
             Text("Turtle")
                 .font(.subheadline.weight(.bold))
                 .frame(width: 80, height: 44)
-                .background(turtleHeld ? Color.orange : Color.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
+                .background(turtleHeld ? Color.white : Color.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
+                .foregroundStyle(turtleHeld ? Color.black : Color.white)
                 .gesture(DragGesture(minimumDistance: 0)
                     .onChanged { _ in
                         if !turtleHeld {
@@ -119,7 +123,7 @@ struct ContentView: View {
             } label: {
                 Image(systemName: "arrow.counterclockwise")
                     .frame(width: 44, height: 44)
-                    .background(Color.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
+                    .background(Color.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
             }
 
             Button {
@@ -127,7 +131,8 @@ struct ContentView: View {
             } label: {
                 Image(systemName: "gyroscope")
                     .frame(width: 44, height: 44)
-                    .background(gyroOn ? Color.teal : Color.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
+                    .background(gyroOn ? Color.white : Color.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
+                    .foregroundStyle(gyroOn ? Color.black : Color.white)
             }
 
             Button {
@@ -135,7 +140,7 @@ struct ContentView: View {
             } label: {
                 Image(systemName: "gearshape")
                     .frame(width: 44, height: 44)
-                    .background(Color.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
+                    .background(Color.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
             }
         }
         .foregroundStyle(.white)
@@ -168,7 +173,7 @@ struct TelemetryBar: View {
         HStack(spacing: 18) {
             HStack(spacing: 6) {
                 Circle()
-                    .fill(connection.hasTelemetry ? Color.green : (connection.status.isConnected ? Color.yellow : Color.red))
+                    .fill(Color.white.opacity(connection.hasTelemetry ? 1 : (connection.status.isConnected ? 0.5 : 0.18)))
                     .frame(width: 10, height: 10)
                 Text(connection.status.label).lineLimit(1)
             }
@@ -177,16 +182,16 @@ struct TelemetryBar: View {
                     Label("\(Int(rtt.rounded())) ms", systemImage: "wifi")
                 }
                 Label(String(format: "%.1f V  %d %%", t.batteryVolts, t.batteryPercent), systemImage: "battery.75")
-                    .foregroundStyle(t.cellVolts < 3.5 ? Color.red : Color.white)
+                    .foregroundStyle(Color.white.opacity(t.cellVolts < 3.5 ? 1 : 0.7))
                 Label(String(format: "%.0f km/h", t.speedKmh), systemImage: "speedometer")
                 Label(String(format: "%.0f m", t.altitudeMeters), systemImage: "arrow.up.and.down")
                 if let lap = t.lapTime {
                     Label(String(format: "%.2f s", lap), systemImage: "stopwatch")
                 }
                 if t.flags.contains(.failsafe) {
-                    Text("FAILSAFE").foregroundStyle(.red).bold()
+                    Text("FAILSAFE").foregroundStyle(.white).bold()
                 } else if t.flags.contains(.armingBlocked) {
-                    Text("GAS RUNTER").foregroundStyle(.orange).bold()
+                    Text("GAS RUNTER").foregroundStyle(.white.opacity(0.8)).bold()
                 }
             }
             Spacer()

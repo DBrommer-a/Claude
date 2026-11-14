@@ -61,6 +61,8 @@ namespace Frostline.EditorTools
             ConfigureQualityLevels(assets);
             GraphicsSettings.defaultRenderPipeline = assets[DefaultLevel];
             NameLayer(GameSystemsBuilder.OwnDroneLayer, GameSystemsBuilder.OwnDroneLayerName);
+            // Laub-Streuprofil der Pakete dauerhaft eintragen, sonst wird Laub im Build rot/rosa.
+            HdrpAccess.RegisterDiffusionProfiles();
 
             bool restartNeeded = EnableBothInputBackends();
 

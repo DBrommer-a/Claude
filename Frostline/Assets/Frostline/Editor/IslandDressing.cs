@@ -140,6 +140,16 @@ namespace Frostline.EditorTools
                     if (Vorlagen.Place("dutch_ship_medium", parent, p, yaw + Range(-6f, 6f), 1f, true, 0.004f, 2.2f) != null) placed++;
                 }
             }
+            if (AssetStorePakete.HasIndustrial)
+            {
+                // Hafen im selben Stil wie das Industriegebiet: Containerreihen, Fässer, Paletten, Kisten.
+                IslandShape.Zone harbor = IslandShape.Harbor;
+                for (int i = 0; i < 3; i++) ContainerRow(parent, harbor, 5);
+                for (int i = 0; i < 6; i++) PrefabCluster(parent, harbor, "Barrel_v2_quadro", 2, 4f);
+                for (int i = 0; i < 6; i++) PrefabCluster(parent, harbor, "Palet_v1_set", 2, 5f);
+                for (int i = 0; i < 6; i++) PrefabCluster(parent, harbor, "Wooden_box_v1_LD1", 3, 3f);
+                return;
+            }
             Clusters(parent, IslandShape.Harbor, "Barrel_01", 7, 4, 1f, 1.15f, 3f, 1f, 0.03f);
             Clusters(parent, IslandShape.Harbor, "industrial_pastic_container", 5, 3, 1.6f, 2.2f, 3f, 1f, 0.03f);
         }
@@ -147,6 +157,11 @@ namespace Frostline.EditorTools
         static void Industry(Transform parent)
         {
             IslandShape.Zone zone = IslandShape.Industry;
+            if (AssetStorePakete.HasIndustrial)
+            {
+                IndustrialSet(parent, zone);
+                return;
+            }
             Clusters(parent, zone, "Barrel_01", 9, 4, 1f, 1.15f, 3f, 1f, 0.03f);
             Clusters(parent, zone, "industrial_pastic_container", 7, 3, 1.6f, 2.4f, 3f, 1f, 0.03f);
             Scatter(parent, zone, "utility_box_01", 12, 1.3f, 1.6f, 1f, 0.03f);
@@ -171,6 +186,11 @@ namespace Frostline.EditorTools
             }
             Scatter(parent, zone, "fire_hydrant", 12, 1f, 1f, 1f, 0.04f);
             Scatter(parent, zone, "utility_box_01", 10, 1.3f, 1.6f, 1f, 0.03f);
+            if (AssetStorePakete.HasIndustrial)
+            {
+                for (int i = 0; i < 8; i++) PrefabCluster(parent, zone, "Dumpsters_v1_garbadge", 1, 1f);
+                for (int i = 0; i < 6; i++) PrefabCluster(parent, zone, "Electric_box_v2", 1, 1f);
+            }
         }
 
         static void Village(Transform parent, IslandShape.Zone zone)
@@ -178,6 +198,190 @@ namespace Frostline.EditorTools
             Clusters(parent, zone, "Barrel_01", 3, 3, 1f, 1.15f, 2.5f, 1f, 0.03f);
             Scatter(parent, zone, "tree_stump_01", 6, 0.9f, 1.3f, 2f, 0.03f);
             Scatter(parent, zone, "street_lamp_01", 6, 1f, 1f, 1.5f, 0.01f);
+            if (AssetStorePakete.HasIndustrial)
+            {
+                for (int i = 0; i < 3; i++) PrefabCluster(parent, zone, "Wooden_box_v1_LD1", 2, 2.5f);
+                for (int i = 0; i < 2; i++) PrefabCluster(parent, zone, "Palet_v1_single", 2, 3f);
+            }
+        }
+
+        // ------------------------------------------------------------ Industrial Set (Asset Store)
+
+        /// <summary>
+        /// Industriegebiet aus dem Industrial Set: Hallen und Öltanks auf freien, flachen Flächen,
+        /// Containerreihen, Betonzaun-Züge, Rohrleitungen und Kleinteile. Alles aus einem Set, damit der
+        /// Stil einheitlich bleibt; die gebauten Hallen der Rennstrecke bleiben unangetastet.
+        /// </summary>
+        static void IndustrialSet(Transform parent, IslandShape.Zone zone)
+        {
+            string[] halls = { "Hangar_v4", "Hangar_v3_basic", "Hangar_v2_basic", "Hangar_v1_full", "Hangar_v2_outbuilding",
+                "Hangar_v3_outbuilding_1", "Hangar_v2_outbuilding2", "Hangar_v1_half" };
+            foreach (string hall in halls) TryPlaceBuilding(AssetStorePakete.Prefab(hall), hall, parent, zone, 0.95f, 40, 90f);
+            for (int i = 0; i < 2; i++) TryPlaceBuilding(AssetStorePakete.Prefab("Oil_tank_v1"), "Oil_tank_v1", parent, zone, 0.9f, 30, 45f);
+            for (int i = 0; i < 2; i++) TryPlaceBuilding(AssetStorePakete.Prefab("Oil_tank_v2"), "Oil_tank_v2", parent, zone, 0.9f, 30, 45f);
+            for (int i = 0; i < 4; i++) ContainerRow(parent, zone, 4 + i % 2);
+            for (int i = 0; i < 3; i++) FenceRun(parent, zone, "Concrete_fence_v2_S", 8);
+            string[] pipes = { "Pipes_set_v1_H_set_v1", "Pipes_set_v1_H_set_v2", "Pipes_set_v1_H_set_v3", "Pipes_set_v1_U_set_v1", "Industrial_pipe_v1" };
+            foreach (string p in pipes) TryPlaceBuilding(AssetStorePakete.Prefab(p), p, parent, zone, 0.9f, 20, 90f);
+
+            string[] small = { "Generator_v1", "Electric_box_v1", "Electric_box_v3", "Conditioner_v1", "Bags_on_pallet_v1_1",
+                "Bags_on_pallet_v1_2", "Dumpsters_v1_garbadge", "Dumpsters_v1_empty" };
+            foreach (string s in small)
+                for (int i = 0; i < 3; i++) PrefabCluster(parent, zone, s, 1, 1f);
+            for (int i = 0; i < 10; i++) PrefabCluster(parent, zone, "Barrel_v2_quadro", 2, 4f);
+            for (int i = 0; i < 6; i++) PrefabCluster(parent, zone, "Barrel_v3_single", 3, 2.5f);
+            for (int i = 0; i < 8; i++) PrefabCluster(parent, zone, "Palet_v1_set", 2, 5f);
+            for (int i = 0; i < 8; i++) PrefabCluster(parent, zone, "Wooden_box_v1_LD1", 3, 3f);
+        }
+
+        /// <summary>Großes Teil (Halle, Tank, Rohrbrücke) auf freier, flacher Fläche; sonst neuer Versuch.</summary>
+        static GameObject TryPlaceBuilding(GameObject prefab, string name, Transform parent, IslandShape.Zone zone,
+            float radiusFraction, int attempts, float yawStep)
+        {
+            if (prefab == null) return null;
+            for (int a = 0; a < attempts; a++)
+            {
+                float angle = Range(0f, Mathf.PI * 2f);
+                float d = Mathf.Sqrt(Range(0.02f, 1f)) * zone.Radius * radiusFraction;
+                float x = zone.Position.x + Mathf.Cos(angle) * d;
+                float z = zone.Position.y + Mathf.Sin(angle) * d;
+                float yaw = Mathf.Round(Range(0f, 360f) / yawStep) * yawStep;
+                GameObject go = PlaceChecked(prefab, name, parent, x, z, yaw, 8f, 0.15f);
+                if (go != null) return go;
+            }
+            return null;
+        }
+
+        /// <summary>Kleinteile in Gruppen: <paramref name="count"/> Stück im Umkreis von <paramref name="spread"/> m.</summary>
+        static void PrefabCluster(Transform parent, IslandShape.Zone zone, string name, int count, float spread)
+        {
+            GameObject prefab = AssetStorePakete.Prefab(name);
+            if (prefab == null) return;
+            float angle = Range(0f, Mathf.PI * 2f);
+            float d = Mathf.Sqrt(Range(0f, 1f)) * zone.Radius * 0.9f;
+            float cx = zone.Position.x + Mathf.Cos(angle) * d;
+            float cz = zone.Position.y + Mathf.Sin(angle) * d;
+            for (int i = 0; i < count; i++)
+                PlaceChecked(prefab, name, parent, cx + Range(-spread, spread), cz + Range(-spread, spread), Range(0f, 360f), 14f, 0.02f);
+        }
+
+        /// <summary>Reihe aus Frachtcontainern, teils zweilagig gestapelt.</summary>
+        static void ContainerRow(Transform parent, IslandShape.Zone zone, int count)
+        {
+            GameObject prefab = AssetStorePakete.Prefab("Cargo_container_v1_LD1close");
+            if (prefab == null) return;
+            float angle = Range(0f, Mathf.PI * 2f);
+            float d = Mathf.Sqrt(Range(0.05f, 1f)) * zone.Radius * 0.85f;
+            float x = zone.Position.x + Mathf.Cos(angle) * d;
+            float z = zone.Position.y + Mathf.Sin(angle) * d;
+            float yaw = Mathf.Round(Range(0f, 360f) / 90f) * 90f;
+            GameObject first = PlaceChecked(prefab, "Container", parent, x, z, yaw, 6f, 0.05f);
+            if (first == null) return;
+            Bounds size;
+            PropModels.LocalBounds(first, first.transform, false, out size);
+            bool alongX = size.size.x < size.size.z;
+            Vector3 step = (alongX ? first.transform.right * size.size.x : first.transform.forward * size.size.z) * 1.12f;
+            Vector3 origin = first.transform.position;
+            for (int i = 1; i < count; i++)
+            {
+                Vector3 p = origin + step * i;
+                GameObject next = PlaceChecked(prefab, "Container", parent, p.x, p.z, yaw, 6f, 0.05f);
+                if (next == null) break;
+                // Jeder zweite Container bekommt einen zweiten oben drauf.
+                if (i % 2 == 1 && Range(0f, 1f) < 0.7f)
+                {
+                    GameObject top = Vorlagen.PlaceAsset(prefab, "Container", parent, next.transform.position + Vector3.up * size.size.y,
+                        yaw + Range(-3f, 3f), 1f, true, 0.01f);
+                    if (top != null) placed++;
+                }
+            }
+        }
+
+        /// <summary>Betonzaun als durchgehender Zug aus gleichen Feldern, entlang der Feldrichtung.</summary>
+        static void FenceRun(Transform parent, IslandShape.Zone zone, string name, int segments)
+        {
+            GameObject prefab = AssetStorePakete.Prefab(name);
+            if (prefab == null) return;
+            float angle = Range(0f, Mathf.PI * 2f);
+            float r = zone.Radius * Range(0.6f, 0.9f);
+            float x = zone.Position.x + Mathf.Cos(angle) * r;
+            float z = zone.Position.y + Mathf.Sin(angle) * r;
+            float yaw = -angle * Mathf.Rad2Deg;
+            GameObject first = PlaceChecked(prefab, name, parent, x, z, yaw, 10f, 0.1f);
+            if (first == null) return;
+            Bounds size;
+            PropModels.LocalBounds(first, first.transform, false, out size);
+            Vector3 step = size.size.x >= size.size.z ? first.transform.right * size.size.x : first.transform.forward * size.size.z;
+            Vector3 origin = first.transform.position;
+            for (int i = 1; i < segments; i++)
+            {
+                Vector3 p = origin + step * i;
+                if (PlaceChecked(prefab, name, parent, p.x, p.z, yaw, 10f, 0.1f) == null) break;
+            }
+        }
+
+        /// <summary>
+        /// Setzt ein Prefab, wenn der Boden passt, die Stelle frei von Flugrouten ist und es nichts
+        /// Vorhandenes schneidet (Gebäude, Zäune, andere Teile). Sonst wird es wieder entfernt.
+        /// </summary>
+        static GameObject PlaceChecked(GameObject prefab, string name, Transform parent, float x, float z, float yaw, float maxSlope, float sink)
+        {
+            Vector3 ground;
+            float slope;
+            if (!GroundAt(x, z, 0.8f, out ground, out slope) || slope > maxSlope)
+            {
+                rejected++;
+                return null;
+            }
+            GameObject go = Vorlagen.PlaceAsset(prefab, name, parent, ground, yaw, 1f, true, 0.008f, sink);
+            if (go == null) return null;
+            Bounds b = WorldBounds(go);
+            if (!IsClear(b.center, Mathf.Max(b.extents.x, b.extents.z)) || Overlaps(go, b) || !Flat(b, ground.y))
+            {
+                Object.DestroyImmediate(go);
+                rejected++;
+                return null;
+            }
+            placed++;
+            Physics.SyncTransforms();
+            return go;
+        }
+
+        static Bounds WorldBounds(GameObject go)
+        {
+            var b = new Bounds(go.transform.position, Vector3.zero);
+            foreach (Renderer r in go.GetComponentsInChildren<Renderer>()) b.Encapsulate(r.bounds);
+            return b;
+        }
+
+        /// <summary>Schneidet das neue Teil etwas anderes als das Gelände? (Unterkante 0,6 m höher: Plätze und Straßen zählen nicht.)</summary>
+        static bool Overlaps(GameObject go, Bounds b)
+        {
+            Physics.SyncTransforms();
+            float bottom = b.min.y + 0.6f;
+            if (b.max.y <= bottom) return false;
+            var center = new Vector3(b.center.x, (bottom + b.max.y) * 0.5f, b.center.z);
+            var half = new Vector3(b.extents.x * 0.96f, (b.max.y - bottom) * 0.5f, b.extents.z * 0.96f);
+            foreach (Collider hit in Physics.OverlapBox(center, half, Quaternion.identity, ~0, QueryTriggerInteraction.Ignore))
+            {
+                if (hit is TerrainCollider || hit.transform.IsChildOf(go.transform)) continue;
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>Gelände unter den Ecken weder viel höher (vergraben) noch viel tiefer (schwebend).</summary>
+        static bool Flat(Bounds b, float groundY)
+        {
+            float[] xs = { b.min.x, b.max.x };
+            float[] zs = { b.min.z, b.max.z };
+            foreach (float cx in xs)
+                foreach (float cz in zs)
+                {
+                    float h = IslandShape.Height(cx, cz);
+                    if (h > groundY + 0.8f || h < groundY - 2.5f) return false;
+                }
+            return true;
         }
 
         // ------------------------------------------------------------ Hilfen

@@ -71,17 +71,17 @@ final class StickPadUIView: UIView {
         isMultipleTouchEnabled = true
         backgroundColor = .clear
         for layer in [leftBase, rightBase] {
-            layer.fillColor = UIColor.white.withAlphaComponent(0.06).cgColor
-            layer.strokeColor = UIColor.white.withAlphaComponent(0.35).cgColor
+            layer.fillColor = UIColor.white.withAlphaComponent(0.04).cgColor
+            layer.strokeColor = UIColor.white.withAlphaComponent(0.22).cgColor
             layer.lineWidth = 2
             self.layer.addSublayer(layer)
         }
         for layer in [leftKnob, rightKnob] {
-            layer.fillColor = UIColor.systemTeal.withAlphaComponent(0.85).cgColor
+            layer.fillColor = UIColor.white.withAlphaComponent(0.9).cgColor
             self.layer.addSublayer(layer)
         }
-        throttleTrack.fillColor = UIColor.white.withAlphaComponent(0.12).cgColor
-        throttleFill.fillColor = UIColor.systemOrange.withAlphaComponent(0.9).cgColor
+        throttleTrack.fillColor = UIColor.white.withAlphaComponent(0.08).cgColor
+        throttleFill.fillColor = UIColor.white.withAlphaComponent(0.7).cgColor
         self.layer.addSublayer(throttleTrack)
         self.layer.addSublayer(throttleFill)
     }

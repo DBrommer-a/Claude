@@ -4,11 +4,13 @@ using UnityEngine;
 namespace Frostline.EditorTools
 {
     /// <summary>
-    /// Setzt das mit Higgsfield erzeugte Drohnenmodell (GLB, importiert über glTFast) anstelle
-    /// des Platzhalters ein. Fehlt das Modell oder der Importer, bleibt der Platzhalter.
+    /// Setzt ein Drohnenmodell (GLB, importiert über glTFast) anstelle des Platzhalters ein.
+    /// Zuerst das DJI-FPV-Modell (lokal, aus dem Fab-Download per tools/mac/frostline.sh blender),
+    /// sonst das mit Higgsfield erzeugte Modell. Fehlen beide oder der Importer, bleibt der Platzhalter.
     /// </summary>
     public static class DroneModelSwap
     {
+        public const string DjiModelPath = "Assets/Frostline/Models/DJI/DJI_FPV.glb";
         public const string ModelPath = "Assets/Frostline/Models/Drohne/FrostlineDrohne.glb";
 
         /// <summary>Spannweite über die Propellerspitzen eines 5-Zoll-Quads in m.</summary>
@@ -16,17 +18,26 @@ namespace Frostline.EditorTools
 
         public static bool TryUseGeneratedModel(Transform placeholder)
         {
-            var asset = AssetDatabase.LoadAssetAtPath<GameObject>(ModelPath);
+            // DJI: Nase liegt in Blender bei −Y, nach glTF-Export und glTFast-Import bei +Z (vorn) – keine Drehung.
+            var asset = AssetDatabase.LoadAssetAtPath<GameObject>(DjiModelPath);
+            string name = "Modell (DJI FPV)";
+            Vector3 euler = Vector3.zero;
+            if (asset == null)
+            {
+                asset = AssetDatabase.LoadAssetAtPath<GameObject>(ModelPath);
+                name = "Modell (Higgsfield)";
+                euler = DroneModelOrientation.Euler;
+            }
             if (asset == null) return false;
 
             var instance = (GameObject)PrefabUtility.InstantiatePrefab(asset, placeholder.parent);
             if (instance == null) instance = Object.Instantiate(asset, placeholder.parent);
-            instance.name = "Modell (Higgsfield)";
+            instance.name = name;
             foreach (Collider c in instance.GetComponentsInChildren<Collider>()) Object.DestroyImmediate(c);
 
             // Auf echte Größe bringen und mittig über den Rahmen setzen.
             instance.transform.localPosition = Vector3.zero;
-            instance.transform.localRotation = Quaternion.Euler(DroneModelOrientation.Euler);
+            instance.transform.localRotation = Quaternion.Euler(euler);
             instance.transform.localScale = Vector3.one;
             Bounds bounds = LocalBounds(instance, placeholder.parent);
             float span = Mathf.Max(bounds.size.x, bounds.size.z);

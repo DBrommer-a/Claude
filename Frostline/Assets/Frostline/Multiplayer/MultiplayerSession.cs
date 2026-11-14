@@ -59,9 +59,20 @@ namespace Frostline.Multiplayer
             if (Instance == this) Instance = null;
         }
 
+        /// <summary>
+        /// Anmelde-Profil für Unity Authentication. Leer = Standard. Zwei Spiele auf demselben Mac brauchen
+        /// verschiedene Profile, sonst melden sich beide als derselbe Spieler an (Multiplayer-Test).
+        /// </summary>
+        public static string Profile;
+
         static async Task EnsureSignedIn()
         {
-            if (UnityServices.State != ServicesInitializationState.Initialized) await UnityServices.InitializeAsync();
+            if (UnityServices.State != ServicesInitializationState.Initialized)
+            {
+                var options = new InitializationOptions();
+                if (!string.IsNullOrEmpty(Profile)) options.SetProfile(Profile);
+                await UnityServices.InitializeAsync(options);
+            }
             if (!AuthenticationService.Instance.IsSignedIn) await AuthenticationService.Instance.SignInAnonymouslyAsync();
         }
 
@@ -70,6 +81,7 @@ namespace Frostline.Multiplayer
             if (Current == Status.Connecting || InSession) return;
             Current = Status.Connecting;
             Error = null;
+            KeepRunningInBackground();
             try
             {
                 await EnsureSignedIn();
@@ -102,6 +114,7 @@ namespace Frostline.Multiplayer
             }
             Current = Status.Connecting;
             Error = null;
+            KeepRunningInBackground();
             try
             {
                 await EnsureSignedIn();
@@ -133,6 +146,15 @@ namespace Frostline.Multiplayer
             }
             NetworkManager network = NetworkManager.Singleton;
             if (network != null && network.IsListening) network.Shutdown();
+        }
+
+        /// <summary>
+        /// Im Multiplayer darf das Spiel nicht anhalten, wenn das Fenster den Fokus verliert: Ein Host im
+        /// Hintergrund würde sonst einfrieren und alle Mitspieler verlören die Verbindung.
+        /// </summary>
+        static void KeepRunningInBackground()
+        {
+            Application.runInBackground = true;
         }
 
         void Attach()

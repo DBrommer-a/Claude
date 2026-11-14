@@ -75,6 +75,7 @@ namespace Frostline.EditorTools
                 EnvironmentRefs env = GameSystemsBuilder.CreateEnvironment(CloudBottom, CloudThickness);
                 Progress("Vorlagen (Poly Haven) importieren", 0.03f);
                 Vorlagen.EnsureImported();
+                AssetStorePakete.PrepareMaterials();
                 mat = IslandMaterials.Create();
 
                 world = new GameObject("Insel").transform;
@@ -163,6 +164,106 @@ namespace Frostline.EditorTools
             return go;
         }
 
+        /// <summary>
+        /// Detail-Gras aus dem Terrain Sample Asset Pack. Aus: Im HDRP-Build (Unity 6.6, Metal) zeichnet der
+        /// TerrainGrass-Shader die Halme unsichtbar, kostet aber viel Leistung (1 %-Tief 15 statt ~110 fps).
+        /// Heide und Moos kommen weiter als Bodenschichten; zum Ausprobieren hier einschalten.
+        /// </summary>
+        static readonly bool DetailGrass = false;
+
+        static readonly string[] DetailPrefabs = { "Grass_A", "Grass_B", "Grass_C", "GrassDry_A", "Heather_A", "Heather_B", "Fern_A", "Fern_B" };
+
+        /// <summary>
+        /// Gras, Heide und Farne aus dem Terrain Sample Asset Pack als Terrain-Details (GPU-Instancing).
+        /// Dichte folgt der Splatmap: Gras auf dem Grün, trockenes Gras am Strandübergang, Heide auf der Heide-
+        /// Schicht, Farne vereinzelt in feuchten Senken. Nicht in Orten und Gewerbegebieten.
+        /// </summary>
+        static void ApplyDetails(TerrainData data, float[,,] splat, float originX, float originZ)
+        {
+            var prototypes = new List<DetailPrototype>();
+            var index = new Dictionary<string, int>();
+            foreach (string name in DetailPrefabs)
+            {
+                GameObject prefab = AssetStorePakete.Prefab(name);
+                if (prefab == null) continue;
+                bool fern = name.StartsWith("Fern");
+                index[name] = prototypes.Count;
+                prototypes.Add(new DetailPrototype
+                {
+                    prototype = prefab,
+                    usePrototypeMesh = true,
+                    useInstancing = true,
+                    renderMode = DetailRenderMode.VertexLit,
+                    minWidth = 0.8f,
+                    maxWidth = fern ? 1.5f : 1.3f,
+                    minHeight = 0.8f,
+                    maxHeight = fern ? 1.6f : 1.4f,
+                    noiseSpread = 0.35f,
+                    healthyColor = Color.white,
+                    dryColor = new Color(0.86f, 0.84f, 0.76f),
+                    alignToGround = 0.7f,
+                    positionJitter = 1f,
+                });
+            }
+            if (prototypes.Count == 0) return;
+
+            int res = splat.GetLength(0);
+            int channels = splat.GetLength(2);
+            // Werte sind Anzahl Halme pro Zelle; neue TerrainData steht sonst auf Abdeckung (0–255), dann wären
+            // 1–2 pro Zelle praktisch unsichtbar.
+            data.SetDetailScatterMode(DetailScatterMode.InstanceCountMode);
+            data.SetDetailResolution(res, 32);
+            data.detailPrototypes = prototypes.ToArray();
+            var maps = new int[prototypes.Count][,];
+            for (int i = 0; i < maps.Length; i++) maps[i] = new int[res, res];
+            var random = new System.Random(Mathf.RoundToInt(originX * 7f + originZ * 13f) + 5);
+            IslandShape.Zone[] towns = { IslandShape.Industry, IslandShape.City, IslandShape.ValleyVillage,
+                IslandShape.MountainVillage, IslandShape.Harbor, IslandShape.FishingVillage };
+
+            for (int row = 0; row < res; row++)
+            {
+                float z = originZ + (float)row / (res - 1) * IslandShape.TileSize;
+                for (int col = 0; col < res; col++)
+                {
+                    float x = originX + (float)col / (res - 1) * IslandShape.TileSize;
+                    float grass = splat[row, col, 1];
+                    float heath = channels > 5 ? splat[row, col, 5] : 0f;
+                    if (grass + heath < 0.25f) continue;
+                    bool inTown = false;
+                    foreach (IslandShape.Zone t in towns)
+                    {
+                        if ((new Vector2(x, z) - t.Position).sqrMagnitude < t.Radius * t.Radius * 0.85f) { inTown = true; break; }
+                    }
+                    if (inTown) continue;
+
+                    float noise = Mathf.PerlinNoise(x * 0.045f + 3.1f, z * 0.045f - 7.7f);
+                    float r = (float)random.NextDouble();
+                    float h = IslandShape.Height(x, z);
+                    if (h < 1.5f) continue;
+
+                    int grassCount = Mathf.Clamp(Mathf.RoundToInt(grass * (0.5f + 1.3f * noise) * 1.6f - r * 0.6f), 0, 2);
+                    if (grassCount > 0)
+                    {
+                        string kind = h < 14f ? "GrassDry_A" : noise < 0.38f ? "Grass_A" : noise < 0.62f ? "Grass_B" : "Grass_C";
+                        int i;
+                        if (index.TryGetValue(kind, out i) || index.TryGetValue("Grass_A", out i)) maps[i][row, col] += grassCount;
+                    }
+                    int heathCount = Mathf.Clamp(Mathf.RoundToInt(heath * 2f - r * 0.5f), 0, 2);
+                    if (heathCount > 0)
+                    {
+                        int i;
+                        if (index.TryGetValue(noise < 0.5f ? "Heather_A" : "Heather_B", out i)) maps[i][row, col] += heathCount;
+                    }
+                    if (grass > 0.6f && h > 25f && h < 240f && noise > 0.66f && r < 0.35f)
+                    {
+                        int i;
+                        if (index.TryGetValue(r < 0.17f ? "Fern_A" : "Fern_B", out i)) maps[i][row, col] += 1;
+                    }
+                }
+            }
+            for (int i = 0; i < maps.Length; i++) data.SetDetailLayer(0, 0, i, maps[i]);
+        }
+
         static TerrainLayer TemplateLayer(string id, Color tint, System.Func<TerrainLayer> fallback, float tile = 0f)
         {
             TerrainLayer layer = Vorlagen.Layer(id, tint, tile);
@@ -184,19 +285,26 @@ namespace Frostline.EditorTools
             const int SplatResolution = 1024;
 
             // Bodenschichten aus Poly-Haven-Vorlagen (echte Fotoscans); ohne Vorlagen die gerechneten.
+            // Reihenfolge: Asset-Store-Paket (Terrain Sample Asset Pack), sonst Poly-Haven-Vorlage, sonst gerechnet.
+            // Der schwarze Lavasand gibt den Stränden den nordischen (isländischen) Charakter.
             TerrainLayer[] layers =
             {
-                TemplateLayer("coast_sand_01", new Color(0.9f, 0.9f, 0.88f),
+                AssetStorePakete.Layer("Black_Sand", 6f) ?? TemplateLayer("coast_sand_01", new Color(0.9f, 0.9f, 0.88f),
                     () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Sand", new Color(0.36f, 0.34f, 0.31f), new Color(0.2f, 0.19f, 0.18f), 6f, 0.3f, 0.6f)),
-                TemplateLayer("rocky_terrain_02", Color.white,
+                AssetStorePakete.Layer("Grass_Moss", 7f) ?? TemplateLayer("rocky_terrain_02", Color.white,
                     () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Kies_Gras", new Color(0.33f, 0.34f, 0.3f), new Color(0.2f, 0.22f, 0.18f), 9f, 0.15f, 1.4f)),
-                TemplateLayer("gray_rocks", new Color(0.86f, 0.9f, 0.98f),
+                AssetStorePakete.Layer("Rock", 14f) ?? TemplateLayer("gray_rocks", new Color(0.86f, 0.9f, 0.98f),
                     () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Fels", new Color(0.3f, 0.3f, 0.32f), new Color(0.16f, 0.16f, 0.18f), 18f, 0.2f, 2.2f), 18f),
-                TemplateLayer("snow_field_aerial", Color.white,
+                AssetStorePakete.Layer("Snow", 10f) ?? TemplateLayer("snow_field_aerial", Color.white,
                     () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Schnee", new Color(0.86f, 0.88f, 0.92f), new Color(0.74f, 0.78f, 0.86f), 12f, 0.45f, 0.35f)),
                 TemplateLayer("snow_04", new Color(0.72f, 0.86f, 1f),
                     () => PrototypeSceneBuilder.CreateLayer("Insel_" + "Eis", new Color(0.66f, 0.82f, 0.92f), new Color(0.45f, 0.62f, 0.78f), 20f, 0.8f, 0.8f), 16f),
             };
+            // Zwei Schichten mehr für Abwechslung, wenn das Paket da ist: Heide in der Tundra, Kies am Strand.
+            TerrainLayer heather = AssetStorePakete.Layer("Heather", 6f);
+            TerrainLayer pebbles = AssetStorePakete.Layer("Pebbles_A", 4f);
+            bool extraLayers = heather != null && pebbles != null;
+            if (extraLayers) layers = new List<TerrainLayer>(layers) { heather, pebbles }.ToArray();
 
             GameObject treePrefab = CreateTreePrefab();
             var terrains = new Terrain[4];
@@ -228,7 +336,13 @@ namespace Frostline.EditorTools
                     Progress("Terrain " + label + ": Bodenschichten", baseProgress + 0.11f);
                     data.terrainLayers = layers;
                     data.alphamapResolution = SplatResolution;
-                    data.SetAlphamaps(0, 0, IslandShape.BuildSplatmap(heights, originX, originZ, SplatResolution));
+                    float[,,] splat = IslandShape.BuildSplatmap(heights, originX, originZ, SplatResolution, extraLayers);
+                    data.SetAlphamaps(0, 0, splat);
+                    if (DetailGrass)
+                    {
+                        Progress("Terrain " + label + ": Gras und Heide", baseProgress + 0.12f);
+                        ApplyDetails(data, splat, originX, originZ);
+                    }
 
                     Progress("Terrain " + label + ": Bäume", baseProgress + 0.13f);
                     data.treePrototypes = new[] { new TreePrototype { prefab = treePrefab } };
@@ -245,6 +359,9 @@ namespace Frostline.EditorTools
                     terrain.heightmapPixelError = 8f;
                     terrain.drawInstanced = true;
                     terrain.basemapDistance = 900f;
+                    // Gras, Heide und Farne nur im Nahbereich: genug für den FPV-Tiefflug, kaum fps-Kosten.
+                    terrain.detailObjectDistance = 85f;
+                    terrain.detailObjectDensity = 1f;
                     terrain.treeDistance = 1500f;
                     terrain.treeBillboardDistance = 400f;
                     terrain.allowAutoConnect = true;

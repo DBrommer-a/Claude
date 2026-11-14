@@ -74,6 +74,10 @@ namespace Frostline.Diagnostics
         public float minimumClearance = 40f;
 
         readonly List<float> frameMs = new List<float>(8192);
+        readonly List<float> frameCpuMs = new List<float>(8192);
+        readonly List<float> frameGpuMs = new List<float>(8192);
+        readonly List<Vector3> framePos = new List<Vector3>(8192);
+        readonly FrameTiming[] timing = new FrameTiming[1];
         float elapsed;
         int savedVSync;
         int savedTargetFrameRate;
@@ -95,6 +99,9 @@ namespace Frostline.Diagnostics
             Running = true;
             elapsed = 0f;
             frameMs.Clear();
+            frameCpuMs.Clear();
+            frameGpuMs.Clear();
+            framePos.Clear();
             LastResult = null;
 
             // Ohne Begrenzung messen, sonst deckelt der Bildschirm das Ergebnis.
@@ -129,7 +136,16 @@ namespace Frostline.Diagnostics
             EvaluatePath(Mathf.Clamp01(elapsed / total), out position, out forward);
             drone.transform.SetPositionAndRotation(position, Quaternion.LookRotation(forward, Vector3.up));
 
-            if (elapsed > warmupSeconds) frameMs.Add(dt * 1000f);
+            if (elapsed > warmupSeconds)
+            {
+                frameMs.Add(dt * 1000f);
+                // Für die Fehlersuche: Wo war die Kamera, und lag es an CPU oder GPU?
+                FrameTimingManager.CaptureFrameTimings();
+                uint got = FrameTimingManager.GetLatestTimings(1, timing);
+                frameCpuMs.Add(got > 0 ? (float)timing[0].cpuMainThreadFrameTime : -1f);
+                frameGpuMs.Add(got > 0 ? (float)timing[0].gpuFrameTime : -1f);
+                framePos.Add(position);
+            }
             if (elapsed >= total) Finish();
         }
 
@@ -263,10 +279,16 @@ namespace Frostline.Diagnostics
             text.AppendLine("Unity:          " + Application.unityVersion);
             File.WriteAllText(reportPath, text.ToString());
 
-            var csv = new StringBuilder("frame,ms\n");
+            // cpu_ms/gpu_ms: -1, wenn der Build keine Frame-Timing-Statistik liefert.
+            var csv = new StringBuilder("frame,ms,cpu_ms,gpu_ms,x,y,z\n");
             for (int i = 0; i < frameMs.Count; i++)
             {
-                csv.Append(i).Append(',').Append(frameMs[i].ToString("0.000", inv)).Append('\n');
+                Vector3 p = i < framePos.Count ? framePos[i] : Vector3.zero;
+                csv.Append(i).Append(',').Append(frameMs[i].ToString("0.000", inv))
+                    .Append(',').Append((i < frameCpuMs.Count ? frameCpuMs[i] : -1f).ToString("0.000", inv))
+                    .Append(',').Append((i < frameGpuMs.Count ? frameGpuMs[i] : -1f).ToString("0.000", inv))
+                    .Append(',').Append(p.x.ToString("0", inv)).Append(',').Append(p.y.ToString("0", inv)).Append(',').Append(p.z.ToString("0", inv))
+                    .Append('\n');
             }
             File.WriteAllText(Path.Combine(folder, "benchmark_" + stamp + "_frames.csv"), csv.ToString());
             return reportPath;

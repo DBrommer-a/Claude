@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Frostline/Scenes/Verlassene_Insel.unity
+    guid: a0a08227d85b74dad90eb146fe810ebf
+  - enabled: 1
     path: Assets/Frostline/Scenes/Frostline_Insel.unity
     guid: bea71036b785f493fbfcdf91d705c9c8
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

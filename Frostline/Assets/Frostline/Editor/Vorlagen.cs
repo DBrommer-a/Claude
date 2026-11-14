@@ -139,10 +139,16 @@ namespace Frostline.EditorTools
         public static GameObject Place(string id, Transform parent, Vector3 ground, float yaw, float scale, bool collider,
             float cullBelow, float sink = 0f, float tilt = 0f)
         {
-            GameObject asset = Model(id);
+            return PlaceAsset(Model(id), id, parent, ground, yaw, scale, collider, cullBelow, sink, tilt);
+        }
+
+        /// <summary>Wie <see cref="Place"/>, aber für ein beliebiges Modell oder Prefab (z. B. aus Asset-Store-Paketen).</summary>
+        public static GameObject PlaceAsset(GameObject asset, string name, Transform parent, Vector3 ground, float yaw, float scale,
+            bool collider, float cullBelow, float sink = 0f, float tilt = 0f)
+        {
             if (asset == null) return null;
 
-            var root = new GameObject(id);
+            var root = new GameObject(name);
             root.transform.SetParent(parent, false);
             root.transform.SetPositionAndRotation(ground, Quaternion.Euler(0f, yaw, 0f) * Quaternion.Euler(tilt, 0f, 0f));
 
@@ -168,9 +174,13 @@ namespace Frostline.EditorTools
                     if (f.sharedMesh != null) f.gameObject.AddComponent<MeshCollider>().sharedMesh = f.sharedMesh;
             }
 
-            var lod = root.AddComponent<LODGroup>();
-            lod.SetLODs(new[] { new LOD(cullBelow, root.GetComponentsInChildren<Renderer>()) });
-            lod.RecalculateBounds();
+            // Eigene LOD-Stufen eines Prefabs bleiben; sonst blendet eine LOD-Gruppe das Modell in der Ferne aus.
+            if (instance.GetComponentInChildren<LODGroup>() == null)
+            {
+                var lod = root.AddComponent<LODGroup>();
+                lod.SetLODs(new[] { new LOD(cullBelow, root.GetComponentsInChildren<Renderer>()) });
+                lod.RecalculateBounds();
+            }
 
             foreach (Transform t in root.GetComponentsInChildren<Transform>(true))
             {

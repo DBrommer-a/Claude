@@ -487,11 +487,12 @@ namespace Frostline.EditorTools
             var go = new GameObject("Netzwerk-Drohne");
             go.AddComponent<NetworkObject>();
             NetworkDrone drone = go.AddComponent<NetworkDrone>();
-            Material frame = LitMaterial("Mitspieler", new Color(1f, 0.55f, 0.1f), 0.5f);
+            // Mitspieler sehen aus wie die eigene Drohne (DJI-Modell, sonst Higgsfield, sonst Platzhalter).
             var model = new GameObject("Modell").transform;
             model.SetParent(go.transform, false);
-            Part(model, PrimitiveType.Cube, new Vector3(0f, 0.02f, 0f), new Vector3(0.22f, 0.03f, 0.22f), Quaternion.Euler(0f, 45f, 0f), frame);
-            Part(model, PrimitiveType.Cube, new Vector3(0f, 0.045f, -0.01f), new Vector3(0.05f, 0.04f, 0.12f), Quaternion.identity, frame);
+            Transform placeholder = BuildDroneModel(model, "Platzhalter", 1f);
+            DroneModelSwap.TryUseGeneratedModel(placeholder);
+            foreach (Collider c in model.GetComponentsInChildren<Collider>(true)) Object.DestroyImmediate(c);
             go.AddComponent<AudioSource>();
             MotorAudio audio = go.AddComponent<MotorAudio>();
             audio.spatial = true;
