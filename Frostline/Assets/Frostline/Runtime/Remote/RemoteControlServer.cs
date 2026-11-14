@@ -52,8 +52,11 @@ namespace Frostline.Remote
             public volatile IPEndPoint Endpoint;
         }
 
-        /// <summary>Server für die Kopplung per QR-Code; leer = nur WLAN. Im Menü änderbar.</summary>
-        public const string DefaultRelayHost = "";
+        /// <summary>
+        /// Server für die Kopplung per QR-Code (Frostline Relay, UDP 47821); leer = nur WLAN. Im Menü änderbar.
+        /// Eingerichtet mit tools/relay/einrichten.sh.
+        /// </summary>
+        public const string DefaultRelayHost = "31.70.130.250";
         const string RelayHostKey = "Frostline.Relay.Host";
         const string RelayPortKey = "Frostline.Relay.Port";
         const string RelaySecretKey = "Frostline.Relay.Secret";
