@@ -9,6 +9,8 @@ struct FrostlineRemoteApp: App {
             ContentView()
                 .environmentObject(connection)
                 .preferredColorScheme(.dark)
+                // QR-Code aus dem Spiel mit der Kamera-App gescannt: frostline://pair?…
+                .onOpenURL { url in connection.pair(with: url) }
         }
     }
 }

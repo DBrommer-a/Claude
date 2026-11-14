@@ -15,7 +15,7 @@ FPV-Sender oder iPhone als Controller und Multiplayer für bis zu 8 Drohnen.
 | Spielmodi | Freestyle mit 12 Sammelringen, 3 Rennstrecken mit Bestzeit und Ghost, Replay, Signalverlust am Rand, Checkpoints |
 | Wetter | klar, tiefe Wolken, Schneesturm; Tageszeit über Physically Based Sky; Wind auf die Drohne |
 | Multiplayer | Relay + Lobby mit Raum-Code, Geister-Drohnen mit Interpolation, Rennen für alle, Fangen |
-| iPhone-App | SwiftUI, Multitouch-Sticks, Gyro, Haptik, Telemetrie, 250 Pakete/s |
+| iPhone-App | SwiftUI, feste Knüppel wie am FPV-Sender, Gyro, Haptik, Telemetrie, 250 Pakete/s; im WLAN direkt, sonst per QR-Kopplung übers Internet |
 | Higgsfield | Concept-Art je Zone, Drohne, Leuchtturm, Funkmast, Kran, Fischerhütte, Renn-Gate, Kutter als 3D-Modelle, Ambient-Sounds, App-Icon, Ladebildschirm |
 | Optik | Freie Vorlagen von Poly Haven (CC0): Fotoscan-Böden (Sand, Moos-Tundra, Fels, Schnee, Eis), Gebäude-Materialien (Beton, Ziegel, Holz, Putz, Dach, Rost, Stein) und rund 670 Modelle (Felsen, Treibholz, Segelschiffe, Fässer, Container, Flutlicht, Laternen, Hydranten) |
 
@@ -53,6 +53,20 @@ Weitere Menüpunkte: **3 · Mac-Build erstellen** (für die fps-Messung) und
 | R | zurück zum letzten Checkpoint |
 | Tastatur-Flug | W/S Gas, A/D Gier, Pfeile Nick/Roll, Leertaste schärfen, M Modus, T Turtle |
 
+## iPhone übers Internet (ohne gleiches WLAN)
+
+1. Einmal einen Frostline Relay auf einem Server mit öffentlicher IP einrichten:
+   `tools/relay/einrichten.sh root@<server>` – danach `python3 tools/relay/pruefen.py <server>`.
+   Nötig ist nur UDP-Port 47821 (in der Firewall des Servers bzw. Hosters öffnen).
+2. Im Spiel F1 › Spiel › „Übers Internet“ den Server eintragen. Es erscheint ein QR-Code.
+3. Den QR-Code einmal mit der iPhone-Kamera scannen (oder in der App unter Setup › „QR-Code scannen“).
+   Die Kopplung liegt danach im Schlüsselbund; die App verbindet sich von selbst – im selben WLAN direkt,
+   sonst über den Server, auch über Mobilfunk.
+
+Sicherheit: Der QR-Code enthält einen zufälligen 256-Bit-Schlüssel. Jedes Paket ist signiert
+(HMAC-SHA-256); das Spiel nimmt nur Pakete des gekoppelten Handys an. Der Server kennt den Schlüssel
+nicht und reicht nur weiter. „Neuen Code erzeugen“ im Spiel meldet ein gekoppeltes Handy ab.
+
 ## Die Insel
 
 | Zone | Zum Reinfliegen |
@@ -79,7 +93,8 @@ Rennstrecken: **Strandlinie** (durchs Wrack), **Industrie-Slalom** (durch Hallen
 | `Frostline/Assets/Frostline/Multiplayer` | Netcode for GameObjects, Sessions (Relay + Lobby), Geister-Drohnen |
 | `Frostline/Assets/Frostline/Editor` | Projekt-Einrichtung, Szenen- und Insel-Builder, Mac-Build, Megascans-Import |
 | `Frostline/Assets/Frostline/Tests` | 102 Tests (Unity Test Runner oder `dotnet test tools/flightcore-tests`) |
-| `FrostlineRemote` | iPhone-App mit Xcode-Projekt; `FrostlineRemoteKit` mit 13 Swift-Tests |
+| `FrostlineRemote` | iPhone-App mit Xcode-Projekt; `FrostlineRemoteKit` mit 24 Swift-Tests |
+| `tools/relay` | Frostline Relay: kleiner UDP-Server für die iPhone-Steuerung übers Internet (Python, ohne Abhängigkeiten) |
 | `Design/Concept` | Concept-Art aus Higgsfield als Ziel für Licht und Farben |
 
 Bei jedem Push laufen die C#- und Swift-Tests automatisch (GitHub Actions).

@@ -6,7 +6,8 @@ import FrostlineRemoteKit
 #endif
 
 /// Verbindung zum Spiel auf dem Mac: findet ihn per Bonjour (oder über die IP-Adresse),
-/// schickt 250-mal pro Sekunde die Sticks und empfängt Telemetrie.
+/// schickt 250-mal pro Sekunde die Sticks und empfängt Telemetrie. Ist das Handy einmal per QR-Code
+/// gekoppelt, geht es ohne gemeinsames WLAN über den Frostline Relay (Server im Internet).
 @MainActor
 final class RemoteConnection: ObservableObject {
     enum Status: Equatable {
@@ -43,6 +44,12 @@ final class RemoteConnection: ObservableObject {
     @Published private(set) var telemetry = TelemetryPacket()
     @Published private(set) var hasTelemetry = false
     @Published private(set) var roundTripMs: Double?
+    /// Kopplung aus dem QR-Code (Schlüsselbund); nil = nur WLAN.
+    @Published private(set) var pairing: RelayPairing? = PairingStore.load()
+    /// Läuft die aktuelle Verbindung über den Server?
+    @Published private(set) var viaRelay = false
+    /// Meldet der Server, dass das Spiel dort angemeldet ist?
+    @Published private(set) var relayPeerPresent = false
 
     let control = ControlState()
     var onEvents: (([EventTracker.Event]) -> Void)?
@@ -55,11 +62,13 @@ final class RemoteConnection: ObservableObject {
     private var lastPublish: UInt32 = 0
     private var lastTelemetryMs: UInt32 = 0
     private var watchdog: Timer?
+    private var relayFallback: Timer?
 
     // MARK: Suchen
 
     func start() {
         startBrowsing()
+        scheduleRelay()
         watchdog?.invalidate()
         watchdog = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.checkTimeout() }
@@ -69,6 +78,8 @@ final class RemoteConnection: ObservableObject {
     func stop() {
         watchdog?.invalidate()
         watchdog = nil
+        relayFallback?.invalidate()
+        relayFallback = nil
         browser?.cancel()
         browser = nil
         disconnect()
@@ -97,8 +108,9 @@ final class RemoteConnection: ObservableObject {
 
     private func updateHosts(_ found: [FoundHost]) {
         hosts = found
-        // Automatisch mit dem ersten gefundenen Mac verbinden.
-        if link == nil, let first = found.first, !UserDefaults.standard.bool(forKey: Settings.Keys.useManualHost) {
+        // Automatisch mit dem ersten gefundenen Mac verbinden (außer „Immer über Server“).
+        if link == nil, let first = found.first, !UserDefaults.standard.bool(forKey: Settings.Keys.useManualHost),
+           !(pairing != nil && UserDefaults.standard.bool(forKey: Settings.Keys.preferRelay)) {
             connect(to: first.endpoint, name: first.name)
         }
     }
@@ -118,15 +130,65 @@ final class RemoteConnection: ObservableObject {
         connect(to: .hostPort(host: NWEndpoint.Host(trimmed), port: port), name: trimmed)
     }
 
-    private func connect(to endpoint: NWEndpoint, name: String) {
+    // MARK: Übers Internet (QR-Code)
+
+    /// Kopplung aus einem gescannten QR-Code übernehmen und gleich über den Server verbinden.
+    @discardableResult
+    func pair(with url: URL) -> Bool {
+        guard let pairing = RelayPairing(url: url) else { return false }
+        PairingStore.save(pairing)
+        self.pairing = pairing
+        connectRelay()
+        return true
+    }
+
+    func forgetPairing() {
+        PairingStore.delete()
+        pairing = nil
+        relayPeerPresent = false
+        if viaRelay {
+            disconnect()
+            status = .searching
+        }
+    }
+
+    func connectRelay() {
+        guard let pairing, let port = NWEndpoint.Port(rawValue: pairing.port) else { return }
+        relayFallback?.invalidate()
+        connect(to: .hostPort(host: NWEndpoint.Host(pairing.host), port: port),
+                name: pairing.name.isEmpty ? pairing.host : pairing.name, relay: pairing)
+    }
+
+    /// WLAN zuerst; findet Bonjour nach 2,5 s keinen Mac, geht es über den Server.
+    private func scheduleRelay() {
+        relayFallback?.invalidate()
+        guard pairing != nil, link == nil else { return }
+        if UserDefaults.standard.bool(forKey: Settings.Keys.preferRelay) {
+            connectRelay()
+            return
+        }
+        relayFallback = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { [weak self] _ in
+            Task { @MainActor in
+                guard let self, self.link == nil else { return }
+                self.connectRelay()
+            }
+        }
+    }
+
+    private func connect(to endpoint: NWEndpoint, name: String, relay: RelayPairing? = nil) {
         disconnect()
         currentHost = name
         status = .connecting(name)
         events.reset()
         latency.reset()
         hasTelemetry = false
+        viaRelay = relay != nil
+        relayPeerPresent = false
 
-        let link = UdpLink(endpoint: endpoint, control: control, deviceName: Settings.pilotName)
+        let link = UdpLink(endpoint: endpoint, control: control, deviceName: Settings.pilotName, relay: relay)
+        link.onRelayStatus = { [weak self] present in
+            Task { @MainActor in self?.relayPeerPresent = present }
+        }
         link.onTelemetry = { [weak self] packet in
             Task { @MainActor in self?.receive(packet) }
         }
@@ -148,6 +210,7 @@ final class RemoteConnection: ObservableObject {
         link?.stop()
         link = nil
         hasTelemetry = false
+        viaRelay = false
         UIApplication.shared.isIdleTimerDisabled = false
     }
 
@@ -191,8 +254,12 @@ final class UdpLink {
     var onTelemetry: ((TelemetryPacket) -> Void)?
     var onWelcome: ((WelcomePacket) -> Void)?
     var onFailure: ((String) -> Void)?
+    /// Nur über den Server: ob das Spiel dort angemeldet ist (Antwort auf das Lebenszeichen).
+    var onRelayStatus: ((Bool) -> Void)?
 
     private let connection: NWConnection
+    private let relay: RelayPairing?
+    private let room: [UInt8]
     private let control: ControlState
     private let queue = DispatchQueue(label: "frostline.remote.udp", qos: .userInteractive)
     private let session = UInt32.random(in: 1...UInt32.max)
@@ -202,12 +269,24 @@ final class UdpLink {
     private var ticks = 0
     private var welcomed = false
 
-    init(endpoint: NWEndpoint, control: ControlState, deviceName: String) {
+    init(endpoint: NWEndpoint, control: ControlState, deviceName: String, relay: RelayPairing? = nil) {
         let parameters = NWParameters.udp
         parameters.serviceClass = .interactiveVoice // niedrige Latenz im WLAN
         connection = NWConnection(to: endpoint, using: parameters)
         self.control = control
         self.deviceName = deviceName
+        self.relay = relay
+        self.room = relay?.roomID ?? []
+    }
+
+    /// Direkt (WLAN) oder signiert im Relay-Rahmen über den Server.
+    private func send(_ data: Data) {
+        if let relay {
+            let framed = RelayFrame.seal(Array(data), role: RelayFrame.rolePhone, room: room, secret: relay.secret)
+            connection.send(content: Data(framed), completion: .idempotent)
+        } else {
+            connection.send(content: data, completion: .idempotent)
+        }
     }
 
     func start() {
@@ -215,6 +294,7 @@ final class UdpLink {
             guard let self else { return }
             switch state {
             case .ready:
+                if self.relay != nil { self.send(Data()) } // beim Server anmelden
                 self.sendHello()
                 self.receive()
                 self.startTimer()
@@ -234,7 +314,7 @@ final class UdpLink {
             timer?.cancel()
             timer = nil
         }
-        connection.send(content: RemoteProtocol.goodbye(), completion: .idempotent)
+        send(RemoteProtocol.goodbye())
         connection.cancel()
     }
 
@@ -250,20 +330,30 @@ final class UdpLink {
     private func tick() {
         sequence &+= 1
         let packet = control.packet(sequence: sequence, nowMs: RemoteClock.nowMs())
-        connection.send(content: packet.encoded(), completion: .idempotent)
+        send(packet.encoded())
         ticks += 1
         // Anmeldung wiederholen: alle 0,5 s bis zur Antwort, danach jede Sekunde.
         if ticks % (welcomed ? 250 : 125) == 0 { sendHello() }
+        // Über den Server: einmal pro Sekunde ein Lebenszeichen, die Antwort sagt, ob das Spiel da ist.
+        if relay != nil && ticks % 250 == 0 { send(Data()) }
     }
 
     private func sendHello() {
         let hello = HelloPacket(session: session, name: deviceName)
-        connection.send(content: hello.encoded(), completion: .idempotent)
+        send(hello.encoded())
     }
 
     private func receive() {
-        connection.receiveMessage { [weak self] data, _, _, error in
+        connection.receiveMessage { [weak self] received, _, _, error in
             guard let self else { return }
+            var data = received
+            if let framed = received, let relay = self.relay {
+                switch RelayFrame.open(Array(framed), room: self.room, secret: relay.secret, expectedRole: RelayFrame.roleGame) {
+                case .peer(let payload): data = Data(payload)
+                case .serverAck(let present): self.onRelayStatus?(present); data = nil
+                case .invalid: data = nil
+                }
+            }
             if let data {
                 switch RemoteProtocol.packetType(of: data) {
                 case .telemetry:

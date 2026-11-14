@@ -40,6 +40,172 @@ namespace Frostline.Remote
         byte armEvents, crashEvents, groundEvents, gateEvents;
         bool wasArmed;
 
+        // ------------------------------------------------------------ Weg übers Internet (Frostline Relay)
+
+        /// <summary>Unveränderliche Kopplung; wird als Ganzes ersetzt (Empfangs-Thread liest sie).</summary>
+        sealed class RelayConfig
+        {
+            public string Host;
+            public int Port;
+            public byte[] Secret;
+            public byte[] Room;
+            public volatile IPEndPoint Endpoint;
+        }
+
+        /// <summary>Server für die Kopplung per QR-Code; leer = nur WLAN. Im Menü änderbar.</summary>
+        public const string DefaultRelayHost = "";
+        const string RelayHostKey = "Frostline.Relay.Host";
+        const string RelayPortKey = "Frostline.Relay.Port";
+        const string RelaySecretKey = "Frostline.Relay.Secret";
+
+        volatile RelayConfig relay;
+        readonly byte[] relayBuffer = new byte[RemoteRelay.HeaderSize + RemoteProtocol.MaxPacketSize];
+        readonly byte[] relaySendBuffer = new byte[RemoteRelay.HeaderSize + RemoteProtocol.MaxPacketSize];
+        bool clientViaRelay;
+        float nextKeepalive;
+        long relayAckMs = -100000;
+        volatile bool relayPeerPresent;
+        bool announcedRelayClient;
+        bool relaySendWarned;
+
+        /// <summary>Inhalt des QR-Codes (frostline://pair?…), oder null ohne Server.</summary>
+        public string PairingUrl
+        {
+            get
+            {
+                RelayConfig r = relay;
+                return r == null ? null : RemoteRelay.PairingUrl(r.Host, r.Port, r.Secret, SystemInfo.deviceName);
+            }
+        }
+
+        public string RelayHost
+        {
+            get { RelayConfig r = relay; return r == null ? "" : (r.Port == RemoteRelay.DefaultPort ? r.Host : r.Host + ":" + r.Port); }
+        }
+
+        public bool RelayReachable { get { return NowMs - Interlocked.Read(ref relayAckMs) < 3500; } }
+        public bool ConnectedViaRelay { get { lock (clientGate) return clientViaRelay && IsConnected; } }
+
+        public string RelayStatus
+        {
+            get
+            {
+                RelayConfig r = relay;
+                if (r == null) return "Kein Server eingetragen – nur im selben WLAN.";
+                if (r.Endpoint == null) return "Server " + r.Host + " wird gesucht …";
+                if (!RelayReachable) return "Server " + r.Host + " antwortet nicht (UDP-Port " + r.Port + ").";
+                if (ConnectedViaRelay) return "Über Server verbunden: " + ClientName;
+                return relayPeerPresent ? "Server erreichbar, Handy meldet sich …" : "Server erreichbar – QR-Code mit dem iPhone scannen.";
+            }
+        }
+
+        /// <summary>Server setzen ("host" oder "host:port"); leer schaltet den Weg übers Internet ab.</summary>
+        public void SetRelayHost(string text)
+        {
+            string host = (text ?? "").Trim();
+            int port = RemoteRelay.DefaultPort;
+            int colon = host.LastIndexOf(':');
+            if (colon > 0 && host.IndexOf(':') == colon && int.TryParse(host.Substring(colon + 1), out int parsed))
+            {
+                port = parsed;
+                host = host.Substring(0, colon);
+            }
+            PlayerPrefs.SetString(RelayHostKey, host);
+            PlayerPrefs.SetInt(RelayPortKey, port);
+            PlayerPrefs.Save();
+            ConfigureRelay(host, port, LoadSecret());
+        }
+
+        /// <summary>Neuer Schlüssel: Das bisher gekoppelte Handy kommt nicht mehr hinein, ein neuer QR-Code entsteht.</summary>
+        public void NewPairing()
+        {
+            byte[] secret = RemoteRelay.NewSecret();
+            PlayerPrefs.SetString(RelaySecretKey, RemoteRelay.Base64Url(secret));
+            PlayerPrefs.Save();
+            RelayConfig r = relay;
+            if (r != null) ConfigureRelay(r.Host, r.Port, secret);
+        }
+
+        static byte[] LoadSecret()
+        {
+            byte[] secret = RemoteRelay.FromBase64Url(PlayerPrefs.GetString(RelaySecretKey, ""));
+            if (secret == null || secret.Length != RemoteRelay.SecretSize)
+            {
+                secret = RemoteRelay.NewSecret();
+                PlayerPrefs.SetString(RelaySecretKey, RemoteRelay.Base64Url(secret));
+                PlayerPrefs.Save();
+            }
+            return secret;
+        }
+
+        void LoadRelay()
+        {
+            string host = PlayerPrefs.GetString(RelayHostKey, DefaultRelayHost);
+            int port = PlayerPrefs.GetInt(RelayPortKey, RemoteRelay.DefaultPort);
+            // Zum Testen: -frostlineRelay host:port
+            string[] args = Environment.GetCommandLineArgs();
+            int i = Array.IndexOf(args, "-frostlineRelay");
+            if (i >= 0 && i + 1 < args.Length)
+            {
+                string arg = args[i + 1];
+                int colon = arg.LastIndexOf(':');
+                host = colon > 0 ? arg.Substring(0, colon) : arg;
+                if (colon > 0) int.TryParse(arg.Substring(colon + 1), out port);
+            }
+            ConfigureRelay(host, port, LoadSecret());
+        }
+
+        void ConfigureRelay(string host, int port, byte[] secret)
+        {
+            if (string.IsNullOrEmpty(host))
+            {
+                relay = null;
+                return;
+            }
+            var config = new RelayConfig { Host = host, Port = port, Secret = secret, Room = RemoteRelay.RoomId(secret) };
+            relay = config;
+            lock (clientGate)
+            {
+                if (clientViaRelay) { client = null; clientName = ""; clientViaRelay = false; link.Clear(); }
+            }
+            // Namen auflösen, ohne das Spiel anzuhalten.
+            new Thread(() =>
+            {
+                try
+                {
+                    IPAddress[] addresses = Dns.GetHostAddresses(config.Host);
+                    IPAddress chosen = null;
+                    foreach (IPAddress a in addresses)
+                        if (a.AddressFamily == AddressFamily.InterNetwork) { chosen = a; break; }
+                    if (chosen == null && addresses.Length > 0) chosen = addresses[0];
+                    // Der Empfangs-Socket ist IPv6 mit IPv4-Mitnutzung; Mono sendet von dort nur an
+                    // IPv6-Adressen, IPv4 also als ::ffff:a.b.c.d.
+                    Socket s = socket;
+                    if (chosen != null && s != null && s.AddressFamily == AddressFamily.InterNetworkV6 && chosen.AddressFamily == AddressFamily.InterNetwork)
+                        chosen = chosen.MapToIPv6();
+                    if (chosen != null) config.Endpoint = new IPEndPoint(chosen, config.Port);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning("Frostline: Server " + config.Host + " nicht gefunden: " + e.Message);
+                }
+            }) { IsBackground = true, Name = "Frostline Relay DNS" }.Start();
+        }
+
+        /// <summary>Schickt ein Funkpaket direkt (WLAN) oder signiert über den Server.</summary>
+        void SendPacket(byte[] data, int length, EndPoint target, bool viaRelay, byte[] scratch)
+        {
+            if (!viaRelay)
+            {
+                socket.SendTo(data, length, SocketFlags.None, target);
+                return;
+            }
+            RelayConfig r = relay;
+            if (r == null || r.Endpoint == null) return;
+            int size = RemoteRelay.Seal(scratch, RemoteRelay.RoleGame, r.Room, r.Secret, data, length);
+            socket.SendTo(scratch, size, SocketFlags.None, r.Endpoint);
+        }
+
         public static RemoteControlServer Instance { get; private set; }
 
         public long NowMs { get { return clock.ElapsedMilliseconds; } }
@@ -58,6 +224,11 @@ namespace Frostline.Remote
         void OnEnable()
         {
             Instance = this;
+            // Zum Testen: eigener Port ohne Bonjour, damit ein Handy im WLAN den Testlauf nicht findet.
+            string[] args = Environment.GetCommandLineArgs();
+            int p = Array.IndexOf(args, "-frostlineFunkPort");
+            if (p >= 0 && p + 1 < args.Length) int.TryParse(args[p + 1], out port);
+            if (Array.IndexOf(args, "-frostlineOhneBonjour") >= 0) advertiseBonjour = false;
             if (drone == null) drone = FindAnyObjectByType<DroneController>();
             Open();
             FrostlineEvents.Crashed += OnCrashed;
@@ -115,6 +286,7 @@ namespace Frostline.Remote
             receiver.Start();
 
             if (advertiseBonjour) bonjour = Bonjour.Register(RemoteProtocol.BonjourType, port);
+            LoadRelay();
             Status = "Wartet auf iPhone (Port " + port + (BonjourActive ? ", Bonjour aktiv)" : ")");
         }
 
@@ -122,13 +294,14 @@ namespace Frostline.Remote
         {
             running = false;
             EndPoint target;
-            lock (clientGate) target = client;
+            bool viaRelay;
+            lock (clientGate) { target = client; viaRelay = clientViaRelay; }
             if (socket != null && target != null)
             {
                 try
                 {
                     int length = RemoteProtocol.WriteGoodbye(sendBuffer);
-                    socket.SendTo(sendBuffer, length, SocketFlags.None, target);
+                    SendPacket(sendBuffer, length, target, viaRelay, relaySendBuffer);
                 }
                 catch (Exception) { }
             }
@@ -145,8 +318,9 @@ namespace Frostline.Remote
 
         void ReceiveLoop()
         {
-            var buffer = new byte[256];
+            var buffer = new byte[RemoteRelay.HeaderSize + 256];
             var reply = new byte[RemoteProtocol.MaxPacketSize];
+            var relayReply = new byte[RemoteRelay.HeaderSize + RemoteProtocol.MaxPacketSize];
             string hostName = SystemInfo.deviceName;
 
             while (running)
@@ -168,6 +342,29 @@ namespace Frostline.Remote
                     break;
                 }
 
+                bool viaRelay = false;
+                if (RemoteRelay.IsFrame(buffer, length))
+                {
+                    RelayConfig r = relay;
+                    if (r == null) continue;
+                    int offset, payloadLength;
+                    bool present;
+                    RemoteRelay.Kind kind = RemoteRelay.Open(buffer, length, r.Room, r.Secret, RemoteRelay.RolePhone, out offset, out payloadLength, out present);
+                    if (kind == RemoteRelay.Kind.ServerAck)
+                    {
+                        Interlocked.Exchange(ref relayAckMs, NowMs);
+                        relayPeerPresent = present;
+                        continue;
+                    }
+                    if (kind != RemoteRelay.Kind.Peer || payloadLength <= 0) continue;
+                    // Nur signierte Pakete des gekoppelten Handys; danach wie im WLAN weiter.
+                    Buffer.BlockCopy(buffer, offset, relayBuffer, 0, payloadLength);
+                    Buffer.BlockCopy(relayBuffer, 0, buffer, 0, payloadLength);
+                    length = payloadLength;
+                    viaRelay = true;
+                    Interlocked.Exchange(ref relayAckMs, NowMs);
+                }
+
                 RemoteProtocol.PacketType type;
                 if (!RemoteProtocol.TryReadType(buffer, length, out type)) continue;
 
@@ -175,26 +372,28 @@ namespace Frostline.Remote
                 {
                     case RemoteProtocol.PacketType.Control:
                         ControlPacket control;
+                        if (!IsCurrentClient(remote, viaRelay)) { ignoredPackets++; break; }
                         if (RemoteProtocol.TryReadControl(buffer, length, out control) && link.Receive(control, NowMs))
                         {
-                            lock (clientGate) client = remote;
+                            lock (clientGate) { client = remote; clientViaRelay = viaRelay; }
                         }
                         break;
 
                     case RemoteProtocol.PacketType.Hello:
                         uint session;
                         string name;
-                        if (RemoteProtocol.TryReadHello(buffer, length, out session, out name))
+                        if (RemoteProtocol.TryReadHello(buffer, length, out session, out name) && IsCurrentClient(remote, viaRelay))
                         {
                             lock (clientGate)
                             {
                                 client = remote;
                                 clientName = name;
+                                clientViaRelay = viaRelay;
                             }
                             try
                             {
                                 int size = RemoteProtocol.WriteWelcome(reply, session, (ushort)telemetryRateHz, hostName);
-                                socket.SendTo(reply, size, SocketFlags.None, remote);
+                                SendPacket(reply, size, remote, viaRelay, relayReply);
                             }
                             catch (Exception) { }
                         }
@@ -206,9 +405,27 @@ namespace Frostline.Remote
                         {
                             client = null;
                             clientName = "";
+                            clientViaRelay = false;
                         }
                         break;
                 }
+            }
+        }
+
+        int ignoredPackets;
+
+        /// <summary>
+        /// Ein Handy auf einmal: Solange das verbundene funkt, werden andere ignoriert (sonst würden zwei
+        /// Handys abwechselnd steuern). Schweigt es, darf ein anderes – oder dasselbe auf anderem Weg
+        /// (z. B. WLAN weg, weiter über Mobilfunk und Server).
+        /// </summary>
+        bool IsCurrentClient(EndPoint remote, bool viaRelay)
+        {
+            lock (clientGate)
+            {
+                if (client == null || !link.IsConnected(NowMs)) return true;
+                if (viaRelay != clientViaRelay) return false;
+                return viaRelay || remote.Equals(client);
             }
         }
 
@@ -236,21 +453,42 @@ namespace Frostline.Remote
             }
 
             if (socket == null) return;
-            if (IsConnected) Status = "Verbunden: " + ClientName + "  ·  " + PacketsPerSecond.ToString("0") + " Pakete/s  ·  Verlust " + LossPercent.ToString("0") + " %";
-            else Status = "Wartet auf iPhone (Port " + port + (BonjourActive ? ", Bonjour aktiv)" : ")");
+            bool relayed = ConnectedViaRelay;
+            if (IsConnected) Status = "Verbunden" + (relayed ? " über Server" : "") + ": " + ClientName + "  ·  " + PacketsPerSecond.ToString("0") + " Pakete/s  ·  Verlust " + LossPercent.ToString("0") + " %";
+            else Status = "Wartet auf iPhone (Port " + port + (BonjourActive ? ", Bonjour aktiv" : "") + (relay != null ? ", Server " + relay.Host : "") + ")";
+            if (relayed && !announcedRelayClient) Debug.Log("Frostline: iPhone über Server verbunden: " + ClientName);
+            announcedRelayClient = relayed;
+
+            // Lebenszeichen an den Server: hält den Weg durch Router und Mobilfunk offen.
+            RelayConfig r = relay;
+            if (r != null && r.Endpoint != null && Time.unscaledTime >= nextKeepalive)
+            {
+                nextKeepalive = Time.unscaledTime + 1f;
+                try
+                {
+                    int size = RemoteRelay.Seal(relaySendBuffer, RemoteRelay.RoleGame, r.Room, r.Secret, sendBuffer, 0);
+                    socket.SendTo(relaySendBuffer, size, SocketFlags.None, r.Endpoint);
+                }
+                catch (Exception e)
+                {
+                    if (!relaySendWarned) Debug.LogWarning("Frostline: Senden an den Server " + r.Endpoint + " fehlgeschlagen: " + e.Message);
+                    relaySendWarned = true;
+                }
+            }
 
             if (Time.unscaledTime < nextTelemetryTime) return;
             nextTelemetryTime = Time.unscaledTime + 1f / Mathf.Max(1, telemetryRateHz);
 
             EndPoint target;
-            lock (clientGate) target = client;
+            bool viaRelay;
+            lock (clientGate) { target = client; viaRelay = clientViaRelay; }
             if (target == null || !IsConnected) return;
 
             try
             {
                 TelemetryPacket packet = BuildTelemetry();
                 int length = RemoteProtocol.WriteTelemetry(sendBuffer, packet);
-                socket.SendTo(sendBuffer, length, SocketFlags.None, target);
+                SendPacket(sendBuffer, length, target, viaRelay, relaySendBuffer);
             }
             catch (Exception)
             {

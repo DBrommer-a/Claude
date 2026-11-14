@@ -15,6 +15,8 @@ enum Settings {
         static let stickMode = "stickMode"
         static let absoluteGrip = "absoluteGrip"
         static let detentHaptics = "detentHaptics"
+        // Übers Internet: auch im WLAN den Server nehmen
+        static let preferRelay = "preferRelay"
     }
 
     static var pilotName: String {

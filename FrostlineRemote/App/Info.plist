@@ -18,18 +18,31 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>app.frostline.remote.pair</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>frostline</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>Frostline Remote sucht im WLAN nach dem Mac, auf dem Frostline läuft, und schickt ihm die Stick-Eingaben.</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_frostline._udp</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Zum Scannen des Kopplungs-QR-Codes aus dem Spiel (F1 › Spiel).</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Frostline Remote sucht im WLAN nach dem Mac, auf dem Frostline läuft, und schickt ihm die Stick-Eingaben.</string>
 	<key>NSMotionUsageDescription</key>
 	<string>Im Gyro-Modus steuerst du Nick und Roll durch Kippen des iPhones.</string>
 	<key>UIApplicationSceneManifest</key>

@@ -15,6 +15,8 @@ struct SettingsView: View {
     @AppStorage(Settings.Keys.stickMode) private var stickMode = 2
     @AppStorage(Settings.Keys.absoluteGrip) private var absoluteGrip = false
     @AppStorage(Settings.Keys.detentHaptics) private var detentHaptics = true
+    @AppStorage(Settings.Keys.preferRelay) private var preferRelay = false
+    @State private var showScanner = false
     @AppStorage(Settings.Keys.gyroMaxTilt) private var gyroMaxTilt = 30.0
     @AppStorage(Settings.Keys.haptics) private var hapticsOn = true
     @AppStorage(Settings.Keys.deadband) private var deadband = 0.02
@@ -49,6 +51,29 @@ struct SettingsView: View {
                     Text(connection.status.label).font(.footnote).foregroundStyle(.secondary)
                 }
 
+                Section {
+                    if let pairing = connection.pairing {
+                        LabeledContent("Gekoppelt mit", value: pairing.name.isEmpty ? pairing.host : pairing.name)
+                        LabeledContent("Server", value: "\(pairing.host):\(pairing.port)")
+                        LabeledContent("Spiel am Server", value: connection.viaRelay ? (connection.relayPeerPresent ? "angemeldet" : "nicht gemeldet") : "–")
+                        Button("Jetzt über Server verbinden") { connection.connectRelay() }
+                        Toggle("Immer über Server (auch im WLAN)", isOn: $preferRelay)
+                        Button("Kopplung löschen") { connection.forgetPairing() }
+                    } else {
+                        Text("Noch nicht gekoppelt. Im Spiel F1 › Spiel öffnen und den QR-Code scannen – mit dem Knopf unten oder der Kamera-App.")
+                            .foregroundStyle(.secondary)
+                    }
+                    Button {
+                        showScanner = true
+                    } label: {
+                        Label(connection.pairing == nil ? "QR-Code scannen" : "Neu koppeln (QR-Code scannen)", systemImage: "qrcode.viewfinder")
+                    }
+                } header: {
+                    Text("Übers Internet (ohne gleiches WLAN)")
+                } footer: {
+                    Text("Einmal scannen genügt: Die Kopplung bleibt gespeichert. Im selben WLAN verbindet sich die App weiter direkt, sonst über den Server – auch über Mobilfunk.")
+                }
+
                 Section("Name im Spiel") {
                     TextField("iPhone", text: $pilotName)
                 }
@@ -76,6 +101,12 @@ struct SettingsView: View {
 
                 Section {
                     Toggle("Vibration", isOn: $hapticsOn)
+                }
+            }
+            .sheet(isPresented: $showScanner) {
+                QRScannerSheet { url in
+                    connection.pair(with: url)
+                    showScanner = false
                 }
             }
             .navigationTitle("Frostline Remote")

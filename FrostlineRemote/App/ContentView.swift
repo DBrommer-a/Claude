@@ -336,7 +336,7 @@ struct StatusScreen: View {
                     .font(.system(size: 15, weight: .heavy, design: .monospaced))
                     .foregroundStyle(.white)
                 Spacer()
-                Text(connection.hasTelemetry ? "LINK" : "KEIN LINK")
+                Text(connection.hasTelemetry ? (connection.viaRelay ? "LINK · SERVER" : "LINK") : "KEIN LINK")
                     .font(.system(size: 10, weight: .bold, design: .monospaced))
                     .foregroundStyle(.white.opacity(connection.hasTelemetry ? 0.8 : 0.4))
             }
@@ -405,7 +405,7 @@ struct TelemetryBar: View {
                 Circle()
                     .fill(Color.white.opacity(connection.hasTelemetry ? 1 : (connection.status.isConnected ? 0.5 : 0.18)))
                     .frame(width: 8, height: 8)
-                Text(connection.status.label).lineLimit(1)
+                Text(connection.status.label + (connection.viaRelay ? " · über Server" : "")).lineLimit(1)
             }
             if connection.hasTelemetry {
                 if let rtt = connection.roundTripMs {

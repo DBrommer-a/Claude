@@ -18,6 +18,9 @@ namespace Frostline.Diagnostics
     ///   -frostlineResult &lt;Datei&gt;     wohin das JSON geschrieben wird
     ///   -frostlineQuality &lt;Name&gt;     Qualitätsstufe, z. B. High
     ///   -frostlineOhne baeume,gras,schatten,nebel,wasser,wolken   Messung zur Fehlersuche ohne diese Teile
+    ///   -frostlineKopplung &lt;png&gt;    Kopplungs-QR (übers Internet) als PNG, URL daneben als .txt
+    ///   -frostlineWarten &lt;s&gt;        so lange laufen und den iPhone-Status protokollieren
+    ///   -frostlineRelay host:port      Server für die Kopplung (statt der gespeicherten Einstellung)
     /// Danach beendet sich das Spiel selbst.
     /// </summary>
     public sealed class AutomationRunner : MonoBehaviour
@@ -29,6 +32,8 @@ namespace Frostline.Diagnostics
         string resultPath;
         string quality;
         string without;
+        string pairingFile;
+        float waitSeconds;
         readonly List<string> written = new List<string>();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -47,6 +52,8 @@ namespace Frostline.Diagnostics
             runner.resultPath = Argument(args, "-frostlineResult");
             runner.quality = Argument(args, "-frostlineQuality");
             runner.without = Argument(args, "-frostlineOhne");
+            runner.pairingFile = Argument(args, "-frostlineKopplung");
+            float.TryParse(Argument(args, "-frostlineWarten"), NumberStyles.Float, CultureInfo.InvariantCulture, out runner.waitSeconds);
         }
 
         static string Argument(string[] args, string name)
@@ -66,8 +73,10 @@ namespace Frostline.Diagnostics
             // Ladebildschirm, Shader und Wolken hochfahren lassen.
             yield return new WaitForSecondsRealtime(6f);
 
+            if (!string.IsNullOrEmpty(pairingFile)) yield return WritePairing();
             if (!string.IsNullOrEmpty(shotsFolder)) yield return Screenshots();
             if (benchmark) yield return Benchmark();
+            if (waitSeconds > 0f) yield return WaitAndReport();
 
             // Der Multiplayer-Test (-frostlineHost/-frostlineJoin) beendet das Spiel selbst.
             string[] args = Environment.GetCommandLineArgs();
@@ -91,6 +100,61 @@ namespace Frostline.Diagnostics
                 }
             }
             Log("Qualitätsstufe „" + name + "“ unbekannt, bleibe bei " + names[QualitySettings.GetQualityLevel()]);
+        }
+
+        // ------------------------------------------------------------ Kopplung übers Internet (Test)
+
+        /// <summary>Legt den Kopplungs-QR als PNG und die URL als .txt ab (für den Test mit dem Simulator).</summary>
+        IEnumerator WritePairing()
+        {
+            Frostline.Remote.RemoteControlServer remote = FindAnyObjectByType<Frostline.Remote.RemoteControlServer>();
+            float giveUp = Time.realtimeSinceStartup + 10f;
+            while ((remote == null || remote.PairingUrl == null) && Time.realtimeSinceStartup < giveUp)
+            {
+                yield return new WaitForSecondsRealtime(0.5f);
+                if (remote == null) remote = FindAnyObjectByType<Frostline.Remote.RemoteControlServer>();
+            }
+            if (remote == null || remote.PairingUrl == null)
+            {
+                Log("Kopplung: kein Server eingetragen");
+                yield break;
+            }
+            string url = remote.PairingUrl;
+            Frostline.Remote.QrCode qr = Frostline.Remote.QrCode.Encode(url);
+            const int scale = 8, quiet = 4;
+            int size = (qr.Size + quiet * 2) * scale;
+            var tex = new Texture2D(size, size, TextureFormat.RGB24, false);
+            var pixels = new Color32[size * size];
+            for (int y = 0; y < size; y++)
+                for (int x = 0; x < size; x++)
+                    pixels[y * size + x] = qr[x / scale - quiet, (size - 1 - y) / scale - quiet] ? new Color32(0, 0, 0, 255) : new Color32(255, 255, 255, 255);
+            tex.SetPixels32(pixels);
+            tex.Apply();
+            Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(pairingFile)));
+            File.WriteAllBytes(pairingFile, tex.EncodeToPNG());
+            File.WriteAllText(pairingFile + ".txt", url);
+            Destroy(tex);
+            Log("Kopplung geschrieben: " + pairingFile);
+        }
+
+        IEnumerator WaitAndReport()
+        {
+            Frostline.Remote.RemoteControlServer remote = FindAnyObjectByType<Frostline.Remote.RemoteControlServer>();
+            float end = Time.realtimeSinceStartup + waitSeconds;
+            string last = null;
+            while (Time.realtimeSinceStartup < end)
+            {
+                string status = remote != null ? remote.Status + " | " + remote.RelayStatus : "kein Empfänger";
+                // Zahlen (Pakete/s) schwanken; nur bei neuem Zustand protokollieren.
+                string state = remote != null ? (remote.IsConnected ? (remote.ConnectedViaRelay ? "server" : "wlan") : "aus") + remote.RelayStatus : status;
+                if (state != last)
+                {
+                    Log("iPhone: " + status);
+                    last = state;
+                }
+                yield return new WaitForSecondsRealtime(1f);
+            }
+            if (remote != null) Log("iPhone zum Schluss: " + remote.Status);
         }
 
         // ------------------------------------------------------------ Screenshots

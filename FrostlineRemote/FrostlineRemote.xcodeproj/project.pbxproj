@@ -8,32 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		0419218DD8D237AE892C837A /* ControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF707528691744DFAC657C /* ControlState.swift */; };
+		0F4D98C3051E311098A21926 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5162244BB1F3B1ED031EB /* QRScannerView.swift */; };
 		198F264F225D041852A91DF1 /* FrostlineRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B646B82043C6D62AB936A53 /* FrostlineRemoteApp.swift */; };
 		261C52C5FEFA0A6D98AC3A2D /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314069F75AB9D8525B0907F6 /* Haptics.swift */; };
 		3B8BA70026191E37E7C161AA /* GimbalMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44310066D6B7EB41C3FE47E3 /* GimbalMath.swift */; };
 		5C9046139FACAAFB337A1599 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F6E4A7FF640B49829D95A /* SettingsView.swift */; };
 		6FD09C34C64E4C9567779C05 /* RemoteConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3730BFD76CEDA947FC5885 /* RemoteConnection.swift */; };
+		70699610722F8049550EB289 /* RelayCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7610E44FE64AE407EB49D /* RelayCrypto.swift */; };
 		75C4061F30F17DFB49364516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9176AC21641709130EC6ED /* Assets.xcassets */; };
 		7850611B3AEE5A41D408E195 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7E1DD3DEE44DCC7398BFA /* RemoteProtocol.swift */; };
 		796D07FE292D038D0DB066F4 /* GimbalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB9EE586C64175C88F1757 /* GimbalView.swift */; };
 		8778DA37D71DC93E738E079F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D2213F2E6F447F3B17F8D /* ContentView.swift */; };
+		91F0FC63F4B1E1394CDBC351 /* PairingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86ECDA6A5FE72974048F471 /* PairingStore.swift */; };
 		95CFC1147F4A66C458F58B9A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613ECF6E77B85A39D8C18982 /* Settings.swift */; };
 		CEFC55353C3D7E828F8F0FEA /* StickMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643E3CA9689C35C9AD0C8F1 /* StickMath.swift */; };
 		D02CB6DF74D0F4B21F4E66CF /* GyroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0506A6167FB878BA1946BF /* GyroController.swift */; };
+		F1BEF94C8942279C57867118 /* RelayFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B56425C733D8EC17D3187 /* RelayFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E7610E44FE64AE407EB49D /* RelayCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayCrypto.swift; sourceTree = "<group>"; };
 		0B0D2213F2E6F447F3B17F8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C9176AC21641709130EC6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18AF707528691744DFAC657C /* ControlState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlState.swift; sourceTree = "<group>"; };
+		1A2B56425C733D8EC17D3187 /* RelayFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayFrame.swift; sourceTree = "<group>"; };
 		314069F75AB9D8525B0907F6 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		44310066D6B7EB41C3FE47E3 /* GimbalMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GimbalMath.swift; sourceTree = "<group>"; };
 		4B646B82043C6D62AB936A53 /* FrostlineRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostlineRemoteApp.swift; sourceTree = "<group>"; };
 		506EEB182BA9E23A6E2F111D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		613ECF6E77B85A39D8C18982 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6AD5162244BB1F3B1ED031EB /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		7FAB9EE586C64175C88F1757 /* GimbalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GimbalView.swift; sourceTree = "<group>"; };
 		B643E3CA9689C35C9AD0C8F1 /* StickMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickMath.swift; sourceTree = "<group>"; };
 		CFF7E1DD3DEE44DCC7398BFA /* RemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProtocol.swift; sourceTree = "<group>"; };
+		D86ECDA6A5FE72974048F471 /* PairingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingStore.swift; sourceTree = "<group>"; };
 		DC4F6E4A7FF640B49829D95A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DE0506A6167FB878BA1946BF /* GyroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroController.swift; sourceTree = "<group>"; };
 		EC2934D6FB5FDB66E6FF3458 /* FrostlineRemote.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FrostlineRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				44310066D6B7EB41C3FE47E3 /* GimbalMath.swift */,
+				07E7610E44FE64AE407EB49D /* RelayCrypto.swift */,
+				1A2B56425C733D8EC17D3187 /* RelayFrame.swift */,
 				CFF7E1DD3DEE44DCC7398BFA /* RemoteProtocol.swift */,
 				B643E3CA9689C35C9AD0C8F1 /* StickMath.swift */,
 			);
@@ -80,6 +90,8 @@
 				DE0506A6167FB878BA1946BF /* GyroController.swift */,
 				314069F75AB9D8525B0907F6 /* Haptics.swift */,
 				506EEB182BA9E23A6E2F111D /* Info.plist */,
+				D86ECDA6A5FE72974048F471 /* PairingStore.swift */,
+				6AD5162244BB1F3B1ED031EB /* QRScannerView.swift */,
 				FF3730BFD76CEDA947FC5885 /* RemoteConnection.swift */,
 				613ECF6E77B85A39D8C18982 /* Settings.swift */,
 				DC4F6E4A7FF640B49829D95A /* SettingsView.swift */,
@@ -172,6 +184,10 @@
 				796D07FE292D038D0DB066F4 /* GimbalView.swift in Sources */,
 				D02CB6DF74D0F4B21F4E66CF /* GyroController.swift in Sources */,
 				261C52C5FEFA0A6D98AC3A2D /* Haptics.swift in Sources */,
+				91F0FC63F4B1E1394CDBC351 /* PairingStore.swift in Sources */,
+				0F4D98C3051E311098A21926 /* QRScannerView.swift in Sources */,
+				70699610722F8049550EB289 /* RelayCrypto.swift in Sources */,
+				F1BEF94C8942279C57867118 /* RelayFrame.swift in Sources */,
 				6FD09C34C64E4C9567779C05 /* RemoteConnection.swift in Sources */,
 				7850611B3AEE5A41D408E195 /* RemoteProtocol.swift in Sources */,
 				95CFC1147F4A66C458F58B9A /* Settings.swift in Sources */,

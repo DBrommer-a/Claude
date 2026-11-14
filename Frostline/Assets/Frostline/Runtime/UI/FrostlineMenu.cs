@@ -281,7 +281,59 @@ namespace Frostline.UI
                 {
                     input.SelectRemote();
                 }
+                DrawPairing();
             }
+        }
+
+        // ------------------------------------------------------------ Kopplung per QR-Code (übers Internet)
+
+        string relayInput;
+        string qrUrl;
+        Texture2D qrTexture;
+
+        void DrawPairing()
+        {
+            GUILayout.Space(8f);
+            GUILayout.Label("Übers Internet (ohne gleiches WLAN)", heading);
+            if (relayInput == null) relayInput = remote.RelayHost;
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Server", GUILayout.Width(60f));
+            relayInput = GUILayout.TextField(relayInput, GUILayout.Width(260f));
+            if (GUILayout.Button("Übernehmen", GUILayout.Width(110f))) remote.SetRelayHost(relayInput);
+            GUILayout.EndHorizontal();
+            GUILayout.Label(remote.RelayStatus, wrapped);
+
+            string url = remote.PairingUrl;
+            if (url == null) return;
+            if (url != qrUrl || qrTexture == null)
+            {
+                qrUrl = url;
+                if (qrTexture != null) Destroy(qrTexture);
+                qrTexture = QrTexture(url);
+            }
+            GUILayout.Label("Einmal mit der iPhone-Kamera (oder in der App unter Setup) scannen – danach verbindet sich das Handy von selbst, auch über Mobilfunk.", wrapped);
+            Rect r = GUILayoutUtility.GetRect(240f, 240f, GUILayout.Width(240f), GUILayout.Height(240f));
+            GUI.DrawTexture(r, qrTexture, ScaleMode.ScaleToFit, false);
+            if (GUILayout.Button("Neuen Code erzeugen (bisheriges Handy abmelden)", GUILayout.Height(26f)))
+            {
+                remote.NewPairing();
+                qrUrl = null;
+            }
+        }
+
+        static Texture2D QrTexture(string text)
+        {
+            QrCode qr = QrCode.Encode(text);
+            const int quiet = 4;
+            int size = qr.Size + quiet * 2;
+            var tex = new Texture2D(size, size, TextureFormat.RGB24, false) { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
+            var pixels = new Color32[size * size];
+            for (int y = 0; y < size; y++)
+                for (int x = 0; x < size; x++)
+                    pixels[y * size + x] = qr[x - quiet, size - 1 - y - quiet] ? new Color32(0, 0, 0, 255) : new Color32(255, 255, 255, 255);
+            tex.SetPixels32(pixels);
+            tex.Apply();
+            return tex;
         }
 
         // ------------------------------------------------------------ Sender
