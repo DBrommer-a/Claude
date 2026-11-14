@@ -5,12 +5,16 @@ enum Settings {
     enum Keys {
         static let useManualHost = "useManualHost"
         static let manualHost = "manualHost"
-        static let stickSize = "stickSize"
-        static let throttleTravel = "throttleTravel"
         static let gyroMaxTilt = "gyroMaxTilt"
         static let haptics = "haptics"
         static let pilotName = "pilotName"
         static let deadband = "deadband"
+        // Knüppel wie am Sender
+        static let gimbalSize = "gimbalSize"
+        static let fingerTravel = "fingerTravel"
+        static let stickMode = "stickMode"
+        static let absoluteGrip = "absoluteGrip"
+        static let detentHaptics = "detentHaptics"
     }
 
     static var pilotName: String {

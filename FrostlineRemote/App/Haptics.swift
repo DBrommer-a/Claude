@@ -31,4 +31,14 @@ final class Haptics {
         guard enabled else { return }
         light.impactOccurred(intensity: 0.4)
     }
+
+    /// Kurzes, hartes Klicken, wenn ein Knüppel die Mitte oder eine Gasraste überfährt.
+    private let detentGenerator = UISelectionFeedbackGenerator()
+    var detentsEnabled = true
+
+    func detent() {
+        guard enabled, detentsEnabled else { return }
+        detentGenerator.selectionChanged()
+        detentGenerator.prepare()
+    }
 }

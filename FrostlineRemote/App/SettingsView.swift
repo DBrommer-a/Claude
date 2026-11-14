@@ -10,8 +10,11 @@ struct SettingsView: View {
 
     @AppStorage(Settings.Keys.manualHost) private var manualHost = ""
     @AppStorage(Settings.Keys.pilotName) private var pilotName = ""
-    @AppStorage(Settings.Keys.stickSize) private var stickSize = 70.0
-    @AppStorage(Settings.Keys.throttleTravel) private var throttleTravel = 220.0
+    @AppStorage(Settings.Keys.gimbalSize) private var gimbalSize = 205.0
+    @AppStorage(Settings.Keys.fingerTravel) private var fingerTravel = 0.85
+    @AppStorage(Settings.Keys.stickMode) private var stickMode = 2
+    @AppStorage(Settings.Keys.absoluteGrip) private var absoluteGrip = false
+    @AppStorage(Settings.Keys.detentHaptics) private var detentHaptics = true
     @AppStorage(Settings.Keys.gyroMaxTilt) private var gyroMaxTilt = 30.0
     @AppStorage(Settings.Keys.haptics) private var hapticsOn = true
     @AppStorage(Settings.Keys.deadband) private var deadband = 0.02
@@ -50,10 +53,20 @@ struct SettingsView: View {
                     TextField("iPhone", text: $pilotName)
                 }
 
-                Section("Sticks") {
-                    LabeledSlider(title: "Stickgröße", value: $stickSize, range: 45...110, format: "%.0f pt")
-                    LabeledSlider(title: "Gasweg", value: $throttleTravel, range: 120...360, format: "%.0f pt")
+                Section {
+                    Picker("Belegung", selection: $stickMode) {
+                        Text("Mode 2 (Gas links)").tag(2)
+                        Text("Mode 1 (Gas rechts)").tag(1)
+                    }
+                    LabeledSlider(title: "Knüppelgröße", value: $gimbalSize, range: 130...260, format: "%.0f pt")
+                    LabeledSlider(title: "Fingerweg für Vollausschlag", value: $fingerTravel, range: 0.5...1.0, format: "%.0f %%", scale: 100)
                     LabeledSlider(title: "Totzone", value: $deadband, range: 0...0.1, format: "%.2f")
+                    Toggle("Knüppel springt unter den Daumen", isOn: $absoluteGrip)
+                    Toggle("Rasten spüren (Mitte, 0 % und 50 % Gas)", isOn: $detentHaptics)
+                } header: {
+                    Text("Knüppel")
+                } footer: {
+                    Text("Standard wie am Sender: Der Knüppel bewegt sich ab seiner Stellung mit dem Daumen und springt beim Anfassen nicht. Gas bleibt stehen, alle anderen Achsen federn zur Mitte. Weniger Fingerweg = empfindlicher.")
                 }
 
                 Section("Gyro-Modus") {
@@ -80,13 +93,14 @@ private struct LabeledSlider: View {
     @Binding var value: Double
     let range: ClosedRange<Double>
     let format: String
+    var scale: Double = 1
 
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text(title)
                 Spacer()
-                Text(String(format: format, value)).monospacedDigit().foregroundStyle(.secondary)
+                Text(String(format: format, value * scale)).monospacedDigit().foregroundStyle(.secondary)
             }
             Slider(value: $value, in: range)
         }
