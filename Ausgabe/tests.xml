@@ -1,668 +1,668 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="102" result="Passed" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.5865755">
-  <test-suite type="TestSuite" id="1000" name="Frostline" fullname="Frostline" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.586576" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="102" result="Passed" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.5124234">
+  <test-suite type="TestSuite" id="1000" name="Frostline" fullname="Frostline" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.512423" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties>
       <property name="platform" value="EditMode" />
     </properties>
-    <test-suite type="Assembly" id="1117" name="Frostline.Tests.Editor.dll" fullname="/Users/davidbrommer/Projekte/Frostline/Frostline/Library/ScriptAssemblies/Frostline.Tests.Editor.dll" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.582824" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1117" name="Frostline.Tests.Editor.dll" fullname="/Users/davidbrommer/Projekte/Frostline/Frostline/Library/ScriptAssemblies/Frostline.Tests.Editor.dll" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.509034" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="2394" />
+        <property name="_PID" value="42088" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="EditMode" />
         <property name="EditorOnly" value="True" />
       </properties>
-      <test-suite type="TestSuite" id="1118" name="Frostline" fullname="Frostline" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.582629" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="1118" name="Frostline" fullname="Frostline" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.508809" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-suite type="TestSuite" id="1119" name="Tests" fullname="Frostline.Tests" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.582471" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="1119" name="Tests" fullname="Frostline.Tests" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.508660" total="102" passed="102" failed="0" inconclusive="0" skipped="0" asserts="0">
           <properties />
-          <test-suite type="TestFixture" id="1001" name="GameplayTests" fullname="Frostline.Tests.GameplayTests" classname="Frostline.Tests.GameplayTests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.020720" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1001" name="GameplayTests" fullname="Frostline.Tests.GameplayTests" classname="Frostline.Tests.GameplayTests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.022762" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1004" name="Gate_BackwardsIsReported" fullname="Frostline.Tests.GameplayTests.Gate_BackwardsIsReported" methodname="Gate_BackwardsIsReported" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1879387464" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.006298" asserts="0">
+            <test-case id="1004" name="Gate_BackwardsIsReported" fullname="Frostline.Tests.GameplayTests.Gate_BackwardsIsReported" methodname="Gate_BackwardsIsReported" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="297581496" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006028" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1003" name="Gate_FastFlightIsStillDetected" fullname="Frostline.Tests.GameplayTests.Gate_FastFlightIsStillDetected" methodname="Gate_FastFlightIsStillDetected" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="470158280" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000092" asserts="0">
+            <test-case id="1003" name="Gate_FastFlightIsStillDetected" fullname="Frostline.Tests.GameplayTests.Gate_FastFlightIsStillDetected" methodname="Gate_FastFlightIsStillDetected" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1630097212" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000099" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1006" name="Gate_NoCrossingWithoutReachingThePlane" fullname="Frostline.Tests.GameplayTests.Gate_NoCrossingWithoutReachingThePlane" methodname="Gate_NoCrossingWithoutReachingThePlane" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="747186922" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000056" asserts="0">
+            <test-case id="1006" name="Gate_NoCrossingWithoutReachingThePlane" fullname="Frostline.Tests.GameplayTests.Gate_NoCrossingWithoutReachingThePlane" methodname="Gate_NoCrossingWithoutReachingThePlane" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="897442857" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000075" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1005" name="Gate_PassingBesideIsAMiss" fullname="Frostline.Tests.GameplayTests.Gate_PassingBesideIsAMiss" methodname="Gate_PassingBesideIsAMiss" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="499543961" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000110" asserts="0">
+            <test-case id="1005" name="Gate_PassingBesideIsAMiss" fullname="Frostline.Tests.GameplayTests.Gate_PassingBesideIsAMiss" methodname="Gate_PassingBesideIsAMiss" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1652780112" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000114" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1007" name="Gate_RotatedGateUsesItsOwnAxes" fullname="Frostline.Tests.GameplayTests.Gate_RotatedGateUsesItsOwnAxes" methodname="Gate_RotatedGateUsesItsOwnAxes" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1687821695" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000201" asserts="0">
+            <test-case id="1007" name="Gate_RotatedGateUsesItsOwnAxes" fullname="Frostline.Tests.GameplayTests.Gate_RotatedGateUsesItsOwnAxes" methodname="Gate_RotatedGateUsesItsOwnAxes" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1340109105" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000211" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1002" name="Gate_ThroughTheOpening" fullname="Frostline.Tests.GameplayTests.Gate_ThroughTheOpening" methodname="Gate_ThroughTheOpening" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1723590113" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000051" asserts="0">
+            <test-case id="1002" name="Gate_ThroughTheOpening" fullname="Frostline.Tests.GameplayTests.Gate_ThroughTheOpening" methodname="Gate_ThroughTheOpening" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="684937743" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000052" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1018" name="Interpolator_ExtrapolatesOnlyBriefly" fullname="Frostline.Tests.GameplayTests.Interpolator_ExtrapolatesOnlyBriefly" methodname="Interpolator_ExtrapolatesOnlyBriefly" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="403819716" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000731" asserts="0">
+            <test-case id="1018" name="Interpolator_ExtrapolatesOnlyBriefly" fullname="Frostline.Tests.GameplayTests.Interpolator_ExtrapolatesOnlyBriefly" methodname="Interpolator_ExtrapolatesOnlyBriefly" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="682564920" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000733" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1019" name="Interpolator_IgnoresOutOfOrderPackets" fullname="Frostline.Tests.GameplayTests.Interpolator_IgnoresOutOfOrderPackets" methodname="Interpolator_IgnoresOutOfOrderPackets" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="52457853" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000167" asserts="0">
+            <test-case id="1019" name="Interpolator_IgnoresOutOfOrderPackets" fullname="Frostline.Tests.GameplayTests.Interpolator_IgnoresOutOfOrderPackets" methodname="Interpolator_IgnoresOutOfOrderPackets" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="928494877" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000168" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1017" name="Interpolator_IsSmoothAcrossSnapshots" fullname="Frostline.Tests.GameplayTests.Interpolator_IsSmoothAcrossSnapshots" methodname="Interpolator_IsSmoothAcrossSnapshots" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1420321311" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000947" asserts="0">
+            <test-case id="1017" name="Interpolator_IsSmoothAcrossSnapshots" fullname="Frostline.Tests.GameplayTests.Interpolator_IsSmoothAcrossSnapshots" methodname="Interpolator_IsSmoothAcrossSnapshots" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="720049002" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000901" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1016" name="Interpolator_PlaysBack100MillisecondsDelayed" fullname="Frostline.Tests.GameplayTests.Interpolator_PlaysBack100MillisecondsDelayed" methodname="Interpolator_PlaysBack100MillisecondsDelayed" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="137878852" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000287" asserts="0">
+            <test-case id="1016" name="Interpolator_PlaysBack100MillisecondsDelayed" fullname="Frostline.Tests.GameplayTests.Interpolator_PlaysBack100MillisecondsDelayed" methodname="Interpolator_PlaysBack100MillisecondsDelayed" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="389470791" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000196" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1008" name="Race_CountdownThenGatesInOrder" fullname="Frostline.Tests.GameplayTests.Race_CountdownThenGatesInOrder" methodname="Race_CountdownThenGatesInOrder" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="344067396" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000770" asserts="0">
+            <test-case id="1008" name="Race_CountdownThenGatesInOrder" fullname="Frostline.Tests.GameplayTests.Race_CountdownThenGatesInOrder" methodname="Race_CountdownThenGatesInOrder" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="329126116" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000656" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1009" name="Race_MultipleLapsKeepBestLap" fullname="Frostline.Tests.GameplayTests.Race_MultipleLapsKeepBestLap" methodname="Race_MultipleLapsKeepBestLap" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="114487190" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000313" asserts="0">
+            <test-case id="1009" name="Race_MultipleLapsKeepBestLap" fullname="Frostline.Tests.GameplayTests.Race_MultipleLapsKeepBestLap" methodname="Race_MultipleLapsKeepBestLap" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="2132093701" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000280" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1012" name="Replay_ExtractAndSaveRoundTrip" fullname="Frostline.Tests.GameplayTests.Replay_ExtractAndSaveRoundTrip" methodname="Replay_ExtractAndSaveRoundTrip" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1901878558" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001340" asserts="0">
+            <test-case id="1012" name="Replay_ExtractAndSaveRoundTrip" fullname="Frostline.Tests.GameplayTests.Replay_ExtractAndSaveRoundTrip" methodname="Replay_ExtractAndSaveRoundTrip" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1814627722" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001246" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1010" name="Replay_InterpolatesBetweenFrames" fullname="Frostline.Tests.GameplayTests.Replay_InterpolatesBetweenFrames" methodname="Replay_InterpolatesBetweenFrames" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1508884436" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000148" asserts="0">
+            <test-case id="1010" name="Replay_InterpolatesBetweenFrames" fullname="Frostline.Tests.GameplayTests.Replay_InterpolatesBetweenFrames" methodname="Replay_InterpolatesBetweenFrames" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1355670685" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000137" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1013" name="Replay_RejectsForeignFiles" fullname="Frostline.Tests.GameplayTests.Replay_RejectsForeignFiles" methodname="Replay_RejectsForeignFiles" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="41791083" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001713" asserts="0">
+            <test-case id="1013" name="Replay_RejectsForeignFiles" fullname="Frostline.Tests.GameplayTests.Replay_RejectsForeignFiles" methodname="Replay_RejectsForeignFiles" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="135514318" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001019" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1011" name="Replay_RingBufferKeepsNewestFrames" fullname="Frostline.Tests.GameplayTests.Replay_RingBufferKeepsNewestFrames" methodname="Replay_RingBufferKeepsNewestFrames" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1598276084" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000189" asserts="0">
+            <test-case id="1011" name="Replay_RingBufferKeepsNewestFrames" fullname="Frostline.Tests.GameplayTests.Replay_RingBufferKeepsNewestFrames" methodname="Replay_RingBufferKeepsNewestFrames" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1106213129" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000101" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1015" name="Signal_AltitudeAlsoCounts" fullname="Frostline.Tests.GameplayTests.Signal_AltitudeAlsoCounts" methodname="Signal_AltitudeAlsoCounts" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1135482436" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000171" asserts="0">
+            <test-case id="1015" name="Signal_AltitudeAlsoCounts" fullname="Frostline.Tests.GameplayTests.Signal_AltitudeAlsoCounts" methodname="Signal_AltitudeAlsoCounts" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="941729170" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000134" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1014" name="Signal_CleanInsideNoisyOutsideLostBeyond" fullname="Frostline.Tests.GameplayTests.Signal_CleanInsideNoisyOutsideLostBeyond" methodname="Signal_CleanInsideNoisyOutsideLostBeyond" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="1676624982" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000153" asserts="0">
+            <test-case id="1014" name="Signal_CleanInsideNoisyOutsideLostBeyond" fullname="Frostline.Tests.GameplayTests.Signal_CleanInsideNoisyOutsideLostBeyond" methodname="Signal_CleanInsideNoisyOutsideLostBeyond" classname="Frostline.Tests.GameplayTests" runstate="Runnable" seed="406788725" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.003956" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="1020" name="MaskMapTests" fullname="Frostline.Tests.MaskMapTests" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.007655" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1020" name="MaskMapTests" fullname="Frostline.Tests.MaskMapTests" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.007885" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1033" name="Naming_GroupsFilesOfOneMaterial" fullname="Frostline.Tests.MaskMapTests.Naming_GroupsFilesOfOneMaterial" methodname="Naming_GroupsFilesOfOneMaterial" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="2082437186" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.002444" asserts="0">
+            <test-case id="1033" name="Naming_GroupsFilesOfOneMaterial" fullname="Frostline.Tests.MaskMapTests.Naming_GroupsFilesOfOneMaterial" methodname="Naming_GroupsFilesOfOneMaterial" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="604132967" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001672" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-suite type="ParameterizedMethod" id="1032" name="Naming_RecognizesMegascansSuffixes" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.002949" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1032" name="Naming_RecognizesMegascansSuffixes" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.003612" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1025" name="Naming_RecognizesMegascansSuffixes(&quot;rock_cliff_4K_Roughness.jpg&quot;,Roughness)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;rock_cliff_4K_Roughness.jpg&quot;,Roughness)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1672543928" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000420" asserts="0">
+              <test-case id="1025" name="Naming_RecognizesMegascansSuffixes(&quot;rock_cliff_4K_Roughness.jpg&quot;,Roughness)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;rock_cliff_4K_Roughness.jpg&quot;,Roughness)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="872262196" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000217" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1026" name="Naming_RecognizesMegascansSuffixes(&quot;T_concrete_2K_BaseColor.png&quot;,Albedo)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;T_concrete_2K_BaseColor.png&quot;,Albedo)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1753502446" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000065" asserts="0">
+              <test-case id="1026" name="Naming_RecognizesMegascansSuffixes(&quot;T_concrete_2K_BaseColor.png&quot;,Albedo)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;T_concrete_2K_BaseColor.png&quot;,Albedo)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="750929805" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000104" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1027" name="Naming_RecognizesMegascansSuffixes(&quot;snow_field_Normal.png&quot;,Normal)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;snow_field_Normal.png&quot;,Normal)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="748511379" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000152" asserts="0">
+              <test-case id="1027" name="Naming_RecognizesMegascansSuffixes(&quot;snow_field_Normal.png&quot;,Normal)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;snow_field_Normal.png&quot;,Normal)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1131255089" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000095" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1028" name="Naming_RecognizesMegascansSuffixes(&quot;ice_4K_AO.jpg&quot;,Occlusion)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;ice_4K_AO.jpg&quot;,Occlusion)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1723656385" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000109" asserts="0">
+              <test-case id="1028" name="Naming_RecognizesMegascansSuffixes(&quot;ice_4K_AO.jpg&quot;,Occlusion)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;ice_4K_AO.jpg&quot;,Occlusion)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="840699513" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000071" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1029" name="Naming_RecognizesMegascansSuffixes(&quot;metal_plate_Metalness.png&quot;,Metallic)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;metal_plate_Metalness.png&quot;,Metallic)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="339055815" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000847" asserts="0">
+              <test-case id="1029" name="Naming_RecognizesMegascansSuffixes(&quot;metal_plate_Metalness.png&quot;,Metallic)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;metal_plate_Metalness.png&quot;,Metallic)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1246103713" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000060" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1030" name="Naming_RecognizesMegascansSuffixes(&quot;ground_Displacement.exr&quot;,Displacement)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;ground_Displacement.exr&quot;,Displacement)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="790706585" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000051" asserts="0">
+              <test-case id="1030" name="Naming_RecognizesMegascansSuffixes(&quot;ground_Displacement.exr&quot;,Displacement)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;ground_Displacement.exr&quot;,Displacement)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1340657122" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000061" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1031" name="Naming_RecognizesMegascansSuffixes(&quot;preview.jpg&quot;,Unknown)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;preview.jpg&quot;,Unknown)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1974859199" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000049" asserts="0">
+              <test-case id="1031" name="Naming_RecognizesMegascansSuffixes(&quot;preview.jpg&quot;,Unknown)" fullname="Frostline.Tests.MaskMapTests.Naming_RecognizesMegascansSuffixes(&quot;preview.jpg&quot;,Unknown)" methodname="Naming_RecognizesMegascansSuffixes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="392789811" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000121" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-case id="1023" name="Pack_PrefersGlossinessOverRoughness" fullname="Frostline.Tests.MaskMapTests.Pack_PrefersGlossinessOverRoughness" methodname="Pack_PrefersGlossinessOverRoughness" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1878910256" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000412" asserts="0">
+            <test-case id="1023" name="Pack_PrefersGlossinessOverRoughness" fullname="Frostline.Tests.MaskMapTests.Pack_PrefersGlossinessOverRoughness" methodname="Pack_PrefersGlossinessOverRoughness" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="2021567093" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000342" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1021" name="Pack_PutsChannelsWhereHdrpExpectsThem" fullname="Frostline.Tests.MaskMapTests.Pack_PutsChannelsWhereHdrpExpectsThem" methodname="Pack_PutsChannelsWhereHdrpExpectsThem" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="394652041" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000293" asserts="0">
+            <test-case id="1021" name="Pack_PutsChannelsWhereHdrpExpectsThem" fullname="Frostline.Tests.MaskMapTests.Pack_PutsChannelsWhereHdrpExpectsThem" methodname="Pack_PutsChannelsWhereHdrpExpectsThem" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="30679744" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000273" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1024" name="Pack_RejectsMismatchedSizes" fullname="Frostline.Tests.MaskMapTests.Pack_RejectsMismatchedSizes" methodname="Pack_RejectsMismatchedSizes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="696819461" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000210" asserts="0">
+            <test-case id="1024" name="Pack_RejectsMismatchedSizes" fullname="Frostline.Tests.MaskMapTests.Pack_RejectsMismatchedSizes" methodname="Pack_RejectsMismatchedSizes" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1066809724" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000272" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1022" name="Pack_UsesNeutralValuesForMissingMaps" fullname="Frostline.Tests.MaskMapTests.Pack_UsesNeutralValuesForMissingMaps" methodname="Pack_UsesNeutralValuesForMissingMaps" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="1489845890" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000078" asserts="0">
+            <test-case id="1022" name="Pack_UsesNeutralValuesForMissingMaps" fullname="Frostline.Tests.MaskMapTests.Pack_UsesNeutralValuesForMissingMaps" methodname="Pack_UsesNeutralValuesForMissingMaps" classname="Frostline.Tests.MaskMapTests" runstate="Runnable" seed="484805378" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000045" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="1034" name="QuadSimTests" fullname="Frostline.Tests.QuadSimTests" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="50" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.545100" total="50" passed="50" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1034" name="QuadSimTests" fullname="Frostline.Tests.QuadSimTests" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="50" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.469345" total="50" passed="50" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1079" name="AcroMode_DoesNotSelfLevel" fullname="Frostline.Tests.QuadSimTests.AcroMode_DoesNotSelfLevel" methodname="AcroMode_DoesNotSelfLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1761590512" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.003390" asserts="0">
+            <test-case id="1079" name="AcroMode_DoesNotSelfLevel" fullname="Frostline.Tests.QuadSimTests.AcroMode_DoesNotSelfLevel" methodname="AcroMode_DoesNotSelfLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2053224699" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.003065" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1074" name="Airmode_KeepsControlAtZeroThrottle" fullname="Frostline.Tests.QuadSimTests.Airmode_KeepsControlAtZeroThrottle" methodname="Airmode_KeepsControlAtZeroThrottle" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1317062766" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001269" asserts="0">
+            <test-case id="1074" name="Airmode_KeepsControlAtZeroThrottle" fullname="Frostline.Tests.QuadSimTests.Airmode_KeepsControlAtZeroThrottle" methodname="Airmode_KeepsControlAtZeroThrottle" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="328838649" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001146" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1076" name="AngleMode_HoldsTheCommandedAngle" fullname="Frostline.Tests.QuadSimTests.AngleMode_HoldsTheCommandedAngle" methodname="AngleMode_HoldsTheCommandedAngle" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1225591788" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001175" asserts="0">
+            <test-case id="1076" name="AngleMode_HoldsTheCommandedAngle" fullname="Frostline.Tests.QuadSimTests.AngleMode_HoldsTheCommandedAngle" methodname="AngleMode_HoldsTheCommandedAngle" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="872102168" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001066" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1075" name="AngleMode_LevelsFromATilt" fullname="Frostline.Tests.QuadSimTests.AngleMode_LevelsFromATilt" methodname="AngleMode_LevelsFromATilt" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2000376945" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001066" asserts="0">
+            <test-case id="1075" name="AngleMode_LevelsFromATilt" fullname="Frostline.Tests.QuadSimTests.AngleMode_LevelsFromATilt" methodname="AngleMode_LevelsFromATilt" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="658510113" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001013" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1077" name="AngleMode_RecoversFromUpsideDown" fullname="Frostline.Tests.QuadSimTests.AngleMode_RecoversFromUpsideDown" methodname="AngleMode_RecoversFromUpsideDown" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1404815558" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001394" asserts="0">
+            <test-case id="1077" name="AngleMode_RecoversFromUpsideDown" fullname="Frostline.Tests.QuadSimTests.AngleMode_RecoversFromUpsideDown" methodname="AngleMode_RecoversFromUpsideDown" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1414891428" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001343" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1080" name="Arming_IsBlockedWhileThrottleIsUp" fullname="Frostline.Tests.QuadSimTests.Arming_IsBlockedWhileThrottleIsUp" methodname="Arming_IsBlockedWhileThrottleIsUp" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="69954318" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000348" asserts="0">
+            <test-case id="1080" name="Arming_IsBlockedWhileThrottleIsUp" fullname="Frostline.Tests.QuadSimTests.Arming_IsBlockedWhileThrottleIsUp" methodname="Arming_IsBlockedWhileThrottleIsUp" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1958912357" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000353" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1083" name="Battery_DrainsAndGetsWeaker" fullname="Frostline.Tests.QuadSimTests.Battery_DrainsAndGetsWeaker" methodname="Battery_DrainsAndGetsWeaker" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1329849616" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.084013" asserts="0">
+            <test-case id="1083" name="Battery_DrainsAndGetsWeaker" fullname="Frostline.Tests.QuadSimTests.Battery_DrainsAndGetsWeaker" methodname="Battery_DrainsAndGetsWeaker" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="991277637" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.071059" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1084" name="Battery_InfiniteOptionKeepsCapacity" fullname="Frostline.Tests.QuadSimTests.Battery_InfiniteOptionKeepsCapacity" methodname="Battery_InfiniteOptionKeepsCapacity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="234631838" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.019709" asserts="0">
+            <test-case id="1084" name="Battery_InfiniteOptionKeepsCapacity" fullname="Frostline.Tests.QuadSimTests.Battery_InfiniteOptionKeepsCapacity" methodname="Battery_InfiniteOptionKeepsCapacity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="759306941" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.019267" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1085" name="Battery_RestingVoltageCurveIsMonotonic" fullname="Frostline.Tests.QuadSimTests.Battery_RestingVoltageCurveIsMonotonic" methodname="Battery_RestingVoltageCurveIsMonotonic" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1677044831" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000269" asserts="0">
+            <test-case id="1085" name="Battery_RestingVoltageCurveIsMonotonic" fullname="Frostline.Tests.QuadSimTests.Battery_RestingVoltageCurveIsMonotonic" methodname="Battery_RestingVoltageCurveIsMonotonic" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="364392832" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000195" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-suite type="ParameterizedMethod" id="1055" name="Disarmed_FallsWithTerminalVelocity" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.031765" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1055" name="Disarmed_FallsWithTerminalVelocity" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.027297" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1051" name="Disarmed_FallsWithTerminalVelocity(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Freestyle 5&quot;)" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1473316905" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.008677" asserts="0">
+              <test-case id="1051" name="Disarmed_FallsWithTerminalVelocity(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Freestyle 5&quot;)" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2138605746" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006920" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1052" name="Disarmed_FallsWithTerminalVelocity(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Racer 5&quot;)" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="891692676" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.008285" asserts="0">
+              <test-case id="1052" name="Disarmed_FallsWithTerminalVelocity(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Racer 5&quot;)" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1456820077" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006499" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1053" name="Disarmed_FallsWithTerminalVelocity(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Cinewhoop 3&quot;)" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="264148828" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.006545" asserts="0">
+              <test-case id="1053" name="Disarmed_FallsWithTerminalVelocity(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Cinewhoop 3&quot;)" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="653827958" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006383" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1054" name="Disarmed_FallsWithTerminalVelocity(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Bebop (KestrelFPV Original))" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="436640757" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.006710" asserts="0">
+              <test-case id="1054" name="Disarmed_FallsWithTerminalVelocity(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.Disarmed_FallsWithTerminalVelocity(Bebop (KestrelFPV Original))" methodname="Disarmed_FallsWithTerminalVelocity" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="633875091" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006499" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-case id="1081" name="Failsafe_StopsTheMotors" fullname="Frostline.Tests.QuadSimTests.Failsafe_StopsTheMotors" methodname="Failsafe_StopsTheMotors" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1943806222" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000886" asserts="0">
+            <test-case id="1081" name="Failsafe_StopsTheMotors" fullname="Frostline.Tests.QuadSimTests.Failsafe_StopsTheMotors" methodname="Failsafe_StopsTheMotors" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="436622891" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000852" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1050" name="Freestyle_PerformanceNumbersArePlausible" fullname="Frostline.Tests.QuadSimTests.Freestyle_PerformanceNumbersArePlausible" methodname="Freestyle_PerformanceNumbersArePlausible" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="956322564" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.006701" asserts="0">
+            <test-case id="1050" name="Freestyle_PerformanceNumbersArePlausible" fullname="Frostline.Tests.QuadSimTests.Freestyle_PerformanceNumbersArePlausible" methodname="Freestyle_PerformanceNumbersArePlausible" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1060615520" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006912" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-suite type="ParameterizedMethod" id="1049" name="FullThrottle_ReachesMostOfTheConfiguredThrust" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.005795" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1049" name="FullThrottle_ReachesMostOfTheConfiguredThrust" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.003312" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1045" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Freestyle 5&quot;)" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="712210830" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001450" asserts="0">
+              <test-case id="1045" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Freestyle 5&quot;)" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1956957191" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000855" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1046" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Racer 5&quot;)" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="845865275" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000987" asserts="0">
+              <test-case id="1046" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Racer 5&quot;)" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="194629360" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000635" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1047" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Cinewhoop 3&quot;)" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="985536980" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001285" asserts="0">
+              <test-case id="1047" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Cinewhoop 3&quot;)" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1894215449" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000656" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1048" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Bebop (KestrelFPV Original))" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="406445455" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000878" asserts="0">
+              <test-case id="1048" name="FullThrottle_ReachesMostOfTheConfiguredThrust(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.FullThrottle_ReachesMostOfTheConfiguredThrust(Bebop (KestrelFPV Original))" methodname="FullThrottle_ReachesMostOfTheConfiguredThrust" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="871017168" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000622" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-case id="1078" name="HorizonMode_LevelsAtCenterAndFlipsAtFullStick" fullname="Frostline.Tests.QuadSimTests.HorizonMode_LevelsAtCenterAndFlipsAtFullStick" methodname="HorizonMode_LevelsAtCenterAndFlipsAtFullStick" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1966911795" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001414" asserts="0">
+            <test-case id="1078" name="HorizonMode_LevelsAtCenterAndFlipsAtFullStick" fullname="Frostline.Tests.QuadSimTests.HorizonMode_LevelsAtCenterAndFlipsAtFullStick" methodname="HorizonMode_LevelsAtCenterAndFlipsAtFullStick" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="11775274" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001403" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-suite type="ParameterizedMethod" id="1039" name="Hover_HoldsAltitudeAndStaysLevel" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.011532" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1039" name="Hover_HoldsAltitudeAndStaysLevel" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.007315" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1035" name="Hover_HoldsAltitudeAndStaysLevel(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Freestyle 5&quot;)" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2024246258" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.005924" asserts="0">
+              <test-case id="1035" name="Hover_HoldsAltitudeAndStaysLevel(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Freestyle 5&quot;)" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="524030820" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001807" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1036" name="Hover_HoldsAltitudeAndStaysLevel(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Racer 5&quot;)" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1157917180" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001765" asserts="0">
+              <test-case id="1036" name="Hover_HoldsAltitudeAndStaysLevel(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Racer 5&quot;)" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="462665409" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001770" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1037" name="Hover_HoldsAltitudeAndStaysLevel(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Cinewhoop 3&quot;)" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1165200784" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001614" asserts="0">
+              <test-case id="1037" name="Hover_HoldsAltitudeAndStaysLevel(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Cinewhoop 3&quot;)" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1026226247" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001769" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1038" name="Hover_HoldsAltitudeAndStaysLevel(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Bebop (KestrelFPV Original))" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1712237273" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001575" asserts="0">
+              <test-case id="1038" name="Hover_HoldsAltitudeAndStaysLevel(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.Hover_HoldsAltitudeAndStaysLevel(Bebop (KestrelFPV Original))" methodname="Hover_HoldsAltitudeAndStaysLevel" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1947357921" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001557" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="1044" name="HoverThrottle_IsInRealisticRange" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001906" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1044" name="HoverThrottle_IsInRealisticRange" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001442" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1040" name="HoverThrottle_IsInRealisticRange(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Freestyle 5&quot;)" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="151682086" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001018" asserts="0">
+              <test-case id="1040" name="HoverThrottle_IsInRealisticRange(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Freestyle 5&quot;)" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1212231824" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000938" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1041" name="HoverThrottle_IsInRealisticRange(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Racer 5&quot;)" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1183387539" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000040" asserts="0">
+              <test-case id="1041" name="HoverThrottle_IsInRealisticRange(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Racer 5&quot;)" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="209537371" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000031" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1042" name="HoverThrottle_IsInRealisticRange(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Cinewhoop 3&quot;)" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1233587624" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000031" asserts="0">
+              <test-case id="1042" name="HoverThrottle_IsInRealisticRange(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Cinewhoop 3&quot;)" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1438075112" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000027" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1043" name="HoverThrottle_IsInRealisticRange(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Bebop (KestrelFPV Original))" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1620372581" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000029" asserts="0">
+              <test-case id="1043" name="HoverThrottle_IsInRealisticRange(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.HoverThrottle_IsInRealisticRange(Bebop (KestrelFPV Original))" methodname="HoverThrottle_IsInRealisticRange" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="515619926" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000026" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-case id="1057" name="PitchForward_LowersTheNose" fullname="Frostline.Tests.QuadSimTests.PitchForward_LowersTheNose" methodname="PitchForward_LowersTheNose" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1498430220" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000633" asserts="0">
+            <test-case id="1057" name="PitchForward_LowersTheNose" fullname="Frostline.Tests.QuadSimTests.PitchForward_LowersTheNose" methodname="PitchForward_LowersTheNose" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1982370688" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000536" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-suite type="ParameterizedMethod" id="1091" name="RandomSticks_NeverProduceInvalidNumbers" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.337657" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1091" name="RandomSticks_NeverProduceInvalidNumbers" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.286940" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1087" name="RandomSticks_NeverProduceInvalidNumbers(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Freestyle 5&quot;)" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1952563328" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.090928" asserts="0">
+              <test-case id="1087" name="RandomSticks_NeverProduceInvalidNumbers(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Freestyle 5&quot;)" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="310741080" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.075405" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1088" name="RandomSticks_NeverProduceInvalidNumbers(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Racer 5&quot;)" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2045210424" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.093537" asserts="0">
+              <test-case id="1088" name="RandomSticks_NeverProduceInvalidNumbers(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Racer 5&quot;)" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="473000129" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.071124" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1089" name="RandomSticks_NeverProduceInvalidNumbers(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Cinewhoop 3&quot;)" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1491405748" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.080516" asserts="0">
+              <test-case id="1089" name="RandomSticks_NeverProduceInvalidNumbers(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Cinewhoop 3&quot;)" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1179968162" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.069061" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1090" name="RandomSticks_NeverProduceInvalidNumbers(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Bebop (KestrelFPV Original))" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1170116991" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.070705" asserts="0">
+              <test-case id="1090" name="RandomSticks_NeverProduceInvalidNumbers(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.RandomSticks_NeverProduceInvalidNumbers(Bebop (KestrelFPV Original))" methodname="RandomSticks_NeverProduceInvalidNumbers" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="282516579" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.070689" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="1072" name="RateStep_BehavesTheSameAtOtherPhysicsRates" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.013351" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1072" name="RateStep_BehavesTheSameAtOtherPhysicsRates" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.013008" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1069" name="RateStep_BehavesTheSameAtOtherPhysicsRates(0.001f)" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates(0.001f)" methodname="RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="329629976" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001433" asserts="0">
+              <test-case id="1069" name="RateStep_BehavesTheSameAtOtherPhysicsRates(0.001f)" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates(0.001f)" methodname="RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1830365343" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001508" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1070" name="RateStep_BehavesTheSameAtOtherPhysicsRates(0.002f)" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates(0.002f)" methodname="RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1863481888" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000555" asserts="0">
+              <test-case id="1070" name="RateStep_BehavesTheSameAtOtherPhysicsRates(0.002f)" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates(0.002f)" methodname="RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1201314393" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000562" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1071" name="RateStep_BehavesTheSameAtOtherPhysicsRates(0.004f)" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates(0.004f)" methodname="RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="601407155" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000286" asserts="0">
+              <test-case id="1071" name="RateStep_BehavesTheSameAtOtherPhysicsRates(0.004f)" fullname="Frostline.Tests.QuadSimTests.RateStep_BehavesTheSameAtOtherPhysicsRates(0.004f)" methodname="RateStep_BehavesTheSameAtOtherPhysicsRates" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2005345079" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000289" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="1068" name="RateStep_FullStickStillTracks" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.002649" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1068" name="RateStep_FullStickStillTracks" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.002776" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1064" name="RateStep_FullStickStillTracks(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Freestyle 5&quot;)" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1595896095" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000616" asserts="0">
+              <test-case id="1064" name="RateStep_FullStickStillTracks(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Freestyle 5&quot;)" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="733893444" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000625" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1065" name="RateStep_FullStickStillTracks(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Racer 5&quot;)" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="313858987" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000548" asserts="0">
+              <test-case id="1065" name="RateStep_FullStickStillTracks(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Racer 5&quot;)" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="508914550" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000548" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1066" name="RateStep_FullStickStillTracks(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Cinewhoop 3&quot;)" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1189254799" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000546" asserts="0">
+              <test-case id="1066" name="RateStep_FullStickStillTracks(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Cinewhoop 3&quot;)" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="93831047" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000547" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1067" name="RateStep_FullStickStillTracks(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Bebop (KestrelFPV Original))" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1117600226" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000546" asserts="0">
+              <test-case id="1067" name="RateStep_FullStickStillTracks(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.RateStep_FullStickStillTracks(Bebop (KestrelFPV Original))" methodname="RateStep_FullStickStillTracks" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2102437955" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000547" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="1063" name="RateStep_IsFastAndWellDamped" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.007483" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="1063" name="RateStep_IsFastAndWellDamped" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.006935" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1059" name="RateStep_IsFastAndWellDamped(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Freestyle 5&quot;)" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2104732921" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001898" asserts="0">
+              <test-case id="1059" name="RateStep_IsFastAndWellDamped(Freestyle 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Freestyle 5&quot;)" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1414173446" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001740" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1060" name="RateStep_IsFastAndWellDamped(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Racer 5&quot;)" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1671278656" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001745" asserts="0">
+              <test-case id="1060" name="RateStep_IsFastAndWellDamped(Racer 5&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Racer 5&quot;)" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2128271093" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001595" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1061" name="RateStep_IsFastAndWellDamped(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Cinewhoop 3&quot;)" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="261961369" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001733" asserts="0">
+              <test-case id="1061" name="RateStep_IsFastAndWellDamped(Cinewhoop 3&quot;)" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Cinewhoop 3&quot;)" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1351848987" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001599" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1062" name="RateStep_IsFastAndWellDamped(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Bebop (KestrelFPV Original))" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1260782092" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001616" asserts="0">
+              <test-case id="1062" name="RateStep_IsFastAndWellDamped(Bebop (KestrelFPV Original))" fullname="Frostline.Tests.QuadSimTests.RateStep_IsFastAndWellDamped(Bebop (KestrelFPV Original))" methodname="RateStep_IsFastAndWellDamped" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1920697034" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001602" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
             </test-suite>
-            <test-case id="1073" name="RateStep_StaysStableAtHighThrottle" fullname="Frostline.Tests.QuadSimTests.RateStep_StaysStableAtHighThrottle" methodname="RateStep_StaysStableAtHighThrottle" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="919137547" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001771" asserts="0">
+            <test-case id="1073" name="RateStep_StaysStableAtHighThrottle" fullname="Frostline.Tests.QuadSimTests.RateStep_StaysStableAtHighThrottle" methodname="RateStep_StaysStableAtHighThrottle" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="551341727" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001745" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1092" name="Reset_RestoresAFreshDrone" fullname="Frostline.Tests.QuadSimTests.Reset_RestoresAFreshDrone" methodname="Reset_RestoresAFreshDrone" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1603895582" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.003649" asserts="0">
+            <test-case id="1092" name="Reset_RestoresAFreshDrone" fullname="Frostline.Tests.QuadSimTests.Reset_RestoresAFreshDrone" methodname="Reset_RestoresAFreshDrone" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1222275750" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.003429" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1056" name="RollRight_LowersTheRightSide" fullname="Frostline.Tests.QuadSimTests.RollRight_LowersTheRightSide" methodname="RollRight_LowersTheRightSide" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1342699271" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000555" asserts="0">
+            <test-case id="1056" name="RollRight_LowersTheRightSide" fullname="Frostline.Tests.QuadSimTests.RollRight_LowersTheRightSide" methodname="RollRight_LowersTheRightSide" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="2087677779" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000497" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1082" name="Turtle_PushesDownOnTheStickSide" fullname="Frostline.Tests.QuadSimTests.Turtle_PushesDownOnTheStickSide" methodname="Turtle_PushesDownOnTheStickSide" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="443578379" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000373" asserts="0">
+            <test-case id="1082" name="Turtle_PushesDownOnTheStickSide" fullname="Frostline.Tests.QuadSimTests.Turtle_PushesDownOnTheStickSide" methodname="Turtle_PushesDownOnTheStickSide" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1598833890" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000317" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1086" name="Wind_PushesAHoveringDrone" fullname="Frostline.Tests.QuadSimTests.Wind_PushesAHoveringDrone" methodname="Wind_PushesAHoveringDrone" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="856481721" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001627" asserts="0">
+            <test-case id="1086" name="Wind_PushesAHoveringDrone" fullname="Frostline.Tests.QuadSimTests.Wind_PushesAHoveringDrone" methodname="Wind_PushesAHoveringDrone" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="757298498" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001520" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1058" name="YawRight_TurnsTheNoseToTheRight" fullname="Frostline.Tests.QuadSimTests.YawRight_TurnsTheNoseToTheRight" methodname="YawRight_TurnsTheNoseToTheRight" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="1635657039" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000460" asserts="0">
+            <test-case id="1058" name="YawRight_TurnsTheNoseToTheRight" fullname="Frostline.Tests.QuadSimTests.YawRight_TurnsTheNoseToTheRight" methodname="YawRight_TurnsTheNoseToTheRight" classname="Frostline.Tests.QuadSimTests" runstate="Runnable" seed="920157676" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000442" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="1093" name="RatesTests" fullname="Frostline.Tests.RatesTests" classname="Frostline.Tests.RatesTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001804" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1093" name="RatesTests" fullname="Frostline.Tests.RatesTests" classname="Frostline.Tests.RatesTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001624" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1097" name="Actual_FullStick_IsMaxRate" fullname="Frostline.Tests.RatesTests.Actual_FullStick_IsMaxRate" methodname="Actual_FullStick_IsMaxRate" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1004709800" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000162" asserts="0">
+            <test-case id="1097" name="Actual_FullStick_IsMaxRate" fullname="Frostline.Tests.RatesTests.Actual_FullStick_IsMaxRate" methodname="Actual_FullStick_IsMaxRate" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1536391111" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000135" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1098" name="Actual_HalfStick_MatchesFormula" fullname="Frostline.Tests.RatesTests.Actual_HalfStick_MatchesFormula" methodname="Actual_HalfStick_MatchesFormula" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="2070666087" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000057" asserts="0">
+            <test-case id="1098" name="Actual_HalfStick_MatchesFormula" fullname="Frostline.Tests.RatesTests.Actual_HalfStick_MatchesFormula" methodname="Actual_HalfStick_MatchesFormula" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="922940312" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000056" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1094" name="Betaflight_DefaultRates_Give667DegPerSecond" fullname="Frostline.Tests.RatesTests.Betaflight_DefaultRates_Give667DegPerSecond" methodname="Betaflight_DefaultRates_Give667DegPerSecond" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1733309287" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000055" asserts="0">
+            <test-case id="1094" name="Betaflight_DefaultRates_Give667DegPerSecond" fullname="Frostline.Tests.RatesTests.Betaflight_DefaultRates_Give667DegPerSecond" methodname="Betaflight_DefaultRates_Give667DegPerSecond" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1043125493" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000051" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1095" name="Betaflight_HalfStick_MatchesFormula" fullname="Frostline.Tests.RatesTests.Betaflight_HalfStick_MatchesFormula" methodname="Betaflight_HalfStick_MatchesFormula" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="809688199" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000052" asserts="0">
+            <test-case id="1095" name="Betaflight_HalfStick_MatchesFormula" fullname="Frostline.Tests.RatesTests.Betaflight_HalfStick_MatchesFormula" methodname="Betaflight_HalfStick_MatchesFormula" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="620923624" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000053" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1096" name="Betaflight_RcRateAboveTwo_GetsSteeper" fullname="Frostline.Tests.RatesTests.Betaflight_RcRateAboveTwo_GetsSteeper" methodname="Betaflight_RcRateAboveTwo_GetsSteeper" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1700027075" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000049" asserts="0">
+            <test-case id="1096" name="Betaflight_RcRateAboveTwo_GetsSteeper" fullname="Frostline.Tests.RatesTests.Betaflight_RcRateAboveTwo_GetsSteeper" methodname="Betaflight_RcRateAboveTwo_GetsSteeper" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1722142212" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000042" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1102" name="Deadband_RemovesCenterAndKeepsFullRange" fullname="Frostline.Tests.RatesTests.Deadband_RemovesCenterAndKeepsFullRange" methodname="Deadband_RemovesCenterAndKeepsFullRange" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1760557504" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000124" asserts="0">
+            <test-case id="1102" name="Deadband_RemovesCenterAndKeepsFullRange" fullname="Frostline.Tests.RatesTests.Deadband_RemovesCenterAndKeepsFullRange" methodname="Deadband_RemovesCenterAndKeepsFullRange" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1193142596" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000122" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1101" name="Profile_SwitchesBetweenTypes" fullname="Frostline.Tests.RatesTests.Profile_SwitchesBetweenTypes" methodname="Profile_SwitchesBetweenTypes" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="385909705" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000079" asserts="0">
+            <test-case id="1101" name="Profile_SwitchesBetweenTypes" fullname="Frostline.Tests.RatesTests.Profile_SwitchesBetweenTypes" methodname="Profile_SwitchesBetweenTypes" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="79214129" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000078" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1099" name="Rates_AreZeroAtCenter_AndSymmetric" fullname="Frostline.Tests.RatesTests.Rates_AreZeroAtCenter_AndSymmetric" methodname="Rates_AreZeroAtCenter_AndSymmetric" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="1897657703" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000105" asserts="0">
+            <test-case id="1099" name="Rates_AreZeroAtCenter_AndSymmetric" fullname="Frostline.Tests.RatesTests.Rates_AreZeroAtCenter_AndSymmetric" methodname="Rates_AreZeroAtCenter_AndSymmetric" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="995465242" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000101" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1100" name="Rates_NeverExceedLimit" fullname="Frostline.Tests.RatesTests.Rates_NeverExceedLimit" methodname="Rates_NeverExceedLimit" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="745945175" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000104" asserts="0">
+            <test-case id="1100" name="Rates_NeverExceedLimit" fullname="Frostline.Tests.RatesTests.Rates_NeverExceedLimit" methodname="Rates_NeverExceedLimit" classname="Frostline.Tests.RatesTests" runstate="Runnable" seed="250626406" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000090" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="1103" name="RemoteProtocolTests" fullname="Frostline.Tests.RemoteProtocolTests" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.006244" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1103" name="RemoteProtocolTests" fullname="Frostline.Tests.RemoteProtocolTests" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.005970" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1109" name="AxisEncoding_RoundTripsAndClamps" fullname="Frostline.Tests.RemoteProtocolTests.AxisEncoding_RoundTripsAndClamps" methodname="AxisEncoding_RoundTripsAndClamps" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="92010504" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000487" asserts="0">
+            <test-case id="1109" name="AxisEncoding_RoundTripsAndClamps" fullname="Frostline.Tests.RemoteProtocolTests.AxisEncoding_RoundTripsAndClamps" methodname="AxisEncoding_RoundTripsAndClamps" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="230953090" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000489" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1104" name="Control_MatchesTestVector" fullname="Frostline.Tests.RemoteProtocolTests.Control_MatchesTestVector" methodname="Control_MatchesTestVector" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="50864353" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001747" asserts="0">
+            <test-case id="1104" name="Control_MatchesTestVector" fullname="Frostline.Tests.RemoteProtocolTests.Control_MatchesTestVector" methodname="Control_MatchesTestVector" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1281035656" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.001640" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1108" name="ForeignAndBrokenPackets_AreRejected" fullname="Frostline.Tests.RemoteProtocolTests.ForeignAndBrokenPackets_AreRejected" methodname="ForeignAndBrokenPackets_AreRejected" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1574614158" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000154" asserts="0">
+            <test-case id="1108" name="ForeignAndBrokenPackets_AreRejected" fullname="Frostline.Tests.RemoteProtocolTests.ForeignAndBrokenPackets_AreRejected" methodname="ForeignAndBrokenPackets_AreRejected" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="341099357" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000130" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1106" name="HelloAndWelcome_MatchTestVectors" fullname="Frostline.Tests.RemoteProtocolTests.HelloAndWelcome_MatchTestVectors" methodname="HelloAndWelcome_MatchTestVectors" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="958203636" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000639" asserts="0">
+            <test-case id="1106" name="HelloAndWelcome_MatchTestVectors" fullname="Frostline.Tests.RemoteProtocolTests.HelloAndWelcome_MatchTestVectors" methodname="HelloAndWelcome_MatchTestVectors" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="462415048" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000614" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1113" name="Link_AcceptsRestartedApp" fullname="Frostline.Tests.RemoteProtocolTests.Link_AcceptsRestartedApp" methodname="Link_AcceptsRestartedApp" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1093522473" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000350" asserts="0">
+            <test-case id="1113" name="Link_AcceptsRestartedApp" fullname="Frostline.Tests.RemoteProtocolTests.Link_AcceptsRestartedApp" methodname="Link_AcceptsRestartedApp" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1904587520" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000362" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1111" name="Link_DeliversLatestInput" fullname="Frostline.Tests.RemoteProtocolTests.Link_DeliversLatestInput" methodname="Link_DeliversLatestInput" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="107719227" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000199" asserts="0">
+            <test-case id="1111" name="Link_DeliversLatestInput" fullname="Frostline.Tests.RemoteProtocolTests.Link_DeliversLatestInput" methodname="Link_DeliversLatestInput" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1987239505" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000191" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1114" name="Link_GoesToFailsafeAfter200Milliseconds" fullname="Frostline.Tests.RemoteProtocolTests.Link_GoesToFailsafeAfter200Milliseconds" methodname="Link_GoesToFailsafeAfter200Milliseconds" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1674502084" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000153" asserts="0">
+            <test-case id="1114" name="Link_GoesToFailsafeAfter200Milliseconds" fullname="Frostline.Tests.RemoteProtocolTests.Link_GoesToFailsafeAfter200Milliseconds" methodname="Link_GoesToFailsafeAfter200Milliseconds" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1043611652" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000150" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1112" name="Link_IgnoresOldAndDuplicatePackets" fullname="Frostline.Tests.RemoteProtocolTests.Link_IgnoresOldAndDuplicatePackets" methodname="Link_IgnoresOldAndDuplicatePackets" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="543441166" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000096" asserts="0">
+            <test-case id="1112" name="Link_IgnoresOldAndDuplicatePackets" fullname="Frostline.Tests.RemoteProtocolTests.Link_IgnoresOldAndDuplicatePackets" methodname="Link_IgnoresOldAndDuplicatePackets" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1504780577" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000096" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1116" name="Link_MeasuresRateAndLoss" fullname="Frostline.Tests.RemoteProtocolTests.Link_MeasuresRateAndLoss" methodname="Link_MeasuresRateAndLoss" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1761644588" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000113" asserts="0">
+            <test-case id="1116" name="Link_MeasuresRateAndLoss" fullname="Frostline.Tests.RemoteProtocolTests.Link_MeasuresRateAndLoss" methodname="Link_MeasuresRateAndLoss" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="2000324015" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000107" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1115" name="Link_ReportsResetOncePerPress" fullname="Frostline.Tests.RemoteProtocolTests.Link_ReportsResetOncePerPress" methodname="Link_ReportsResetOncePerPress" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1930956428" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000128" asserts="0">
+            <test-case id="1115" name="Link_ReportsResetOncePerPress" fullname="Frostline.Tests.RemoteProtocolTests.Link_ReportsResetOncePerPress" methodname="Link_ReportsResetOncePerPress" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1223246476" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000114" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1107" name="LongNames_AreCutWithoutBreakingCharacters" fullname="Frostline.Tests.RemoteProtocolTests.LongNames_AreCutWithoutBreakingCharacters" methodname="LongNames_AreCutWithoutBreakingCharacters" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="118099479" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000077" asserts="0">
+            <test-case id="1107" name="LongNames_AreCutWithoutBreakingCharacters" fullname="Frostline.Tests.RemoteProtocolTests.LongNames_AreCutWithoutBreakingCharacters" methodname="LongNames_AreCutWithoutBreakingCharacters" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="998896615" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000068" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1110" name="SequenceComparison_HandlesWrapAround" fullname="Frostline.Tests.RemoteProtocolTests.SequenceComparison_HandlesWrapAround" methodname="SequenceComparison_HandlesWrapAround" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="179891504" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.000070" asserts="0">
+            <test-case id="1110" name="SequenceComparison_HandlesWrapAround" fullname="Frostline.Tests.RemoteProtocolTests.SequenceComparison_HandlesWrapAround" methodname="SequenceComparison_HandlesWrapAround" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1368612331" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000069" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1105" name="Telemetry_MatchesTestVector" fullname="Frostline.Tests.RemoteProtocolTests.Telemetry_MatchesTestVector" methodname="Telemetry_MatchesTestVector" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1266637198" result="Passed" start-time="2026-11-14 15:17:34Z" end-time="2026-11-14 15:17:34Z" duration="0.001019" asserts="0">
+            <test-case id="1105" name="Telemetry_MatchesTestVector" fullname="Frostline.Tests.RemoteProtocolTests.Telemetry_MatchesTestVector" methodname="Telemetry_MatchesTestVector" classname="Frostline.Tests.RemoteProtocolTests" runstate="Runnable" seed="1475332345" result="Passed" start-time="2026-11-14 18:44:25Z" end-time="2026-11-14 18:44:25Z" duration="0.000960" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />

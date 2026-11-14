@@ -121,6 +121,7 @@ namespace Frostline.FotoInsel
                     Progress("Drohne und Spielsysteme", 0.97f);
                     Frostline.EditorTools.VerlasseneInselSpiel.AddGameplay(scene);
                     Report += FotoLichtstimmungen.Add(scene);
+                    Report += FotoZusaetze.Add(scene);
                 }
                 else
                 {

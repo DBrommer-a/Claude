@@ -149,6 +149,7 @@ namespace Frostline.Diagnostics
             yield return ModelShots(drone.transform, index);
             index += 2;
             yield return PropShots(drone.transform, index);
+            yield return BirdShots(drone.transform);
             yield return MoodShots(drone.transform, views);
 
             body.isKinematic = false;
@@ -156,6 +157,25 @@ namespace Frostline.Diagnostics
             drone.enabled = true;
             DroneRespawn respawn = drone.GetComponent<DroneRespawn>();
             if (respawn != null) respawn.Respawn();
+        }
+
+        /// <summary>Je Vogelschwarm ein Bild aus wenigen Metern hinter einem Vogel (die Vögel fliegen weiter, daher sofort).</summary>
+        IEnumerator BirdShots(Transform drone)
+        {
+            int index = 40;
+            foreach (Frostline.View.BirdFlock flock in FindObjectsByType<Frostline.View.BirdFlock>(FindObjectsSortMode.None))
+            {
+                Transform bird = flock.transform.childCount > 0 ? flock.transform.GetChild(0) : null;
+                if (bird == null) continue;
+                for (int f = 0; f < 2; f++)
+                {
+                    Vector3 eye = bird.position - bird.forward * (flock.wingspan * 4f) + bird.right * flock.wingspan * 1.5f + Vector3.up * flock.wingspan;
+                    drone.SetPositionAndRotation(eye, Quaternion.LookRotation(bird.position + bird.forward * flock.wingspan * 3f - eye));
+                    yield return null;
+                }
+                yield return Capture(index.ToString("00") + "_Voegel_" + Safe(flock.name));
+                index++;
+            }
         }
 
         /// <summary>Jede Lichtstimmung von zwei Standpunkten: Dorf am Fluss und über dem Wolkenmeer.</summary>

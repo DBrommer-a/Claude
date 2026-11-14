@@ -29,6 +29,7 @@ namespace Frostline.FotoInsel
             // Lichtstimmungen in die eben gespeicherte, noch offene Szene.
             Scene scene = SceneManager.GetActiveScene();
             result += FotoLichtstimmungen.Add(scene);
+            result += FotoZusaetze.Add(scene);
             EditorSceneManager.SaveScene(scene);
             return result;
         }
